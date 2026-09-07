@@ -330,6 +330,22 @@ footer .mark{font-size:var(--pix-l);letter-spacing:var(--pix-l-tr);color:var(--i
 .cact a:last-child{border-right:0}
 .cact a:hover{background:var(--ink);color:var(--paper)}
 .cact a.mute{color:#a0a0a0}
+/* a card that can be played: the poster is a button, the frame only loads when it is pressed */
+.shot.can{cursor:pointer;border:0;padding:0;width:100%;display:block;background:#ddd;font:inherit}
+.shot .go{position:absolute;inset:0;display:grid;place-items:center;background:rgba(0,0,0,.28)}
+.shot .go span{font-family:var(--pix);font-size:var(--pix-m);letter-spacing:var(--pix-m-tr);text-transform:uppercase;
+  color:#fff;background:var(--coral);padding:var(--s2) var(--s4);box-shadow:0 0 0 1px rgba(0,0,0,.25)}
+.shot.can:hover .go,.shot.can:focus-visible .go{background:rgba(0,0,0,.12)}
+.shot iframe{width:100%;height:100%;border:0;display:block;background:#000}
+.playing .tag{display:none}
+.cact button{flex:1;text-align:center;padding:var(--s3) var(--s2);font-family:var(--pix);font-size:var(--pix-s);
+  letter-spacing:var(--pix-s-tr);text-transform:uppercase;color:var(--ink);background:none;border:0;
+  border-right:1px solid var(--hair);cursor:pointer;min-height:var(--tap)}
+.cact button:last-child{border-right:0}
+.cact button:hover,.cact button:focus-visible{background:var(--ink);color:var(--paper)}
+.cact button.voted{background:var(--coral);color:#fff}
+.cact button .n{font-variant-numeric:tabular-nums}
+.votenote{font-size:var(--t-cell);color:var(--grey);margin:var(--s4) 0 0}
 .empty{padding:var(--s6) 0;color:var(--grey);font-family:var(--pix);font-size:var(--pix-s);letter-spacing:var(--pix-s-tr);text-transform:uppercase}
 </style>
 
@@ -538,6 +554,8 @@ footer .mark{font-size:var(--pix-l);letter-spacing:var(--pix-l-tr);color:var(--i
     <button class="chip" type="button" data-f="platformer" aria-pressed="false">platformer</button>
     <button class="chip" type="button" data-f="other" aria-pressed="false">other</button>
   </div>
+  <p class="votenote">Press a card to play the game in place. Voting opens with the shortlist; until the count is
+  wired to a server your votes are kept in your own browser, so treat the numbers here as layout, not results.</p>
   <div class="grid" id="grid"></div>
   <p class="empty" id="empty" hidden>No entries in this filter yet.</p>
   <div class="cols">
@@ -631,10 +649,14 @@ footer .mark{font-size:var(--pix-l);letter-spacing:var(--pix-l-tr);color:var(--i
 
   /* entries */
   var ENTRIES = [
-    { ref:true, title:'Drive', by:'404 GEN', tag:'reference build, not eligible', genre:'racing', short:false,
+    { ref:true, id:'drive', title:'Drive', by:'404 GEN', tag:'reference build, not eligible', genre:'racing', short:false,
       found:'Three blind rounds against a commercial racer. The property that decided every one was named by a person, never by the model.',
       badges:['gate pass','777 draws','1.36M tris','Claude Opus and Fable'],
       play:'https://404-repo.github.io/drive/game/', src:'https://github.com/404-Repo/drive', shot:'media/t_drive_b.jpg' },
+    { ref:true, id:'rust17', title:'Rust 17', by:'404 GEN', tag:'reference build, not eligible', genre:'shooter', short:false,
+      found:'Twenty four rounds on a desert oilfield. Generated meshes lost to code every time at game weight, so the 3D is code and Atlas does the materials, the sky and the sound.',
+      badges:['gate pass','767 draws','1.16M tris','Claude Opus and Fable'],
+      play:'https://404-repo.github.io/rust17/game/', src:'https://github.com/404-Repo/rust17', shot:'media/t_rust_card.jpg' },
     { title:'Example entry', by:'Entrant name', genre:'racing', short:true,
       found:'One line on the thing this entrant tried that nobody else did. Their words, three sentences at most, and it carries 20 percent of the judging.',
       badges:['gate pass','GPT agent','racing'], play:'#', src:'#' },
@@ -653,21 +675,56 @@ footer .mark{font-size:var(--pix-l);letter-spacing:var(--pix-l-tr);color:var(--i
   ];
   var grid = document.getElementById('grid'), empty = document.getElementById('empty');
   function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'})[c]; }); }
-  function card(e){
+  /* votes: one per entry per browser. Swap readVotes and writeVote for a fetch when the count
+     moves to a server; nothing else in here needs to change. */
+  var VKEY = 'jam.votes.v1';
+  function readVotes(){ try { return JSON.parse(localStorage.getItem(VKEY) || '{}'); } catch (e) { return {}; } }
+  function writeVote(id, on){ var v = readVotes(); if (on) v[id] = 1; else delete v[id]; try { localStorage.setItem(VKEY, JSON.stringify(v)); } catch (e) {} return v; }
+
+  function card(e, i){
+    var id = e.id || ('e' + i);
     var shot = e.shot ? '<img src="' + e.shot + '" alt="A frame from ' + esc(e.title) + '" loading="lazy">'
                       : '<div class="ph"><span>screenshot</span></div>';
     var tag = '<span class="tag' + (e.ref ? '' : ' ghosttag') + '">' + esc(e.ref ? e.tag : 'example entry') + '</span>';
     var badges = e.badges.map(function(t, n){ return '<span class="badge' + (n === 0 ? ' pass' : '') + '">' + esc(t) + '</span>'; }).join('');
-    var play = e.play === '#' ? '<a class="mute" href="#entries">play</a>' : '<a href="' + e.play + '" target="_blank" rel="noopener">play</a>';
+    var playable = e.play && e.play !== '#';
+    var shotEl = playable
+      ? '<button class="shot can" type="button" data-play="' + e.play + '" aria-label="Play ' + esc(e.title) + ' here">' + shot + tag + '<span class="go"><span>play</span></span></button>'
+      : '<div class="shot">' + shot + tag + '</div>';
+    var voted = readVotes()[id] ? ' voted' : '';
+    var vote = '<button class="vote' + voted + '" type="button" data-vote="' + id + '">vote <span class="n">' + (readVotes()[id] ? 1 : 0) + '</span></button>';
     var src = e.src === '#' ? '<a class="mute" href="#entries">source</a>' : '<a href="' + e.src + '" target="_blank" rel="noopener">source</a>';
+    var open = playable ? '<a href="' + e.play + '" target="_blank" rel="noopener">new tab</a>' : '<a class="mute" href="#entries">new tab</a>';
     return '<article class="card' + (e.ref ? ' ref' : '') + '" data-genre="' + e.genre + '" data-short="' + (e.short ? 1 : 0) + '">' +
-      '<div class="shot">' + shot + tag + '</div><div class="cbody"><h3>' + esc(e.title) + '</h3>' +
+      shotEl + '<div class="cbody"><h3>' + esc(e.title) + '</h3>' +
       '<div class="by">' + esc(e.by) + '</div><p class="found"><b>what I found</b>' + esc(e.found) + '</p>' +
-      '<div class="meta">' + badges + '</div></div><div class="cact">' + play + src + '</div></article>';
+      '<div class="meta">' + badges + '</div></div><div class="cact">' + vote + open + src + '</div></article>';
   }
   grid.innerHTML = ENTRIES.map(card).join('');
-  document.getElementById('statEntries').textContent = ENTRIES.length - 1;
-  document.getElementById('statPass').textContent = ENTRIES.length - 1;
+
+  /* press a poster and the game loads in place, not before: an iframe per card on load would
+     pull two whole games down for a visitor who wanted to read the rules */
+  grid.addEventListener('click', function(ev){
+    var b = ev.target.closest && ev.target.closest('[data-play]');
+    if (b) {
+      var url = b.getAttribute('data-play'), box = document.createElement('div');
+      box.className = 'shot playing';
+      box.innerHTML = '<iframe src="' + url + '" title="Playable build" allow="fullscreen; autoplay; gamepad" allowfullscreen></iframe>';
+      b.replaceWith(box);
+      return;
+    }
+    var v = ev.target.closest && ev.target.closest('[data-vote]');
+    if (v) {
+      var id = v.getAttribute('data-vote'), on = !v.classList.contains('voted');
+      writeVote(id, on);
+      v.classList.toggle('voted', on);
+      v.querySelector('.n').textContent = on ? 1 : 0;
+    }
+  });
+  /* the 404 builds are references, not entries, so they do not count */
+  var real = ENTRIES.filter(function(e){ return !e.ref; }).length;
+  document.getElementById('statEntries').textContent = real;
+  document.getElementById('statPass').textContent = real;
 
   var chips = [].slice.call(document.querySelectorAll('.chip'));
   chips.forEach(function(c){

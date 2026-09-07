@@ -49,6 +49,18 @@ Writes `index.html` (media referenced from `media/`, the real site) and `artifac
 inlined as data URIs, for an Artifact preview whose CSP blocks external media). Edit `body.src.html`,
 never the two outputs.
 
+## Entries page: playing and voting
+
+Both 404 builds are real, playable cards, marked ineligible. Pressing a poster swaps it for an
+iframe of the live game, and nothing loads before that press: two games behind a page about rules
+is a lot to download for a visitor who came to read. Neither host sets `X-Frame-Options`, checked,
+so the frame works.
+
+Voting is one vote per entry per browser, held in `localStorage` under `jam.votes.v1`. There is no
+bot proofing and no server, at Ben's call for now, so the page says plainly that the counts are
+local. When a backend arrives, `readVotes` and `writeVote` in the entries script are the only two
+functions that change.
+
 ## Awaiting Ben
 
 Everything marked `<span class="tbd">`: judges, Atlas signup link and grant size, submission repo,
