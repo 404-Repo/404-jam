@@ -36,6 +36,9 @@
      as padding: the band still bleeds, its text still lands on --gut, and a scrollbar
      cannot desync the two the way 100vw would */
   --gutc:max(var(--pad),calc((100cqw - 1280px)/2 + var(--pad)));
+  /* the width of that gutter as a grid TRACK: the outer cell spans it and then pads by the full
+     gutter, so its text lands on the prose column and its content box still matches the others */
+  --gutt:max(0px,calc(var(--gutc) - var(--cell)));
 
   /* pixel face: three sizes, tracking loosens as the size drops */
   --pix-s:10px; --pix-s-tr:.08em;  /* every label, caption, badge, chip, byline, nav item, key, button */
@@ -82,28 +85,33 @@ section[id],#top{scroll-margin-top:calc(var(--bar) + var(--s4))}
 .stats,.steps,.prizes,.time,.gal{gap:1px;background:var(--hair2)}
 .stat,.step,.prize,.tcell,.shotcell{background:var(--paper)}
 .grid{overflow:hidden}
-/* the bands bleed edge to edge, their text does not: the cell that opens a row and the cell
-   that closes it carry the page gutter, so cell text lands on the same column as the prose */
+/* the bands bleed edge to edge, their text does not, and every cell in a row gets the SAME
+   content width. The gutter is its own grid TRACK at each end; the cell that opens a row spans
+   the leading gutter and the cell that closes it spans the trailing one, then each carries that
+   gutter as padding. Padding the outer cells without widening their track was the earlier
+   version and it left the first and last column narrower than the middle by the gutter. */
 .stats,.steps,.prizes,.time{container-type:inline-size}
 .stat,.step,.prize,.tcell{padding:var(--cell)}
 @media (max-width:899px){
-  .stat:nth-child(2n+1),.prize:nth-child(2n+1),.tcell:nth-child(2n+1){padding-left:var(--gutc)}
-  .stat:nth-child(2n),.stat:last-child,.prize:nth-child(2n),.tcell:nth-child(2n){padding-right:var(--gutc)}
+  .stat:nth-child(2n+1),.prize:nth-child(2n+1),.tcell:nth-child(2n+1){grid-column:1/span 2;padding-left:var(--gutc)}
+  .stat:nth-child(2n),.prize:nth-child(2n),.tcell:nth-child(2n){grid-column:-3/-1;padding-right:var(--gutc)}
+  .stats .stat:last-child{grid-column:1/-1;padding-left:var(--gutc);padding-right:var(--gutc)}
 }
 @media (min-width:900px){
-  .stat:nth-child(5n+1),.prize:nth-child(4n+1),.tcell:nth-child(4n+1){padding-left:var(--gutc)}
-  .stat:nth-child(5n),.prize:nth-child(4n),.tcell:nth-child(4n){padding-right:var(--gutc)}
+  .stat:nth-child(5n+1),.prize:nth-child(4n+1),.tcell:nth-child(4n+1){grid-column:1/span 2;padding-left:var(--gutc)}
+  .stat:nth-child(5n),.prize:nth-child(4n),.tcell:nth-child(4n){grid-column:-3/-1;padding-right:var(--gutc)}
 }
-.step{padding-left:var(--gutc);padding-right:var(--gutc)}
+@media (max-width:599px){
+  .step{grid-column:1/-1;padding-left:var(--gutc);padding-right:var(--gutc)}
+}
 @media (min-width:600px) and (max-width:1199px){
-  .step:nth-child(2n+1){padding-right:var(--cell)}
-  .step:nth-child(2n){padding-left:var(--cell)}
-  .step:last-child{padding-left:var(--gutc);padding-right:var(--gutc)}
+  .step:nth-child(2n+1){grid-column:1/span 2;padding-left:var(--gutc)}
+  .step:nth-child(2n){grid-column:-3/-1;padding-right:var(--gutc)}
+  .steps .step:last-child{grid-column:1/-1;padding-left:var(--gutc);padding-right:var(--gutc)}
 }
 @media (min-width:1200px){
-  .step{padding-left:var(--cell);padding-right:var(--cell)}
-  .step:nth-child(5n+1){padding-left:var(--gutc)}
-  .step:nth-child(5n){padding-right:var(--gutc)}
+  .step:nth-child(5n+1){grid-column:1/span 2;padding-left:var(--gutc)}
+  .step:nth-child(5n){grid-column:-3/-1;padding-right:var(--gutc)}
 }
 .card{box-shadow:1px 0 0 var(--hair2),0 1px 0 var(--hair)}
 
@@ -186,9 +194,8 @@ h1 .k{color:var(--coral)}
 @media (max-width:359px){.panel .slot{font-size:1em}.pcaret{display:none}}
 
 /* stats, the Dream style callout row */
-.stats{display:grid;grid-template-columns:repeat(2,1fr);border-bottom:1px solid var(--ink)}
-@media (min-width:900px){.stats{grid-template-columns:repeat(5,1fr)}}
-@media (max-width:899px){.stats .stat:last-child{grid-column:1/-1}}
+.stats{display:grid;grid-template-columns:var(--gutt) repeat(2,minmax(0,1fr)) var(--gutt);border-bottom:1px solid var(--ink)}
+@media (min-width:900px){.stats{grid-template-columns:var(--gutt) repeat(5,minmax(0,1fr)) var(--gutt)}}
 .stat b{display:block;font-weight:700;font-size:var(--d-num);letter-spacing:-.04em;line-height:1;font-variant-numeric:tabular-nums}
 .stat b em{font-style:normal;font-size:.4em;letter-spacing:-.01em;margin-left:var(--s1);color:var(--grey)}
 .stat span{font-family:var(--pix);font-size:var(--pix-s);letter-spacing:var(--pix-s-tr);text-transform:uppercase;color:var(--grey);margin-top:var(--s2);display:block}
@@ -225,17 +232,17 @@ p.lead{font-size:var(--t-lead);font-weight:700;letter-spacing:-.02em;line-height
 .spec .v code{font-family:var(--mono);font-size:var(--m-chip);background:var(--panel);padding:1px 5px}
 
 /* steps inline */
-.steps{display:grid;grid-template-columns:1fr;border-top:1px solid var(--ink)}
-@media (min-width:600px){.steps{grid-template-columns:repeat(2,1fr)}.step:last-child{grid-column:1/-1}}
-@media (min-width:1200px){.steps{grid-template-columns:repeat(5,1fr)}.step:last-child{grid-column:auto}}
+.steps{display:grid;grid-template-columns:var(--gutt) minmax(0,1fr) var(--gutt);border-top:1px solid var(--ink)}
+@media (min-width:600px){.steps{grid-template-columns:var(--gutt) repeat(2,minmax(0,1fr)) var(--gutt)}}
+@media (min-width:1200px){.steps{grid-template-columns:var(--gutt) repeat(5,minmax(0,1fr)) var(--gutt)}.steps .step:last-child{grid-column:-3/-1;padding-left:var(--cell)}}
 .step .n{font-family:var(--pix);font-size:var(--pix-s);letter-spacing:var(--pix-s-tr);color:var(--coral);text-transform:uppercase}
 .step h3{font-size:var(--t-body);font-weight:700;letter-spacing:-.015em;line-height:1.25;margin:var(--s2) 0 var(--s1)}
 .step p{font-size:var(--t-cell);color:var(--grey);margin:0;max-width:none}
 .step code{font-family:var(--mono);font-size:var(--m-chip);background:var(--panel);padding:1px 4px}
 
 /* prizes */
-.prizes{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--ink)}
-@media (min-width:900px){.prizes{grid-template-columns:repeat(4,1fr)}}
+.prizes{display:grid;grid-template-columns:var(--gutt) repeat(2,minmax(0,1fr)) var(--gutt);border-top:1px solid var(--ink)}
+@media (min-width:900px){.prizes{grid-template-columns:var(--gutt) repeat(4,minmax(0,1fr)) var(--gutt)}}
 .prize .amt{font-weight:700;font-size:var(--d-amt);letter-spacing:-.045em;line-height:1;margin:var(--s2) 0 var(--s2);font-variant-numeric:tabular-nums}
 .prize .amt em{font-style:normal;font-size:.4em;letter-spacing:-.01em;margin-left:var(--s1);color:var(--grey)}
 /* the coral field owns its right edge, as it always has; the row seam below it stays the row seam */
@@ -245,8 +252,8 @@ p.lead{font-size:var(--t-lead);font-weight:700;letter-spacing:-.02em;line-height
 #prizes .spec{border-top:0;margin-top:var(--s6)}
 
 /* dates */
-.time{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--ink)}
-@media (min-width:900px){.time{grid-template-columns:repeat(4,1fr)}}
+.time{display:grid;grid-template-columns:var(--gutt) repeat(2,minmax(0,1fr)) var(--gutt);border-top:1px solid var(--ink)}
+@media (min-width:900px){.time{grid-template-columns:var(--gutt) repeat(4,minmax(0,1fr)) var(--gutt)}}
 .tcell .d{font-weight:700;font-size:var(--d-num);letter-spacing:-.04em;line-height:1;margin:var(--s2) 0 var(--s2)}
 .tcell p{font-size:var(--t-cell);color:var(--grey);margin:0;max-width:none}
 /* the live cell is marked by an ink coloured brand, not by a 9 level shift in grey */
