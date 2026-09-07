@@ -344,7 +344,9 @@ footer .mark{font-size:var(--pix-l);letter-spacing:var(--pix-l-tr);color:var(--i
 <!-- ================= JAM ================= -->
 <div id="view-jam">
 <div class="stage" id="top">
-  <video id="hero" src="media/hero_rust.mp4" poster="media/hero_rust_poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Rust 17, a desert oilfield shooter built with the recipe, seen in motion"></video>
+  <video id="hero" poster="media/hero_rust_poster.jpg" autoplay muted loop playsinline preload="metadata"
+         data-sm="media/hero_rust_854.mp4" data-md="media/hero_rust_1280.mp4" data-lg="media/hero_rust_1600.mp4"
+         aria-label="Rust 17, a desert oilfield shooter built with the recipe, seen in motion"></video>
   <div class="veil"></div>
   <button class="play" id="vtoggle" type="button">pause</button>
   <div class="in"><div class="wrap">
@@ -558,8 +560,13 @@ footer .mark{font-size:var(--pix-l);letter-spacing:var(--pix-l-tr);color:var(--i
   var reduce = false;
   try { reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
 
-  /* hero video: pause control, and honour reduced motion by showing the poster */
+  /* hero video: three encodes, and the screen picks. A full bleed clip at 854 wide is a 2x
+     upscale on a laptop and looks it; a 1600 wide file on a phone is 6 MB nobody asked for. */
   var vid = document.getElementById('hero'), vt = document.getElementById('vtoggle');
+  (function pick(){
+    var w = window.innerWidth, c = navigator.connection || {}, thin = c.saveData || /^([23]g|slow-2g)$/.test(c.effectiveType || '');
+    vid.src = vid.getAttribute(thin ? 'data-sm' : w >= 1100 ? 'data-lg' : w >= 700 ? 'data-md' : 'data-sm');
+  })();
   if (reduce && vid) { vid.pause(); vt.textContent = 'play'; }
   vt.addEventListener('click', function(){
     if (vid.paused) { vid.play(); vt.textContent = 'pause'; } else { vid.pause(); vt.textContent = 'play'; }

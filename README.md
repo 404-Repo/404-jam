@@ -25,8 +25,8 @@ cmap points at the wrong glyphs; do not use it here.
 
 | file | what | source |
 |---|---|---|
-| `hero.mp4` | 13 s of Drive in motion, 854x480, HUD hidden | recorded with `tools/clip.mjs` in `~/drive` |
-| `hero_poster.jpg` | first frame, for `poster` and reduced motion | same run |
+| `hero_rust_1600/1280/854.mp4` | 15 s of Rust 17 in motion, HUD hidden, three encodes | recorded with `tools/banner.mjs` in `~/cod_derrick` |
+| `hero_rust_poster.jpg` | a frame for `poster` and for reduced motion | same run |
 | `t_drive_a/b/c.jpg` | Drive stills | frames from the same run |
 | `t_rust_a/b.jpg` | Rust 17 | `~/cod_derrick/rounds/r11`, `r14` |
 | `t_costa_a/b.jpg` | Costa Verde | `~/cod_clean/game/_shots` |

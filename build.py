@@ -16,7 +16,10 @@ def datauri(name):
     mime = mimetypes.guess_type(p)[0] or 'application/octet-stream'
     return 'data:%s;base64,%s' % (mime, base64.b64encode(open(p, 'rb').read()).decode())
 
-inline = re.sub(r'MEDIA/([A-Za-z0-9_.-]+)', lambda m: datauri(m.group(1)), src)
+# the artifact copy carries ONE encode, the smallest: three data URIs would push the page past the
+# 16 MB artifact ceiling, and the public site is the one that has to look sharp.
+one = src.replace('MEDIA/hero_rust_1280.mp4', 'MEDIA/hero_rust_854.mp4').replace('MEDIA/hero_rust_1600.mp4', 'MEDIA/hero_rust_854.mp4')
+inline = re.sub(r'MEDIA/([A-Za-z0-9_.-]+)', lambda m: datauri(m.group(1)), one)
 open(os.path.join(HERE, 'artifact.html'), 'w').write(inline)
 for f in ('index.html', 'artifact.html'):
     print(f, round(os.path.getsize(os.path.join(HERE, f)) / 1024, 1), 'KB')
