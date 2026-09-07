@@ -1,0 +1,295 @@
+
+===== 412 =====
+role	font	size	wt	lh	tracking	w	h
+bar mark	fourzerofourpixel	13px	400	18.85px (1.450)	0.65px (0.0500em)	48	19
+bar nav a	fourzerofourpixel	11px	400	15.95px (1.450)	0.55px (0.0500em)	0	0
+h1 hero	Helvetica	44px	700	36.96px (0.840)	-2.42px (-0.0550em)	372	111
+hero tagline	fourzerofourpixel	11px	400	15.95px (1.450)	0.88px (0.0800em)	372	17
+hero p	Helvetica	15px	400	21.75px (1.450)	normal (0)	284	65
+hero btn	fourzerofourpixel	12px	400	17.4px (1.450)	0.72px (0.0600em)	133	47
+play btn	fourzerofourpixel	10px	400	normal (normal)	0.6px (0.0600em)	48	28
+prompt lbl	fourzerofourpixel	10px	400	14.5px (1.450)	0.9px (0.0900em)	261	15
+prompt code	ui-monospace	14px	400	20.3px (1.450)	normal (0)	326	66
+prompt slot	ui-monospace	15.12px	700	21.924px (1.450)	-0.1512px (-0.0100em)	189	25
+prompt button	fourzerofourpixel	10px	400	normal (normal)	0.6px (0.0600em)	60	32
+stat b	Helvetica	30px	700	30px (1.000)	-1.5px (-0.0500em)	165	30
+stat em	Helvetica	12px	700	12px (1.000)	-0.12px (-0.0100em)	24	14
+stat span	fourzerofourpixel	10px	400	14.5px (1.450)	0.7px (0.0700em)	165	15
+section lab	fourzerofourpixel	11px	400	15.95px (1.450)	1.1px (0.1000em)	287	16
+h2	Helvetica	26px	700	25.48px (0.980)	-1.17px (-0.0450em)	372	76
+p.lead	Helvetica	18px	700	23.4px (1.300)	-0.36px (-0.0200em)	372	94
+p.g body	Helvetica	16px	400	23.2px (1.450)	normal (0)	372	116
+gal cap	fourzerofourpixel	9px	400	13.05px (1.450)	0.54px (0.0600em)	92	24
+gal cap b	fourzerofourpixel	9px	400	13.05px (1.450)	0.54px (0.0600em)	20	11
+step n	fourzerofourpixel	10px	400	14.5px (1.450)	normal (0)	12	12
+step h3	Helvetica	15px	700	21.75px (1.450)	-0.225px (-0.0150em)	379	22
+step p	Helvetica	13px	400	18.85px (1.450)	normal (0)	379	38
+step code	ui-monospace	12px	400	17.4px (1.450)	normal (0)	87	16
+spec k	fourzerofourpixel	10px	400	14.5px (1.450)	0.7px (0.0700em)	372	18
+spec v	Helvetica	15px	400	21.75px (1.450)	normal (0)	372	22
+spec v code	ui-monospace	13px	400	18.85px (1.450)	normal (0)	135	17
+prize pix	fourzerofourpixel	11px	400	15.95px (1.450)	0.66px (0.0600em)	23	13
+prize amt	Helvetica	34px	700	34px (1.000)	-1.87px (-0.0550em)	169	34
+prize amt em	Helvetica	11.56px	700	11.56px (1.000)	-1.87px (-0.1618em)	18	14
+prize p	Helvetica	13px	400	18.85px (1.450)	normal (0)	169	75
+tcell pix	fourzerofourpixel	11px	400	15.95px (1.450)	0.66px (0.0600em)	28	13
+tcell d	Helvetica	26px	700	37.7px (1.450)	-1.04px (-0.0400em)	173	38
+tcell p	Helvetica	13px	400	18.85px (1.450)	normal (0)	173	38
+faq summary	Helvetica	16px	700	23.2px (1.450)	-0.32px (-0.0200em)	372	23
+faq p	Helvetica	14.5px	400	21.025px (1.450)	normal (0)	340	42
+btn	fourzerofourpixel	12px	400	17.4px (1.450)	0.72px (0.0600em)	133	47
+footer a	fourzerofourpixel	11px	400	15.95px (1.450)	0.66px (0.0600em)	41	16
+footer pix	fourzerofourpixel	11px	400	15.95px (1.450)	0.66px (0.0600em)	47	16
+judging p.pix	fourzerofourpixel	11px	400	15.95px (1.450)	0.66px (0.0600em)	287	17
+
+===== 768 =====
+role	font	size	wt	lh	tracking	w	h
+bar mark	fourzerofourpixel	13px	400	18.85px (1.450)	0.65px (0.0500em)	48	19
+bar nav a	fourzerofourpixel	11px	400	15.95px (1.450)	0.55px (0.0500em)	18	16
+h1 hero	Helvetica	80.64px	700	67.7376px (0.840)	-4.4352px (-0.0550em)	728	203
+hero tagline	fourzerofourpixel	11px	400	15.95px (1.450)	0.88px (0.0800em)	728	17
+hero p	Helvetica	15px	400	21.75px (1.450)	normal (0)	284	65
+hero btn	fourzerofourpixel	12px	400	17.4px (1.450)	0.72px (0.0600em)	133	47
+play btn	fourzerofourpixel	10px	400	normal (normal)	0.6px (0.0600em)	48	28
+prompt lbl	fourzerofourpixel	10px	400	14.5px (1.450)	0.9px (0.0900em)	261	15
+prompt code	ui-monospace	14px	400	20.3px (1.450)	normal (0)	551	45
+prompt slot	ui-monospace	15.12px	700	21.924px (1.450)	-0.1512px (-0.0100em)	189	25
+prompt button	fourzerofourpixel	10px	400	normal (normal)	0.6px (0.0600em)	60	32
+stat b	Helvetica	30.72px	700	30.72px (1.000)	-1.536px (-0.0500em)	343	31
+stat em	Helvetica	12.288px	700	12.288px (1.000)	-0.12288px (-0.0100em)	25	14
+stat span	fourzerofourpixel	10px	400	14.5px (1.450)	0.7px (0.0700em)	343	15
+section lab	fourzerofourpixel	11px	400	15.95px (1.450)	1.1px (0.1000em)	287	16
+h2	Helvetica	30.72px	700	30.1056px (0.980)	-1.3824px (-0.0450em)	728	90
+p.lead	Helvetica	18px	700	23.4px (1.300)	-0.36px (-0.0200em)	581	47
+p.g body	Helvetica	16px	400	23.2px (1.450)	normal (0)	516	70
+gal cap	fourzerofourpixel	9px	400	13.05px (1.450)	0.54px (0.0600em)	92	24
+gal cap b	fourzerofourpixel	9px	400	13.05px (1.450)	0.54px (0.0600em)	20	11
+step n	fourzerofourpixel	10px	400	14.5px (1.450)	normal (0)	12	12
+step h3	Helvetica	15px	700	21.75px (1.450)	-0.225px (-0.0150em)	121	44
+step p	Helvetica	13px	400	18.85px (1.450)	normal (0)	121	112
+step code	ui-monospace	12px	400	17.4px (1.450)	normal (0)	87	16
+spec k	fourzerofourpixel	10px	400	14.5px (1.450)	0.7px (0.0700em)	145	22
+spec v	Helvetica	15px	400	21.75px (1.450)	normal (0)	517	22
+spec v code	ui-monospace	13px	400	18.85px (1.450)	normal (0)	135	17
+prize pix	fourzerofourpixel	11px	400	15.95px (1.450)	0.66px (0.0600em)	23	13
+prize amt	Helvetica	38.4px	700	38.4px (1.000)	-2.112px (-0.0550em)	155	38
+prize amt em	Helvetica	13.056px	700	13.056px (1.000)	-2.112px (-0.1618em)	20	15
+prize p	Helvetica	13px	400	18.85px (1.450)	normal (0)	155	75
+tcell pix	fourzerofourpixel	11px	400	15.95px (1.450)	0.66px (0.0600em)	28	13
+tcell d	Helvetica	26px	700	37.7px (1.450)	-1.04px (-0.0400em)	159	38
+tcell p	Helvetica	13px	400	18.85px (1.450)	normal (0)	159	38
+faq summary	Helvetica	16px	700	23.2px (1.450)	-0.32px (-0.0200em)	728	23
+faq p	Helvetica	14.5px	400	21.025px (1.450)	normal (0)	468	42
+btn	fourzerofourpixel	12px	400	17.4px (1.450)	0.72px (0.0600em)	133	47
+footer a	fourzerofourpixel	11px	400	15.95px (1.450)	0.66px (0.0600em)	41	16
+footer pix	fourzerofourpixel	11px	400	15.95px (1.450)	0.66px (0.0600em)	47	16
+judging p.pix	fourzerofourpixel	11px	400	15.95px (1.450)	0.66px (0.0600em)	287	17
+
+===== 1024 =====
+role	font	size	wt	lh	tracking	w	h
+bar mark	fourzerofourpixel	13px	400	18.85px (1.450)	0.65px (0.0500em)	48	19
+bar nav a	fourzerofourpixel	11px	400	15.95px (1.450)	0.55px (0.0500em)	18	16
+h1 hero	Helvetica	107.52px	700	90.3168px (0.840)	-5.9136px (-0.0550em)	984	271
+hero tagline	fourzerofourpixel	11px	400	15.95px (1.450)	0.88px (0.0800em)	984	17
+hero p	Helvetica	15px	400	21.75px (1.450)	normal (0)	284	65
+hero btn	fourzerofourpixel	12px	400	17.4px (1.450)	0.72px (0.0600em)	133	47
+play btn	fourzerofourpixel	10px	400	normal (normal)	0.6px (0.0600em)	48	28
+prompt lbl	fourzerofourpixel	10px	400	14.5px (1.450)	0.9px (0.0900em)	261	15
+prompt code	ui-monospace	17.408px	400	25.2416px (1.450)	normal (0)	807	55
+prompt slot	ui-monospace	18.8006px	700	27.2609px (1.450)	-0.188006px (-0.0100em)	233	30
+prompt button	fourzerofourpixel	10px	400	normal (normal)	0.6px (0.0600em)	60	32
+stat b	Helvetica	40.96px	700	40.96px (1.000)	-2.048px (-0.0500em)	164	41
+stat em	Helvetica	16.384px	700	16.384px (1.000)	-0.16384px (-0.0100em)	33	20
+stat span	fourzerofourpixel	10px	400	14.5px (1.450)	0.7px (0.0700em)	164	15
+section lab	fourzerofourpixel	11px	400	15.95px (1.450)	1.1px (0.1000em)	287	16
+h2	Helvetica	40.96px	700	40.1408px (0.980)	-1.8432px (-0.0450em)	468	120
+p.lead	Helvetica	18px	700	23.4px (1.300)	-0.36px (-0.0200em)	468	70
+p.g body	Helvetica	16px	400	23.2px (1.450)	normal (0)	468	93
+gal cap	fourzerofourpixel	9px	400	13.05px (1.450)	0.54px (0.0600em)	92	24
+gal cap b	fourzerofourpixel	9px	400	13.05px (1.450)	0.54px (0.0600em)	20	11
+step n	fourzerofourpixel	10px	400	14.5px (1.450)	normal (0)	12	12
+step h3	Helvetica	15px	700	21.75px (1.450)	-0.225px (-0.0150em)	172	22
+step p	Helvetica	13px	400	18.85px (1.450)	normal (0)	172	75
+step code	ui-monospace	12px	400	17.4px (1.450)	normal (0)	87	16
+spec k	fourzerofourpixel	10px	400	14.5px (1.450)	0.7px (0.0700em)	145	44
+spec v	Helvetica	15px	400	21.75px (1.450)	normal (0)	303	44
+spec v code	ui-monospace	13px	400	18.85px (1.450)	normal (0)	135	17
+prize pix	fourzerofourpixel	11px	400	15.95px (1.450)	0.66px (0.0600em)	23	13
+prize amt	Helvetica	51.2px	700	51.2px (1.000)	-2.816px (-0.0550em)	219	51
+prize amt em	Helvetica	17.408px	700	17.408px (1.000)	-2.816px (-0.1618em)	27	20
+prize p	Helvetica	13px	400	18.85px (1.450)	normal (0)	219	57
+tcell pix	fourzerofourpixel	11px	400	15.95px (1.450)	0.66px (0.0600em)	28	13
+tcell d	Helvetica	26px	700	37.7px (1.450)	-1.04px (-0.0400em)	223	38
+tcell p	Helvetica	13px	400	18.85px (1.450)	normal (0)	223	19
+faq summary	Helvetica	16px	700	23.2px (1.450)	-0.32px (-0.0200em)	984	23
+faq p	Helvetica	14.5px	400	21.025px (1.450)	normal (0)	468	42
+btn	fourzerofourpixel	12px	400	17.4px (1.450)	0.72px (0.0600em)	133	47
+footer a	fourzerofourpixel	11px	400	15.95px (1.450)	0.66px (0.0600em)	41	16
+footer pix	fourzerofourpixel	11px	400	15.95px (1.450)	0.66px (0.0600em)	47	16
+judging p.pix	fourzerofourpixel	11px	400	15.95px (1.450)	0.66px (0.0600em)	287	17
+
+===== 1280 =====
+role	font	size	wt	lh	tracking	w	h
+bar mark	fourzerofourpixel	13px	400	18.85px (1.450)	0.65px (0.0500em)	48	19
+bar nav a	fourzerofourpixel	11px	400	15.95px (1.450)	0.55px (0.0500em)	18	16
+h1 hero	Helvetica	134.4px	700	112.896px (0.840)	-7.392px (-0.0550em)	1240	339
+hero tagline	fourzerofourpixel	11px	400	15.95px (1.450)	0.88px (0.0800em)	1240	17
+hero p	Helvetica	15px	400	21.75px (1.450)	normal (0)	284	65
+hero btn	fourzerofourpixel	12px	400	17.4px (1.450)	0.72px (0.0600em)	133	47
+play btn	fourzerofourpixel	10px	400	normal (normal)	0.6px (0.0600em)	48	28
+prompt lbl	fourzerofourpixel	10px	400	14.5px (1.450)	0.9px (0.0900em)	261	15
+prompt code	ui-monospace	20px	400	29px (1.450)	normal (0)	1063	63
+prompt slot	ui-monospace	21.6px	700	31.32px (1.450)	-0.216px (-0.0100em)	266	34
+prompt button	fourzerofourpixel	10px	400	normal (normal)	0.6px (0.0600em)	60	32
+stat b	Helvetica	46px	700	46px (1.000)	-2.3px (-0.0500em)	215	46
+stat em	Helvetica	18.4px	700	18.4px (1.000)	-0.184px (-0.0100em)	37	21
+stat span	fourzerofourpixel	10px	400	14.5px (1.450)	0.7px (0.0700em)	215	15
+section lab	fourzerofourpixel	11px	400	15.95px (1.450)	1.1px (0.1000em)	287	16
+h2	Helvetica	44px	700	43.12px (0.980)	-1.98px (-0.0450em)	596	129
+p.lead	Helvetica	18px	700	23.4px (1.300)	-0.36px (-0.0200em)	581	47
+p.g body	Helvetica	16px	400	23.2px (1.450)	normal (0)	516	70
+gal cap	fourzerofourpixel	9px	400	13.05px (1.450)	0.54px (0.0600em)	92	24
+gal cap b	fourzerofourpixel	9px	400	13.05px (1.450)	0.54px (0.0600em)	20	11
+step n	fourzerofourpixel	10px	400	14.5px (1.450)	normal (0)	12	12
+step h3	Helvetica	15px	700	21.75px (1.450)	-0.225px (-0.0150em)	223	22
+step p	Helvetica	13px	400	18.85px (1.450)	normal (0)	223	57
+step code	ui-monospace	12px	400	17.4px (1.450)	normal (0)	87	16
+spec k	fourzerofourpixel	10px	400	14.5px (1.450)	0.7px (0.0700em)	145	22
+spec v	Helvetica	15px	400	21.75px (1.450)	normal (0)	431	22
+spec v code	ui-monospace	13px	400	18.85px (1.450)	normal (0)	135	17
+prize pix	fourzerofourpixel	11px	400	15.95px (1.450)	0.66px (0.0600em)	23	13
+prize amt	Helvetica	58px	700	58px (1.000)	-3.19px (-0.0550em)	283	58
+prize amt em	Helvetica	19.72px	700	19.72px (1.000)	-3.19px (-0.1618em)	31	23
+prize p	Helvetica	13px	400	18.85px (1.450)	normal (0)	283	38
+tcell pix	fourzerofourpixel	11px	400	15.95px (1.450)	0.66px (0.0600em)	28	13
+tcell d	Helvetica	26px	700	37.7px (1.450)	-1.04px (-0.0400em)	287	38
+tcell p	Helvetica	13px	400	18.85px (1.450)	normal (0)	287	19
+faq summary	Helvetica	16px	700	23.2px (1.450)	-0.32px (-0.0200em)	1240	23
+faq p	Helvetica	14.5px	400	21.025px (1.450)	normal (0)	468	42
+btn	fourzerofourpixel	12px	400	17.4px (1.450)	0.72px (0.0600em)	133	47
+footer a	fourzerofourpixel	11px	400	15.95px (1.450)	0.66px (0.0600em)	41	16
+footer pix	fourzerofourpixel	11px	400	15.95px (1.450)	0.66px (0.0600em)	47	16
+judging p.pix	fourzerofourpixel	11px	400	15.95px (1.450)	0.66px (0.0600em)	287	17
+
+===== 1440 =====
+role	font	size	wt	lh	tracking	w	h
+bar mark	fourzerofourpixel	13px	400	18.85px (1.450)	0.65px (0.0500em)	48	19
+bar nav a	fourzerofourpixel	11px	400	15.95px (1.450)	0.55px (0.0500em)	18	16
+h1 hero	Helvetica	140px	700	117.6px (0.840)	-7.7px (-0.0550em)	1280	353
+hero tagline	fourzerofourpixel	11px	400	15.95px (1.450)	0.88px (0.0800em)	1280	17
+hero p	Helvetica	15px	400	21.75px (1.450)	normal (0)	284	65
+hero btn	fourzerofourpixel	12px	400	17.4px (1.450)	0.72px (0.0600em)	133	47
+play btn	fourzerofourpixel	10px	400	normal (normal)	0.6px (0.0600em)	48	28
+prompt lbl	fourzerofourpixel	10px	400	14.5px (1.450)	0.9px (0.0900em)	261	15
+prompt code	ui-monospace	20px	400	29px (1.450)	normal (0)	1063	63
+prompt slot	ui-monospace	21.6px	700	31.32px (1.450)	-0.216px (-0.0100em)	266	34
+prompt button	fourzerofourpixel	10px	400	normal (normal)	0.6px (0.0600em)	60	32
+stat b	Helvetica	46px	700	46px (1.000)	-2.3px (-0.0500em)	247	46
+stat em	Helvetica	18.4px	700	18.4px (1.000)	-0.184px (-0.0100em)	37	21
+stat span	fourzerofourpixel	10px	400	14.5px (1.450)	0.7px (0.0700em)	247	15
+section lab	fourzerofourpixel	11px	400	15.95px (1.450)	1.1px (0.1000em)	287	16
+h2	Helvetica	44px	700	43.12px (0.980)	-1.98px (-0.0450em)	596	129
+p.lead	Helvetica	18px	700	23.4px (1.300)	-0.36px (-0.0200em)	581	47
+p.g body	Helvetica	16px	400	23.2px (1.450)	normal (0)	516	70
+gal cap	fourzerofourpixel	9px	400	13.05px (1.450)	0.54px (0.0600em)	92	24
+gal cap b	fourzerofourpixel	9px	400	13.05px (1.450)	0.54px (0.0600em)	20	11
+step n	fourzerofourpixel	10px	400	14.5px (1.450)	normal (0)	12	12
+step h3	Helvetica	15px	700	21.75px (1.450)	-0.225px (-0.0150em)	255	22
+step p	Helvetica	13px	400	18.85px (1.450)	normal (0)	255	57
+step code	ui-monospace	12px	400	17.4px (1.450)	normal (0)	87	16
+spec k	fourzerofourpixel	10px	400	14.5px (1.450)	0.7px (0.0700em)	145	22
+spec v	Helvetica	15px	400	21.75px (1.450)	normal (0)	431	22
+spec v code	ui-monospace	13px	400	18.85px (1.450)	normal (0)	135	17
+prize pix	fourzerofourpixel	11px	400	15.95px (1.450)	0.66px (0.0600em)	23	13
+prize amt	Helvetica	58px	700	58px (1.000)	-3.19px (-0.0550em)	323	58
+prize amt em	Helvetica	19.72px	700	19.72px (1.000)	-3.19px (-0.1618em)	31	23
+prize p	Helvetica	13px	400	18.85px (1.450)	normal (0)	323	38
+tcell pix	fourzerofourpixel	11px	400	15.95px (1.450)	0.66px (0.0600em)	28	13
+tcell d	Helvetica	26px	700	37.7px (1.450)	-1.04px (-0.0400em)	327	38
+tcell p	Helvetica	13px	400	18.85px (1.450)	normal (0)	327	19
+faq summary	Helvetica	16px	700	23.2px (1.450)	-0.32px (-0.0200em)	1240	23
+faq p	Helvetica	14.5px	400	21.025px (1.450)	normal (0)	468	42
+btn	fourzerofourpixel	12px	400	17.4px (1.450)	0.72px (0.0600em)	133	47
+footer a	fourzerofourpixel	11px	400	15.95px (1.450)	0.66px (0.0600em)	41	16
+footer pix	fourzerofourpixel	11px	400	15.95px (1.450)	0.66px (0.0600em)	47	16
+judging p.pix	fourzerofourpixel	11px	400	15.95px (1.450)	0.66px (0.0600em)	287	17
+
+===== 1440_entries =====
+role	font	size	wt	lh	tracking	w	h
+e h1	Helvetica	96px	700	80.64px (0.840)	-5.28px (-0.0550em)	1240	81
+e lab	fourzerofourpixel	11px	400	15.95px (1.450)	1.1px (0.1000em)	287	16
+e g	Helvetica	16px	400	23.2px (1.450)	normal (0)	516	46
+filters lbl	fourzerofourpixel	10px	400	14.5px (1.450)	0.7px (0.0700em)	22	15
+chip	fourzerofourpixel	10px	400	normal (normal)	0.5px (0.0500em)	33	28
+card h3	Helvetica	19px	700	19px (1.000)	-0.665px (-0.0350em)	382	19
+card by	fourzerofourpixel	10px	400	14.5px (1.450)	0.5px (0.0500em)	382	15
+card found	Helvetica	13.5px	400	18.9px (1.400)	normal (0)	382	71
+found b	fourzerofourpixel	9px	400	12.6px (1.400)	0.63px (0.0700em)	382	13
+badge	fourzerofourpixel	9px	400	13.05px (1.450)	0.45px (0.0500em)	53	21
+cact a	fourzerofourpixel	10px	400	14.5px (1.450)	0.7px (0.0700em)	207	35
+tag	fourzerofourpixel	9px	400	13.05px (1.450)	0.54px (0.0600em)	126	21
+empty	fourzerofourpixel	11px	400	15.95px (1.450)	0.77px (0.0700em)	0	0
+
+===== 1280_entries =====
+role	font	size	wt	lh	tracking	w	h
+e h1	Helvetica	96px	700	80.64px (0.840)	-5.28px (-0.0550em)	1240	81
+e lab	fourzerofourpixel	11px	400	15.95px (1.450)	1.1px (0.1000em)	287	16
+e g	Helvetica	16px	400	23.2px (1.450)	normal (0)	516	46
+filters lbl	fourzerofourpixel	10px	400	14.5px (1.450)	0.7px (0.0700em)	22	15
+chip	fourzerofourpixel	10px	400	normal (normal)	0.5px (0.0500em)	33	28
+card h3	Helvetica	19px	700	19px (1.000)	-0.665px (-0.0350em)	382	19
+card by	fourzerofourpixel	10px	400	14.5px (1.450)	0.5px (0.0500em)	382	15
+card found	Helvetica	13.5px	400	18.9px (1.400)	normal (0)	382	71
+found b	fourzerofourpixel	9px	400	12.6px (1.400)	0.63px (0.0700em)	382	13
+badge	fourzerofourpixel	9px	400	13.05px (1.450)	0.45px (0.0500em)	53	21
+cact a	fourzerofourpixel	10px	400	14.5px (1.450)	0.7px (0.0700em)	207	35
+tag	fourzerofourpixel	9px	400	13.05px (1.450)	0.54px (0.0600em)	126	21
+empty	fourzerofourpixel	11px	400	15.95px (1.450)	0.77px (0.0700em)	0	0
+
+===== 1024_entries =====
+role	font	size	wt	lh	tracking	w	h
+e h1	Helvetica	81.92px	700	68.8128px (0.840)	-4.5056px (-0.0550em)	984	69
+e lab	fourzerofourpixel	11px	400	15.95px (1.450)	1.1px (0.1000em)	287	16
+e g	Helvetica	16px	400	23.2px (1.450)	normal (0)	516	46
+filters lbl	fourzerofourpixel	10px	400	14.5px (1.450)	0.7px (0.0700em)	22	15
+chip	fourzerofourpixel	10px	400	normal (normal)	0.5px (0.0500em)	33	28
+card h3	Helvetica	19px	700	19px (1.000)	-0.665px (-0.0350em)	461	19
+card by	fourzerofourpixel	10px	400	14.5px (1.450)	0.5px (0.0500em)	461	15
+card found	Helvetica	13.5px	400	18.9px (1.400)	normal (0)	461	52
+found b	fourzerofourpixel	9px	400	12.6px (1.400)	0.63px (0.0700em)	461	13
+badge	fourzerofourpixel	9px	400	13.05px (1.450)	0.45px (0.0500em)	53	21
+cact a	fourzerofourpixel	10px	400	14.5px (1.450)	0.7px (0.0700em)	246	35
+tag	fourzerofourpixel	9px	400	13.05px (1.450)	0.54px (0.0600em)	126	21
+empty	fourzerofourpixel	11px	400	15.95px (1.450)	0.77px (0.0700em)	0	0
+
+===== 768_entries =====
+role	font	size	wt	lh	tracking	w	h
+e h1	Helvetica	61.44px	700	51.6096px (0.840)	-3.3792px (-0.0550em)	728	52
+e lab	fourzerofourpixel	11px	400	15.95px (1.450)	1.1px (0.1000em)	287	16
+e g	Helvetica	16px	400	23.2px (1.450)	normal (0)	516	46
+filters lbl	fourzerofourpixel	10px	400	14.5px (1.450)	0.7px (0.0700em)	22	15
+chip	fourzerofourpixel	10px	400	normal (normal)	0.5px (0.0500em)	33	28
+card h3	Helvetica	19px	700	19px (1.000)	-0.665px (-0.0350em)	333	19
+card by	fourzerofourpixel	10px	400	14.5px (1.450)	0.5px (0.0500em)	333	15
+card found	Helvetica	13.5px	400	18.9px (1.400)	normal (0)	333	71
+found b	fourzerofourpixel	9px	400	12.6px (1.400)	0.63px (0.0700em)	333	13
+badge	fourzerofourpixel	9px	400	13.05px (1.450)	0.45px (0.0500em)	53	21
+cact a	fourzerofourpixel	10px	400	14.5px (1.450)	0.7px (0.0700em)	182	35
+tag	fourzerofourpixel	9px	400	13.05px (1.450)	0.54px (0.0600em)	126	21
+empty	fourzerofourpixel	11px	400	15.95px (1.450)	0.77px (0.0700em)	0	0
+
+===== 412_entries =====
+role	font	size	wt	lh	tracking	w	h
+e h1	Helvetica	40px	700	33.6px (0.840)	-2.2px (-0.0550em)	372	34
+e lab	fourzerofourpixel	11px	400	15.95px (1.450)	1.1px (0.1000em)	287	16
+e g	Helvetica	16px	400	23.2px (1.450)	normal (0)	372	70
+filters lbl	fourzerofourpixel	10px	400	14.5px (1.450)	0.7px (0.0700em)	22	15
+chip	fourzerofourpixel	10px	400	normal (normal)	0.5px (0.0500em)	33	28
+card h3	Helvetica	19px	700	19px (1.000)	-0.665px (-0.0350em)	340	19
+card by	fourzerofourpixel	10px	400	14.5px (1.450)	0.5px (0.0500em)	340	15
+card found	Helvetica	13.5px	400	18.9px (1.400)	normal (0)	340	71
+found b	fourzerofourpixel	9px	400	12.6px (1.400)	0.63px (0.0700em)	340	13
+badge	fourzerofourpixel	9px	400	13.05px (1.450)	0.45px (0.0500em)	53	21
+cact a	fourzerofourpixel	10px	400	14.5px (1.450)	0.7px (0.0700em)	186	35
+tag	fourzerofourpixel	9px	400	13.05px (1.450)	0.54px (0.0600em)	126	21
+empty	fourzerofourpixel	11px	400	15.95px (1.450)	0.77px (0.0700em)	0	0

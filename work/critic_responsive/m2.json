@@ -1,0 +1,6194 @@
+{
+ "320": {
+  "panelHeights": {
+   "a coastal kart racer": 171.8,
+   "a night market chase": 171.8,
+   "a lighthouse platformer": 192.1,
+   "a submarine salvage sim": 192.1,
+   "a rooftop parkour run": 171.8,
+   "a desert train heist": 171.8,
+   "a haunted arcade": 171.8,
+   "a game nobody has made yet": 192.1
+  },
+  "panelSpread": 20.299999999999983,
+  "h1lines": [
+   [
+    "One line.",
+    198.3
+   ],
+   [
+    "Two weeks.",
+    264.2
+   ],
+   [
+    "Ten TAO.",
+    182.7
+   ]
+  ],
+  "h1w": [
+   20,
+   503.5,
+   280,
+   110.9
+  ],
+  "codeLines": 4,
+  "codeBox": [
+   43,
+   851.5,
+   260,
+   85.8
+  ],
+  "acts": [
+   163.9,
+   949.3,
+   113.1,
+   32
+  ],
+  "innerPad": "18px 20px",
+  "steps": [
+   {
+    "b": [
+     0,
+     3015.3,
+     320,
+     121.9
+    ],
+    "t": "(01)Clone 404's 3JS harnes"
+   },
+   {
+    "b": [
+     0,
+     3137.2,
+     320,
+     122.3
+    ],
+    "t": "(02)Sign up for AtlasA fix"
+   },
+   {
+    "b": [
+     0,
+     3259.5,
+     320,
+     121.9
+    ],
+    "t": "(03)Give your agent the li"
+   },
+   {
+    "b": [
+     0,
+     3381.4,
+     320,
+     121.9
+    ],
+    "t": "(04)Pass the gateDesktop a"
+   },
+   {
+    "b": [
+     0,
+     3503.3,
+     320,
+     122.6
+    ],
+    "t": "(05)SubmitA pull request w"
+   }
+  ],
+  "prizes": [
+   {
+    "b": [
+     0,
+     5980.4,
+     160,
+     178.3
+    ],
+    "t": "first5TAOAnnounced on stag"
+   },
+   {
+    "b": [
+     160,
+     5980.4,
+     160,
+     178.3
+    ],
+    "t": "second3TAOShowcase slot an"
+   },
+   {
+    "b": [
+     0,
+     6158.7,
+     160,
+     159.5
+    ],
+    "t": "third1.5TAOShowcase slot a"
+   },
+   {
+    "b": [
+     160,
+     6158.7,
+     160,
+     159.5
+    ],
+    "t": "community0.5TAOVoted by ev"
+   }
+  ],
+  "tcells": [
+   {
+    "b": [
+     0,
+     6667.8,
+     160,
+     156.2
+    ],
+    "t": "opens11 SepRecipe, harness"
+   },
+   {
+    "b": [
+     160,
+     6667.8,
+     160,
+     156.2
+    ],
+    "t": "office hours18 SepQuestion"
+   },
+   {
+    "b": [
+     0,
+     6824,
+     160,
+     156.5
+    ],
+    "t": "closes25 Sep23:59 UTC, gat"
+   },
+   {
+    "b": [
+     160,
+     6824,
+     160,
+     156.5
+    ],
+    "t": "winners28 SepOn stage at t"
+   }
+  ],
+  "shotcells": [
+   {
+    "b": [
+     0,
+     1779.2,
+     320,
+     180.4
+    ],
+    "t": "Drive / kart racer"
+   },
+   {
+    "b": [
+     0,
+     1959.7,
+     320,
+     180.4
+    ],
+    "t": "Rust 17 / shooter"
+   },
+   {
+    "b": [
+     0,
+     2140.1,
+     320,
+     180.4
+    ],
+    "t": "Costa Verde / driver"
+   },
+   {
+    "b": [
+     0,
+     2320.5,
+     320,
+     180.4
+    ],
+    "t": "Drive / seafront"
+   },
+   {
+    "b": [
+     0,
+     2501,
+     320,
+     180.4
+    ],
+    "t": "Warehouse / FPS"
+   },
+   {
+    "b": [
+     0,
+     2681.4,
+     320,
+     180.4
+    ],
+    "t": "Costa Verde / quay"
+   }
+  ],
+  "cards": [
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "reference build, not eligi"
+   },
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "screenshotexample entryExa"
+   },
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "screenshotexample entryExa"
+   }
+  ],
+  "tapSmall": [
+   {
+    "t": "404—GEN",
+    "h": 18.8,
+    "w": 48.1
+   },
+   {
+    "t": "entries",
+    "h": 15.9,
+    "w": 33
+   },
+   {
+    "t": "pause",
+    "h": 28,
+    "w": 47.5
+   },
+   {
+    "t": "another",
+    "h": 32,
+    "w": 59.7
+   },
+   {
+    "t": "copy",
+    "h": 32,
+    "w": 45.4
+   },
+   {
+    "t": "Do I need a GPU?",
+    "h": 23.2,
+    "w": 280
+   },
+   {
+    "t": "Do I have to use C",
+    "h": 23.2,
+    "w": 280
+   },
+   {
+    "t": "Can I use my own a",
+    "h": 23.2,
+    "w": 280
+   },
+   {
+    "t": "How do I get paid?",
+    "h": 23.2,
+    "w": 280
+   },
+   {
+    "t": "Where do I ask for",
+    "h": 23.2,
+    "w": 280
+   },
+   {
+    "t": "404—GEN",
+    "h": 15.9,
+    "w": 41.5
+   },
+   {
+    "t": "404.xyz",
+    "h": 15.9,
+    "w": 32.5
+   },
+   {
+    "t": "the recipe",
+    "h": 15.9,
+    "w": 42.4
+   }
+  ],
+  "statsBottom": [
+   0,
+   1033.3,
+   320,
+   278.5
+  ],
+  "lastStatBottom": [
+   0,
+   1218.3,
+   160,
+   92.5
+  ],
+  "galBottom": [
+   0,
+   1778.2,
+   320,
+   1083.6
+  ],
+  "lastShot": [
+   0,
+   2681.4,
+   320,
+   180.4
+  ],
+  "sectBottom": [
+   0,
+   1311.8,
+   320,
+   1591
+  ],
+  "specRows": [
+   {
+    "b": [
+     20,
+     3982.2,
+     280,
+     86.1
+    ],
+    "t": "readywindow.__READY__ with"
+   },
+   {
+    "b": [
+     20,
+     4068.3,
+     280,
+     86
+    ],
+    "t": "startsFrom a real click an"
+   }
+  ],
+  "specK": [
+   {
+    "b": [
+     20,
+     3993.2,
+     280,
+     17.5
+    ],
+    "t": "ready"
+   },
+   {
+    "b": [
+     20,
+     4079.3,
+     280,
+     17.5
+    ],
+    "t": "starts"
+   }
+  ],
+  "barNav": [
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "how"
+   },
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "gate"
+   },
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "prizes"
+   },
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "dates"
+   },
+   {
+    "b": [
+     267,
+     15,
+     33,
+     15.9
+    ],
+    "t": "entries"
+   }
+  ],
+  "play": [
+   252.5,
+   56,
+   47.5,
+   28
+  ],
+  "heroBtns": [
+   {
+    "b": [
+     20,
+     705.6,
+     133.5,
+     47.4
+    ],
+    "t": "Sign up and build"
+   },
+   {
+    "b": [
+     163.5,
+     705.6,
+     78.8,
+     47.4
+    ],
+    "t": "Entries"
+   }
+  ],
+  "heroP": [
+   20,
+   628.4,
+   280,
+   65.3
+  ],
+  "lead": [
+   20,
+   1498.2,
+   280,
+   117
+  ],
+  "faq": [
+   {
+    "b": [
+     20,
+     7064.4,
+     280,
+     23.2
+    ],
+    "t": "Do I need a GPU?"
+   },
+   {
+    "b": [
+     20,
+     7183.6,
+     280,
+     23.2
+    ],
+    "t": "Do I have to use Claude?"
+   },
+   {
+    "b": [
+     20,
+     7231.8,
+     280,
+     23.2
+    ],
+    "t": "Can I use my own art?"
+   }
+  ]
+ },
+ "360": {
+  "panelHeights": {
+   "a coastal kart racer": 171.8,
+   "a night market chase": 171.8,
+   "a lighthouse platformer": 171.8,
+   "a submarine salvage sim": 171.8,
+   "a rooftop parkour run": 171.8,
+   "a desert train heist": 171.8,
+   "a haunted arcade": 171.8,
+   "a game nobody has made yet": 171.8
+  },
+  "panelSpread": 0,
+  "h1lines": [
+   [
+    "One line.",
+    198.3
+   ],
+   [
+    "Two weeks.",
+    264.2
+   ],
+   [
+    "Ten TAO.",
+    182.7
+   ]
+  ],
+  "h1w": [
+   20,
+   503.5,
+   320,
+   110.9
+  ],
+  "codeLines": 4,
+  "codeBox": [
+   43,
+   851.5,
+   274,
+   85.8
+  ],
+  "acts": [
+   203.9,
+   949.3,
+   113.1,
+   32
+  ],
+  "innerPad": "18px 20px",
+  "steps": [
+   {
+    "b": [
+     0,
+     3103.7,
+     360,
+     121.9
+    ],
+    "t": "(01)Clone 404's 3JS harnes"
+   },
+   {
+    "b": [
+     0,
+     3225.6,
+     360,
+     122.3
+    ],
+    "t": "(02)Sign up for AtlasA fix"
+   },
+   {
+    "b": [
+     0,
+     3347.9,
+     360,
+     121.9
+    ],
+    "t": "(03)Give your agent the li"
+   },
+   {
+    "b": [
+     0,
+     3469.8,
+     360,
+     121.9
+    ],
+    "t": "(04)Pass the gateDesktop a"
+   },
+   {
+    "b": [
+     0,
+     3591.8,
+     360,
+     122.6
+    ],
+    "t": "(05)SubmitA pull request w"
+   }
+  ],
+  "prizes": [
+   {
+    "b": [
+     0,
+     5954.9,
+     180,
+     178.3
+    ],
+    "t": "first5TAOAnnounced on stag"
+   },
+   {
+    "b": [
+     180,
+     5954.9,
+     180,
+     178.3
+    ],
+    "t": "second3TAOShowcase slot an"
+   },
+   {
+    "b": [
+     0,
+     6133.2,
+     180,
+     140.6
+    ],
+    "t": "third1.5TAOShowcase slot a"
+   },
+   {
+    "b": [
+     180,
+     6133.2,
+     180,
+     140.6
+    ],
+    "t": "community0.5TAOVoted by ev"
+   }
+  ],
+  "tcells": [
+   {
+    "b": [
+     0,
+     6601.7,
+     180,
+     156.2
+    ],
+    "t": "opens11 SepRecipe, harness"
+   },
+   {
+    "b": [
+     180,
+     6601.7,
+     180,
+     156.2
+    ],
+    "t": "office hours18 SepQuestion"
+   },
+   {
+    "b": [
+     0,
+     6757.9,
+     180,
+     137.6
+    ],
+    "t": "closes25 Sep23:59 UTC, gat"
+   },
+   {
+    "b": [
+     180,
+     6757.9,
+     180,
+     137.6
+    ],
+    "t": "winners28 SepOn stage at t"
+   }
+  ],
+  "shotcells": [
+   {
+    "b": [
+     0,
+     1732.7,
+     360,
+     202.9
+    ],
+    "t": "Drive / kart racer"
+   },
+   {
+    "b": [
+     0,
+     1935.6,
+     360,
+     202.9
+    ],
+    "t": "Rust 17 / shooter"
+   },
+   {
+    "b": [
+     0,
+     2138.5,
+     360,
+     202.9
+    ],
+    "t": "Costa Verde / driver"
+   },
+   {
+    "b": [
+     0,
+     2341.5,
+     360,
+     202.9
+    ],
+    "t": "Drive / seafront"
+   },
+   {
+    "b": [
+     0,
+     2544.4,
+     360,
+     202.9
+    ],
+    "t": "Warehouse / FPS"
+   },
+   {
+    "b": [
+     0,
+     2747.3,
+     360,
+     202.9
+    ],
+    "t": "Costa Verde / quay"
+   }
+  ],
+  "cards": [
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "reference build, not eligi"
+   },
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "screenshotexample entryExa"
+   },
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "screenshotexample entryExa"
+   }
+  ],
+  "tapSmall": [
+   {
+    "t": "404—GEN",
+    "h": 18.8,
+    "w": 48.1
+   },
+   {
+    "t": "entries",
+    "h": 15.9,
+    "w": 33
+   },
+   {
+    "t": "pause",
+    "h": 28,
+    "w": 47.5
+   },
+   {
+    "t": "another",
+    "h": 32,
+    "w": 59.7
+   },
+   {
+    "t": "copy",
+    "h": 32,
+    "w": 45.4
+   },
+   {
+    "t": "Do I need a GPU?",
+    "h": 23.2,
+    "w": 320
+   },
+   {
+    "t": "Do I have to use C",
+    "h": 23.2,
+    "w": 320
+   },
+   {
+    "t": "Can I use my own a",
+    "h": 23.2,
+    "w": 320
+   },
+   {
+    "t": "How do I get paid?",
+    "h": 23.2,
+    "w": 320
+   },
+   {
+    "t": "Where do I ask for",
+    "h": 23.2,
+    "w": 320
+   },
+   {
+    "t": "404—GEN",
+    "h": 15.9,
+    "w": 41.5
+   },
+   {
+    "t": "404.xyz",
+    "h": 15.9,
+    "w": 32.5
+   },
+   {
+    "t": "the recipe",
+    "h": 15.9,
+    "w": 42.4
+   }
+  ],
+  "statsBottom": [
+   0,
+   1033.3,
+   360,
+   278.5
+  ],
+  "lastStatBottom": [
+   0,
+   1218.3,
+   180,
+   92.5
+  ],
+  "galBottom": [
+   0,
+   1731.7,
+   360,
+   1218.6
+  ],
+  "lastShot": [
+   0,
+   2747.3,
+   360,
+   202.9
+  ],
+  "sectBottom": [
+   0,
+   1311.8,
+   360,
+   1679.5
+  ],
+  "specRows": [
+   {
+    "b": [
+     20,
+     4045.2,
+     320,
+     64.3
+    ],
+    "t": "readywindow.__READY__ with"
+   },
+   {
+    "b": [
+     20,
+     4109.5,
+     320,
+     86
+    ],
+    "t": "startsFrom a real click an"
+   }
+  ],
+  "specK": [
+   {
+    "b": [
+     20,
+     4056.2,
+     320,
+     17.5
+    ],
+    "t": "ready"
+   },
+   {
+    "b": [
+     20,
+     4120.5,
+     320,
+     17.5
+    ],
+    "t": "starts"
+   }
+  ],
+  "barNav": [
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "how"
+   },
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "gate"
+   },
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "prizes"
+   },
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "dates"
+   },
+   {
+    "b": [
+     307,
+     15,
+     33,
+     15.9
+    ],
+    "t": "entries"
+   }
+  ],
+  "play": [
+   292.5,
+   56,
+   47.5,
+   28
+  ],
+  "heroBtns": [
+   {
+    "b": [
+     20,
+     705.6,
+     133.5,
+     47.4
+    ],
+    "t": "Sign up and build"
+   },
+   {
+    "b": [
+     163.5,
+     705.6,
+     78.8,
+     47.4
+    ],
+    "t": "Entries"
+   }
+  ],
+  "heroP": [
+   20,
+   628.4,
+   283.6,
+   65.3
+  ],
+  "lead": [
+   20,
+   1498.2,
+   320,
+   93.6
+  ],
+  "faq": [
+   {
+    "b": [
+     20,
+     6979.5,
+     320,
+     23.2
+    ],
+    "t": "Do I need a GPU?"
+   },
+   {
+    "b": [
+     20,
+     7098.7,
+     320,
+     23.2
+    ],
+    "t": "Do I have to use Claude?"
+   },
+   {
+    "b": [
+     20,
+     7146.9,
+     320,
+     23.2
+    ],
+    "t": "Can I use my own art?"
+   }
+  ]
+ },
+ "375": {
+  "panelHeights": {
+   "a coastal kart racer": 171.8,
+   "a night market chase": 171.8,
+   "a lighthouse platformer": 171.8,
+   "a submarine salvage sim": 171.8,
+   "a rooftop parkour run": 171.8,
+   "a desert train heist": 171.8,
+   "a haunted arcade": 151.5,
+   "a game nobody has made yet": 171.8
+  },
+  "panelSpread": 20.30000000000001,
+  "h1lines": [
+   [
+    "One line.",
+    198.3
+   ],
+   [
+    "Two weeks.",
+    264.2
+   ],
+   [
+    "Ten TAO.",
+    182.7
+   ]
+  ],
+  "h1w": [
+   20,
+   503.5,
+   335,
+   110.9
+  ],
+  "codeLines": 4,
+  "codeBox": [
+   43,
+   851.5,
+   289,
+   85.8
+  ],
+  "acts": [
+   218.9,
+   949.3,
+   113.1,
+   32
+  ],
+  "innerPad": "18px 20px",
+  "steps": [
+   {
+    "b": [
+     0,
+     3154.3,
+     375,
+     121.9
+    ],
+    "t": "(01)Clone 404's 3JS harnes"
+   },
+   {
+    "b": [
+     0,
+     3276.3,
+     375,
+     122.3
+    ],
+    "t": "(02)Sign up for AtlasA fix"
+   },
+   {
+    "b": [
+     0,
+     3398.5,
+     375,
+     121.9
+    ],
+    "t": "(03)Give your agent the li"
+   },
+   {
+    "b": [
+     0,
+     3520.5,
+     375,
+     121.9
+    ],
+    "t": "(04)Pass the gateDesktop a"
+   },
+   {
+    "b": [
+     0,
+     3642.4,
+     375,
+     122.6
+    ],
+    "t": "(05)SubmitA pull request w"
+   }
+  ],
+  "prizes": [
+   {
+    "b": [
+     0,
+     5982.3,
+     187.5,
+     178.3
+    ],
+    "t": "first5TAOAnnounced on stag"
+   },
+   {
+    "b": [
+     187.5,
+     5982.3,
+     187.5,
+     178.3
+    ],
+    "t": "second3TAOShowcase slot an"
+   },
+   {
+    "b": [
+     0,
+     6160.6,
+     187.5,
+     140.6
+    ],
+    "t": "third1.5TAOShowcase slot a"
+   },
+   {
+    "b": [
+     187.5,
+     6160.6,
+     187.5,
+     140.6
+    ],
+    "t": "community0.5TAOVoted by ev"
+   }
+  ],
+  "tcells": [
+   {
+    "b": [
+     0,
+     6607.4,
+     187.5,
+     137.3
+    ],
+    "t": "opens11 SepRecipe, harness"
+   },
+   {
+    "b": [
+     187.5,
+     6607.4,
+     187.5,
+     137.3
+    ],
+    "t": "office hours18 SepQuestion"
+   },
+   {
+    "b": [
+     0,
+     6744.7,
+     187.5,
+     137.6
+    ],
+    "t": "closes25 Sep23:59 UTC, gat"
+   },
+   {
+    "b": [
+     187.5,
+     6744.7,
+     187.5,
+     137.6
+    ],
+    "t": "winners28 SepOn stage at t"
+   }
+  ],
+  "shotcells": [
+   {
+    "b": [
+     0,
+     1732.7,
+     375,
+     211.4
+    ],
+    "t": "Drive / kart racer"
+   },
+   {
+    "b": [
+     0,
+     1944,
+     375,
+     211.4
+    ],
+    "t": "Rust 17 / shooter"
+   },
+   {
+    "b": [
+     0,
+     2155.4,
+     375,
+     211.4
+    ],
+    "t": "Costa Verde / driver"
+   },
+   {
+    "b": [
+     0,
+     2366.8,
+     375,
+     211.4
+    ],
+    "t": "Drive / seafront"
+   },
+   {
+    "b": [
+     0,
+     2578.2,
+     375,
+     211.4
+    ],
+    "t": "Warehouse / FPS"
+   },
+   {
+    "b": [
+     0,
+     2789.5,
+     375,
+     211.4
+    ],
+    "t": "Costa Verde / quay"
+   }
+  ],
+  "cards": [
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "reference build, not eligi"
+   },
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "screenshotexample entryExa"
+   },
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "screenshotexample entryExa"
+   }
+  ],
+  "tapSmall": [
+   {
+    "t": "404—GEN",
+    "h": 18.8,
+    "w": 48.1
+   },
+   {
+    "t": "entries",
+    "h": 15.9,
+    "w": 33
+   },
+   {
+    "t": "pause",
+    "h": 28,
+    "w": 47.5
+   },
+   {
+    "t": "another",
+    "h": 32,
+    "w": 59.7
+   },
+   {
+    "t": "copy",
+    "h": 32,
+    "w": 45.4
+   },
+   {
+    "t": "Do I need a GPU?",
+    "h": 23.2,
+    "w": 335
+   },
+   {
+    "t": "Do I have to use C",
+    "h": 23.2,
+    "w": 335
+   },
+   {
+    "t": "Can I use my own a",
+    "h": 23.2,
+    "w": 335
+   },
+   {
+    "t": "How do I get paid?",
+    "h": 23.2,
+    "w": 335
+   },
+   {
+    "t": "Where do I ask for",
+    "h": 23.2,
+    "w": 335
+   },
+   {
+    "t": "404—GEN",
+    "h": 15.9,
+    "w": 41.5
+   },
+   {
+    "t": "404.xyz",
+    "h": 15.9,
+    "w": 32.5
+   },
+   {
+    "t": "the recipe",
+    "h": 15.9,
+    "w": 42.4
+   }
+  ],
+  "statsBottom": [
+   0,
+   1033.3,
+   375,
+   278.5
+  ],
+  "lastStatBottom": [
+   0,
+   1218.3,
+   187.5,
+   92.5
+  ],
+  "galBottom": [
+   0,
+   1731.7,
+   375,
+   1269.3
+  ],
+  "lastShot": [
+   0,
+   2789.5,
+   375,
+   211.4
+  ],
+  "sectBottom": [
+   0,
+   1311.8,
+   375,
+   1730.1
+  ],
+  "specRows": [
+   {
+    "b": [
+     20,
+     4095.8,
+     335,
+     64.3
+    ],
+    "t": "readywindow.__READY__ with"
+   },
+   {
+    "b": [
+     20,
+     4160.1,
+     335,
+     86
+    ],
+    "t": "startsFrom a real click an"
+   }
+  ],
+  "specK": [
+   {
+    "b": [
+     20,
+     4106.8,
+     335,
+     17.5
+    ],
+    "t": "ready"
+   },
+   {
+    "b": [
+     20,
+     4171.1,
+     335,
+     17.5
+    ],
+    "t": "starts"
+   }
+  ],
+  "barNav": [
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "how"
+   },
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "gate"
+   },
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "prizes"
+   },
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "dates"
+   },
+   {
+    "b": [
+     322,
+     15,
+     33,
+     15.9
+    ],
+    "t": "entries"
+   }
+  ],
+  "play": [
+   307.5,
+   56,
+   47.5,
+   28
+  ],
+  "heroBtns": [
+   {
+    "b": [
+     20,
+     705.6,
+     133.5,
+     47.4
+    ],
+    "t": "Sign up and build"
+   },
+   {
+    "b": [
+     163.5,
+     705.6,
+     78.8,
+     47.4
+    ],
+    "t": "Entries"
+   }
+  ],
+  "heroP": [
+   20,
+   628.4,
+   283.6,
+   65.3
+  ],
+  "lead": [
+   20,
+   1498.2,
+   335,
+   93.6
+  ],
+  "faq": [
+   {
+    "b": [
+     20,
+     6966.3,
+     335,
+     23.2
+    ],
+    "t": "Do I need a GPU?"
+   },
+   {
+    "b": [
+     20,
+     7085.5,
+     335,
+     23.2
+    ],
+    "t": "Do I have to use Claude?"
+   },
+   {
+    "b": [
+     20,
+     7133.7,
+     335,
+     23.2
+    ],
+    "t": "Can I use my own art?"
+   }
+  ]
+ },
+ "412": {
+  "panelHeights": {
+   "a coastal kart racer": 151.5,
+   "a night market chase": 151.5,
+   "a lighthouse platformer": 151.5,
+   "a submarine salvage sim": 151.5,
+   "a rooftop parkour run": 151.5,
+   "a desert train heist": 151.5,
+   "a haunted arcade": 151.5,
+   "a game nobody has made yet": 171.8
+  },
+  "panelSpread": 20.30000000000001,
+  "h1lines": [
+   [
+    "One line.",
+    198.3
+   ],
+   [
+    "Two weeks.",
+    264.2
+   ],
+   [
+    "Ten TAO.",
+    182.7
+   ]
+  ],
+  "h1w": [
+   20,
+   503.5,
+   372,
+   110.9
+  ],
+  "codeLines": 3,
+  "codeBox": [
+   43,
+   851.5,
+   326,
+   65.5
+  ],
+  "acts": [
+   255.9,
+   929,
+   113.1,
+   32
+  ],
+  "innerPad": "18px 20px",
+  "steps": [
+   {
+    "b": [
+     0,
+     3258.9,
+     412,
+     121.9
+    ],
+    "t": "(01)Clone 404's 3JS harnes"
+   },
+   {
+    "b": [
+     0,
+     3380.8,
+     412,
+     122.3
+    ],
+    "t": "(02)Sign up for AtlasA fix"
+   },
+   {
+    "b": [
+     0,
+     3503.1,
+     412,
+     121.9
+    ],
+    "t": "(03)Give your agent the li"
+   },
+   {
+    "b": [
+     0,
+     3625,
+     412,
+     121.9
+    ],
+    "t": "(04)Pass the gateDesktop a"
+   },
+   {
+    "b": [
+     0,
+     3747,
+     412,
+     122.6
+    ],
+    "t": "(05)SubmitA pull request w"
+   }
+  ],
+  "prizes": [
+   {
+    "b": [
+     0,
+     6040.5,
+     206,
+     178.3
+    ],
+    "t": "first5TAOAnnounced on stag"
+   },
+   {
+    "b": [
+     206,
+     6040.5,
+     206,
+     178.3
+    ],
+    "t": "second3TAOShowcase slot an"
+   },
+   {
+    "b": [
+     0,
+     6218.8,
+     206,
+     140.6
+    ],
+    "t": "third1.5TAOShowcase slot a"
+   },
+   {
+    "b": [
+     206,
+     6218.8,
+     206,
+     140.6
+    ],
+    "t": "community0.5TAOVoted by ev"
+   }
+  ],
+  "tcells": [
+   {
+    "b": [
+     0,
+     6665.6,
+     206,
+     137.3
+    ],
+    "t": "opens11 SepRecipe, harness"
+   },
+   {
+    "b": [
+     206,
+     6665.6,
+     206,
+     137.3
+    ],
+    "t": "office hours18 SepQuestion"
+   },
+   {
+    "b": [
+     0,
+     6802.9,
+     206,
+     137.6
+    ],
+    "t": "closes25 Sep23:59 UTC, gat"
+   },
+   {
+    "b": [
+     206,
+     6802.9,
+     206,
+     137.6
+    ],
+    "t": "winners28 SepOn stage at t"
+   }
+  ],
+  "shotcells": [
+   {
+    "b": [
+     0,
+     1712.4,
+     412,
+     232.2
+    ],
+    "t": "Drive / kart racer"
+   },
+   {
+    "b": [
+     0,
+     1944.5,
+     412,
+     232.2
+    ],
+    "t": "Rust 17 / shooter"
+   },
+   {
+    "b": [
+     0,
+     2176.7,
+     412,
+     232.2
+    ],
+    "t": "Costa Verde / driver"
+   },
+   {
+    "b": [
+     0,
+     2408.9,
+     412,
+     232.2
+    ],
+    "t": "Drive / seafront"
+   },
+   {
+    "b": [
+     0,
+     2641.1,
+     412,
+     232.2
+    ],
+    "t": "Warehouse / FPS"
+   },
+   {
+    "b": [
+     0,
+     2873.3,
+     412,
+     232.2
+    ],
+    "t": "Costa Verde / quay"
+   }
+  ],
+  "cards": [
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "reference build, not eligi"
+   },
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "screenshotexample entryExa"
+   },
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "screenshotexample entryExa"
+   }
+  ],
+  "tapSmall": [
+   {
+    "t": "404—GEN",
+    "h": 18.8,
+    "w": 48.1
+   },
+   {
+    "t": "entries",
+    "h": 15.9,
+    "w": 33
+   },
+   {
+    "t": "pause",
+    "h": 28,
+    "w": 47.5
+   },
+   {
+    "t": "another",
+    "h": 32,
+    "w": 59.7
+   },
+   {
+    "t": "copy",
+    "h": 32,
+    "w": 45.4
+   },
+   {
+    "t": "Do I need a GPU?",
+    "h": 23.2,
+    "w": 372
+   },
+   {
+    "t": "Do I have to use C",
+    "h": 23.2,
+    "w": 372
+   },
+   {
+    "t": "Can I use my own a",
+    "h": 23.2,
+    "w": 372
+   },
+   {
+    "t": "How do I get paid?",
+    "h": 23.2,
+    "w": 372
+   },
+   {
+    "t": "Where do I ask for",
+    "h": 23.2,
+    "w": 372
+   },
+   {
+    "t": "404—GEN",
+    "h": 15.9,
+    "w": 41.5
+   },
+   {
+    "t": "404.xyz",
+    "h": 15.9,
+    "w": 32.5
+   },
+   {
+    "t": "the recipe",
+    "h": 15.9,
+    "w": 42.4
+   }
+  ],
+  "statsBottom": [
+   0,
+   1013,
+   412,
+   278.5
+  ],
+  "lastStatBottom": [
+   0,
+   1198,
+   206,
+   92.5
+  ],
+  "galBottom": [
+   0,
+   1711.4,
+   412,
+   1394.1
+  ],
+  "lastShot": [
+   0,
+   2873.3,
+   412,
+   232.2
+  ],
+  "sectBottom": [
+   0,
+   1291.5,
+   412,
+   1855
+  ],
+  "specRows": [
+   {
+    "b": [
+     20,
+     4177.2,
+     372,
+     64.3
+    ],
+    "t": "readywindow.__READY__ with"
+   },
+   {
+    "b": [
+     20,
+     4241.5,
+     372,
+     86
+    ],
+    "t": "startsFrom a real click an"
+   }
+  ],
+  "specK": [
+   {
+    "b": [
+     20,
+     4188.2,
+     372,
+     17.5
+    ],
+    "t": "ready"
+   },
+   {
+    "b": [
+     20,
+     4252.5,
+     372,
+     17.5
+    ],
+    "t": "starts"
+   }
+  ],
+  "barNav": [
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "how"
+   },
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "gate"
+   },
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "prizes"
+   },
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "dates"
+   },
+   {
+    "b": [
+     359,
+     15,
+     33,
+     15.9
+    ],
+    "t": "entries"
+   }
+  ],
+  "play": [
+   344.5,
+   56,
+   47.5,
+   28
+  ],
+  "heroBtns": [
+   {
+    "b": [
+     20,
+     705.6,
+     133.5,
+     47.4
+    ],
+    "t": "Sign up and build"
+   },
+   {
+    "b": [
+     163.5,
+     705.6,
+     78.8,
+     47.4
+    ],
+    "t": "Entries"
+   }
+  ],
+  "heroP": [
+   20,
+   628.4,
+   283.6,
+   65.3
+  ],
+  "lead": [
+   20,
+   1477.9,
+   372,
+   93.6
+  ],
+  "faq": [
+   {
+    "b": [
+     20,
+     7024.5,
+     372,
+     23.2
+    ],
+    "t": "Do I need a GPU?"
+   },
+   {
+    "b": [
+     20,
+     7122.7,
+     372,
+     23.2
+    ],
+    "t": "Do I have to use Claude?"
+   },
+   {
+    "b": [
+     20,
+     7170.9,
+     372,
+     23.2
+    ],
+    "t": "Can I use my own art?"
+   }
+  ]
+ },
+ "500": {
+  "panelHeights": {
+   "a coastal kart racer": 127.8,
+   "a night market chase": 127.8,
+   "a lighthouse platformer": 127.8,
+   "a submarine salvage sim": 127.8,
+   "a rooftop parkour run": 127.8,
+   "a desert train heist": 127.8,
+   "a haunted arcade": 107.5,
+   "a game nobody has made yet": 127.8
+  },
+  "panelSpread": 20.299999999999997,
+  "h1lines": [
+   [
+    "One line.",
+    236.5
+   ],
+   [
+    "Two weeks.",
+    315.3
+   ],
+   [
+    "Ten TAO.",
+    218
+   ]
+  ],
+  "h1w": [
+   20,
+   482.1,
+   460,
+   132.3
+  ],
+  "codeLines": 4,
+  "codeBox": [
+   43,
+   851.5,
+   282.9,
+   85.8
+  ],
+  "acts": [
+   343.9,
+   878.4,
+   113.1,
+   32
+  ],
+  "innerPad": "18px 20px",
+  "steps": [
+   {
+    "b": [
+     0,
+     3485.6,
+     500,
+     121.9
+    ],
+    "t": "(01)Clone 404's 3JS harnes"
+   },
+   {
+    "b": [
+     0,
+     3607.5,
+     500,
+     122.3
+    ],
+    "t": "(02)Sign up for AtlasA fix"
+   },
+   {
+    "b": [
+     0,
+     3729.8,
+     500,
+     103.1
+    ],
+    "t": "(03)Give your agent the li"
+   },
+   {
+    "b": [
+     0,
+     3832.9,
+     500,
+     121.9
+    ],
+    "t": "(04)Pass the gateDesktop a"
+   },
+   {
+    "b": [
+     0,
+     3954.8,
+     500,
+     103.4
+    ],
+    "t": "(05)SubmitA pull request w"
+   }
+  ],
+  "prizes": [
+   {
+    "b": [
+     0,
+     6119,
+     250,
+     159.5
+    ],
+    "t": "first5TAOAnnounced on stag"
+   },
+   {
+    "b": [
+     250,
+     6119,
+     250,
+     159.5
+    ],
+    "t": "second3TAOShowcase slot an"
+   },
+   {
+    "b": [
+     0,
+     6278.5,
+     250,
+     140.6
+    ],
+    "t": "third1.5TAOShowcase slot a"
+   },
+   {
+    "b": [
+     250,
+     6278.5,
+     250,
+     140.6
+    ],
+    "t": "community0.5TAOVoted by ev"
+   }
+  ],
+  "tcells": [
+   {
+    "b": [
+     0,
+     6725.3,
+     250,
+     137.3
+    ],
+    "t": "opens11 SepRecipe, harness"
+   },
+   {
+    "b": [
+     250,
+     6725.3,
+     250,
+     137.3
+    ],
+    "t": "office hours18 SepQuestion"
+   },
+   {
+    "b": [
+     0,
+     6862.6,
+     250,
+     137.6
+    ],
+    "t": "closes25 Sep23:59 UTC, gat"
+   },
+   {
+    "b": [
+     250,
+     6862.6,
+     250,
+     137.6
+    ],
+    "t": "winners28 SepOn stage at t"
+   }
+  ],
+  "shotcells": [
+   {
+    "b": [
+     0,
+     1642.1,
+     500,
+     281.7
+    ],
+    "t": "Drive / kart racer"
+   },
+   {
+    "b": [
+     0,
+     1923.8,
+     500,
+     281.7
+    ],
+    "t": "Rust 17 / shooter"
+   },
+   {
+    "b": [
+     0,
+     2205.5,
+     500,
+     281.7
+    ],
+    "t": "Costa Verde / driver"
+   },
+   {
+    "b": [
+     0,
+     2487.1,
+     500,
+     281.7
+    ],
+    "t": "Drive / seafront"
+   },
+   {
+    "b": [
+     0,
+     2768.8,
+     500,
+     281.7
+    ],
+    "t": "Warehouse / FPS"
+   },
+   {
+    "b": [
+     0,
+     3050.5,
+     500,
+     281.7
+    ],
+    "t": "Costa Verde / quay"
+   }
+  ],
+  "cards": [
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "reference build, not eligi"
+   },
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "screenshotexample entryExa"
+   },
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "screenshotexample entryExa"
+   }
+  ],
+  "tapSmall": [
+   {
+    "t": "404—GEN",
+    "h": 18.8,
+    "w": 48.1
+   },
+   {
+    "t": "entries",
+    "h": 15.9,
+    "w": 33
+   },
+   {
+    "t": "pause",
+    "h": 28,
+    "w": 47.5
+   },
+   {
+    "t": "another",
+    "h": 32,
+    "w": 59.7
+   },
+   {
+    "t": "copy",
+    "h": 32,
+    "w": 45.4
+   },
+   {
+    "t": "Do I need a GPU?",
+    "h": 23.2,
+    "w": 460
+   },
+   {
+    "t": "Do I have to use C",
+    "h": 23.2,
+    "w": 460
+   },
+   {
+    "t": "Can I use my own a",
+    "h": 23.2,
+    "w": 460
+   },
+   {
+    "t": "How do I get paid?",
+    "h": 23.2,
+    "w": 460
+   },
+   {
+    "t": "Where do I ask for",
+    "h": 23.2,
+    "w": 460
+   },
+   {
+    "t": "404—GEN",
+    "h": 15.9,
+    "w": 41.5
+   },
+   {
+    "t": "404.xyz",
+    "h": 15.9,
+    "w": 32.5
+   },
+   {
+    "t": "the recipe",
+    "h": 15.9,
+    "w": 42.4
+   }
+  ],
+  "statsBottom": [
+   0,
+   989.3,
+   500,
+   278.5
+  ],
+  "lastStatBottom": [
+   0,
+   1174.3,
+   250,
+   92.5
+  ],
+  "galBottom": [
+   0,
+   1641.1,
+   500,
+   1691.1
+  ],
+  "lastShot": [
+   0,
+   3050.5,
+   500,
+   281.7
+  ],
+  "sectBottom": [
+   0,
+   1267.8,
+   500,
+   2105.4
+  ],
+  "specRows": [
+   {
+    "b": [
+     20,
+     4342.7,
+     460,
+     64.3
+    ],
+    "t": "readywindow.__READY__ with"
+   },
+   {
+    "b": [
+     20,
+     4407,
+     460,
+     64.3
+    ],
+    "t": "startsFrom a real click an"
+   }
+  ],
+  "specK": [
+   {
+    "b": [
+     20,
+     4353.7,
+     460,
+     17.5
+    ],
+    "t": "ready"
+   },
+   {
+    "b": [
+     20,
+     4418,
+     460,
+     17.5
+    ],
+    "t": "starts"
+   }
+  ],
+  "barNav": [
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "how"
+   },
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "gate"
+   },
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "prizes"
+   },
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "dates"
+   },
+   {
+    "b": [
+     447,
+     15,
+     33,
+     15.9
+    ],
+    "t": "entries"
+   }
+  ],
+  "play": [
+   432.5,
+   56,
+   47.5,
+   28
+  ],
+  "heroBtns": [
+   {
+    "b": [
+     20,
+     705.6,
+     133.5,
+     47.4
+    ],
+    "t": "Sign up and build"
+   },
+   {
+    "b": [
+     163.5,
+     705.6,
+     78.8,
+     47.4
+    ],
+    "t": "Entries"
+   }
+  ],
+  "heroP": [
+   20,
+   628.4,
+   283.6,
+   65.3
+  ],
+  "lead": [
+   20,
+   1454.2,
+   460,
+   70.2
+  ],
+  "faq": [
+   {
+    "b": [
+     20,
+     7084.2,
+     460,
+     23.2
+    ],
+    "t": "Do I need a GPU?"
+   },
+   {
+    "b": [
+     20,
+     7182.4,
+     460,
+     23.2
+    ],
+    "t": "Do I have to use Claude?"
+   },
+   {
+    "b": [
+     20,
+     7230.6,
+     460,
+     23.2
+    ],
+    "t": "Can I use my own art?"
+   }
+  ]
+ },
+ "620": {
+  "panelHeights": {
+   "a coastal kart racer": 107.5,
+   "a night market chase": 107.5,
+   "a lighthouse platformer": 107.5,
+   "a submarine salvage sim": 107.5,
+   "a rooftop parkour run": 107.5,
+   "a desert train heist": 107.5,
+   "a haunted arcade": 107.5,
+   "a game nobody has made yet": 107.5
+  },
+  "panelSpread": 0,
+  "h1lines": [
+   [
+    "One line.",
+    293.3
+   ],
+   [
+    "Two weeks.",
+    390.9
+   ],
+   [
+    "Ten TAO.",
+    270.4
+   ]
+  ],
+  "h1w": [
+   20,
+   509.7,
+   580,
+   164
+  ],
+  "codeLines": 3,
+  "codeBox": [
+   43,
+   851.5,
+   402.9,
+   65.5
+  ],
+  "acts": [
+   463.9,
+   868.3,
+   113.1,
+   32
+  ],
+  "innerPad": "18px 20px",
+  "steps": [
+   {
+    "b": [
+     0,
+     2253,
+     620,
+     103.1
+    ],
+    "t": "(01)Clone 404's 3JS harnes"
+   },
+   {
+    "b": [
+     0,
+     2356.1,
+     620,
+     103.4
+    ],
+    "t": "(02)Sign up for AtlasA fix"
+   },
+   {
+    "b": [
+     0,
+     2459.6,
+     620,
+     103.1
+    ],
+    "t": "(03)Give your agent the li"
+   },
+   {
+    "b": [
+     0,
+     2562.7,
+     620,
+     103.1
+    ],
+    "t": "(04)Pass the gateDesktop a"
+   },
+   {
+    "b": [
+     0,
+     2665.8,
+     620,
+     103.4
+    ],
+    "t": "(05)SubmitA pull request w"
+   }
+  ],
+  "prizes": [
+   {
+    "b": [
+     0,
+     4741.5,
+     310,
+     140.6
+    ],
+    "t": "first5TAOAnnounced on stag"
+   },
+   {
+    "b": [
+     310,
+     4741.5,
+     310,
+     140.6
+    ],
+    "t": "second3TAOShowcase slot an"
+   },
+   {
+    "b": [
+     0,
+     4882.1,
+     310,
+     121.8
+    ],
+    "t": "third1.5TAOShowcase slot a"
+   },
+   {
+    "b": [
+     310,
+     4882.1,
+     310,
+     121.8
+    ],
+    "t": "community0.5TAOVoted by ev"
+   }
+  ],
+  "tcells": [
+   {
+    "b": [
+     0,
+     5310.1,
+     310,
+     118.5
+    ],
+    "t": "opens11 SepRecipe, harness"
+   },
+   {
+    "b": [
+     310,
+     5310.1,
+     310,
+     118.5
+    ],
+    "t": "office hours18 SepQuestion"
+   },
+   {
+    "b": [
+     0,
+     5428.5,
+     310,
+     118.8
+    ],
+    "t": "closes25 Sep23:59 UTC, gat"
+   },
+   {
+    "b": [
+     310,
+     5428.5,
+     310,
+     118.8
+    ],
+    "t": "winners28 SepOn stage at t"
+   }
+  ],
+  "shotcells": [
+   {
+    "b": [
+     0,
+     1575.2,
+     310,
+     174.8
+    ],
+    "t": "Drive / kart racer"
+   },
+   {
+    "b": [
+     310,
+     1575.2,
+     310,
+     174.8
+    ],
+    "t": "Rust 17 / shooter"
+   },
+   {
+    "b": [
+     0,
+     1750,
+     310,
+     174.8
+    ],
+    "t": "Costa Verde / driver"
+   },
+   {
+    "b": [
+     310,
+     1750,
+     310,
+     174.8
+    ],
+    "t": "Drive / seafront"
+   },
+   {
+    "b": [
+     0,
+     1924.8,
+     310,
+     174.8
+    ],
+    "t": "Warehouse / FPS"
+   },
+   {
+    "b": [
+     310,
+     1924.8,
+     310,
+     174.8
+    ],
+    "t": "Costa Verde / quay"
+   }
+  ],
+  "cards": [
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "reference build, not eligi"
+   },
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "screenshotexample entryExa"
+   },
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "screenshotexample entryExa"
+   }
+  ],
+  "tapSmall": [
+   {
+    "t": "404—GEN",
+    "h": 18.8,
+    "w": 48.1
+   },
+   {
+    "t": "entries",
+    "h": 15.9,
+    "w": 33
+   },
+   {
+    "t": "pause",
+    "h": 28,
+    "w": 47.5
+   },
+   {
+    "t": "another",
+    "h": 32,
+    "w": 59.7
+   },
+   {
+    "t": "copy",
+    "h": 32,
+    "w": 45.4
+   },
+   {
+    "t": "Do I need a GPU?",
+    "h": 23.2,
+    "w": 580
+   },
+   {
+    "t": "Do I have to use C",
+    "h": 23.2,
+    "w": 580
+   },
+   {
+    "t": "Can I use my own a",
+    "h": 23.2,
+    "w": 580
+   },
+   {
+    "t": "How do I get paid?",
+    "h": 23.2,
+    "w": 580
+   },
+   {
+    "t": "Where do I ask for",
+    "h": 23.2,
+    "w": 580
+   },
+   {
+    "t": "404—GEN",
+    "h": 15.9,
+    "w": 41.5
+   },
+   {
+    "t": "404.xyz",
+    "h": 15.9,
+    "w": 32.5
+   },
+   {
+    "t": "the recipe",
+    "h": 15.9,
+    "w": 42.4
+   }
+  ],
+  "statsBottom": [
+   0,
+   969,
+   620,
+   278.5
+  ],
+  "lastStatBottom": [
+   0,
+   1154,
+   310,
+   92.5
+  ],
+  "galBottom": [
+   0,
+   1574.2,
+   620,
+   525.4
+  ],
+  "lastShot": [
+   310,
+   1924.8,
+   310,
+   174.8
+  ],
+  "sectBottom": [
+   0,
+   1247.5,
+   620,
+   893.1
+  ],
+  "specRows": [
+   {
+    "b": [
+     20,
+     3053.6,
+     580,
+     64.3
+    ],
+    "t": "readywindow.__READY__ with"
+   },
+   {
+    "b": [
+     20,
+     3118,
+     580,
+     64.3
+    ],
+    "t": "startsFrom a real click an"
+   }
+  ],
+  "specK": [
+   {
+    "b": [
+     20,
+     3064.6,
+     580,
+     17.5
+    ],
+    "t": "ready"
+   },
+   {
+    "b": [
+     20,
+     3129,
+     580,
+     17.5
+    ],
+    "t": "starts"
+   }
+  ],
+  "barNav": [
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "how"
+   },
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "gate"
+   },
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "prizes"
+   },
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "dates"
+   },
+   {
+    "b": [
+     567,
+     15,
+     33,
+     15.9
+    ],
+    "t": "entries"
+   }
+  ],
+  "play": [
+   552.5,
+   56,
+   47.5,
+   28
+  ],
+  "heroBtns": [
+   {
+    "b": [
+     377.7,
+     705.6,
+     133.5,
+     47.4
+    ],
+    "t": "Sign up and build"
+   },
+   {
+    "b": [
+     521.2,
+     705.6,
+     78.8,
+     47.4
+    ],
+    "t": "Entries"
+   }
+  ],
+  "heroP": [
+   20,
+   687.8,
+   283.6,
+   65.3
+  ],
+  "lead": [
+   20,
+   1433.9,
+   580,
+   46.8
+  ],
+  "faq": [
+   {
+    "b": [
+     20,
+     5631.3,
+     580,
+     23.2
+    ],
+    "t": "Do I need a GPU?"
+   },
+   {
+    "b": [
+     20,
+     5729.5,
+     580,
+     23.2
+    ],
+    "t": "Do I have to use Claude?"
+   },
+   {
+    "b": [
+     20,
+     5777.7,
+     580,
+     23.2
+    ],
+    "t": "Can I use my own art?"
+   }
+  ]
+ },
+ "700": {
+  "panelHeights": {
+   "a coastal kart racer": 87.2,
+   "a night market chase": 87.2,
+   "a lighthouse platformer": 87.2,
+   "a submarine salvage sim": 87.2,
+   "a rooftop parkour run": 87.2,
+   "a desert train heist": 87.2,
+   "a haunted arcade": 87.2,
+   "a game nobody has made yet": 87.2
+  },
+  "panelSpread": 0,
+  "h1lines": [
+   [
+    "One line.",
+    331.2
+   ],
+   [
+    "Two weeks.",
+    441.4
+   ],
+   [
+    "Ten TAO.",
+    305.2
+   ]
+  ],
+  "h1w": [
+   20,
+   488.5,
+   660,
+   185.2
+  ],
+  "codeLines": 2,
+  "codeBox": [
+   43,
+   851.5,
+   482.9,
+   45.2
+  ],
+  "acts": [
+   543.9,
+   858.1,
+   113.1,
+   32
+  ],
+  "innerPad": "18px 20px",
+  "steps": [
+   {
+    "b": [
+     0,
+     2308.1,
+     700,
+     103.1
+    ],
+    "t": "(01)Clone 404's 3JS harnes"
+   },
+   {
+    "b": [
+     0,
+     2411.2,
+     700,
+     103.4
+    ],
+    "t": "(02)Sign up for AtlasA fix"
+   },
+   {
+    "b": [
+     0,
+     2514.6,
+     700,
+     103.1
+    ],
+    "t": "(03)Give your agent the li"
+   },
+   {
+    "b": [
+     0,
+     2617.7,
+     700,
+     103.1
+    ],
+    "t": "(04)Pass the gateDesktop a"
+   },
+   {
+    "b": [
+     0,
+     2720.8,
+     700,
+     103.4
+    ],
+    "t": "(05)SubmitA pull request w"
+   }
+  ],
+  "prizes": [
+   {
+    "b": [
+     0,
+     4808.4,
+     350,
+     141.6
+    ],
+    "t": "first5TAOAnnounced on stag"
+   },
+   {
+    "b": [
+     350,
+     4808.4,
+     350,
+     141.6
+    ],
+    "t": "second3TAOShowcase slot an"
+   },
+   {
+    "b": [
+     0,
+     4950,
+     350,
+     122.8
+    ],
+    "t": "third1.5TAOShowcase slot a"
+   },
+   {
+    "b": [
+     350,
+     4950,
+     350,
+     122.8
+    ],
+    "t": "community0.5TAOVoted by ev"
+   }
+  ],
+  "tcells": [
+   {
+    "b": [
+     0,
+     5380.9,
+     350,
+     118.5
+    ],
+    "t": "opens11 SepRecipe, harness"
+   },
+   {
+    "b": [
+     350,
+     5380.9,
+     350,
+     118.5
+    ],
+    "t": "office hours18 SepQuestion"
+   },
+   {
+    "b": [
+     0,
+     5499.4,
+     350,
+     118.8
+    ],
+    "t": "closes25 Sep23:59 UTC, gat"
+   },
+   {
+    "b": [
+     350,
+     5499.4,
+     350,
+     118.8
+    ],
+    "t": "winners28 SepOn stage at t"
+   }
+  ],
+  "shotcells": [
+   {
+    "b": [
+     0,
+     1560.8,
+     350,
+     197.3
+    ],
+    "t": "Drive / kart racer"
+   },
+   {
+    "b": [
+     350,
+     1560.8,
+     350,
+     197.3
+    ],
+    "t": "Rust 17 / shooter"
+   },
+   {
+    "b": [
+     0,
+     1758.1,
+     350,
+     197.3
+    ],
+    "t": "Costa Verde / driver"
+   },
+   {
+    "b": [
+     350,
+     1758.1,
+     350,
+     197.3
+    ],
+    "t": "Drive / seafront"
+   },
+   {
+    "b": [
+     0,
+     1955.4,
+     350,
+     197.3
+    ],
+    "t": "Warehouse / FPS"
+   },
+   {
+    "b": [
+     350,
+     1955.4,
+     350,
+     197.3
+    ],
+    "t": "Costa Verde / quay"
+   }
+  ],
+  "cards": [
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "reference build, not eligi"
+   },
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "screenshotexample entryExa"
+   },
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "screenshotexample entryExa"
+   }
+  ],
+  "tapSmall": [
+   {
+    "t": "404—GEN",
+    "h": 18.8,
+    "w": 48.1
+   },
+   {
+    "t": "how",
+    "h": 15.9,
+    "w": 17.6
+   },
+   {
+    "t": "gate",
+    "h": 15.9,
+    "w": 20.9
+   },
+   {
+    "t": "prizes",
+    "h": 15.9,
+    "w": 28.6
+   },
+   {
+    "t": "dates",
+    "h": 15.9,
+    "w": 26.4
+   },
+   {
+    "t": "entries",
+    "h": 15.9,
+    "w": 33
+   },
+   {
+    "t": "pause",
+    "h": 28,
+    "w": 47.5
+   },
+   {
+    "t": "another",
+    "h": 32,
+    "w": 59.7
+   },
+   {
+    "t": "copy",
+    "h": 32,
+    "w": 45.4
+   },
+   {
+    "t": "Do I need a GPU?",
+    "h": 23.2,
+    "w": 660
+   },
+   {
+    "t": "Do I have to use C",
+    "h": 23.2,
+    "w": 660
+   },
+   {
+    "t": "Can I use my own a",
+    "h": 23.2,
+    "w": 660
+   },
+   {
+    "t": "How do I get paid?",
+    "h": 23.2,
+    "w": 660
+   },
+   {
+    "t": "Where do I ask for",
+    "h": 23.2,
+    "w": 660
+   },
+   {
+    "t": "404—GEN",
+    "h": 15.9,
+    "w": 41.5
+   },
+   {
+    "t": "404.xyz",
+    "h": 15.9,
+    "w": 32.5
+   },
+   {
+    "t": "the recipe",
+    "h": 15.9,
+    "w": 42.4
+   }
+  ],
+  "statsBottom": [
+   0,
+   948.7,
+   700,
+   278.5
+  ],
+  "lastStatBottom": [
+   0,
+   1133.7,
+   350,
+   92.5
+  ],
+  "galBottom": [
+   0,
+   1559.8,
+   700,
+   592.9
+  ],
+  "lastShot": [
+   350,
+   1955.4,
+   350,
+   197.3
+  ],
+  "sectBottom": [
+   0,
+   1227.2,
+   700,
+   966.5
+  ],
+  "specRows": [
+   {
+    "b": [
+     20,
+     3112.6,
+     660,
+     64.3
+    ],
+    "t": "readywindow.__READY__ with"
+   },
+   {
+    "b": [
+     20,
+     3177,
+     660,
+     64.3
+    ],
+    "t": "startsFrom a real click an"
+   }
+  ],
+  "specK": [
+   {
+    "b": [
+     20,
+     3123.6,
+     660,
+     17.5
+    ],
+    "t": "ready"
+   },
+   {
+    "b": [
+     20,
+     3188,
+     660,
+     17.5
+    ],
+    "t": "starts"
+   }
+  ],
+  "barNav": [
+   {
+    "b": [
+     493.5,
+     15,
+     17.6,
+     15.9
+    ],
+    "t": "how"
+   },
+   {
+    "b": [
+     526.1,
+     15,
+     20.9,
+     15.9
+    ],
+    "t": "gate"
+   },
+   {
+    "b": [
+     562,
+     15,
+     28.6,
+     15.9
+    ],
+    "t": "prizes"
+   },
+   {
+    "b": [
+     605.6,
+     15,
+     26.4,
+     15.9
+    ],
+    "t": "dates"
+   },
+   {
+    "b": [
+     647,
+     15,
+     33,
+     15.9
+    ],
+    "t": "entries"
+   }
+  ],
+  "play": [
+   632.5,
+   56,
+   47.5,
+   28
+  ],
+  "heroBtns": [
+   {
+    "b": [
+     457.7,
+     705.6,
+     133.5,
+     47.4
+    ],
+    "t": "Sign up and build"
+   },
+   {
+    "b": [
+     601.2,
+     705.6,
+     78.8,
+     47.4
+    ],
+    "t": "Entries"
+   }
+  ],
+  "heroP": [
+   20,
+   687.8,
+   283.6,
+   65.3
+  ],
+  "lead": [
+   20,
+   1419.5,
+   580.6,
+   46.8
+  ],
+  "faq": [
+   {
+    "b": [
+     20,
+     5702.1,
+     660,
+     23.2
+    ],
+    "t": "Do I need a GPU?"
+   },
+   {
+    "b": [
+     20,
+     5800.4,
+     660,
+     23.2
+    ],
+    "t": "Do I have to use Claude?"
+   },
+   {
+    "b": [
+     20,
+     5848.5,
+     660,
+     23.2
+    ],
+    "t": "Can I use my own art?"
+   }
+  ]
+ },
+ "768": {
+  "panelHeights": {
+   "a coastal kart racer": 87.2,
+   "a night market chase": 87.2,
+   "a lighthouse platformer": 87.2,
+   "a submarine salvage sim": 87.2,
+   "a rooftop parkour run": 87.2,
+   "a desert train heist": 87.2,
+   "a haunted arcade": 87.2,
+   "a game nobody has made yet": 87.2
+  },
+  "panelSpread": 0,
+  "h1lines": [
+   [
+    "One line.",
+    363.3
+   ],
+   [
+    "Two weeks.",
+    484.3
+   ],
+   [
+    "Ten TAO.",
+    334.9
+   ]
+  ],
+  "h1w": [
+   20,
+   470.5,
+   728,
+   203.2
+  ],
+  "codeLines": 2,
+  "codeBox": [
+   43,
+   851.5,
+   550.9,
+   45.2
+  ],
+  "acts": [
+   611.9,
+   858.1,
+   113.1,
+   32
+  ],
+  "innerPad": "18px 20px",
+  "steps": [
+   {
+    "b": [
+     0,
+     2378.3,
+     153.6,
+     217.6
+    ],
+    "t": "(01)Clone 404's 3JS harnes"
+   },
+   {
+    "b": [
+     153.6,
+     2378.3,
+     153.6,
+     217.6
+    ],
+    "t": "(02)Sign up for AtlasA fix"
+   },
+   {
+    "b": [
+     307.2,
+     2378.3,
+     153.6,
+     217.6
+    ],
+    "t": "(03)Give your agent the li"
+   },
+   {
+    "b": [
+     460.8,
+     2378.3,
+     153.6,
+     217.6
+    ],
+    "t": "(04)Pass the gateDesktop a"
+   },
+   {
+    "b": [
+     614.4,
+     2378.3,
+     153.6,
+     217.6
+    ],
+    "t": "(05)SubmitA pull request w"
+   }
+  ],
+  "prizes": [
+   {
+    "b": [
+     0,
+     4303.5,
+     192,
+     182.7
+    ],
+    "t": "first5TAOAnnounced on stag"
+   },
+   {
+    "b": [
+     192,
+     4303.5,
+     192,
+     182.7
+    ],
+    "t": "second3TAOShowcase slot an"
+   },
+   {
+    "b": [
+     384,
+     4303.5,
+     192,
+     182.7
+    ],
+    "t": "third1.5TAOShowcase slot a"
+   },
+   {
+    "b": [
+     576,
+     4303.5,
+     192,
+     182.7
+    ],
+    "t": "community0.5TAOVoted by ev"
+   }
+  ],
+  "tcells": [
+   {
+    "b": [
+     0,
+     4738.5,
+     192,
+     137.6
+    ],
+    "t": "opens11 SepRecipe, harness"
+   },
+   {
+    "b": [
+     192,
+     4738.5,
+     192,
+     137.6
+    ],
+    "t": "office hours18 SepQuestion"
+   },
+   {
+    "b": [
+     384,
+     4738.5,
+     192,
+     137.6
+    ],
+    "t": "closes25 Sep23:59 UTC, gat"
+   },
+   {
+    "b": [
+     576,
+     4738.5,
+     192,
+     137.6
+    ],
+    "t": "winners28 SepOn stage at t"
+   }
+  ],
+  "shotcells": [
+   {
+    "b": [
+     0,
+     1570.9,
+     384,
+     216.4
+    ],
+    "t": "Drive / kart racer"
+   },
+   {
+    "b": [
+     384,
+     1570.9,
+     384,
+     216.4
+    ],
+    "t": "Rust 17 / shooter"
+   },
+   {
+    "b": [
+     0,
+     1787.4,
+     384,
+     216.4
+    ],
+    "t": "Costa Verde / driver"
+   },
+   {
+    "b": [
+     384,
+     1787.4,
+     384,
+     216.4
+    ],
+    "t": "Drive / seafront"
+   },
+   {
+    "b": [
+     0,
+     2003.8,
+     384,
+     216.4
+    ],
+    "t": "Warehouse / FPS"
+   },
+   {
+    "b": [
+     384,
+     2003.8,
+     384,
+     216.4
+    ],
+    "t": "Costa Verde / quay"
+   }
+  ],
+  "cards": [
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "reference build, not eligi"
+   },
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "screenshotexample entryExa"
+   },
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "screenshotexample entryExa"
+   }
+  ],
+  "tapSmall": [
+   {
+    "t": "404—GEN",
+    "h": 18.8,
+    "w": 48.1
+   },
+   {
+    "t": "how",
+    "h": 15.9,
+    "w": 17.6
+   },
+   {
+    "t": "gate",
+    "h": 15.9,
+    "w": 20.9
+   },
+   {
+    "t": "prizes",
+    "h": 15.9,
+    "w": 28.6
+   },
+   {
+    "t": "dates",
+    "h": 15.9,
+    "w": 26.4
+   },
+   {
+    "t": "entries",
+    "h": 15.9,
+    "w": 33
+   },
+   {
+    "t": "pause",
+    "h": 28,
+    "w": 47.5
+   },
+   {
+    "t": "another",
+    "h": 32,
+    "w": 59.7
+   },
+   {
+    "t": "copy",
+    "h": 32,
+    "w": 45.4
+   },
+   {
+    "t": "Do I need a GPU?",
+    "h": 23.2,
+    "w": 728
+   },
+   {
+    "t": "Do I have to use C",
+    "h": 23.2,
+    "w": 728
+   },
+   {
+    "t": "Can I use my own a",
+    "h": 23.2,
+    "w": 728
+   },
+   {
+    "t": "How do I get paid?",
+    "h": 23.2,
+    "w": 728
+   },
+   {
+    "t": "Where do I ask for",
+    "h": 23.2,
+    "w": 728
+   },
+   {
+    "t": "404—GEN",
+    "h": 15.9,
+    "w": 41.5
+   },
+   {
+    "t": "404.xyz",
+    "h": 15.9,
+    "w": 32.5
+   },
+   {
+    "t": "the recipe",
+    "h": 15.9,
+    "w": 42.4
+   }
+  ],
+  "statsBottom": [
+   0,
+   948.7,
+   768,
+   280.7
+  ],
+  "lastStatBottom": [
+   0,
+   1135.2,
+   384,
+   93.2
+  ],
+  "galBottom": [
+   0,
+   1569.9,
+   768,
+   650.3
+  ],
+  "lastShot": [
+   384,
+   2003.8,
+   384,
+   216.4
+  ],
+  "sectBottom": [
+   0,
+   1229.4,
+   768,
+   1031.9
+  ],
+  "specRows": [
+   {
+    "b": [
+     20,
+     2889.6,
+     728,
+     44.8
+    ],
+    "t": "readywindow.__READY__ with"
+   },
+   {
+    "b": [
+     20,
+     2934.4,
+     728,
+     44.8
+    ],
+    "t": "startsFrom a real click an"
+   }
+  ],
+  "specK": [
+   {
+    "b": [
+     20,
+     2900.6,
+     145,
+     21.8
+    ],
+    "t": "ready"
+   },
+   {
+    "b": [
+     20,
+     2945.4,
+     145,
+     21.8
+    ],
+    "t": "starts"
+   }
+  ],
+  "barNav": [
+   {
+    "b": [
+     561.5,
+     15,
+     17.6,
+     15.9
+    ],
+    "t": "how"
+   },
+   {
+    "b": [
+     594.1,
+     15,
+     20.9,
+     15.9
+    ],
+    "t": "gate"
+   },
+   {
+    "b": [
+     630,
+     15,
+     28.6,
+     15.9
+    ],
+    "t": "prizes"
+   },
+   {
+    "b": [
+     673.6,
+     15,
+     26.4,
+     15.9
+    ],
+    "t": "dates"
+   },
+   {
+    "b": [
+     715,
+     15,
+     33,
+     15.9
+    ],
+    "t": "entries"
+   }
+  ],
+  "play": [
+   700.5,
+   56,
+   47.5,
+   28
+  ],
+  "heroBtns": [
+   {
+    "b": [
+     525.7,
+     705.6,
+     133.5,
+     47.4
+    ],
+    "t": "Sign up and build"
+   },
+   {
+    "b": [
+     669.2,
+     705.6,
+     78.8,
+     47.4
+    ],
+    "t": "Entries"
+   }
+  ],
+  "heroP": [
+   20,
+   687.8,
+   283.6,
+   65.3
+  ],
+  "lead": [
+   20,
+   1429.6,
+   580.6,
+   46.8
+  ],
+  "faq": [
+   {
+    "b": [
+     20,
+     4960.1,
+     728,
+     23.2
+    ],
+    "t": "Do I need a GPU?"
+   },
+   {
+    "b": [
+     20,
+     5058.3,
+     728,
+     23.2
+    ],
+    "t": "Do I have to use Claude?"
+   },
+   {
+    "b": [
+     20,
+     5106.5,
+     728,
+     23.2
+    ],
+    "t": "Can I use my own art?"
+   }
+  ]
+ },
+ "900": {
+  "panelHeights": {
+   "a coastal kart racer": 91.1,
+   "a night market chase": 91.1,
+   "a lighthouse platformer": 91.1,
+   "a submarine salvage sim": 91.1,
+   "a rooftop parkour run": 91.1,
+   "a desert train heist": 91.1,
+   "a haunted arcade": 91.1,
+   "a game nobody has made yet": 91.1
+  },
+  "panelSpread": 0,
+  "h1lines": [
+   [
+    "One line.",
+    425.8
+   ],
+   [
+    "Two weeks.",
+    567.5
+   ],
+   [
+    "Ten TAO.",
+    392.4
+   ]
+  ],
+  "h1w": [
+   20,
+   435.6,
+   860,
+   238.1
+  ],
+  "codeLines": 2,
+  "codeBox": [
+   43,
+   851.5,
+   682.9,
+   49.1
+  ],
+  "acts": [
+   743.9,
+   860.1,
+   113.1,
+   32
+  ],
+  "innerPad": "18px 20px",
+  "steps": [
+   {
+    "b": [
+     0,
+     2203,
+     180,
+     181.4
+    ],
+    "t": "(01)Clone 404's 3JS harnes"
+   },
+   {
+    "b": [
+     180,
+     2203,
+     180,
+     181.4
+    ],
+    "t": "(02)Sign up for AtlasA fix"
+   },
+   {
+    "b": [
+     360,
+     2203,
+     180,
+     181.4
+    ],
+    "t": "(03)Give your agent the li"
+   },
+   {
+    "b": [
+     540,
+     2203,
+     180,
+     181.4
+    ],
+    "t": "(04)Pass the gateDesktop a"
+   },
+   {
+    "b": [
+     720,
+     2203,
+     180,
+     181.4
+    ],
+    "t": "(05)SubmitA pull request w"
+   }
+  ],
+  "prizes": [
+   {
+    "b": [
+     0,
+     3861,
+     225,
+     170.5
+    ],
+    "t": "first5TAOAnnounced on stag"
+   },
+   {
+    "b": [
+     225,
+     3861,
+     225,
+     170.5
+    ],
+    "t": "second3TAOShowcase slot an"
+   },
+   {
+    "b": [
+     450,
+     3861,
+     225,
+     170.5
+    ],
+    "t": "third1.5TAOShowcase slot a"
+   },
+   {
+    "b": [
+     675,
+     3861,
+     225,
+     170.5
+    ],
+    "t": "community0.5TAOVoted by ev"
+   }
+  ],
+  "tcells": [
+   {
+    "b": [
+     0,
+     4289,
+     225,
+     137.6
+    ],
+    "t": "opens11 SepRecipe, harness"
+   },
+   {
+    "b": [
+     225,
+     4289,
+     225,
+     137.6
+    ],
+    "t": "office hours18 SepQuestion"
+   },
+   {
+    "b": [
+     450,
+     4289,
+     225,
+     137.6
+    ],
+    "t": "closes25 Sep23:59 UTC, gat"
+   },
+   {
+    "b": [
+     675,
+     4289,
+     225,
+     137.6
+    ],
+    "t": "winners28 SepOn stage at t"
+   }
+  ],
+  "shotcells": [
+   {
+    "b": [
+     0,
+     1279.1,
+     450,
+     253.6
+    ],
+    "t": "Drive / kart racer"
+   },
+   {
+    "b": [
+     450,
+     1279.1,
+     450,
+     253.6
+    ],
+    "t": "Rust 17 / shooter"
+   },
+   {
+    "b": [
+     0,
+     1532.6,
+     450,
+     253.6
+    ],
+    "t": "Costa Verde / driver"
+   },
+   {
+    "b": [
+     450,
+     1532.6,
+     450,
+     253.6
+    ],
+    "t": "Drive / seafront"
+   },
+   {
+    "b": [
+     0,
+     1786.2,
+     450,
+     253.6
+    ],
+    "t": "Warehouse / FPS"
+   },
+   {
+    "b": [
+     450,
+     1786.2,
+     450,
+     253.6
+    ],
+    "t": "Costa Verde / quay"
+   }
+  ],
+  "cards": [
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "reference build, not eligi"
+   },
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "screenshotexample entryExa"
+   },
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "screenshotexample entryExa"
+   }
+  ],
+  "tapSmall": [
+   {
+    "t": "404—GEN",
+    "h": 18.8,
+    "w": 48.1
+   },
+   {
+    "t": "how",
+    "h": 15.9,
+    "w": 17.6
+   },
+   {
+    "t": "gate",
+    "h": 15.9,
+    "w": 20.9
+   },
+   {
+    "t": "prizes",
+    "h": 15.9,
+    "w": 28.6
+   },
+   {
+    "t": "dates",
+    "h": 15.9,
+    "w": 26.4
+   },
+   {
+    "t": "entries",
+    "h": 15.9,
+    "w": 33
+   },
+   {
+    "t": "pause",
+    "h": 28,
+    "w": 47.5
+   },
+   {
+    "t": "another",
+    "h": 32,
+    "w": 59.7
+   },
+   {
+    "t": "copy",
+    "h": 32,
+    "w": 45.4
+   },
+   {
+    "t": "Do I need a GPU?",
+    "h": 23.2,
+    "w": 860
+   },
+   {
+    "t": "Do I have to use C",
+    "h": 23.2,
+    "w": 860
+   },
+   {
+    "t": "Can I use my own a",
+    "h": 23.2,
+    "w": 860
+   },
+   {
+    "t": "How do I get paid?",
+    "h": 23.2,
+    "w": 860
+   },
+   {
+    "t": "Where do I ask for",
+    "h": 23.2,
+    "w": 860
+   },
+   {
+    "t": "404—GEN",
+    "h": 15.9,
+    "w": 41.5
+   },
+   {
+    "t": "404.xyz",
+    "h": 15.9,
+    "w": 32.5
+   },
+   {
+    "t": "the recipe",
+    "h": 15.9,
+    "w": 42.4
+   }
+  ],
+  "statsBottom": [
+   0,
+   952.6,
+   900,
+   98.5
+  ],
+  "lastStatBottom": [
+   720,
+   952.6,
+   180,
+   97.5
+  ],
+  "galBottom": [
+   0,
+   1278.1,
+   900,
+   761.7
+  ],
+  "lastShot": [
+   450,
+   1786.2,
+   450,
+   253.6
+  ],
+  "sectBottom": [
+   0,
+   1051.1,
+   900,
+   1029.6
+  ],
+  "specRows": [
+   {
+    "b": [
+     474,
+     2466.3,
+     406,
+     66.6
+    ],
+    "t": "readywindow.__READY__ with"
+   },
+   {
+    "b": [
+     474,
+     2532.9,
+     406,
+     66.5
+    ],
+    "t": "startsFrom a real click an"
+   }
+  ],
+  "specK": [
+   {
+    "b": [
+     474,
+     2477.3,
+     145,
+     43.6
+    ],
+    "t": "ready"
+   },
+   {
+    "b": [
+     474,
+     2543.9,
+     145,
+     43.5
+    ],
+    "t": "starts"
+   }
+  ],
+  "barNav": [
+   {
+    "b": [
+     693.5,
+     15,
+     17.6,
+     15.9
+    ],
+    "t": "how"
+   },
+   {
+    "b": [
+     726.1,
+     15,
+     20.9,
+     15.9
+    ],
+    "t": "gate"
+   },
+   {
+    "b": [
+     762,
+     15,
+     28.6,
+     15.9
+    ],
+    "t": "prizes"
+   },
+   {
+    "b": [
+     805.6,
+     15,
+     26.4,
+     15.9
+    ],
+    "t": "dates"
+   },
+   {
+    "b": [
+     847,
+     15,
+     33,
+     15.9
+    ],
+    "t": "entries"
+   }
+  ],
+  "play": [
+   832.5,
+   56,
+   47.5,
+   28
+  ],
+  "heroBtns": [
+   {
+    "b": [
+     657.7,
+     705.6,
+     133.5,
+     47.4
+    ],
+    "t": "Sign up and build"
+   },
+   {
+    "b": [
+     801.2,
+     705.6,
+     78.8,
+     47.4
+    ],
+    "t": "Entries"
+   }
+  ],
+  "heroP": [
+   20,
+   687.8,
+   283.6,
+   65.3
+  ],
+  "lead": [
+   474,
+   1091.1,
+   406,
+   70.2
+  ],
+  "faq": [
+   {
+    "b": [
+     20,
+     4510.5,
+     860,
+     23.2
+    ],
+    "t": "Do I need a GPU?"
+   },
+   {
+    "b": [
+     20,
+     4608.8,
+     860,
+     23.2
+    ],
+    "t": "Do I have to use Claude?"
+   },
+   {
+    "b": [
+     20,
+     4656.9,
+     860,
+     23.2
+    ],
+    "t": "Can I use my own art?"
+   }
+  ]
+ },
+ "1024": {
+  "panelHeights": {
+   "a coastal kart racer": 97.5,
+   "a night market chase": 97.5,
+   "a lighthouse platformer": 97.5,
+   "a submarine salvage sim": 97.5,
+   "a rooftop parkour run": 97.5,
+   "a desert train heist": 97.5,
+   "a haunted arcade": 97.5,
+   "a game nobody has made yet": 97.5
+  },
+  "panelSpread": 0,
+  "h1lines": [
+   [
+    "One line.",
+    484.4
+   ],
+   [
+    "Two weeks.",
+    645.7
+   ],
+   [
+    "Ten TAO.",
+    446.5
+   ]
+  ],
+  "h1w": [
+   20,
+   402.8,
+   984,
+   270.9
+  ],
+  "codeLines": 2,
+  "codeBox": [
+   43,
+   851.5,
+   806.9,
+   55.5
+  ],
+  "acts": [
+   867.9,
+   863.2,
+   113.1,
+   32
+  ],
+  "innerPad": "18px 20px",
+  "steps": [
+   {
+    "b": [
+     0,
+     1843.3,
+     204.8,
+     160
+    ],
+    "t": "(01)Clone 404's 3JS harnes"
+   },
+   {
+    "b": [
+     204.8,
+     1843.3,
+     204.8,
+     160
+    ],
+    "t": "(02)Sign up for AtlasA fix"
+   },
+   {
+    "b": [
+     409.6,
+     1843.3,
+     204.8,
+     160
+    ],
+    "t": "(03)Give your agent the li"
+   },
+   {
+    "b": [
+     614.4,
+     1843.3,
+     204.8,
+     160
+    ],
+    "t": "(04)Pass the gateDesktop a"
+   },
+   {
+    "b": [
+     819.2,
+     1843.3,
+     204.8,
+     160
+    ],
+    "t": "(05)SubmitA pull request w"
+   }
+  ],
+  "prizes": [
+   {
+    "b": [
+     0,
+     3384.3,
+     256,
+     176.7
+    ],
+    "t": "first5TAOAnnounced on stag"
+   },
+   {
+    "b": [
+     256,
+     3384.3,
+     256,
+     176.7
+    ],
+    "t": "second3TAOShowcase slot an"
+   },
+   {
+    "b": [
+     512,
+     3384.3,
+     256,
+     176.7
+    ],
+    "t": "third1.5TAOShowcase slot a"
+   },
+   {
+    "b": [
+     768,
+     3384.3,
+     256,
+     176.7
+    ],
+    "t": "community0.5TAOVoted by ev"
+   }
+  ],
+  "tcells": [
+   {
+    "b": [
+     0,
+     3823.3,
+     256,
+     137.6
+    ],
+    "t": "opens11 SepRecipe, harness"
+   },
+   {
+    "b": [
+     256,
+     3823.3,
+     256,
+     137.6
+    ],
+    "t": "office hours18 SepQuestion"
+   },
+   {
+    "b": [
+     512,
+     3823.3,
+     256,
+     137.6
+    ],
+    "t": "closes25 Sep23:59 UTC, gat"
+   },
+   {
+    "b": [
+     768,
+     3823.3,
+     256,
+     137.6
+    ],
+    "t": "winners28 SepOn stage at t"
+   }
+  ],
+  "shotcells": [
+   {
+    "b": [
+     0,
+     1290.4,
+     341.3,
+     192.4
+    ],
+    "t": "Drive / kart racer"
+   },
+   {
+    "b": [
+     341.3,
+     1290.4,
+     341.3,
+     192.4
+    ],
+    "t": "Rust 17 / shooter"
+   },
+   {
+    "b": [
+     682.7,
+     1290.4,
+     341.3,
+     192.4
+    ],
+    "t": "Costa Verde / driver"
+   },
+   {
+    "b": [
+     0,
+     1482.8,
+     341.3,
+     192.4
+    ],
+    "t": "Drive / seafront"
+   },
+   {
+    "b": [
+     341.3,
+     1482.8,
+     341.3,
+     192.4
+    ],
+    "t": "Warehouse / FPS"
+   },
+   {
+    "b": [
+     682.7,
+     1482.8,
+     341.3,
+     192.4
+    ],
+    "t": "Costa Verde / quay"
+   }
+  ],
+  "cards": [
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "reference build, not eligi"
+   },
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "screenshotexample entryExa"
+   },
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "screenshotexample entryExa"
+   }
+  ],
+  "tapSmall": [
+   {
+    "t": "404—GEN",
+    "h": 18.8,
+    "w": 48.1
+   },
+   {
+    "t": "how",
+    "h": 15.9,
+    "w": 17.6
+   },
+   {
+    "t": "gate",
+    "h": 15.9,
+    "w": 20.9
+   },
+   {
+    "t": "prizes",
+    "h": 15.9,
+    "w": 28.6
+   },
+   {
+    "t": "dates",
+    "h": 15.9,
+    "w": 26.4
+   },
+   {
+    "t": "entries",
+    "h": 15.9,
+    "w": 33
+   },
+   {
+    "t": "pause",
+    "h": 28,
+    "w": 47.5
+   },
+   {
+    "t": "another",
+    "h": 32,
+    "w": 59.7
+   },
+   {
+    "t": "copy",
+    "h": 32,
+    "w": 45.4
+   },
+   {
+    "t": "Do I need a GPU?",
+    "h": 23.2,
+    "w": 984
+   },
+   {
+    "t": "Do I have to use C",
+    "h": 23.2,
+    "w": 984
+   },
+   {
+    "t": "Can I use my own a",
+    "h": 23.2,
+    "w": 984
+   },
+   {
+    "t": "How do I get paid?",
+    "h": 23.2,
+    "w": 984
+   },
+   {
+    "t": "Where do I ask for",
+    "h": 23.2,
+    "w": 984
+   },
+   {
+    "t": "404—GEN",
+    "h": 15.9,
+    "w": 41.5
+   },
+   {
+    "t": "404.xyz",
+    "h": 15.9,
+    "w": 32.5
+   },
+   {
+    "t": "the recipe",
+    "h": 15.9,
+    "w": 42.4
+   }
+  ],
+  "statsBottom": [
+   0,
+   959,
+   1024,
+   103.5
+  ],
+  "lastStatBottom": [
+   819.2,
+   959,
+   204.8,
+   102.5
+  ],
+  "galBottom": [
+   0,
+   1289.4,
+   1024,
+   385.9
+  ],
+  "lastShot": [
+   682.7,
+   1482.8,
+   341.3,
+   192.4
+  ],
+  "sectBottom": [
+   0,
+   1062.4,
+   1024,
+   653.8
+  ],
+  "specRows": [
+   {
+    "b": [
+     536,
+     2085.3,
+     468,
+     66.6
+    ],
+    "t": "readywindow.__READY__ with"
+   },
+   {
+    "b": [
+     536,
+     2151.8,
+     468,
+     66.5
+    ],
+    "t": "startsFrom a real click an"
+   }
+  ],
+  "specK": [
+   {
+    "b": [
+     536,
+     2096.3,
+     145,
+     43.6
+    ],
+    "t": "ready"
+   },
+   {
+    "b": [
+     536,
+     2162.8,
+     145,
+     43.5
+    ],
+    "t": "starts"
+   }
+  ],
+  "barNav": [
+   {
+    "b": [
+     817.5,
+     15,
+     17.6,
+     15.9
+    ],
+    "t": "how"
+   },
+   {
+    "b": [
+     850.1,
+     15,
+     20.9,
+     15.9
+    ],
+    "t": "gate"
+   },
+   {
+    "b": [
+     886,
+     15,
+     28.6,
+     15.9
+    ],
+    "t": "prizes"
+   },
+   {
+    "b": [
+     929.6,
+     15,
+     26.4,
+     15.9
+    ],
+    "t": "dates"
+   },
+   {
+    "b": [
+     971,
+     15,
+     33,
+     15.9
+    ],
+    "t": "entries"
+   }
+  ],
+  "play": [
+   956.5,
+   56,
+   47.5,
+   28
+  ],
+  "heroBtns": [
+   {
+    "b": [
+     781.7,
+     705.6,
+     133.5,
+     47.4
+    ],
+    "t": "Sign up and build"
+   },
+   {
+    "b": [
+     925.2,
+     705.6,
+     78.8,
+     47.4
+    ],
+    "t": "Entries"
+   }
+  ],
+  "heroP": [
+   20,
+   687.8,
+   283.6,
+   65.3
+  ],
+  "lead": [
+   536,
+   1102.4,
+   468,
+   70.2
+  ],
+  "faq": [
+   {
+    "b": [
+     20,
+     4044.9,
+     984,
+     23.2
+    ],
+    "t": "Do I need a GPU?"
+   },
+   {
+    "b": [
+     20,
+     4143.1,
+     984,
+     23.2
+    ],
+    "t": "Do I have to use Claude?"
+   },
+   {
+    "b": [
+     20,
+     4191.3,
+     984,
+     23.2
+    ],
+    "t": "Can I use my own art?"
+   }
+  ]
+ },
+ "1180": {
+  "panelHeights": {
+   "a coastal kart racer": 105.3,
+   "a night market chase": 105.3,
+   "a lighthouse platformer": 105.3,
+   "a submarine salvage sim": 105.3,
+   "a rooftop parkour run": 105.3,
+   "a desert train heist": 105.3,
+   "a haunted arcade": 105.3,
+   "a game nobody has made yet": 105.3
+  },
+  "panelSpread": 0,
+  "h1lines": [
+   [
+    "One line.",
+    558.2
+   ],
+   [
+    "Two weeks.",
+    744
+   ],
+   [
+    "Ten TAO.",
+    514.5
+   ]
+  ],
+  "h1w": [
+   20,
+   361.5,
+   1140,
+   312.2
+  ],
+  "codeLines": 2,
+  "codeBox": [
+   43,
+   851.5,
+   962.9,
+   63.3
+  ],
+  "acts": [
+   1023.9,
+   867.1,
+   113.1,
+   32
+  ],
+  "innerPad": "18px 20px",
+  "steps": [
+   {
+    "b": [
+     0,
+     1906,
+     236,
+     141.4
+    ],
+    "t": "(01)Clone 404's 3JS harnes"
+   },
+   {
+    "b": [
+     236,
+     1906,
+     236,
+     141.4
+    ],
+    "t": "(02)Sign up for AtlasA fix"
+   },
+   {
+    "b": [
+     472,
+     1906,
+     236,
+     141.4
+    ],
+    "t": "(03)Give your agent the li"
+   },
+   {
+    "b": [
+     708,
+     1906,
+     236,
+     141.4
+    ],
+    "t": "(04)Pass the gateDesktop a"
+   },
+   {
+    "b": [
+     944,
+     1906,
+     236,
+     141.4
+    ],
+    "t": "(05)SubmitA pull request w"
+   }
+  ],
+  "prizes": [
+   {
+    "b": [
+     0,
+     3350.5,
+     295,
+     164.6
+    ],
+    "t": "first5TAOAnnounced on stag"
+   },
+   {
+    "b": [
+     295,
+     3350.5,
+     295,
+     164.6
+    ],
+    "t": "second3TAOShowcase slot an"
+   },
+   {
+    "b": [
+     590,
+     3350.5,
+     295,
+     164.6
+    ],
+    "t": "third1.5TAOShowcase slot a"
+   },
+   {
+    "b": [
+     885,
+     3350.5,
+     295,
+     164.6
+    ],
+    "t": "community0.5TAOVoted by ev"
+   }
+  ],
+  "tcells": [
+   {
+    "b": [
+     0,
+     3780.4,
+     295,
+     137.3
+    ],
+    "t": "opens11 SepRecipe, harness"
+   },
+   {
+    "b": [
+     295,
+     3780.4,
+     295,
+     137.3
+    ],
+    "t": "office hours18 SepQuestion"
+   },
+   {
+    "b": [
+     590,
+     3780.4,
+     295,
+     137.3
+    ],
+    "t": "closes25 Sep23:59 UTC, gat"
+   },
+   {
+    "b": [
+     885,
+     3780.4,
+     295,
+     137.3
+    ],
+    "t": "winners28 SepOn stage at t"
+   }
+  ],
+  "shotcells": [
+   {
+    "b": [
+     0,
+     1291.6,
+     393.3,
+     221.7
+    ],
+    "t": "Drive / kart racer"
+   },
+   {
+    "b": [
+     393.3,
+     1291.6,
+     393.3,
+     221.7
+    ],
+    "t": "Rust 17 / shooter"
+   },
+   {
+    "b": [
+     786.7,
+     1291.6,
+     393.3,
+     221.7
+    ],
+    "t": "Costa Verde / driver"
+   },
+   {
+    "b": [
+     0,
+     1513.3,
+     393.3,
+     221.7
+    ],
+    "t": "Drive / seafront"
+   },
+   {
+    "b": [
+     393.3,
+     1513.3,
+     393.3,
+     221.7
+    ],
+    "t": "Warehouse / FPS"
+   },
+   {
+    "b": [
+     786.7,
+     1513.3,
+     393.3,
+     221.7
+    ],
+    "t": "Costa Verde / quay"
+   }
+  ],
+  "cards": [
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "reference build, not eligi"
+   },
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "screenshotexample entryExa"
+   },
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "screenshotexample entryExa"
+   }
+  ],
+  "tapSmall": [
+   {
+    "t": "404—GEN",
+    "h": 18.8,
+    "w": 48.1
+   },
+   {
+    "t": "how",
+    "h": 15.9,
+    "w": 17.6
+   },
+   {
+    "t": "gate",
+    "h": 15.9,
+    "w": 20.9
+   },
+   {
+    "t": "prizes",
+    "h": 15.9,
+    "w": 28.6
+   },
+   {
+    "t": "dates",
+    "h": 15.9,
+    "w": 26.4
+   },
+   {
+    "t": "entries",
+    "h": 15.9,
+    "w": 33
+   },
+   {
+    "t": "pause",
+    "h": 28,
+    "w": 47.5
+   },
+   {
+    "t": "another",
+    "h": 32,
+    "w": 59.7
+   },
+   {
+    "t": "copy",
+    "h": 32,
+    "w": 45.4
+   },
+   {
+    "t": "Do I need a GPU?",
+    "h": 23.2,
+    "w": 1140
+   },
+   {
+    "t": "Do I have to use C",
+    "h": 23.2,
+    "w": 1140
+   },
+   {
+    "t": "Can I use my own a",
+    "h": 23.2,
+    "w": 1140
+   },
+   {
+    "t": "How do I get paid?",
+    "h": 23.2,
+    "w": 1140
+   },
+   {
+    "t": "Where do I ask for",
+    "h": 23.2,
+    "w": 1140
+   },
+   {
+    "t": "404—GEN",
+    "h": 15.9,
+    "w": 41.5
+   },
+   {
+    "t": "404.xyz",
+    "h": 15.9,
+    "w": 32.5
+   },
+   {
+    "t": "the recipe",
+    "h": 15.9,
+    "w": 42.4
+   }
+  ],
+  "statsBottom": [
+   0,
+   966.8,
+   1180,
+   108.5
+  ],
+  "lastStatBottom": [
+   944,
+   966.8,
+   236,
+   107.5
+  ],
+  "galBottom": [
+   0,
+   1290.6,
+   1180,
+   444.4
+  ],
+  "lastShot": [
+   786.7,
+   1513.3,
+   393.3,
+   221.7
+  ],
+  "sectBottom": [
+   0,
+   1075.3,
+   1180,
+   700.6
+  ],
+  "specRows": [
+   {
+    "b": [
+     614,
+     2129.4,
+     546,
+     44.8
+    ],
+    "t": "readywindow.__READY__ with"
+   },
+   {
+    "b": [
+     614,
+     2174.3,
+     546,
+     66.5
+    ],
+    "t": "startsFrom a real click an"
+   }
+  ],
+  "specK": [
+   {
+    "b": [
+     614,
+     2140.4,
+     145,
+     21.8
+    ],
+    "t": "ready"
+   },
+   {
+    "b": [
+     614,
+     2185.3,
+     145,
+     43.5
+    ],
+    "t": "starts"
+   }
+  ],
+  "barNav": [
+   {
+    "b": [
+     973.5,
+     15,
+     17.6,
+     15.9
+    ],
+    "t": "how"
+   },
+   {
+    "b": [
+     1006.1,
+     15,
+     20.9,
+     15.9
+    ],
+    "t": "gate"
+   },
+   {
+    "b": [
+     1042,
+     15,
+     28.6,
+     15.9
+    ],
+    "t": "prizes"
+   },
+   {
+    "b": [
+     1085.6,
+     15,
+     26.4,
+     15.9
+    ],
+    "t": "dates"
+   },
+   {
+    "b": [
+     1127,
+     15,
+     33,
+     15.9
+    ],
+    "t": "entries"
+   }
+  ],
+  "play": [
+   1112.5,
+   56,
+   47.5,
+   28
+  ],
+  "heroBtns": [
+   {
+    "b": [
+     937.7,
+     705.6,
+     133.5,
+     47.4
+    ],
+    "t": "Sign up and build"
+   },
+   {
+    "b": [
+     1081.2,
+     705.6,
+     78.8,
+     47.4
+    ],
+    "t": "Entries"
+   }
+  ],
+  "heroP": [
+   20,
+   687.8,
+   283.6,
+   65.3
+  ],
+  "lead": [
+   614,
+   1115.3,
+   546,
+   70.2
+  ],
+  "faq": [
+   {
+    "b": [
+     20,
+     4001.6,
+     1140,
+     23.2
+    ],
+    "t": "Do I need a GPU?"
+   },
+   {
+    "b": [
+     20,
+     4099.9,
+     1140,
+     23.2
+    ],
+    "t": "Do I have to use Claude?"
+   },
+   {
+    "b": [
+     20,
+     4148,
+     1140,
+     23.2
+    ],
+    "t": "Can I use my own art?"
+   }
+  ]
+ },
+ "1440": {
+  "panelHeights": {
+   "a coastal kart racer": 105.3,
+   "a night market chase": 105.3,
+   "a lighthouse platformer": 105.3,
+   "a submarine salvage sim": 105.3,
+   "a rooftop parkour run": 105.3,
+   "a desert train heist": 105.3,
+   "a haunted arcade": 105.3,
+   "a game nobody has made yet": 105.3
+  },
+  "panelSpread": 0,
+  "h1lines": [
+   [
+    "One line.",
+    630.8
+   ],
+   [
+    "Two weeks.",
+    840.7
+   ],
+   [
+    "Ten TAO.",
+    581.4
+   ]
+  ],
+  "h1w": [
+   80,
+   321,
+   1280,
+   352.8
+  ],
+  "codeLines": 2,
+  "codeBox": [
+   123,
+   851.5,
+   1062.9,
+   63.3
+  ],
+  "acts": [
+   1203.9,
+   867.1,
+   113.1,
+   32
+  ],
+  "innerPad": "18px 20px",
+  "steps": [
+   {
+    "b": [
+     0,
+     2003.5,
+     288,
+     141.1
+    ],
+    "t": "(01)Clone 404's 3JS harnes"
+   },
+   {
+    "b": [
+     288,
+     2003.5,
+     288,
+     141.1
+    ],
+    "t": "(02)Sign up for AtlasA fix"
+   },
+   {
+    "b": [
+     576,
+     2003.5,
+     288,
+     141.1
+    ],
+    "t": "(03)Give your agent the li"
+   },
+   {
+    "b": [
+     864,
+     2003.5,
+     288,
+     141.1
+    ],
+    "t": "(04)Pass the gateDesktop a"
+   },
+   {
+    "b": [
+     1152,
+     2003.5,
+     288,
+     141.1
+    ],
+    "t": "(05)SubmitA pull request w"
+   }
+  ],
+  "prizes": [
+   {
+    "b": [
+     0,
+     3382.4,
+     360,
+     164.6
+    ],
+    "t": "first5TAOAnnounced on stag"
+   },
+   {
+    "b": [
+     360,
+     3382.4,
+     360,
+     164.6
+    ],
+    "t": "second3TAOShowcase slot an"
+   },
+   {
+    "b": [
+     720,
+     3382.4,
+     360,
+     164.6
+    ],
+    "t": "third1.5TAOShowcase slot a"
+   },
+   {
+    "b": [
+     1080,
+     3382.4,
+     360,
+     164.6
+    ],
+    "t": "community0.5TAOVoted by ev"
+   }
+  ],
+  "tcells": [
+   {
+    "b": [
+     0,
+     3812.3,
+     360,
+     118.8
+    ],
+    "t": "opens11 SepRecipe, harness"
+   },
+   {
+    "b": [
+     360,
+     3812.3,
+     360,
+     118.8
+    ],
+    "t": "office hours18 SepQuestion"
+   },
+   {
+    "b": [
+     720,
+     3812.3,
+     360,
+     118.8
+    ],
+    "t": "closes25 Sep23:59 UTC, gat"
+   },
+   {
+    "b": [
+     1080,
+     3812.3,
+     360,
+     118.8
+    ],
+    "t": "winners28 SepOn stage at t"
+   }
+  ],
+  "shotcells": [
+   {
+    "b": [
+     0,
+     1291.6,
+     480,
+     270.4
+    ],
+    "t": "Drive / kart racer"
+   },
+   {
+    "b": [
+     480,
+     1291.6,
+     480,
+     270.4
+    ],
+    "t": "Rust 17 / shooter"
+   },
+   {
+    "b": [
+     960,
+     1291.6,
+     480,
+     270.4
+    ],
+    "t": "Costa Verde / driver"
+   },
+   {
+    "b": [
+     0,
+     1562,
+     480,
+     270.4
+    ],
+    "t": "Drive / seafront"
+   },
+   {
+    "b": [
+     480,
+     1562,
+     480,
+     270.4
+    ],
+    "t": "Warehouse / FPS"
+   },
+   {
+    "b": [
+     960,
+     1562,
+     480,
+     270.4
+    ],
+    "t": "Costa Verde / quay"
+   }
+  ],
+  "cards": [
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "reference build, not eligi"
+   },
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "screenshotexample entryExa"
+   },
+   {
+    "b": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "t": "screenshotexample entryExa"
+   }
+  ],
+  "tapSmall": [
+   {
+    "t": "404—GEN",
+    "h": 18.8,
+    "w": 48.1
+   },
+   {
+    "t": "how",
+    "h": 15.9,
+    "w": 17.6
+   },
+   {
+    "t": "gate",
+    "h": 15.9,
+    "w": 20.9
+   },
+   {
+    "t": "prizes",
+    "h": 15.9,
+    "w": 28.6
+   },
+   {
+    "t": "dates",
+    "h": 15.9,
+    "w": 26.4
+   },
+   {
+    "t": "entries",
+    "h": 15.9,
+    "w": 33
+   },
+   {
+    "t": "pause",
+    "h": 28,
+    "w": 47.5
+   },
+   {
+    "t": "another",
+    "h": 32,
+    "w": 59.7
+   },
+   {
+    "t": "copy",
+    "h": 32,
+    "w": 45.4
+   },
+   {
+    "t": "Do I need a GPU?",
+    "h": 23.2,
+    "w": 1240
+   },
+   {
+    "t": "Do I have to use C",
+    "h": 23.2,
+    "w": 1240
+   },
+   {
+    "t": "Can I use my own a",
+    "h": 23.2,
+    "w": 1240
+   },
+   {
+    "t": "How do I get paid?",
+    "h": 23.2,
+    "w": 1240
+   },
+   {
+    "t": "Where do I ask for",
+    "h": 23.2,
+    "w": 1240
+   },
+   {
+    "t": "404—GEN",
+    "h": 15.9,
+    "w": 41.5
+   },
+   {
+    "t": "404.xyz",
+    "h": 15.9,
+    "w": 32.5
+   },
+   {
+    "t": "the recipe",
+    "h": 15.9,
+    "w": 42.4
+   }
+  ],
+  "statsBottom": [
+   0,
+   966.8,
+   1440,
+   108.5
+  ],
+  "lastStatBottom": [
+   1152,
+   966.8,
+   288,
+   107.5
+  ],
+  "galBottom": [
+   0,
+   1290.6,
+   1440,
+   541.9
+  ],
+  "lastShot": [
+   960,
+   1562,
+   480,
+   270.4
+  ],
+  "sectBottom": [
+   0,
+   1075.3,
+   1440,
+   798.1
+  ],
+  "specRows": [
+   {
+    "b": [
+     744,
+     2226.6,
+     596,
+     44.8
+    ],
+    "t": "readywindow.__READY__ with"
+   },
+   {
+    "b": [
+     744,
+     2271.4,
+     596,
+     44.8
+    ],
+    "t": "startsFrom a real click an"
+   }
+  ],
+  "specK": [
+   {
+    "b": [
+     744,
+     2237.6,
+     145,
+     21.8
+    ],
+    "t": "ready"
+   },
+   {
+    "b": [
+     744,
+     2282.4,
+     145,
+     21.8
+    ],
+    "t": "starts"
+   }
+  ],
+  "barNav": [
+   {
+    "b": [
+     1153.5,
+     15,
+     17.6,
+     15.9
+    ],
+    "t": "how"
+   },
+   {
+    "b": [
+     1186.1,
+     15,
+     20.9,
+     15.9
+    ],
+    "t": "gate"
+   },
+   {
+    "b": [
+     1222,
+     15,
+     28.6,
+     15.9
+    ],
+    "t": "prizes"
+   },
+   {
+    "b": [
+     1265.6,
+     15,
+     26.4,
+     15.9
+    ],
+    "t": "dates"
+   },
+   {
+    "b": [
+     1307,
+     15,
+     33,
+     15.9
+    ],
+    "t": "entries"
+   }
+  ],
+  "play": [
+   1372.5,
+   56,
+   47.5,
+   28
+  ],
+  "heroBtns": [
+   {
+    "b": [
+     1137.7,
+     705.6,
+     133.5,
+     47.4
+    ],
+    "t": "Sign up and build"
+   },
+   {
+    "b": [
+     1281.2,
+     705.6,
+     78.8,
+     47.4
+    ],
+    "t": "Entries"
+   }
+  ],
+  "heroP": [
+   80,
+   687.8,
+   283.6,
+   65.3
+  ],
+  "lead": [
+   744,
+   1115.3,
+   580.6,
+   46.8
+  ],
+  "faq": [
+   {
+    "b": [
+     100,
+     4015,
+     1240,
+     23.2
+    ],
+    "t": "Do I need a GPU?"
+   },
+   {
+    "b": [
+     100,
+     4113.3,
+     1240,
+     23.2
+    ],
+    "t": "Do I have to use Claude?"
+   },
+   {
+    "b": [
+     100,
+     4161.5,
+     1240,
+     23.2
+    ],
+    "t": "Can I use my own art?"
+   }
+  ]
+ }
+}

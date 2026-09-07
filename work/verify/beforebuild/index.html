@@ -1,145 +1,58 @@
 <title>404 Game Jam</title>
 <style>
-/* FONTS_HERE */
+/* fourzerofourpixel, the 404 pixel face, taken from 404.xyz/fonts. It is a partial subset:
+   uppercase, digits and a little punctuation. Keep every pixel string uppercase and avoid
+   the percent sign, the plus sign, the middle dot and arrows. */
+@font-face{font-family:'fourzerofourpixel';src:url(data:font/woff2;base64,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) format('woff2');font-weight:400;font-display:swap}
 
-/* ============================================================================
-   THE SYSTEM. Two scales, and nothing on this page is allowed off them.
-
-   SPACING  4 8 12 16 24 32 48 64, plus one page gutter token.
-   TYPE     pixel face at 10 / 12 / 20 only (its module is 0.1em, and it is a
-            partial subset, so every pixel string stays uppercase);
-            sans text at 13 / 16 / 20; sans display in four tiers that never
-            collide; mono at 13 and one clamp for the prompt.
-   ========================================================================= */
 :root{
   --paper:#F2F2F2; --ink:#000; --coral:#f85951; --grey:#5c5c5c; --hair:#dbdbdb; --hair2:#c9c9c9; --panel:#e9e9e9;
   --pix:fourzerofourpixel,ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
   --sans:Helvetica,"Helvetica Neue",Arial,ui-sans-serif,system-ui,sans-serif;
   --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
-
-  /* spacing steps */
-  --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:24px; --s6:32px; --s7:48px; --s8:64px;
-
-  --bar:48px;       /* the fixed bar, and the unit every anchor jump is offset by */
-  --tap:44px;       /* the smallest a control is allowed to be on a touch screen */
-  --marker:20px;    /* the fixed column the FAQ marker sits in, so the heading never moves */
-  --sec:var(--s7);  /* air above and below a section: 48, and 64 from 1200 */
-  --pad:20px;       /* the page gutter, and the padding inside a band cell: they must match */
-  --cell:var(--s4); /* 16 with a 20 gutter below 900, 24 with a 24 gutter above it */
-  /* the page text edge. 104px at 1440, --pad below the 1320 cap. Full width blocks only. */
-  --gut:max(var(--pad),calc((100% - 1280px)/2 + var(--pad)));
-  /* the same gutter measured against the band a cell sits in, so an outer cell can carry it
-     as padding: the band still bleeds, its text still lands on --gut, and a scrollbar
-     cannot desync the two the way 100vw would */
-  --gutc:max(var(--pad),calc((100cqw - 1280px)/2 + var(--pad)));
-
-  /* pixel face: three sizes, tracking loosens as the size drops */
-  --pix-s:10px; --pix-s-tr:.08em;  /* every label, caption, badge, chip, byline, nav item, key, button */
-  --pix-m:12px; --pix-m-tr:.07em;  /* a pixel string that carries a whole line: hero tagline, .btn */
-  --pix-l:20px; --pix-l-tr:.05em;  /* the 404 GEN wordmark, bar and footer, nothing else */
-
-  /* sans text: three sizes, no half pixels */
-  --t-cell:13px;   /* supporting copy inside a band cell or a card */
-  --t-body:16px;   /* body, spec values, FAQ question and answer, hero paragraph, step headings */
-  --t-lead:20px;   /* the lead voice: p.lead and a card title */
-  --measure:53ch;  /* about 66 characters at 16px */
-
-  /* sans display: four tiers, largest to smallest, none of them ever equal */
-  --d-title:clamp(44px,10.5vw,140px); /* h1 */
-  --d-amt:clamp(34px,5vw,58px);       /* prize amounts, the one number allowed above a heading */
-  --d-head:clamp(28px,3.6vw,46px);    /* h2 */
-  --d-num:clamp(26px,2.6vw,34px);     /* secondary numbers: stat figures and dates */
-
-  --m-chip:13px;                        /* mono inside running text */
-  --m-panel:clamp(15px,1.6vw,20px);     /* the prompt, never smaller than the body */
 }
-/* three reflow points and the container cap: 600, 900, 1200, 1320 */
-@media (min-width:900px){:root{--pad:var(--s5);--cell:var(--s5)}}
-@media (min-width:1200px){:root{--sec:var(--s8)}}
-
 html{color-scheme:light}
 *{box-sizing:border-box}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:var(--t-body);line-height:1.5;-webkit-font-smoothing:antialiased}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.45;-webkit-font-smoothing:antialiased}
 [hidden]{display:none!important}
 a{color:var(--ink)}
 img,video{display:block;max-width:100%}
-.wrap{max-width:1280px;margin:0 auto;padding:0 var(--pad)}
-section[id],#top{scroll-margin-top:calc(var(--bar) + var(--s4))}
-
-/* one focus token for the page: coral on paper, white over the video. No outline:none anywhere.
-   The bar only takes the white ring while it is still transparent over the clip: once it goes
-   solid it is paper, and a white ring on paper is a 1.1:1 ring, which is no ring at all. */
-:where(a,button,summary,[tabindex]):focus-visible{outline:2px solid var(--coral);outline-offset:2px}
-.bar:not(.solid) a:focus-visible,.stage .btn:focus-visible,.play:focus-visible{outline-color:#fff}
-
-/* one line per seam. A band paints its dividers in a 1px grid gap, so no hairline can land
-   on a viewport edge, on the ink rule below it, or beside an orphan cell. A card grid does the
-   same job with a clipped shadow, because filtering can leave it a part filled row. */
-.stats,.steps,.prizes,.time,.gal{gap:1px;background:var(--hair2)}
-.stat,.step,.prize,.tcell,.shotcell{background:var(--paper)}
-.grid{overflow:hidden}
-/* the bands bleed edge to edge, their text does not: the cell that opens a row and the cell
-   that closes it carry the page gutter, so cell text lands on the same column as the prose */
-.stats,.steps,.prizes,.time{container-type:inline-size}
-.stat,.step,.prize,.tcell{padding:var(--cell)}
-@media (max-width:899px){
-  .stat:nth-child(2n+1),.prize:nth-child(2n+1),.tcell:nth-child(2n+1){padding-left:var(--gutc)}
-  .stat:nth-child(2n),.stat:last-child,.prize:nth-child(2n),.tcell:nth-child(2n){padding-right:var(--gutc)}
-}
-@media (min-width:900px){
-  .stat:nth-child(5n+1),.prize:nth-child(4n+1),.tcell:nth-child(4n+1){padding-left:var(--gutc)}
-  .stat:nth-child(5n),.prize:nth-child(4n),.tcell:nth-child(4n){padding-right:var(--gutc)}
-}
-.step{padding-left:var(--gutc);padding-right:var(--gutc)}
-@media (min-width:600px) and (max-width:1199px){
-  .step:nth-child(2n+1){padding-right:var(--cell)}
-  .step:nth-child(2n){padding-left:var(--cell)}
-  .step:last-child{padding-left:var(--gutc);padding-right:var(--gutc)}
-}
-@media (min-width:1200px){
-  .step{padding-left:var(--cell);padding-right:var(--cell)}
-  .step:nth-child(5n+1){padding-left:var(--gutc)}
-  .step:nth-child(5n){padding-right:var(--gutc)}
-}
-.card{box-shadow:1px 0 0 var(--hair2),0 1px 0 var(--hair)}
-
-.pix{font-family:var(--pix);font-size:var(--pix-s);letter-spacing:var(--pix-s-tr);text-transform:uppercase}
+.wrap{max-width:1280px;margin:0 auto;padding:0 20px}
+.pix{font-family:var(--pix);font-size:11px;letter-spacing:.06em;text-transform:uppercase}
 .c{color:var(--coral)} .g{color:var(--grey)}
 .tbd{color:var(--coral);border-bottom:1px dotted var(--coral)}
-.tbd::after{content:"TBD";font-family:var(--pix);font-size:var(--pix-s);letter-spacing:var(--pix-s-tr);vertical-align:super;margin-left:var(--s1)}
+.tbd::after{content:"TBD";font-family:var(--pix);font-size:8px;vertical-align:super;margin-left:3px}
 
 /* bar */
 .bar{position:fixed;top:0;left:0;right:0;z-index:40;transition:background .2s}
-.bar .wrap{display:flex;align-items:center;gap:var(--s4);height:var(--bar)}
-.bar a{font-family:var(--pix);font-size:var(--pix-s);letter-spacing:var(--pix-s-tr);text-transform:uppercase;color:#fff;text-decoration:none;text-shadow:0 1px 3px rgba(0,0,0,.65)}
-.bar a:hover{color:var(--coral)}
-.bar .mark{font-size:var(--pix-l);letter-spacing:var(--pix-l-tr);align-self:stretch;display:flex;align-items:center}
-.bar nav{margin-left:auto;display:flex;gap:var(--s2)}
-.bar nav a{padding:var(--s4) var(--s2)}   /* a 46px hit box without moving the type */
-@media (max-width:640px){.bar .wrap{gap:var(--s3)}.bar nav{gap:0}.bar nav a{padding:var(--s4) var(--s1)}}
+.bar .wrap{display:flex;align-items:center;gap:18px;height:46px}
+.bar a{font-family:var(--pix);font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:#fff;text-decoration:none;text-shadow:0 1px 3px rgba(0,0,0,.65)}
+.bar a:hover,.bar a:focus{color:var(--coral);outline:none}
+.bar .mark{font-size:13px}
+.bar nav{margin-left:auto;display:flex;gap:15px}
+@media (max-width:640px){.bar nav a:not(.keep){display:none}}
 .bar.solid{background:var(--paper);border-bottom:1px solid var(--ink)}
 .bar.solid a{color:var(--ink);text-shadow:none}
 
 /* hero: full bleed clip, almost no words */
 .stage{position:relative;height:min(92vh,780px);min-height:460px;overflow:hidden;background:#111;border-bottom:1px solid var(--ink)}
 .stage video,.stage img.poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-/* the scrim holds at least 10% black behind the band the tagline sits in */
-.stage .veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.42) 0%,rgba(0,0,0,.10) 30%,rgba(0,0,0,.28) 55%,rgba(0,0,0,.66) 100%)}
-.stage .in{position:absolute;inset:auto 0 0 0;padding:0 0 var(--s6);color:#fff}
-h1{font-weight:700;font-size:var(--d-title);line-height:.84;letter-spacing:-.055em;margin:0;text-transform:uppercase;color:#fff}
+.stage .veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.42) 0%,rgba(0,0,0,.05) 34%,rgba(0,0,0,.06) 62%,rgba(0,0,0,.62) 100%)}
+.stage .in{position:absolute;inset:auto 0 0 0;padding:0 20px 26px;color:#fff}
+.stage .in .wrap{padding:0}
+h1{font-weight:700;font-size:clamp(44px,10.5vw,140px);line-height:.84;letter-spacing:-.055em;margin:0;text-transform:uppercase;color:#fff}
 h1 .k{color:var(--coral)}
-.stage .row{display:flex;flex-wrap:wrap;gap:var(--s3) var(--s5);align-items:flex-end;justify-content:space-between;margin-top:var(--s4)}
-.stage .row p{margin:0;max-width:34ch;font-size:var(--t-body);color:rgba(255,255,255,.9);text-shadow:0 1px 3px rgba(0,0,0,.5)}
-.stage .tagline{font-family:var(--pix);font-size:var(--pix-m);letter-spacing:var(--pix-m-tr);text-transform:uppercase;color:rgba(255,255,255,.92);text-shadow:0 1px 3px rgba(0,0,0,.65);margin-bottom:var(--s3)}
-.play{position:absolute;top:calc(var(--bar) + var(--s2));right:var(--gut);font-family:var(--pix);font-size:var(--pix-s);letter-spacing:var(--pix-s-tr);text-transform:uppercase;
-  background:rgba(0,0,0,.45);color:#fff;border:1px solid rgba(255,255,255,.35);padding:0 var(--s3);min-width:64px;min-height:var(--tap);
-  display:inline-flex;align-items:center;justify-content:center;cursor:pointer}
-.play:hover{background:var(--coral);border-color:var(--coral)}
+.stage .row{display:flex;flex-wrap:wrap;gap:12px 26px;align-items:flex-end;justify-content:space-between;margin-top:14px}
+.stage .row p{margin:0;max-width:34ch;font-size:15px;color:rgba(255,255,255,.82)}
+.stage .tagline{font-family:var(--pix);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:10px}
+.play{position:absolute;top:56px;right:20px;font-family:var(--pix);font-size:10px;letter-spacing:.06em;text-transform:uppercase;
+  background:rgba(0,0,0,.45);color:#fff;border:1px solid rgba(255,255,255,.35);padding:6px 10px;cursor:pointer}
+.play:hover,.play:focus{background:var(--coral);border-color:var(--coral);outline:none}
 
 /* prompt panel, with a beam riding the border */
 @property --beam{syntax:'<angle>';initial-value:0deg;inherits:false}
-.promptwrap{background:var(--paper);border-bottom:1px solid var(--ink);padding:var(--s6) 0 var(--s7)}
-.promptwrap .lbl{font-family:var(--pix);font-size:var(--pix-s);letter-spacing:var(--pix-s-tr);text-transform:uppercase;color:var(--coral);margin:0 0 var(--s5)}
+.promptwrap{background:var(--paper);border-bottom:1px solid var(--ink);padding:26px 0 30px}
+.promptwrap .lbl{font-family:var(--pix);font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:var(--grey);margin:0 0 10px}
 /* the beam: a blurred conic on the wrapper for the glow, a masked ring on the panel for the edge */
 .beamwrap{position:relative}
 .beamwrap::before{content:"";position:absolute;inset:-10px;pointer-events:none;filter:blur(16px);opacity:.32;
@@ -153,10 +66,10 @@ h1 .k{color:var(--coral)}
   animation:beamspin 3.8s linear infinite}
 @keyframes beamspin{to{--beam:360deg}}
 @media (prefers-reduced-motion:reduce){.beamwrap::before{display:none}.panel::before{animation:none;background:#f85951}}
-.panel .inner{position:relative;display:flex;flex-wrap:wrap;gap:var(--s3) var(--s4);align-items:center;padding:var(--s4) clamp(var(--s3),4vw,var(--pad))}
-.panel code{font-family:var(--mono);font-size:var(--m-panel);line-height:1.45;color:#fff;flex:1;min-width:min(260px,100%);word-break:break-word}
+.panel .inner{position:relative;display:flex;flex-wrap:wrap;gap:12px 18px;align-items:center;padding:18px 20px}
+.panel code{font-family:var(--mono);font-size:clamp(14px,1.7vw,20px);line-height:1.45;color:#fff;flex:1;min-width:260px;word-break:break-word}
 .panel code .m{color:#ffd7d5}
-.panel .slot{position:relative;display:inline-block;color:#fff;font-weight:700;font-size:1.05em;letter-spacing:-.01em;
+.panel .slot{position:relative;display:inline-block;color:#fff;font-weight:700;font-size:1.08em;letter-spacing:-.01em;
   background:rgba(248,89,81,.10);box-shadow:inset 0 -2px 0 var(--coral);padding:1px 5px 2px;white-space:nowrap;
   transition:background .25s ease}
 /* a light sweeps across the phrase the moment it lands */
@@ -170,151 +83,136 @@ h1 .k{color:var(--coral)}
 .pcaret{display:inline-block;width:9px;height:1.05em;background:var(--coral);vertical-align:-.18em;margin-left:2px;animation:bl 1s steps(1) infinite}
 @keyframes bl{50%{opacity:0}}
 @media (prefers-reduced-motion:reduce){.pcaret{animation:none}}
-.panel .acts{display:flex;gap:var(--s2);margin-left:auto}
-.panel button{font-family:var(--pix);font-size:var(--pix-s);letter-spacing:var(--pix-s-tr);text-transform:uppercase;background:none;
-  border:1px solid #5a5a5a;color:#c9c9c9;padding:0 var(--s3);min-width:88px;min-height:var(--tap);
-  display:inline-flex;align-items:center;justify-content:center;cursor:pointer;white-space:nowrap}
-.panel button:hover{color:var(--coral);border-color:var(--coral)}
-/* the phrase gets a line of its own (the break is in the markup), so the panel is the same
-   height whichever of the eight ideas is showing and the page below it never jumps */
-@media (max-width:599px){.panel .acts{margin-left:0}}
-/* under 360 the longest phrase only fits its own line at the body size, and only without the caret */
-@media (max-width:359px){.panel .slot{font-size:1em}.pcaret{display:none}}
+.panel .acts{display:flex;gap:8px;margin-left:auto}
+.panel button{font-family:var(--pix);font-size:10px;letter-spacing:.06em;text-transform:uppercase;background:none;
+  border:1px solid #3a3a3a;color:#c9c9c9;padding:8px 12px;cursor:pointer;white-space:nowrap}
+.panel button:hover,.panel button:focus{color:var(--coral);border-color:var(--coral);outline:none}
 
 /* stats, the Dream style callout row */
 .stats{display:grid;grid-template-columns:repeat(2,1fr);border-bottom:1px solid var(--ink)}
 @media (min-width:900px){.stats{grid-template-columns:repeat(5,1fr)}}
-@media (max-width:899px){.stats .stat:last-child{grid-column:1/-1}}
-.stat b{display:block;font-weight:700;font-size:var(--d-num);letter-spacing:-.04em;line-height:1;font-variant-numeric:tabular-nums}
-.stat b em{font-style:normal;font-size:.4em;letter-spacing:-.01em;margin-left:var(--s1);color:var(--grey)}
-.stat span{font-family:var(--pix);font-size:var(--pix-s);letter-spacing:var(--pix-s-tr);text-transform:uppercase;color:var(--grey);margin-top:var(--s2);display:block}
+.stat{padding:20px;border-right:1px solid var(--hair2)}
+.stat:last-child{border-right:0}
+@media (max-width:899px){.stat:nth-child(2n){border-right:0}.stat{border-bottom:1px solid var(--hair2)}}
+.stat b{display:block;font-weight:700;font-size:clamp(30px,4vw,46px);letter-spacing:-.05em;line-height:1;font-variant-numeric:tabular-nums}
+.stat b em{font-style:normal;font-size:.4em;letter-spacing:-.01em;margin-left:5px;color:var(--grey)}
+.stat span{font-family:var(--pix);font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:var(--grey);margin-top:7px;display:block}
 .stat.live b{color:var(--coral)}
 
 /* sections, one word labels */
-section{border-bottom:1px solid var(--ink);padding:var(--sec) 0}
-/* an intro block that sits above a full bleed band keeps the heading off the band's rule */
-section > .wrap:first-child:not(:last-child){padding-bottom:var(--s5)}
-.lab{font-family:var(--pix);font-size:var(--pix-s);letter-spacing:var(--pix-s-tr);text-transform:uppercase;color:var(--coral);margin:0 0 var(--s2)}
-h2{font-weight:700;font-size:var(--d-head);line-height:.98;letter-spacing:-.045em;margin:0 0 var(--s4);text-transform:uppercase;text-wrap:balance}
-p{margin:0 0 var(--s3);max-width:var(--measure)}
-p.lead{font-size:var(--t-lead);font-weight:700;letter-spacing:-.02em;line-height:1.35;max-width:40ch}
-.cols{display:grid;grid-template-columns:1fr;gap:var(--s5)}
-@media (min-width:900px){.cols{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:var(--s7)}}
+section{border-bottom:1px solid var(--ink);padding:40px 0}
+.lab{font-family:var(--pix);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--coral);margin:0 0 14px}
+h2{font-weight:700;font-size:clamp(26px,4vw,44px);line-height:.98;letter-spacing:-.045em;margin:0 0 16px;text-transform:uppercase;text-wrap:balance}
+p{margin:0 0 12px;max-width:58ch}
+p.lead{font-size:18px;font-weight:700;letter-spacing:-.02em;line-height:1.3}
+.cols{display:grid;grid-template-columns:1fr;gap:24px}
+@media (min-width:880px){.cols{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px}}
 
-/* media grid, the one band that stays edge to edge because it is pictures, not text */
-.gal{display:grid;grid-template-columns:1fr;border-top:1px solid var(--ink)}
-@media (min-width:600px){.gal{grid-template-columns:1fr 1fr}}
-@media (min-width:900px){.gal.three{grid-template-columns:repeat(3,1fr)}}
-.shotcell{position:relative}
+/* media grid */
+.gal{display:grid;grid-template-columns:1fr;gap:0;border-top:1px solid var(--ink)}
+@media (min-width:620px){.gal{grid-template-columns:1fr 1fr}}
+@media (min-width:1000px){.gal.three{grid-template-columns:repeat(3,1fr)}}
+.shotcell{position:relative;border-right:1px solid var(--hair);border-bottom:1px solid var(--hair);background:#ddd}
 .shotcell img{width:100%;aspect-ratio:16/9;object-fit:cover}
 .shotcell .cap{position:absolute;left:0;bottom:0;background:var(--paper);border-top:1px solid var(--hair);border-right:1px solid var(--hair);
-  font-family:var(--pix);font-size:var(--pix-s);letter-spacing:var(--pix-s-tr);text-transform:uppercase;color:var(--grey);padding:var(--s1) var(--s2)}
+  font-family:var(--pix);font-size:9px;letter-spacing:.06em;text-transform:uppercase;color:var(--grey);padding:5px 9px}
 .shotcell .cap b{color:var(--ink);font-weight:400}
 
 /* compact spec */
 .spec{border-top:1px solid var(--ink)}
-.spec > div{display:grid;grid-template-columns:1fr;gap:var(--s1) var(--s5);padding:var(--s3) 0;border-bottom:1px solid var(--hair)}
-.spec > div:last-child{border-bottom:0}
-@media (min-width:1200px){.spec > div{grid-template-columns:130px minmax(0,1fr)}.spec .k{padding-top:5px}}
-.spec .k{font-family:var(--pix);font-size:var(--pix-s);letter-spacing:var(--pix-s-tr);text-transform:uppercase;color:var(--coral)}
-.spec .v{margin:0;max-width:var(--measure);font-size:var(--t-body)}
-.spec .v code{font-family:var(--mono);font-size:var(--m-chip);background:var(--panel);padding:1px 5px}
+.spec > div{display:grid;grid-template-columns:1fr;gap:2px 20px;padding:11px 0;border-bottom:1px solid var(--hair)}
+@media (min-width:720px){.spec > div{grid-template-columns:145px minmax(0,1fr)}}
+.spec .k{font-family:var(--pix);font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:var(--coral);padding-top:3px}
+.spec .v{margin:0;max-width:62ch;font-size:15px}
+.spec .v code{font-family:var(--mono);font-size:13px;background:var(--panel);padding:1px 5px}
 
 /* steps inline */
 .steps{display:grid;grid-template-columns:1fr;border-top:1px solid var(--ink)}
-@media (min-width:600px){.steps{grid-template-columns:repeat(2,1fr)}.step:last-child{grid-column:1/-1}}
-@media (min-width:1200px){.steps{grid-template-columns:repeat(5,1fr)}.step:last-child{grid-column:auto}}
-.step .n{font-family:var(--pix);font-size:var(--pix-s);letter-spacing:var(--pix-s-tr);color:var(--coral);text-transform:uppercase}
-.step h3{font-size:var(--t-body);font-weight:700;letter-spacing:-.015em;line-height:1.25;margin:var(--s2) 0 var(--s1)}
-.step p{font-size:var(--t-cell);color:var(--grey);margin:0;max-width:none}
-.step code{font-family:var(--mono);font-size:var(--m-chip);background:var(--panel);padding:1px 4px}
+@media (min-width:760px){.steps{grid-template-columns:repeat(5,1fr)}}
+.step{padding:16px 16px 18px;border-right:1px solid var(--hair2);border-bottom:1px solid var(--hair)}
+.step:last-child{border-right:0}
+.step .n{font-family:var(--pix);font-size:10px;color:var(--coral);text-transform:uppercase}
+.step h3{font-size:15px;font-weight:700;letter-spacing:-.015em;margin:8px 0 5px}
+.step p{font-size:13px;color:var(--grey);margin:0;max-width:none}
+.step code{font-family:var(--mono);font-size:12px;background:var(--panel);padding:1px 4px}
 
 /* prizes */
 .prizes{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--ink)}
-@media (min-width:900px){.prizes{grid-template-columns:repeat(4,1fr)}}
-.prize .amt{font-weight:700;font-size:var(--d-amt);letter-spacing:-.045em;line-height:1;margin:var(--s2) 0 var(--s2);font-variant-numeric:tabular-nums}
-.prize .amt em{font-style:normal;font-size:.4em;letter-spacing:-.01em;margin-left:var(--s1);color:var(--grey)}
-/* the coral field owns its right edge, as it always has; the row seam below it stays the row seam */
-.prize.first{background:var(--coral);color:#fff;box-shadow:1px 0 0 var(--coral),0 1px 0 var(--hair2)}
+@media (min-width:760px){.prizes{grid-template-columns:repeat(4,1fr)}}
+.prize{padding:18px 18px 20px;border-right:1px solid var(--hair2);border-bottom:1px solid var(--hair)}
+.prize:last-child{border-right:0}
+.prize .amt{font-weight:700;font-size:clamp(34px,5vw,58px);letter-spacing:-.055em;line-height:1;margin:8px 0 6px;font-variant-numeric:tabular-nums}
+.prize .amt em{font-style:normal;font-size:.34em;margin-left:5px;color:var(--grey)}
+.prize.first{background:var(--coral);color:#fff;border-right-color:var(--coral)}
 .prize.first .amt em,.prize.first p,.prize.first .pix{color:rgba(255,255,255,.9)}
-.prize p{font-size:var(--t-cell);color:var(--grey);margin:0;max-width:none}
-#prizes .spec{border-top:0;margin-top:var(--s6)}
+.prize p{font-size:13px;color:var(--grey);margin:0}
 
 /* dates */
 .time{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--ink)}
-@media (min-width:900px){.time{grid-template-columns:repeat(4,1fr)}}
-.tcell .d{font-weight:700;font-size:var(--d-num);letter-spacing:-.04em;line-height:1;margin:var(--s2) 0 var(--s2)}
-.tcell p{font-size:var(--t-cell);color:var(--grey);margin:0;max-width:none}
-/* the live cell is marked by an ink coloured brand, not by a 9 level shift in grey */
-.tcell.now{background:var(--panel);box-shadow:inset 0 3px 0 var(--coral)} .tcell.now .d{color:var(--coral)}
+@media (min-width:760px){.time{grid-template-columns:repeat(4,1fr)}}
+.tcell{padding:16px 16px 18px;border-right:1px solid var(--hair2);border-bottom:1px solid var(--hair)}
+.tcell:last-child{border-right:0}
+.tcell .d{font-weight:700;font-size:26px;letter-spacing:-.04em;margin:7px 0 4px}
+.tcell p{font-size:13px;color:var(--grey);margin:0;max-width:none}
+.tcell.now{background:var(--panel)} .tcell.now .d{color:var(--coral)}
 
 /* faq */
 .faq{border-top:1px solid var(--ink)}
-.faq details{border-bottom:1px solid var(--hair)}
-.faq details:last-of-type{border-bottom:0}
-.faq summary{cursor:pointer;font-weight:700;font-size:var(--t-body);letter-spacing:-.02em;list-style:none;display:flex;gap:var(--s3);align-items:baseline;padding:var(--s3) 0}
+.faq details{border-bottom:1px solid var(--hair);padding:12px 0}
+.faq summary{cursor:pointer;font-weight:700;font-size:16px;letter-spacing:-.02em;list-style:none;display:flex;gap:11px;align-items:baseline}
 .faq summary::-webkit-details-marker{display:none}
-/* the pixel face has no plus sign, and a fixed width keeps the heading still when it opens */
-.faq summary::before{content:"(0)";font-family:var(--pix);font-size:var(--pix-s);letter-spacing:var(--pix-s-tr);color:var(--coral);text-transform:uppercase;display:inline-block;width:var(--marker);flex:none}
+.faq summary::before{content:"(+)";font-family:var(--pix);color:var(--coral);font-size:11px;text-transform:uppercase}
 .faq details[open] summary::before{content:"(-)"}
-.faq p{margin:0 0 var(--s3) calc(var(--marker) + var(--s3));color:var(--grey);font-size:var(--t-body);max-width:var(--measure)}
+.faq p{margin:8px 0 0 32px;color:var(--grey);font-size:14.5px}
 
 /* buttons + footer */
-.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--coral);color:#fff;font-family:var(--pix);font-size:var(--pix-m);letter-spacing:var(--pix-m-tr);
-  text-transform:uppercase;padding:var(--s4) var(--s5);min-height:var(--tap);text-decoration:none;border:1px solid var(--coral)}
-.btn:hover{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.btn{display:inline-block;background:var(--coral);color:#fff;font-family:var(--pix);font-size:12px;letter-spacing:.06em;
+  text-transform:uppercase;padding:14px 20px;text-decoration:none;border:1px solid var(--coral)}
+.btn:hover,.btn:focus{background:var(--ink);border-color:var(--ink);color:var(--paper);outline:none}
 .btn.ghost{background:none;color:var(--ink);border-color:var(--ink)}
 .btn.ghost:hover{background:var(--ink);color:var(--paper)}
 .btn.light{background:#fff;color:var(--ink);border-color:#fff}
 .btn.light:hover{background:var(--coral);border-color:var(--coral);color:#fff}
-.btn.wire{background:transparent;color:#fff;border-color:rgba(255,255,255,.6)}
-.btn.wire:hover{background:#fff;color:var(--ink);border-color:#fff}
-.btns{display:flex;flex-wrap:wrap;gap:var(--s3);align-items:center}
-#faq .btns{margin-top:var(--s6)}
-footer{padding:var(--s6) 0}
-footer .wrap{display:flex;flex-wrap:wrap;gap:var(--s2) var(--s5);align-items:center}
-footer a{font-family:var(--pix);font-size:var(--pix-s);letter-spacing:var(--pix-s-tr);color:var(--grey);text-decoration:none;text-transform:uppercase;padding:var(--s4) 0}
+.btns{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+footer{padding:20px 0 36px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 22px;align-items:center}
+footer a{font-family:var(--pix);font-size:11px;color:var(--grey);text-decoration:none;text-transform:uppercase}
 footer a:hover{color:var(--coral)}
-footer .mark{font-size:var(--pix-l);letter-spacing:var(--pix-l-tr);color:var(--ink)}
 
 /* entries */
-.ehead{padding:calc(var(--bar) + var(--s6)) 0 var(--s5)}
-#view-entries h1{color:var(--ink);font-size:clamp(40px,7.5vw,100px)}
-.ehead p{margin:var(--s4) 0 0}
-#view-entries .cols{padding:var(--s7) 0 var(--s5)}
-.filters{display:flex;flex-wrap:wrap;gap:var(--s2);padding:var(--s3) 0;border-bottom:1px solid var(--ink);align-items:center}
-.filters .lbl{font-family:var(--pix);font-size:var(--pix-s);letter-spacing:var(--pix-s-tr);text-transform:uppercase;color:var(--grey);margin-right:var(--s1)}
-.chip{font-family:var(--pix);font-size:var(--pix-s);letter-spacing:var(--pix-s-tr);text-transform:uppercase;background:none;border:1px solid var(--hair2);
-  color:var(--grey);padding:0 var(--s3);min-height:var(--tap);display:inline-flex;align-items:center;cursor:pointer}
-.chip:hover{border-color:var(--ink);color:var(--ink)}
+.ehead{padding:70px 0 20px}
+.filters{display:flex;flex-wrap:wrap;gap:7px;padding:14px 0;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);align-items:center}
+.filters .lbl{font-family:var(--pix);font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:var(--grey);margin-right:5px}
+.chip{font-family:var(--pix);font-size:10px;letter-spacing:.05em;text-transform:uppercase;background:none;border:1px solid var(--hair2);
+  color:var(--grey);padding:6px 11px;cursor:pointer}
+.chip:hover,.chip:focus{border-color:var(--ink);color:var(--ink);outline:none}
 .chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--paper)}
-.grid{display:grid;grid-template-columns:1fr}
-@media (min-width:600px){.grid{grid-template-columns:1fr 1fr}}
-@media (min-width:900px){.grid{grid-template-columns:repeat(3,1fr)}}
-.card{display:flex;flex-direction:column}
+.grid{display:grid;grid-template-columns:1fr;border-left:1px solid var(--hair)}
+@media (min-width:680px){.grid{grid-template-columns:1fr 1fr}}
+@media (min-width:1040px){.grid{grid-template-columns:repeat(3,1fr)}}
+.card{border-right:1px solid var(--hair);border-bottom:1px solid var(--hair);display:flex;flex-direction:column}
 .card.ref{background:var(--panel)}
 .shot{aspect-ratio:16/9;position:relative;overflow:hidden;background:#ddd;border-bottom:1px solid var(--hair)}
 .shot img{width:100%;height:100%;object-fit:cover}
 .shot .ph{position:absolute;inset:0;display:grid;place-items:center;background:repeating-linear-gradient(135deg,#e4e4e4 0 12px,#dedede 12px 24px)}
-.shot .ph span{font-family:var(--pix);font-size:var(--pix-s);letter-spacing:var(--pix-s-tr);text-transform:uppercase;color:#9a9a9a}
-.tag{position:absolute;top:0;left:0;font-family:var(--pix);font-size:var(--pix-s);letter-spacing:var(--pix-s-tr);text-transform:uppercase;background:var(--coral);color:#fff;padding:var(--s1) var(--s2)}
+.shot .ph span{font-family:var(--pix);font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:#9a9a9a}
+.tag{position:absolute;top:0;left:0;font-family:var(--pix);font-size:9px;letter-spacing:.06em;text-transform:uppercase;background:var(--coral);color:#fff;padding:4px 8px}
 .tag.ghosttag{background:var(--paper);color:var(--grey);border-right:1px solid var(--hair);border-bottom:1px solid var(--hair)}
-.cbody{padding:var(--cell);display:flex;flex-direction:column;gap:var(--s1);flex:1}
-.cbody h3{font-weight:700;font-size:var(--t-lead);letter-spacing:-.035em;line-height:1;margin:0;text-transform:uppercase}
-.by{font-family:var(--pix);font-size:var(--pix-s);letter-spacing:var(--pix-s-tr);text-transform:uppercase;color:var(--grey)}
-.found{font-size:var(--t-cell);margin:var(--s2) 0 0;max-width:none}
-.found b{color:var(--coral);font-weight:400;font-family:var(--pix);font-size:var(--pix-s);letter-spacing:var(--pix-s-tr);text-transform:uppercase;display:block;margin-bottom:var(--s1)}
-.meta{display:flex;flex-wrap:wrap;gap:var(--s1);margin-top:auto;padding-top:var(--s3)}
-.badge{font-family:var(--pix);font-size:var(--pix-s);letter-spacing:var(--pix-s-tr);text-transform:uppercase;border:1px solid var(--hair2);color:var(--grey);padding:var(--s1) var(--s2)}
+.cbody{padding:13px 15px 15px;display:flex;flex-direction:column;gap:6px;flex:1}
+.cbody h3{font-weight:700;font-size:19px;letter-spacing:-.035em;line-height:1;margin:0;text-transform:uppercase}
+.by{font-family:var(--pix);font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--grey)}
+.found{font-size:13.5px;line-height:1.4;margin:0;max-width:none}
+.found b{color:var(--coral);font-weight:400;font-family:var(--pix);font-size:9px;letter-spacing:.07em;text-transform:uppercase;display:block;margin-bottom:2px}
+.meta{display:flex;flex-wrap:wrap;gap:5px;margin-top:auto;padding-top:7px}
+.badge{font-family:var(--pix);font-size:9px;letter-spacing:.05em;text-transform:uppercase;border:1px solid var(--hair2);color:var(--grey);padding:3px 6px}
 .badge.pass{color:var(--coral);border-color:var(--coral)}
 .cact{display:flex;border-top:1px solid var(--hair)}
-.cact a{flex:1;text-align:center;padding:0 var(--s2);min-height:var(--tap);display:inline-flex;align-items:center;justify-content:center;
-  font-family:var(--pix);font-size:var(--pix-s);letter-spacing:var(--pix-s-tr);text-transform:uppercase;
+.cact a{flex:1;text-align:center;padding:10px 8px;font-family:var(--pix);font-size:10px;letter-spacing:.07em;text-transform:uppercase;
   color:var(--ink);text-decoration:none;border-right:1px solid var(--hair)}
 .cact a:last-child{border-right:0}
-.cact a:hover{background:var(--ink);color:var(--paper)}
+.cact a:hover,.cact a:focus{background:var(--ink);color:var(--paper);outline:none}
 .cact a.mute{color:#a0a0a0}
-.empty{padding:var(--s6) 0;color:var(--grey);font-family:var(--pix);font-size:var(--pix-s);letter-spacing:var(--pix-s-tr);text-transform:uppercase}
+.empty{padding:36px 0;color:var(--grey);font-family:var(--pix);font-size:11px;letter-spacing:.07em;text-transform:uppercase}
 </style>
 
 <div class="bar" id="bar"><div class="wrap">
@@ -328,7 +226,7 @@ footer .mark{font-size:var(--pix-l);letter-spacing:var(--pix-l-tr);color:var(--i
 <!-- ================= JAM ================= -->
 <div id="view-jam">
 <div class="stage" id="top">
-  <video id="hero" src="MEDIA/hero.mp4" poster="MEDIA/hero_poster.jpg" autoplay muted loop playsinline preload="metadata"></video>
+  <video id="hero" src="media/hero.mp4" poster="media/hero_poster.jpg" autoplay muted loop playsinline preload="metadata"></video>
   <div class="veil"></div>
   <button class="play" id="vtoggle" type="button">pause</button>
   <div class="in"><div class="wrap">
@@ -338,7 +236,7 @@ footer .mark{font-size:var(--pix-l);letter-spacing:var(--pix-l-tr);color:var(--i
       <p>Your agent builds the game. Every object in it is Three.js code from the open 404 recipe.</p>
       <div class="btns">
         <a class="btn light" href="#" id="signup">Sign up and build</a>
-        <a class="btn wire" href="#entries">Entries</a>
+        <a class="btn light" href="#entries" style="background:transparent;color:#fff;border-color:rgba(255,255,255,.6)">Entries</a>
       </div>
     </div>
   </div></div>
@@ -347,7 +245,7 @@ footer .mark{font-size:var(--pix-l);letter-spacing:var(--pix-l-tr);color:var(--i
 <div class="promptwrap"><div class="wrap">
   <p class="lbl">paste this into your agent</p>
   <div class="beamwrap"><div class="panel"><div class="inner">
-    <code>Read <span class="m">GAME.md</span> in github.com/404-Repo/404-game-recipe and build me a game about<br><span class="slot" id="slot">a coastal kart racer</span><span class="pcaret" id="pcaret"></span></code>
+    <code>Read <span class="m">GAME.md</span> in github.com/404-Repo/404-game-recipe and build me a game about <span class="slot" id="slot">a coastal kart racer</span><span class="pcaret" id="pcaret"></span></code>
     <span class="acts"><button id="shuffle" type="button">another</button><button id="copy" type="button">copy</button></span>
   </div></div></div>
 </div></div>
@@ -373,12 +271,12 @@ footer .mark{font-size:var(--pix-l);letter-spacing:var(--pix-l-tr);color:var(--i
   </div>
 </div>
 <div class="gal three">
-  <div class="shotcell"><img src="MEDIA/t_drive_a.jpg" alt="A kart racing through an old town street with bunting overhead" loading="lazy"><span class="cap"><b>Drive</b> / kart racer</span></div>
-  <div class="shotcell"><img src="MEDIA/t_rust_a.jpg" alt="A derrick tower over a desert oilfield seen down a rifle" loading="lazy"><span class="cap"><b>Rust 17</b> / shooter</span></div>
-  <div class="shotcell"><img src="MEDIA/t_costa_a.jpg" alt="A car under a stone arch in a coastal old town at night" loading="lazy"><span class="cap"><b>Costa Verde</b> / driver</span></div>
-  <div class="shotcell"><img src="MEDIA/t_drive_c.jpg" alt="Karts on a seafront corner with crowds" loading="lazy"><span class="cap"><b>Drive</b> / seafront</span></div>
-  <div class="shotcell"><img src="MEDIA/t_ware.jpg" alt="A warehouse loading dock seen down the sights of a carbine" loading="lazy"><span class="cap"><b>Warehouse</b> / FPS</span></div>
-  <div class="shotcell"><img src="MEDIA/t_costa_b.jpg" alt="A quay at night with stacked containers" loading="lazy"><span class="cap"><b>Costa Verde</b> / quay</span></div>
+  <div class="shotcell"><img src="media/t_drive_a.jpg" alt="A kart racing through an old town street with bunting overhead" loading="lazy"><span class="cap"><b>Drive</b> / kart racer</span></div>
+  <div class="shotcell"><img src="media/t_rust_a.jpg" alt="A derrick tower over a desert oilfield seen down a rifle" loading="lazy"><span class="cap"><b>Rust 17</b> / shooter</span></div>
+  <div class="shotcell"><img src="media/t_costa_a.jpg" alt="A car under a stone arch in a coastal old town at night" loading="lazy"><span class="cap"><b>Costa Verde</b> / driver</span></div>
+  <div class="shotcell"><img src="media/t_drive_c.jpg" alt="Karts on a seafront corner with crowds" loading="lazy"><span class="cap"><b>Drive</b> / seafront</span></div>
+  <div class="shotcell"><img src="media/t_ware.jpg" alt="A warehouse loading dock seen down the sights of a carbine" loading="lazy"><span class="cap"><b>Warehouse</b> / FPS</span></div>
+  <div class="shotcell"><img src="media/t_costa_b.jpg" alt="A quay at night with stacked containers" loading="lazy"><span class="cap"><b>Costa Verde</b> / quay</span></div>
 </div></section>
 
 <section id="how"><div class="wrap">
@@ -451,7 +349,7 @@ footer .mark{font-size:var(--pix-l);letter-spacing:var(--pix-l-tr);color:var(--i
   </div>
 </div></section>
 
-<section id="prizes"><div class="wrap">
+<section id="prizes" style="padding-bottom:0"><div class="wrap">
   <p class="lab">prizes</p>
   <h2>Ten TAO and a stage</h2>
 </div>
@@ -461,13 +359,13 @@ footer .mark{font-size:var(--pix-l);letter-spacing:var(--pix-l-tr);color:var(--i
   <div class="prize"><span class="pix g">third</span><div class="amt">1.5<em>TAO</em></div><p>Showcase slot and a post on the 404 channel.</p></div>
   <div class="prize"><span class="pix g">community</span><div class="amt">0.5<em>TAO</em></div><p>Voted by everyone who enters, on the shortlist.</p></div>
 </div>
-<div class="wrap"><div class="spec">
+<div class="wrap"><div class="spec" style="border-top:0">
   <div><span class="k">everyone</span><p class="v">Keeps their game, outright.</p></div>
   <div><span class="k">ten entrants</span><p class="v">A free Atlas licence. <span class="tbd">Chosen how, to confirm.</span></p></div>
   <div><span class="k">the best</span><p class="v">Showcased by 404 on X, with the build behind it.</p></div>
 </div></div></section>
 
-<section id="dates"><div class="wrap">
+<section id="dates" style="padding-bottom:0"><div class="wrap">
   <p class="lab">dates</p>
   <h2>Two weeks</h2>
 </div>
@@ -487,7 +385,7 @@ footer .mark{font-size:var(--pix-l);letter-spacing:var(--pix-l-tr);color:var(--i
     <details><summary>How do I get paid?</summary><p>TAO to a Bittensor wallet you give us at submission. <span class="tbd">Payout terms to confirm.</span></p></details>
     <details><summary>Where do I ask for help?</summary><p><span class="tbd">Discord link to come.</span> Office hours are on the calendar above.</p></details>
   </div>
-  <div class="btns">
+  <div class="btns" style="margin-top:26px">
     <a class="btn" href="#" id="signup2">Sign up and build</a>
     <a class="btn ghost" href="https://github.com/404-Repo/404-game-recipe">Read the recipe</a>
   </div>
@@ -499,8 +397,8 @@ footer .mark{font-size:var(--pix-l);letter-spacing:var(--pix-l-tr);color:var(--i
 <div class="wrap">
   <div class="ehead">
     <p class="lab">jam-001 / entries</p>
-    <h1>The <span class="k">entries</span></h1>
-    <p class="g">Submissions open 11 <span class="tbd">September</span>. The layout below is placeholder. The 404 build at the top is real and is not eligible.</p>
+    <h1 style="color:var(--ink);font-size:clamp(40px,8vw,96px)">The <span class="k">entries</span></h1>
+    <p class="g" style="margin-top:14px">Submissions open 11 <span class="tbd">September</span>. The layout below is placeholder. The 404 build at the top is real and is not eligible.</p>
   </div>
 </div>
 <div class="stats">
@@ -522,7 +420,7 @@ footer .mark{font-size:var(--pix-l);letter-spacing:var(--pix-l-tr);color:var(--i
   </div>
   <div class="grid" id="grid"></div>
   <p class="empty" id="empty" hidden>No entries in this filter yet.</p>
-  <div class="cols">
+  <div class="cols" style="padding:36px 0 20px">
     <div><p class="lab">the page</p><h2>How a game gets here</h2></div>
     <div><p class="g">An entry appears the moment its pull request is merged, which happens when the harness verdict in it checks out against a run of our own. Nothing is curated in or out before judging. Every card carries the play link, the gate verdict, what it was built with, and the entrant's own line on what they found.</p></div>
   </div>
@@ -601,7 +499,7 @@ footer .mark{font-size:var(--pix-l);letter-spacing:var(--pix-l-tr);color:var(--i
   /* bar goes solid once past the hero */
   var bar = document.getElementById('bar'), stage = document.getElementById('top');
   function onScroll(){
-    var past = !stage || window.scrollY > 24 || document.getElementById('view-jam').hidden;
+    var past = !stage || window.scrollY > (stage.offsetHeight - 60) || document.getElementById('view-jam').hidden;
     bar.classList.toggle('solid', past);
   }
   window.addEventListener('scroll', onScroll, { passive: true });
@@ -611,7 +509,7 @@ footer .mark{font-size:var(--pix-l);letter-spacing:var(--pix-l-tr);color:var(--i
     { ref:true, title:'Drive', by:'404 GEN', tag:'reference build, not eligible', genre:'racing', short:false,
       found:'Three blind rounds against a commercial racer. The property that decided every one was named by a person, never by the model.',
       badges:['gate pass','777 draws','1.36M tris','Claude Opus and Fable'],
-      play:'https://404-repo.github.io/drive/game/', src:'https://github.com/404-Repo/drive', shot:'MEDIA/t_drive_b.jpg' },
+      play:'https://404-repo.github.io/drive/game/', src:'https://github.com/404-Repo/drive', shot:'media/t_drive_b.jpg' },
     { title:'Example entry', by:'Entrant name', genre:'racing', short:true,
       found:'One line on the thing this entrant tried that nobody else did. Their words, three sentences at most, and it carries 20 percent of the judging.',
       badges:['gate pass','GPT agent','racing'], play:'#', src:'#' },

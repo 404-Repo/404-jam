@@ -1,0 +1,42 @@
+import { createServer } from 'http'; import fs from 'fs'; import path from 'path';
+import { createRequire } from 'module';
+const puppeteer = createRequire('/Users/atlas/drive/recipe/node_modules/x.js')('puppeteer');
+const ROOT='/Users/atlas/404_jam_site';
+const MIME={'.html':'text/html','.mp4':'video/mp4','.jpg':'image/jpeg','.png':'image/png','.woff2':'font/woff2'};
+const s=createServer((q,r)=>{let rel=decodeURIComponent(q.url.split('?')[0]);if(rel==='/')rel='/index.html';const f=path.join(ROOT,rel);
+ if(!f.startsWith(ROOT)||!fs.existsSync(f)||fs.statSync(f).isDirectory()){r.writeHead(404);return r.end('x');}
+ r.writeHead(200,{'Content-Type':MIME[path.extname(f)]||'application/octet-stream','Cache-Control':'no-store'});fs.createReadStream(f).pipe(r);});
+await new Promise(r=>s.listen(0,'127.0.0.1',r));
+const B=`http://127.0.0.1:${s.address().port}/`;
+const b=await puppeteer.launch({headless:true,args:['--no-sandbox','--enable-unsafe-swiftshader','--autoplay-policy=no-user-gesture-required']});
+const ctx=b.defaultBrowserContext(); await ctx.overridePermissions(B,['clipboard-read','clipboard-write']);
+const p=await b.newPage(); await p.setViewport({width:1440,height:900,deviceScaleFactor:1});
+const errs=[]; p.on('pageerror',e=>errs.push('pageerror: '+e.message)); p.on('console',m=>{if(m.type()==='error')errs.push('console: '+m.text());});
+p.on('requestfailed',r2=>errs.push('reqfail: '+r2.url().slice(-50)));
+await p.goto(B,{waitUntil:'networkidle2'}); await new Promise(r=>setTimeout(r,1200));
+const out={};
+out.videoPlaying = await p.evaluate(()=>!document.getElementById('hero').paused);
+await p.click('#vtoggle'); await new Promise(r=>setTimeout(r,200));
+out.afterPauseClick = await p.evaluate(()=>({paused:document.getElementById('hero').paused,label:document.getElementById('vtoggle').textContent}));
+const before = await p.evaluate(()=>document.getElementById('slot').textContent);
+await p.click('#shuffle'); await new Promise(r=>setTimeout(r,1800));
+out.shuffleChanged = await p.evaluate(b2=>document.getElementById('slot').textContent!==b2, before);
+await p.click('#copy'); await new Promise(r=>setTimeout(r,300));
+out.copyLabel = await p.evaluate(()=>document.getElementById('copy').textContent);
+out.clipboard = await p.evaluate(()=>navigator.clipboard.readText().catch(()=>'(denied)'));
+out.countdown = await p.evaluate(()=>document.getElementById('countdown').textContent);
+// faq toggle
+await p.click('.faq details:nth-of-type(2) summary'); await new Promise(r=>setTimeout(r,200));
+out.faqOpened = await p.evaluate(()=>document.querySelectorAll('.faq details[open]').length);
+// entries route + filter
+await p.evaluate(()=>{location.hash='#entries';}); await new Promise(r=>setTimeout(r,600));
+out.entriesShown = await p.evaluate(()=>({jamHidden:document.getElementById('view-jam').hidden, cards:document.querySelectorAll('#grid .card').length, videoPaused:document.getElementById('hero').paused}));
+await p.click('.chip[data-f="shooter"]'); await new Promise(r=>setTimeout(r,300));
+out.filterShooter = await p.evaluate(()=>({visible:[...document.querySelectorAll('#grid .card')].filter(e=>!e.hidden).length, emptyHidden:document.getElementById('empty').hidden}));
+await p.click('.chip[data-f="platformer"]'); await new Promise(r=>setTimeout(r,300));
+out.filterPlatformer = await p.evaluate(()=>({visible:[...document.querySelectorAll('#grid .card')].filter(e=>!e.hidden).length}));
+await p.evaluate(()=>{location.hash='#top';}); await new Promise(r=>setTimeout(r,600));
+out.backToJam = await p.evaluate(()=>({jamHidden:document.getElementById('view-jam').hidden, entHidden:document.getElementById('view-entries').hidden}));
+out.errors=errs;
+console.log(JSON.stringify(out,null,1));
+await b.close(); s.close();

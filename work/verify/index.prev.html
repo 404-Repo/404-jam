@@ -1,6 +1,10 @@
 <title>404 Game Jam</title>
 <style>
-/* FONTS_HERE */
+/* fourzerofourpixel, the 404 pixel face, taken from 404.xyz/fonts. It is a partial subset:
+   uppercase, digits and a little punctuation. Keep every pixel string uppercase and avoid
+   the percent sign, the plus sign, the middle dot and arrows. */
+@font-face{font-family:'fourzerofourpixel';src:url(data:font/woff2;base64,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) format('woff2');font-weight:400;font-display:swap}
+
 
 /* ============================================================================
    THE SYSTEM. Two scales, and nothing on this page is allowed off them.
@@ -66,11 +70,9 @@ img,video{display:block;max-width:100%}
 .wrap{max-width:1280px;margin:0 auto;padding:0 var(--pad)}
 section[id],#top{scroll-margin-top:calc(var(--bar) + var(--s4))}
 
-/* one focus token for the page: coral on paper, white over the video. No outline:none anywhere.
-   The bar only takes the white ring while it is still transparent over the clip: once it goes
-   solid it is paper, and a white ring on paper is a 1.1:1 ring, which is no ring at all. */
+/* one focus token for the page: coral on paper, white over the video. No outline:none anywhere. */
 :where(a,button,summary,[tabindex]):focus-visible{outline:2px solid var(--coral);outline-offset:2px}
-.bar:not(.solid) a:focus-visible,.stage .btn:focus-visible,.play:focus-visible{outline-color:#fff}
+.bar a:focus-visible,.stage .btn:focus-visible,.play:focus-visible{outline-color:#fff}
 
 /* one line per seam. A band paints its dividers in a 1px grid gap, so no hairline can land
    on a viewport edge, on the ink rule below it, or beside an orphan cell. A card grid does the
@@ -328,7 +330,7 @@ footer .mark{font-size:var(--pix-l);letter-spacing:var(--pix-l-tr);color:var(--i
 <!-- ================= JAM ================= -->
 <div id="view-jam">
 <div class="stage" id="top">
-  <video id="hero" src="MEDIA/hero.mp4" poster="MEDIA/hero_poster.jpg" autoplay muted loop playsinline preload="metadata"></video>
+  <video id="hero" src="media/hero.mp4" poster="media/hero_poster.jpg" autoplay muted loop playsinline preload="metadata"></video>
   <div class="veil"></div>
   <button class="play" id="vtoggle" type="button">pause</button>
   <div class="in"><div class="wrap">
@@ -373,12 +375,12 @@ footer .mark{font-size:var(--pix-l);letter-spacing:var(--pix-l-tr);color:var(--i
   </div>
 </div>
 <div class="gal three">
-  <div class="shotcell"><img src="MEDIA/t_drive_a.jpg" alt="A kart racing through an old town street with bunting overhead" loading="lazy"><span class="cap"><b>Drive</b> / kart racer</span></div>
-  <div class="shotcell"><img src="MEDIA/t_rust_a.jpg" alt="A derrick tower over a desert oilfield seen down a rifle" loading="lazy"><span class="cap"><b>Rust 17</b> / shooter</span></div>
-  <div class="shotcell"><img src="MEDIA/t_costa_a.jpg" alt="A car under a stone arch in a coastal old town at night" loading="lazy"><span class="cap"><b>Costa Verde</b> / driver</span></div>
-  <div class="shotcell"><img src="MEDIA/t_drive_c.jpg" alt="Karts on a seafront corner with crowds" loading="lazy"><span class="cap"><b>Drive</b> / seafront</span></div>
-  <div class="shotcell"><img src="MEDIA/t_ware.jpg" alt="A warehouse loading dock seen down the sights of a carbine" loading="lazy"><span class="cap"><b>Warehouse</b> / FPS</span></div>
-  <div class="shotcell"><img src="MEDIA/t_costa_b.jpg" alt="A quay at night with stacked containers" loading="lazy"><span class="cap"><b>Costa Verde</b> / quay</span></div>
+  <div class="shotcell"><img src="media/t_drive_a.jpg" alt="A kart racing through an old town street with bunting overhead" loading="lazy"><span class="cap"><b>Drive</b> / kart racer</span></div>
+  <div class="shotcell"><img src="media/t_rust_a.jpg" alt="A derrick tower over a desert oilfield seen down a rifle" loading="lazy"><span class="cap"><b>Rust 17</b> / shooter</span></div>
+  <div class="shotcell"><img src="media/t_costa_a.jpg" alt="A car under a stone arch in a coastal old town at night" loading="lazy"><span class="cap"><b>Costa Verde</b> / driver</span></div>
+  <div class="shotcell"><img src="media/t_drive_c.jpg" alt="Karts on a seafront corner with crowds" loading="lazy"><span class="cap"><b>Drive</b> / seafront</span></div>
+  <div class="shotcell"><img src="media/t_ware.jpg" alt="A warehouse loading dock seen down the sights of a carbine" loading="lazy"><span class="cap"><b>Warehouse</b> / FPS</span></div>
+  <div class="shotcell"><img src="media/t_costa_b.jpg" alt="A quay at night with stacked containers" loading="lazy"><span class="cap"><b>Costa Verde</b> / quay</span></div>
 </div></section>
 
 <section id="how"><div class="wrap">
@@ -611,7 +613,7 @@ footer .mark{font-size:var(--pix-l);letter-spacing:var(--pix-l-tr);color:var(--i
     { ref:true, title:'Drive', by:'404 GEN', tag:'reference build, not eligible', genre:'racing', short:false,
       found:'Three blind rounds against a commercial racer. The property that decided every one was named by a person, never by the model.',
       badges:['gate pass','777 draws','1.36M tris','Claude Opus and Fable'],
-      play:'https://404-repo.github.io/drive/game/', src:'https://github.com/404-Repo/drive', shot:'MEDIA/t_drive_b.jpg' },
+      play:'https://404-repo.github.io/drive/game/', src:'https://github.com/404-Repo/drive', shot:'media/t_drive_b.jpg' },
     { title:'Example entry', by:'Entrant name', genre:'racing', short:true,
       found:'One line on the thing this entrant tried that nobody else did. Their words, three sentences at most, and it carries 20 percent of the judging.',
       badges:['gate pass','GPT agent','racing'], play:'#', src:'#' },

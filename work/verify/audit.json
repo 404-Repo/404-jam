@@ -1,0 +1,2620 @@
+{
+ "w1440": {
+  "left": [
+   [
+    "bar wordmark",
+    104
+   ],
+   [
+    "hero h1",
+    104
+   ],
+   [
+    "hero tagline",
+    104
+   ],
+   [
+    "hero para",
+    104
+   ],
+   [
+    "prompt label",
+    104
+   ],
+   [
+    "prompt panel",
+    104
+   ],
+   [
+    "stat 1 label",
+    104
+   ],
+   [
+    "what lab",
+    104
+   ],
+   [
+    "what h2",
+    104
+   ],
+   [
+    "how lab",
+    104
+   ],
+   [
+    "how h2",
+    104
+   ],
+   [
+    "step 1 n",
+    104
+   ],
+   [
+    "gate lab",
+    104
+   ],
+   [
+    "gate spec k",
+    684.8
+   ],
+   [
+    "rules lab",
+    104
+   ],
+   [
+    "judging lab",
+    104
+   ],
+   [
+    "prizes lab",
+    104
+   ],
+   [
+    "prize 1 pix",
+    104
+   ],
+   [
+    "prizes spec k",
+    104
+   ],
+   [
+    "dates lab",
+    104
+   ],
+   [
+    "tcell 1 pix",
+    104
+   ],
+   [
+    "faq lab",
+    104
+   ],
+   [
+    "faq summary",
+    104
+   ],
+   [
+    "faq btn",
+    104
+   ],
+   [
+    "footer mark",
+    104
+   ]
+  ],
+  "right": [
+   [
+    "what h2 wrap",
+    80
+   ],
+   [
+    "stat last",
+    104
+   ],
+   [
+    "step last p",
+    104
+   ],
+   [
+    "prize last p",
+    104
+   ],
+   [
+    "tcell last p",
+    104
+   ],
+   [
+    "gate spec v",
+    104
+   ]
+  ],
+  "type": [
+   "Helvetica | 13.6px | 700 | -0.136px | 13.6px   ex: em, em, em",
+   "Helvetica | 13px | 400 | normal | 19.5px   ex: p, p, .tbd",
+   "Helvetica | 140px | 700 | -7.7px | 117.6px   ex: h1, .k",
+   "Helvetica | 16px | 400 | normal | 24px   ex: p, .g, .g",
+   "Helvetica | 16px | 700 | -0.24px | 20px   ex: h3, h3, h3",
+   "Helvetica | 16px | 700 | -0.32px | 24px   ex: summary, summary, summary",
+   "Helvetica | 20px | 700 | -0.4px | 27px   ex: .lead",
+   "Helvetica | 23.2px | 700 | -0.232px | 23.2px   ex: em, em, em",
+   "Helvetica | 34px | 700 | -1.36px | 34px   ex: b, b, b",
+   "Helvetica | 46px | 700 | -2.07px | 45.08px   ex: h2, h2, h2",
+   "Helvetica | 58px | 700 | -2.61px | 58px   ex: .amt, .amt, .amt",
+   "fourzerofourpixel | 10px | 400 | 0.8px | 15px   ex: a, a, a",
+   "fourzerofourpixel | 10px | 400 | 0.8px | normal   ex: .play, button, button",
+   "fourzerofourpixel | 12px | 400 | 0.84px | 18px   ex: .tagline, .tbd, span",
+   "fourzerofourpixel | 20px | 400 | 1px | 30px   ex: .mark, .mark",
+   "ui-monospace | 13px | 400 | normal | 19.5px   ex: code, code, code",
+   "ui-monospace | 20px | 400 | normal | 29px   ex: code, .m",
+   "ui-monospace | 21px | 700 | -0.21px | 30.45px   ex: .slot"
+  ],
+  "space": [
+   "1px  <- paddingTop on .slot, gap on .stats, rowGap on .stats, columnGap on .stats",
+   "2px  <- paddingBottom on .slot, marginLeft on .pcaret",
+   "3px  <- paddingTop on .panel, paddingBottom on .panel, paddingLeft on .panel, paddingRight on .panel",
+   "4px  <- paddingTop on .cap, paddingBottom on .cap, marginBottom on h3, gap on div",
+   "5px  <- paddingLeft on .slot, paddingRight on .slot, paddingTop on .k",
+   "8px  <- paddingLeft on a, paddingRight on a, paddingLeft on .keep, paddingRight on .keep",
+   "12px  <- paddingLeft on .play, paddingRight on .play, marginBottom on .tagline, gap on .row",
+   "16px  <- gap on .wrap, rowGap on .wrap, columnGap on .wrap, paddingTop on a",
+   "24px  <- paddingLeft on .wrap, paddingRight on .wrap, columnGap on .row, paddingLeft on .btn",
+   "32px  <- paddingBottom on .in, paddingTop on .promptwrap, marginTop on .spec, marginLeft on p",
+   "48px  <- paddingBottom on .promptwrap, gap on .cols, rowGap on .cols, columnGap on .cols",
+   "64px  <- paddingTop on section, paddingBottom on section",
+   "80px  <- marginLeft on .wrap, marginRight on .wrap",
+   "104px  <- paddingLeft on .stat, paddingRight on .stat, paddingLeft on .step, paddingRight on .step"
+  ],
+  "overflow": {
+   "scrollW": 1440,
+   "innerW": 1440
+  },
+  "overflowers": [],
+  "docHeight": 5372
+ },
+ "w1024": {
+  "left": [
+   [
+    "bar wordmark",
+    24
+   ],
+   [
+    "hero h1",
+    24
+   ],
+   [
+    "hero tagline",
+    24
+   ],
+   [
+    "hero para",
+    24
+   ],
+   [
+    "prompt label",
+    24
+   ],
+   [
+    "prompt panel",
+    24
+   ],
+   [
+    "stat 1 label",
+    24
+   ],
+   [
+    "what lab",
+    24
+   ],
+   [
+    "what h2",
+    24
+   ],
+   [
+    "how lab",
+    24
+   ],
+   [
+    "how h2",
+    24
+   ],
+   [
+    "step 1 n",
+    24
+   ],
+   [
+    "gate lab",
+    24
+   ],
+   [
+    "gate spec k",
+    489.59
+   ],
+   [
+    "rules lab",
+    24
+   ],
+   [
+    "judging lab",
+    24
+   ],
+   [
+    "prizes lab",
+    24
+   ],
+   [
+    "prize 1 pix",
+    24
+   ],
+   [
+    "prizes spec k",
+    24
+   ],
+   [
+    "dates lab",
+    24
+   ],
+   [
+    "tcell 1 pix",
+    24
+   ],
+   [
+    "faq lab",
+    24
+   ],
+   [
+    "faq summary",
+    24
+   ],
+   [
+    "faq btn",
+    24
+   ],
+   [
+    "footer mark",
+    24
+   ]
+  ],
+  "right": [
+   [
+    "what h2 wrap",
+    0
+   ],
+   [
+    "stat last",
+    24
+   ],
+   [
+    "step last p",
+    24
+   ],
+   [
+    "prize last p",
+    24
+   ],
+   [
+    "tcell last p",
+    24
+   ],
+   [
+    "gate spec v",
+    24
+   ]
+  ],
+  "type": [
+   "Helvetica | 10.6496px | 700 | -0.106496px | 10.6496px   ex: em, em, em",
+   "Helvetica | 107.52px | 700 | -5.9136px | 90.3168px   ex: h1, .k",
+   "Helvetica | 13px | 400 | normal | 19.5px   ex: p, p, .tbd",
+   "Helvetica | 16px | 400 | normal | 24px   ex: p, .g, .g",
+   "Helvetica | 16px | 700 | -0.24px | 20px   ex: h3, h3, h3",
+   "Helvetica | 16px | 700 | -0.32px | 24px   ex: summary, summary, summary",
+   "Helvetica | 20.48px | 700 | -0.2048px | 20.48px   ex: em, em, em",
+   "Helvetica | 20px | 700 | -0.4px | 27px   ex: .lead",
+   "Helvetica | 26.624px | 700 | -1.06496px | 26.624px   ex: b, b, b",
+   "Helvetica | 36.864px | 700 | -1.65888px | 36.1267px   ex: h2, h2, h2",
+   "Helvetica | 51.2px | 700 | -2.304px | 51.2px   ex: .amt, .amt, .amt",
+   "fourzerofourpixel | 10px | 400 | 0.8px | 15px   ex: a, a, a",
+   "fourzerofourpixel | 10px | 400 | 0.8px | normal   ex: .play, button, button",
+   "fourzerofourpixel | 12px | 400 | 0.84px | 18px   ex: .tagline, .tbd, span",
+   "fourzerofourpixel | 20px | 400 | 1px | 30px   ex: .mark, .mark",
+   "ui-monospace | 13px | 400 | normal | 19.5px   ex: code, code, code",
+   "ui-monospace | 16.384px | 400 | normal | 23.7568px   ex: code, .m",
+   "ui-monospace | 17.2032px | 700 | -0.172032px | 24.9446px   ex: .slot"
+  ],
+  "space": [
+   "1px  <- paddingTop on .slot, gap on .stats, rowGap on .stats, columnGap on .stats",
+   "2px  <- paddingBottom on .slot, marginLeft on .pcaret",
+   "3px  <- paddingTop on .panel, paddingBottom on .panel, paddingLeft on .panel, paddingRight on .panel",
+   "4px  <- paddingTop on .cap, paddingBottom on .cap, marginBottom on h3, gap on div",
+   "5px  <- paddingLeft on .slot, paddingRight on .slot",
+   "8px  <- paddingLeft on a, paddingRight on a, paddingLeft on .keep, paddingRight on .keep",
+   "12px  <- paddingLeft on .play, paddingRight on .play, marginBottom on .tagline, gap on .row",
+   "16px  <- gap on .wrap, rowGap on .wrap, columnGap on .wrap, paddingTop on a",
+   "24px  <- paddingLeft on .wrap, paddingRight on .wrap, columnGap on .row, paddingLeft on .btn",
+   "32px  <- paddingBottom on .in, paddingTop on .promptwrap, marginTop on .spec, marginLeft on p",
+   "48px  <- paddingBottom on .promptwrap, paddingTop on section, paddingBottom on section, gap on .cols"
+  ],
+  "overflow": {
+   "scrollW": 1024,
+   "innerW": 1024
+  },
+  "overflowers": [],
+  "docHeight": 5414
+ },
+ "w768": {
+  "left": [
+   [
+    "bar wordmark",
+    20
+   ],
+   [
+    "hero h1",
+    20
+   ],
+   [
+    "hero tagline",
+    20
+   ],
+   [
+    "hero para",
+    20
+   ],
+   [
+    "prompt label",
+    20
+   ],
+   [
+    "prompt panel",
+    20
+   ],
+   [
+    "stat 1 label",
+    20
+   ],
+   [
+    "what lab",
+    20
+   ],
+   [
+    "what h2",
+    20
+   ],
+   [
+    "how lab",
+    20
+   ],
+   [
+    "how h2",
+    20
+   ],
+   [
+    "step 1 n",
+    20
+   ],
+   [
+    "gate lab",
+    20
+   ],
+   [
+    "gate spec k",
+    20
+   ],
+   [
+    "rules lab",
+    20
+   ],
+   [
+    "judging lab",
+    20
+   ],
+   [
+    "prizes lab",
+    20
+   ],
+   [
+    "prize 1 pix",
+    20
+   ],
+   [
+    "prizes spec k",
+    20
+   ],
+   [
+    "dates lab",
+    20
+   ],
+   [
+    "tcell 1 pix",
+    20
+   ],
+   [
+    "faq lab",
+    20
+   ],
+   [
+    "faq summary",
+    20
+   ],
+   [
+    "faq btn",
+    20
+   ],
+   [
+    "footer mark",
+    20
+   ]
+  ],
+  "right": [
+   [
+    "what h2 wrap",
+    0
+   ],
+   [
+    "stat last",
+    20
+   ],
+   [
+    "step last p",
+    20
+   ],
+   [
+    "prize last p",
+    20
+   ],
+   [
+    "tcell last p",
+    20
+   ],
+   [
+    "gate spec v",
+    20
+   ]
+  ],
+  "type": [
+   "Helvetica | 10.4px | 700 | -0.104px | 10.4px   ex: em, em, em",
+   "Helvetica | 13px | 400 | normal | 19.5px   ex: p, p, .tbd",
+   "Helvetica | 15.36px | 700 | -0.1536px | 15.36px   ex: em, em, em",
+   "Helvetica | 16px | 400 | normal | 24px   ex: p, .g, .g",
+   "Helvetica | 16px | 700 | -0.24px | 20px   ex: h3, h3, h3",
+   "Helvetica | 16px | 700 | -0.32px | 24px   ex: summary, summary, summary",
+   "Helvetica | 20px | 700 | -0.4px | 27px   ex: .lead",
+   "Helvetica | 26px | 700 | -1.04px | 26px   ex: b, b, b",
+   "Helvetica | 28px | 700 | -1.26px | 27.44px   ex: h2, h2, h2",
+   "Helvetica | 38.4px | 700 | -1.728px | 38.4px   ex: .amt, .amt, .amt",
+   "Helvetica | 80.64px | 700 | -4.4352px | 67.7376px   ex: h1, .k",
+   "fourzerofourpixel | 10px | 400 | 0.8px | 15px   ex: a, a, a",
+   "fourzerofourpixel | 10px | 400 | 0.8px | normal   ex: .play, button, button",
+   "fourzerofourpixel | 12px | 400 | 0.84px | 18px   ex: .tagline, .tbd, span",
+   "fourzerofourpixel | 20px | 400 | 1px | 30px   ex: .mark, .mark",
+   "ui-monospace | 13px | 400 | normal | 19.5px   ex: code, code, code",
+   "ui-monospace | 15.75px | 700 | -0.1575px | 22.8375px   ex: .slot",
+   "ui-monospace | 15px | 400 | normal | 21.75px   ex: code, .m"
+  ],
+  "space": [
+   "1px  <- paddingTop on .slot, gap on .stats, rowGap on .stats, columnGap on .stats",
+   "2px  <- paddingBottom on .slot, marginLeft on .pcaret",
+   "3px  <- paddingTop on .panel, paddingBottom on .panel, paddingLeft on .panel, paddingRight on .panel",
+   "4px  <- paddingTop on .cap, paddingBottom on .cap, marginBottom on h3, gap on div",
+   "5px  <- paddingLeft on .slot, paddingRight on .slot",
+   "8px  <- paddingLeft on a, paddingRight on a, paddingLeft on .keep, paddingRight on .keep",
+   "12px  <- paddingLeft on .play, paddingRight on .play, marginBottom on .tagline, gap on .row",
+   "16px  <- gap on .wrap, rowGap on .wrap, columnGap on .wrap, paddingTop on a",
+   "20px  <- paddingLeft on .wrap, paddingRight on .wrap, paddingLeft on .inner, paddingRight on .inner",
+   "24px  <- columnGap on .row, paddingLeft on .btn, paddingRight on .btn, marginBottom on .lbl",
+   "32px  <- paddingBottom on .in, paddingTop on .promptwrap, marginTop on .spec, marginLeft on p",
+   "48px  <- paddingBottom on .promptwrap, paddingTop on section, paddingBottom on section"
+  ],
+  "overflow": {
+   "scrollW": 768,
+   "innerW": 768
+  },
+  "overflowers": [],
+  "docHeight": 6624
+ },
+ "w412": {
+  "left": [
+   [
+    "bar wordmark",
+    20
+   ],
+   [
+    "hero h1",
+    20
+   ],
+   [
+    "hero tagline",
+    20
+   ],
+   [
+    "hero para",
+    20
+   ],
+   [
+    "prompt label",
+    20
+   ],
+   [
+    "prompt panel",
+    20
+   ],
+   [
+    "stat 1 label",
+    20
+   ],
+   [
+    "what lab",
+    20
+   ],
+   [
+    "what h2",
+    20
+   ],
+   [
+    "how lab",
+    20
+   ],
+   [
+    "how h2",
+    20
+   ],
+   [
+    "step 1 n",
+    20
+   ],
+   [
+    "gate lab",
+    20
+   ],
+   [
+    "gate spec k",
+    20
+   ],
+   [
+    "rules lab",
+    20
+   ],
+   [
+    "judging lab",
+    20
+   ],
+   [
+    "prizes lab",
+    20
+   ],
+   [
+    "prize 1 pix",
+    20
+   ],
+   [
+    "prizes spec k",
+    20
+   ],
+   [
+    "dates lab",
+    20
+   ],
+   [
+    "tcell 1 pix",
+    20
+   ],
+   [
+    "faq lab",
+    20
+   ],
+   [
+    "faq summary",
+    20
+   ],
+   [
+    "faq btn",
+    20
+   ],
+   [
+    "footer mark",
+    20
+   ]
+  ],
+  "right": [
+   [
+    "what h2 wrap",
+    0
+   ],
+   [
+    "stat last",
+    20
+   ],
+   [
+    "step last p",
+    20
+   ],
+   [
+    "prize last p",
+    20
+   ],
+   [
+    "tcell last p",
+    20
+   ],
+   [
+    "gate spec v",
+    20
+   ]
+  ],
+  "type": [
+   "Helvetica | 10.4px | 700 | -0.104px | 10.4px   ex: em, em, em",
+   "Helvetica | 13.6px | 700 | -0.136px | 13.6px   ex: em, em, em",
+   "Helvetica | 13px | 400 | normal | 19.5px   ex: p, p, .tbd",
+   "Helvetica | 16px | 400 | normal | 24px   ex: p, .g, .g",
+   "Helvetica | 16px | 700 | -0.24px | 20px   ex: h3, h3, h3",
+   "Helvetica | 16px | 700 | -0.32px | 24px   ex: summary, summary, summary",
+   "Helvetica | 20px | 700 | -0.4px | 27px   ex: .lead",
+   "Helvetica | 26px | 700 | -1.04px | 26px   ex: b, b, b",
+   "Helvetica | 28px | 700 | -1.26px | 27.44px   ex: h2, h2, h2",
+   "Helvetica | 34px | 700 | -1.53px | 34px   ex: .amt, .amt, .amt",
+   "Helvetica | 44px | 700 | -2.42px | 36.96px   ex: h1, .k",
+   "fourzerofourpixel | 10px | 400 | 0.8px | 15px   ex: a, a, a",
+   "fourzerofourpixel | 10px | 400 | 0.8px | normal   ex: .play, button, button",
+   "fourzerofourpixel | 12px | 400 | 0.84px | 18px   ex: .tagline, .tbd, span",
+   "fourzerofourpixel | 20px | 400 | 1px | 30px   ex: .mark, .mark",
+   "ui-monospace | 13px | 400 | normal | 19.5px   ex: code, code, code",
+   "ui-monospace | 15.75px | 700 | -0.1575px | 22.8375px   ex: .slot",
+   "ui-monospace | 15px | 400 | normal | 21.75px   ex: code, .m"
+  ],
+  "space": [
+   "1px  <- paddingTop on .slot, gap on .stats, rowGap on .stats, columnGap on .stats",
+   "2px  <- paddingBottom on .slot, marginLeft on .pcaret",
+   "3px  <- paddingTop on .panel, paddingBottom on .panel, paddingLeft on .panel, paddingRight on .panel",
+   "4px  <- paddingLeft on a, paddingRight on a, paddingLeft on .keep, paddingRight on .keep",
+   "5px  <- paddingLeft on .slot, paddingRight on .slot",
+   "8px  <- gap on .acts, rowGap on .acts, columnGap on .acts, marginTop on span",
+   "12px  <- gap on .wrap, rowGap on .wrap, columnGap on .wrap, paddingLeft on .play",
+   "16px  <- paddingTop on a, paddingBottom on a, paddingTop on .keep, paddingBottom on .keep",
+   "16.48px  <- paddingLeft on .inner, paddingRight on .inner",
+   "20px  <- paddingLeft on .wrap, paddingRight on .wrap, paddingLeft on .stat, paddingRight on .stat",
+   "24px  <- columnGap on .row, paddingLeft on .btn, paddingRight on .btn, marginBottom on .lbl",
+   "32px  <- paddingBottom on .in, paddingTop on .promptwrap, marginTop on .spec, marginLeft on p",
+   "48px  <- paddingBottom on .promptwrap, paddingTop on section, paddingBottom on section"
+  ],
+  "overflow": {
+   "scrollW": 412,
+   "innerW": 412
+  },
+  "overflowers": [],
+  "docHeight": 8043
+ },
+ "panel1440": {
+  "hs": [
+   [
+    "a coastal kart racer",
+    100.44,
+    283
+   ],
+   [
+    "a night market chase",
+    100.44,
+    283
+   ],
+   [
+    "a lighthouse platformer",
+    100.44,
+    320
+   ],
+   [
+    "a submarine salvage sim",
+    100.44,
+    320
+   ],
+   [
+    "a rooftop parkour run",
+    100.44,
+    295
+   ],
+   [
+    "a desert train heist",
+    100.44,
+    283
+   ],
+   [
+    "a haunted arcade",
+    100.44,
+    233
+   ],
+   [
+    "a game nobody has made yet",
+    100.44,
+    357
+   ]
+  ],
+  "innerW": 1226,
+  "scrollW": 1440,
+  "innerWidth": 1440
+ },
+ "panel900": {
+  "hs": [
+   [
+    "a coastal kart racer",
+    107.33,
+    221
+   ],
+   [
+    "a night market chase",
+    107.33,
+    221
+   ],
+   [
+    "a lighthouse platformer",
+    107.33,
+    248
+   ],
+   [
+    "a submarine salvage sim",
+    107.33,
+    248
+   ],
+   [
+    "a rooftop parkour run",
+    107.33,
+    230
+   ],
+   [
+    "a desert train heist",
+    107.33,
+    221
+   ],
+   [
+    "a haunted arcade",
+    107.33,
+    183
+   ],
+   [
+    "a game nobody has made yet",
+    107.33,
+    276
+   ]
+  ],
+  "innerW": 846,
+  "scrollW": 900,
+  "innerWidth": 900
+ },
+ "panel412": {
+  "hs": [
+   [
+    "a coastal kart racer",
+    185.08,
+    213
+   ],
+   [
+    "a night market chase",
+    185.08,
+    213
+   ],
+   [
+    "a lighthouse platformer",
+    185.08,
+    241
+   ],
+   [
+    "a submarine salvage sim",
+    185.08,
+    241
+   ],
+   [
+    "a rooftop parkour run",
+    185.08,
+    222
+   ],
+   [
+    "a desert train heist",
+    185.08,
+    213
+   ],
+   [
+    "a haunted arcade",
+    185.08,
+    176
+   ],
+   [
+    "a game nobody has made yet",
+    185.08,
+    269
+   ]
+  ],
+  "innerW": 366,
+  "scrollW": 412,
+  "innerWidth": 412
+ },
+ "panel360": {
+  "hs": [
+   [
+    "a coastal kart racer",
+    185.08,
+    211
+   ],
+   [
+    "a night market chase",
+    185.08,
+    211
+   ],
+   [
+    "a lighthouse platformer",
+    185.08,
+    239
+   ],
+   [
+    "a submarine salvage sim",
+    185.08,
+    239
+   ],
+   [
+    "a rooftop parkour run",
+    185.08,
+    220
+   ],
+   [
+    "a desert train heist",
+    185.08,
+    211
+   ],
+   [
+    "a haunted arcade",
+    185.08,
+    174
+   ],
+   [
+    "a game nobody has made yet",
+    185.08,
+    267
+   ]
+  ],
+  "innerW": 314,
+  "scrollW": 360,
+  "innerWidth": 360
+ },
+ "panel320": {
+  "hs": [
+   [
+    "a coastal kart racer",
+    205.75,
+    200
+   ],
+   [
+    "a night market chase",
+    205.75,
+    200
+   ],
+   [
+    "a lighthouse platformer",
+    205.75,
+    227
+   ],
+   [
+    "a submarine salvage sim",
+    205.75,
+    227
+   ],
+   [
+    "a rooftop parkour run",
+    205.75,
+    209
+   ],
+   [
+    "a desert train heist",
+    205.75,
+    200
+   ],
+   [
+    "a haunted arcade",
+    205.75,
+    165
+   ],
+   [
+    "a game nobody has made yet",
+    205.75,
+    254
+   ]
+  ],
+  "innerW": 274,
+  "scrollW": 320,
+  "innerWidth": 320
+ },
+ "tab": [
+  {
+   "tag": "a",
+   "cls": "mark",
+   "txt": "404—GEN",
+   "outline": "solid 2px rgb(255, 255, 255)",
+   "offset": "2px",
+   "w": 74,
+   "h": 48,
+   "vis": true
+  },
+  {
+   "tag": "a",
+   "cls": "",
+   "txt": "how",
+   "outline": "solid 2px rgb(255, 255, 255)",
+   "offset": "2px",
+   "w": 33,
+   "h": 47,
+   "vis": true
+  },
+  {
+   "tag": "a",
+   "cls": "",
+   "txt": "gate",
+   "outline": "solid 2px rgb(255, 255, 255)",
+   "offset": "2px",
+   "w": 36,
+   "h": 47,
+   "vis": true
+  },
+  {
+   "tag": "a",
+   "cls": "",
+   "txt": "prizes",
+   "outline": "solid 2px rgb(255, 255, 255)",
+   "offset": "2px",
+   "w": 44,
+   "h": 47,
+   "vis": true
+  },
+  {
+   "tag": "a",
+   "cls": "",
+   "txt": "dates",
+   "outline": "solid 2px rgb(255, 255, 255)",
+   "offset": "2px",
+   "w": 42,
+   "h": 47,
+   "vis": true
+  },
+  {
+   "tag": "a",
+   "cls": "keep",
+   "txt": "entries",
+   "outline": "solid 2px rgb(255, 255, 255)",
+   "offset": "2px",
+   "w": 48,
+   "h": 47,
+   "vis": true
+  },
+  {
+   "tag": "button",
+   "cls": "play",
+   "txt": "pause",
+   "outline": "solid 2px rgb(255, 255, 255)",
+   "offset": "2px",
+   "w": 64,
+   "h": 44,
+   "vis": true
+  },
+  {
+   "tag": "a",
+   "cls": "btn light",
+   "txt": "Sign up and build",
+   "outline": "solid 2px rgb(255, 255, 255)",
+   "offset": "2px",
+   "w": 143,
+   "h": 52,
+   "vis": true
+  },
+  {
+   "tag": "a",
+   "cls": "btn wire",
+   "txt": "Entries",
+   "outline": "solid 2px rgb(255, 255, 255)",
+   "offset": "2px",
+   "w": 88,
+   "h": 52,
+   "vis": true
+  },
+  {
+   "tag": "button",
+   "cls": "",
+   "txt": "another",
+   "outline": "solid 2px rgb(248, 89, 81)",
+   "offset": "2px",
+   "w": 88,
+   "h": 44,
+   "vis": true
+  },
+  {
+   "tag": "button",
+   "cls": "",
+   "txt": "copy",
+   "outline": "solid 2px rgb(248, 89, 81)",
+   "offset": "2px",
+   "w": 88,
+   "h": 44,
+   "vis": true
+  },
+  {
+   "tag": "summary",
+   "cls": "",
+   "txt": "Do I need a GPU?",
+   "outline": "solid 2px rgb(248, 89, 81)",
+   "offset": "2px",
+   "w": 1232,
+   "h": 48,
+   "vis": true
+  },
+  {
+   "tag": "summary",
+   "cls": "",
+   "txt": "Do I have to use Claude?",
+   "outline": "solid 2px rgb(248, 89, 81)",
+   "offset": "2px",
+   "w": 1232,
+   "h": 48,
+   "vis": true
+  },
+  {
+   "tag": "summary",
+   "cls": "",
+   "txt": "Can I use my own art?",
+   "outline": "solid 2px rgb(248, 89, 81)",
+   "offset": "2px",
+   "w": 1232,
+   "h": 48,
+   "vis": true
+  },
+  {
+   "tag": "summary",
+   "cls": "",
+   "txt": "How do I get paid?",
+   "outline": "solid 2px rgb(248, 89, 81)",
+   "offset": "2px",
+   "w": 1232,
+   "h": 48,
+   "vis": true
+  },
+  {
+   "tag": "summary",
+   "cls": "",
+   "txt": "Where do I ask for help?",
+   "outline": "solid 2px rgb(248, 89, 81)",
+   "offset": "2px",
+   "w": 1232,
+   "h": 48,
+   "vis": true
+  },
+  {
+   "tag": "a",
+   "cls": "btn",
+   "txt": "Sign up and build",
+   "outline": "solid 2px rgb(248, 89, 81)",
+   "offset": "2px",
+   "w": 143,
+   "h": 52,
+   "vis": true
+  },
+  {
+   "tag": "a",
+   "cls": "btn ghost",
+   "txt": "Read the recipe",
+   "outline": "solid 2px rgb(248, 89, 81)",
+   "offset": "2px",
+   "w": 134,
+   "h": 52,
+   "vis": true
+  },
+  {
+   "tag": "a",
+   "cls": "mark pix",
+   "txt": "404—GEN",
+   "outline": "solid 2px rgb(248, 89, 81)",
+   "offset": "2px",
+   "w": 74,
+   "h": 62,
+   "vis": true
+  },
+  {
+   "tag": "a",
+   "cls": "",
+   "txt": "404.xyz",
+   "outline": "solid 2px rgb(248, 89, 81)",
+   "offset": "2px",
+   "w": 35,
+   "h": 47,
+   "vis": true
+  },
+  {
+   "tag": "a",
+   "cls": "",
+   "txt": "the recipe",
+   "outline": "solid 2px rgb(248, 89, 81)",
+   "offset": "2px",
+   "w": 47,
+   "h": 47,
+   "vis": true
+  },
+  "<body / left document>"
+ ],
+ "tabEntries": [
+  {
+   "tag": "a",
+   "cls": "mark",
+   "txt": "404—GEN",
+   "outline": "solid 2px",
+   "w": 74,
+   "h": 48
+  },
+  {
+   "tag": "a",
+   "cls": "",
+   "txt": "how",
+   "outline": "solid 2px",
+   "w": 33,
+   "h": 47
+  },
+  {
+   "tag": "a",
+   "cls": "",
+   "txt": "gate",
+   "outline": "solid 2px",
+   "w": 36,
+   "h": 47
+  },
+  {
+   "tag": "a",
+   "cls": "",
+   "txt": "prizes",
+   "outline": "solid 2px",
+   "w": 44,
+   "h": 47
+  },
+  {
+   "tag": "a",
+   "cls": "",
+   "txt": "dates",
+   "outline": "solid 2px",
+   "w": 42,
+   "h": 47
+  },
+  {
+   "tag": "a",
+   "cls": "keep",
+   "txt": "entries",
+   "outline": "solid 2px",
+   "w": 48,
+   "h": 47
+  },
+  {
+   "tag": "button",
+   "cls": "chip",
+   "txt": "all",
+   "outline": "solid 2px",
+   "w": 36,
+   "h": 44
+  },
+  {
+   "tag": "button",
+   "cls": "chip",
+   "txt": "shortlist",
+   "outline": "solid 2px",
+   "w": 65,
+   "h": 44
+  },
+  {
+   "tag": "button",
+   "cls": "chip",
+   "txt": "racing",
+   "outline": "solid 2px",
+   "w": 53,
+   "h": 44
+  },
+  {
+   "tag": "button",
+   "cls": "chip",
+   "txt": "shooter",
+   "outline": "solid 2px",
+   "w": 61,
+   "h": 44
+  },
+  {
+   "tag": "button",
+   "cls": "chip",
+   "txt": "platformer",
+   "outline": "solid 2px",
+   "w": 74,
+   "h": 44
+  },
+  {
+   "tag": "button",
+   "cls": "chip",
+   "txt": "other",
+   "outline": "solid 2px",
+   "w": 51,
+   "h": 44
+  },
+  {
+   "tag": "a",
+   "cls": "",
+   "txt": "play",
+   "outline": "solid 2px",
+   "w": 206,
+   "h": 44
+  },
+  {
+   "tag": "a",
+   "cls": "",
+   "txt": "source",
+   "outline": "solid 2px",
+   "w": 205,
+   "h": 44
+  },
+  {
+   "tag": "a",
+   "cls": "mute",
+   "txt": "play",
+   "outline": "solid 2px",
+   "w": 206,
+   "h": 44
+  },
+  {
+   "tag": "a",
+   "cls": "mute",
+   "txt": "source",
+   "outline": "solid 2px",
+   "w": 205,
+   "h": 44
+  },
+  {
+   "tag": "a",
+   "cls": "mute",
+   "txt": "play",
+   "outline": "solid 2px",
+   "w": 206,
+   "h": 44
+  },
+  {
+   "tag": "a",
+   "cls": "mute",
+   "txt": "source",
+   "outline": "solid 2px",
+   "w": 205,
+   "h": 44
+  },
+  {
+   "tag": "a",
+   "cls": "mute",
+   "txt": "play",
+   "outline": "solid 2px",
+   "w": 206,
+   "h": 44
+  },
+  {
+   "tag": "a",
+   "cls": "mute",
+   "txt": "source",
+   "outline": "solid 2px",
+   "w": 205,
+   "h": 44
+  },
+  {
+   "tag": "a",
+   "cls": "mute",
+   "txt": "play",
+   "outline": "solid 2px",
+   "w": 206,
+   "h": 44
+  },
+  {
+   "tag": "a",
+   "cls": "mute",
+   "txt": "source",
+   "outline": "solid 2px",
+   "w": 205,
+   "h": 44
+  },
+  {
+   "tag": "a",
+   "cls": "mute",
+   "txt": "play",
+   "outline": "solid 2px",
+   "w": 206,
+   "h": 44
+  },
+  {
+   "tag": "a",
+   "cls": "mute",
+   "txt": "source",
+   "outline": "solid 2px",
+   "w": 205,
+   "h": 44
+  },
+  {
+   "tag": "a",
+   "cls": "mark pix",
+   "txt": "404—GEN",
+   "outline": "solid 2px",
+   "w": 74,
+   "h": 62
+  },
+  {
+   "tag": "a",
+   "cls": "",
+   "txt": "404.xyz",
+   "outline": "solid 2px",
+   "w": 35,
+   "h": 47
+  },
+  {
+   "tag": "a",
+   "cls": "",
+   "txt": "the recipe",
+   "outline": "solid 2px",
+   "w": 47,
+   "h": 47
+  },
+  "<left document>"
+ ],
+ "hiddenFocusable": {
+  "total": 12,
+  "stillLaidOut": 0,
+  "jamHidden": true
+ },
+ "pixjam": [
+  {
+   "txt": "404—GEN",
+   "raw": "404—GEN",
+   "transform": "uppercase",
+   "sel": "a.mark"
+  },
+  {
+   "txt": "HOW",
+   "raw": "how",
+   "transform": "uppercase",
+   "sel": "a"
+  },
+  {
+   "txt": "GATE",
+   "raw": "gate",
+   "transform": "uppercase",
+   "sel": "a"
+  },
+  {
+   "txt": "PRIZES",
+   "raw": "prizes",
+   "transform": "uppercase",
+   "sel": "a"
+  },
+  {
+   "txt": "DATES",
+   "raw": "dates",
+   "transform": "uppercase",
+   "sel": "a"
+  },
+  {
+   "txt": "ENTRIES",
+   "raw": "entries",
+   "transform": "uppercase",
+   "sel": "a.keep"
+  },
+  {
+   "txt": "PAUSE",
+   "raw": "pause",
+   "transform": "uppercase",
+   "sel": "button.play"
+  },
+  {
+   "txt": "JAM-001 / 11 TO 25 ",
+   "raw": "jam-001 / 11 to 25 ",
+   "transform": "uppercase",
+   "sel": "div.tagline"
+  },
+  {
+   "txt": "SEPTEMBER",
+   "raw": "september",
+   "transform": "uppercase",
+   "sel": "span.tbd"
+  },
+  {
+   "txt": " 2026 / ",
+   "raw": " 2026 / ",
+   "transform": "uppercase",
+   "sel": "div.tagline"
+  },
+  {
+   "txt": "OPENS IN 3D 13H 9M",
+   "raw": "opens in 3d 13h 9m",
+   "transform": "uppercase",
+   "sel": "span"
+  },
+  {
+   "txt": "SIGN UP AND BUILD",
+   "raw": "Sign up and build",
+   "transform": "uppercase",
+   "sel": "a.btn.light"
+  },
+  {
+   "txt": "ENTRIES",
+   "raw": "Entries",
+   "transform": "uppercase",
+   "sel": "a.btn.wire"
+  },
+  {
+   "txt": "PASTE THIS INTO YOUR AGENT",
+   "raw": "paste this into your agent",
+   "transform": "uppercase",
+   "sel": "p.lbl"
+  },
+  {
+   "txt": "ANOTHER",
+   "raw": "another",
+   "transform": "uppercase",
+   "sel": "button"
+  },
+  {
+   "txt": "COPY",
+   "raw": "copy",
+   "transform": "uppercase",
+   "sel": "button"
+  },
+  {
+   "txt": "PRIZE POOL",
+   "raw": "prize pool",
+   "transform": "uppercase",
+   "sel": "span"
+  },
+  {
+   "txt": "TO BUILD",
+   "raw": "to build",
+   "transform": "uppercase",
+   "sel": "span"
+  },
+  {
+   "txt": "TO START",
+   "raw": "to start",
+   "transform": "uppercase",
+   "sel": "span"
+  },
+  {
+   "txt": "REQUIRED",
+   "raw": "required",
+   "transform": "uppercase",
+   "sel": "span"
+  },
+  {
+   "txt": "ASSETS AS CODE",
+   "raw": "assets as code",
+   "transform": "uppercase",
+   "sel": "span"
+  },
+  {
+   "txt": "WHAT",
+   "raw": "what",
+   "transform": "uppercase",
+   "sel": "p.lab"
+  },
+  {
+   "txt": "DRIVE",
+   "raw": "Drive",
+   "transform": "uppercase",
+   "sel": "b"
+  },
+  {
+   "txt": " / KART RACER",
+   "raw": " / kart racer",
+   "transform": "uppercase",
+   "sel": "span.cap"
+  },
+  {
+   "txt": "RUST 17",
+   "raw": "Rust 17",
+   "transform": "uppercase",
+   "sel": "b"
+  },
+  {
+   "txt": " / SHOOTER",
+   "raw": " / shooter",
+   "transform": "uppercase",
+   "sel": "span.cap"
+  },
+  {
+   "txt": "COSTA VERDE",
+   "raw": "Costa Verde",
+   "transform": "uppercase",
+   "sel": "b"
+  },
+  {
+   "txt": " / DRIVER",
+   "raw": " / driver",
+   "transform": "uppercase",
+   "sel": "span.cap"
+  },
+  {
+   "txt": "DRIVE",
+   "raw": "Drive",
+   "transform": "uppercase",
+   "sel": "b"
+  },
+  {
+   "txt": " / SEAFRONT",
+   "raw": " / seafront",
+   "transform": "uppercase",
+   "sel": "span.cap"
+  },
+  {
+   "txt": "WAREHOUSE",
+   "raw": "Warehouse",
+   "transform": "uppercase",
+   "sel": "b"
+  },
+  {
+   "txt": " / FPS",
+   "raw": " / FPS",
+   "transform": "uppercase",
+   "sel": "span.cap"
+  },
+  {
+   "txt": "COSTA VERDE",
+   "raw": "Costa Verde",
+   "transform": "uppercase",
+   "sel": "b"
+  },
+  {
+   "txt": " / QUAY",
+   "raw": " / quay",
+   "transform": "uppercase",
+   "sel": "span.cap"
+  },
+  {
+   "txt": "HOW",
+   "raw": "how",
+   "transform": "uppercase",
+   "sel": "p.lab"
+  },
+  {
+   "txt": "(01)",
+   "raw": "(01)",
+   "transform": "uppercase",
+   "sel": "span.n"
+  },
+  {
+   "txt": "(02)",
+   "raw": "(02)",
+   "transform": "uppercase",
+   "sel": "span.n"
+  },
+  {
+   "txt": "(03)",
+   "raw": "(03)",
+   "transform": "uppercase",
+   "sel": "span.n"
+  },
+  {
+   "txt": "(04)",
+   "raw": "(04)",
+   "transform": "uppercase",
+   "sel": "span.n"
+  },
+  {
+   "txt": "(05)",
+   "raw": "(05)",
+   "transform": "uppercase",
+   "sel": "span.n"
+  },
+  {
+   "txt": "GATE",
+   "raw": "gate",
+   "transform": "uppercase",
+   "sel": "p.lab"
+  },
+  {
+   "txt": "READY",
+   "raw": "ready",
+   "transform": "uppercase",
+   "sel": "span.k"
+  },
+  {
+   "txt": "STARTS",
+   "raw": "starts",
+   "transform": "uppercase",
+   "sel": "span.k"
+  },
+  {
+   "txt": "REPORTS",
+   "raw": "reports",
+   "transform": "uppercase",
+   "sel": "span.k"
+  },
+  {
+   "txt": "MOVES",
+   "raw": "moves",
+   "transform": "uppercase",
+   "sel": "span.k"
+  },
+  {
+   "txt": "SHIPS AS",
+   "raw": "ships as",
+   "transform": "uppercase",
+   "sel": "span.k"
+  },
+  {
+   "txt": "BUDGETS",
+   "raw": "budgets",
+   "transform": "uppercase",
+   "sel": "span.k"
+  },
+  {
+   "txt": "RULES",
+   "raw": "rules",
+   "transform": "uppercase",
+   "sel": "p.lab"
+  },
+  {
+   "txt": "GEOMETRY",
+   "raw": "geometry",
+   "transform": "uppercase",
+   "sel": "span.k"
+  },
+  {
+   "txt": "ART AND SOUND",
+   "raw": "art and sound",
+   "transform": "uppercase",
+   "sel": "span.k"
+  },
+  {
+   "txt": "TEAM",
+   "raw": "team",
+   "transform": "uppercase",
+   "sel": "span.k"
+  },
+  {
+   "txt": "ORIGINAL",
+   "raw": "original",
+   "transform": "uppercase",
+   "sel": "span.k"
+  },
+  {
+   "txt": "YOURS",
+   "raw": "yours",
+   "transform": "uppercase",
+   "sel": "span.k"
+  },
+  {
+   "txt": "JUDGING",
+   "raw": "judging",
+   "transform": "uppercase",
+   "sel": "p.lab"
+  },
+  {
+   "txt": "JUDGES TO BE ANNOUNCED",
+   "raw": "Judges to be announced",
+   "transform": "uppercase",
+   "sel": "span.tbd"
+  },
+  {
+   "txt": "40 PERCENT",
+   "raw": "40 percent",
+   "transform": "uppercase",
+   "sel": "span.k"
+  },
+  {
+   "txt": "30 PERCENT",
+   "raw": "30 percent",
+   "transform": "uppercase",
+   "sel": "span.k"
+  },
+  {
+   "txt": "20 PERCENT",
+   "raw": "20 percent",
+   "transform": "uppercase",
+   "sel": "span.k"
+  },
+  {
+   "txt": "10 PERCENT",
+   "raw": "10 percent",
+   "transform": "uppercase",
+   "sel": "span.k"
+  },
+  {
+   "txt": "PRIZES",
+   "raw": "prizes",
+   "transform": "uppercase",
+   "sel": "p.lab"
+  },
+  {
+   "txt": "FIRST",
+   "raw": "first",
+   "transform": "uppercase",
+   "sel": "span.pix"
+  },
+  {
+   "txt": "SECOND",
+   "raw": "second",
+   "transform": "uppercase",
+   "sel": "span.pix.g"
+  },
+  {
+   "txt": "THIRD",
+   "raw": "third",
+   "transform": "uppercase",
+   "sel": "span.pix.g"
+  },
+  {
+   "txt": "COMMUNITY",
+   "raw": "community",
+   "transform": "uppercase",
+   "sel": "span.pix.g"
+  },
+  {
+   "txt": "EVERYONE",
+   "raw": "everyone",
+   "transform": "uppercase",
+   "sel": "span.k"
+  },
+  {
+   "txt": "TEN ENTRANTS",
+   "raw": "ten entrants",
+   "transform": "uppercase",
+   "sel": "span.k"
+  },
+  {
+   "txt": "THE BEST",
+   "raw": "the best",
+   "transform": "uppercase",
+   "sel": "span.k"
+  },
+  {
+   "txt": "DATES",
+   "raw": "dates",
+   "transform": "uppercase",
+   "sel": "p.lab"
+  },
+  {
+   "txt": "OPENS",
+   "raw": "opens",
+   "transform": "uppercase",
+   "sel": "span.pix.c"
+  },
+  {
+   "txt": "OFFICE HOURS",
+   "raw": "office hours",
+   "transform": "uppercase",
+   "sel": "span.pix.g"
+  },
+  {
+   "txt": "CLOSES",
+   "raw": "closes",
+   "transform": "uppercase",
+   "sel": "span.pix.g"
+  },
+  {
+   "txt": "WINNERS",
+   "raw": "winners",
+   "transform": "uppercase",
+   "sel": "span.pix.g"
+  },
+  {
+   "txt": "QUESTIONS",
+   "raw": "questions",
+   "transform": "uppercase",
+   "sel": "p.lab"
+  },
+  {
+   "txt": "SIGN UP AND BUILD",
+   "raw": "Sign up and build",
+   "transform": "uppercase",
+   "sel": "a.btn"
+  },
+  {
+   "txt": "READ THE RECIPE",
+   "raw": "Read the recipe",
+   "transform": "uppercase",
+   "sel": "a.btn.ghost"
+  },
+  {
+   "txt": "404—GEN",
+   "raw": "404—GEN",
+   "transform": "uppercase",
+   "sel": "a.mark.pix"
+  },
+  {
+   "txt": "404.XYZ",
+   "raw": "404.xyz",
+   "transform": "uppercase",
+   "sel": "a"
+  },
+  {
+   "txt": "THE RECIPE",
+   "raw": "the recipe",
+   "transform": "uppercase",
+   "sel": "a"
+  },
+  {
+   "txt": "SUBNET 17",
+   "raw": "subnet 17",
+   "transform": "uppercase",
+   "sel": "span.pix.g"
+  },
+  {
+   "txt": "DRAFT ",
+   "raw": "draft ",
+   "transform": "uppercase",
+   "sel": "span.pix.g"
+  },
+  {
+   "txt": "V4",
+   "raw": "v4",
+   "transform": "uppercase",
+   "sel": "span.tbd"
+  },
+  {
+   "txt": " FOR REVIEW",
+   "raw": " for review",
+   "transform": "uppercase",
+   "sel": "span.pix.g"
+  },
+  {
+   "txt": "TBD",
+   "raw": "TBD",
+   "transform": "uppercase",
+   "sel": "span.tbd::after"
+  },
+  {
+   "txt": "TBD",
+   "raw": "TBD",
+   "transform": "none",
+   "sel": "span.tbd::after"
+  },
+  {
+   "txt": "TBD",
+   "raw": "TBD",
+   "transform": "none",
+   "sel": "span.tbd::after"
+  },
+  {
+   "txt": "TBD",
+   "raw": "TBD",
+   "transform": "none",
+   "sel": "span.tbd::after"
+  },
+  {
+   "txt": "TBD",
+   "raw": "TBD",
+   "transform": "none",
+   "sel": "span.tbd::after"
+  },
+  {
+   "txt": "TBD",
+   "raw": "TBD",
+   "transform": "none",
+   "sel": "span.tbd::after"
+  },
+  {
+   "txt": "TBD",
+   "raw": "TBD",
+   "transform": "none",
+   "sel": "span.tbd::after"
+  },
+  {
+   "txt": "TBD",
+   "raw": "TBD",
+   "transform": "none",
+   "sel": "span.tbd::after"
+  },
+  {
+   "txt": "TBD",
+   "raw": "TBD",
+   "transform": "uppercase",
+   "sel": "span.tbd::after"
+  },
+  {
+   "txt": "TBD",
+   "raw": "TBD",
+   "transform": "none",
+   "sel": "span.tbd::after"
+  },
+  {
+   "txt": "TBD",
+   "raw": "TBD",
+   "transform": "none",
+   "sel": "span.tbd::after"
+  },
+  {
+   "txt": "TBD",
+   "raw": "TBD",
+   "transform": "none",
+   "sel": "span.tbd::after"
+  },
+  {
+   "txt": "TBD",
+   "raw": "TBD",
+   "transform": "none",
+   "sel": "span.tbd::after"
+  },
+  {
+   "txt": "TBD",
+   "raw": "TBD",
+   "transform": "none",
+   "sel": "span.tbd::after"
+  },
+  {
+   "txt": "TBD",
+   "raw": "TBD",
+   "transform": "none",
+   "sel": "span.tbd::after"
+  },
+  {
+   "txt": "(-)",
+   "raw": "(-)",
+   "transform": "uppercase",
+   "sel": "summary::before"
+  },
+  {
+   "txt": "(0)",
+   "raw": "(0)",
+   "transform": "uppercase",
+   "sel": "summary::before"
+  },
+  {
+   "txt": "(0)",
+   "raw": "(0)",
+   "transform": "uppercase",
+   "sel": "summary::before"
+  },
+  {
+   "txt": "(0)",
+   "raw": "(0)",
+   "transform": "uppercase",
+   "sel": "summary::before"
+  },
+  {
+   "txt": "TBD",
+   "raw": "TBD",
+   "transform": "none",
+   "sel": "span.tbd::after"
+  },
+  {
+   "txt": "(0)",
+   "raw": "(0)",
+   "transform": "uppercase",
+   "sel": "summary::before"
+  },
+  {
+   "txt": "TBD",
+   "raw": "TBD",
+   "transform": "none",
+   "sel": "span.tbd::after"
+  },
+  {
+   "txt": "TBD",
+   "raw": "TBD",
+   "transform": "none",
+   "sel": "span.tbd::after"
+  },
+  {
+   "txt": "TBD",
+   "raw": "TBD",
+   "transform": "uppercase",
+   "sel": "span.tbd::after"
+  }
+ ],
+ "pix#entries": [
+  {
+   "txt": "404—GEN",
+   "raw": "404—GEN",
+   "transform": "uppercase",
+   "sel": "a.mark"
+  },
+  {
+   "txt": "HOW",
+   "raw": "how",
+   "transform": "uppercase",
+   "sel": "a"
+  },
+  {
+   "txt": "GATE",
+   "raw": "gate",
+   "transform": "uppercase",
+   "sel": "a"
+  },
+  {
+   "txt": "PRIZES",
+   "raw": "prizes",
+   "transform": "uppercase",
+   "sel": "a"
+  },
+  {
+   "txt": "DATES",
+   "raw": "dates",
+   "transform": "uppercase",
+   "sel": "a"
+  },
+  {
+   "txt": "ENTRIES",
+   "raw": "entries",
+   "transform": "uppercase",
+   "sel": "a.keep"
+  },
+  {
+   "txt": "JAM-001 / ENTRIES",
+   "raw": "jam-001 / entries",
+   "transform": "uppercase",
+   "sel": "p.lab"
+  },
+  {
+   "txt": "ENTRIES",
+   "raw": "entries",
+   "transform": "uppercase",
+   "sel": "span"
+  },
+  {
+   "txt": "PASSED THE GATE",
+   "raw": "passed the gate",
+   "transform": "uppercase",
+   "sel": "span"
+  },
+  {
+   "txt": "GENRES",
+   "raw": "genres",
+   "transform": "uppercase",
+   "sel": "span"
+  },
+  {
+   "txt": "STILL TO WIN",
+   "raw": "still to win",
+   "transform": "uppercase",
+   "sel": "span"
+  },
+  {
+   "txt": "DAYS LEFT",
+   "raw": "days left",
+   "transform": "uppercase",
+   "sel": "span"
+  },
+  {
+   "txt": "SHOW",
+   "raw": "show",
+   "transform": "uppercase",
+   "sel": "span.lbl"
+  },
+  {
+   "txt": "ALL",
+   "raw": "all",
+   "transform": "uppercase",
+   "sel": "button.chip"
+  },
+  {
+   "txt": "SHORTLIST",
+   "raw": "shortlist",
+   "transform": "uppercase",
+   "sel": "button.chip"
+  },
+  {
+   "txt": "RACING",
+   "raw": "racing",
+   "transform": "uppercase",
+   "sel": "button.chip"
+  },
+  {
+   "txt": "SHOOTER",
+   "raw": "shooter",
+   "transform": "uppercase",
+   "sel": "button.chip"
+  },
+  {
+   "txt": "PLATFORMER",
+   "raw": "platformer",
+   "transform": "uppercase",
+   "sel": "button.chip"
+  },
+  {
+   "txt": "OTHER",
+   "raw": "other",
+   "transform": "uppercase",
+   "sel": "button.chip"
+  },
+  {
+   "txt": "REFERENCE BUILD, NOT ELIGIBLE",
+   "raw": "reference build, not eligible",
+   "transform": "uppercase",
+   "sel": "span.tag"
+  },
+  {
+   "txt": "404 GEN",
+   "raw": "404 GEN",
+   "transform": "uppercase",
+   "sel": "div.by"
+  },
+  {
+   "txt": "WHAT I FOUND",
+   "raw": "what I found",
+   "transform": "uppercase",
+   "sel": "b"
+  },
+  {
+   "txt": "GATE PASS",
+   "raw": "gate pass",
+   "transform": "uppercase",
+   "sel": "span.badge.pass"
+  },
+  {
+   "txt": "777 DRAWS",
+   "raw": "777 draws",
+   "transform": "uppercase",
+   "sel": "span.badge"
+  },
+  {
+   "txt": "1.36M TRIS",
+   "raw": "1.36M tris",
+   "transform": "uppercase",
+   "sel": "span.badge"
+  },
+  {
+   "txt": "CLAUDE OPUS AND FABLE",
+   "raw": "Claude Opus and Fable",
+   "transform": "uppercase",
+   "sel": "span.badge"
+  },
+  {
+   "txt": "PLAY",
+   "raw": "play",
+   "transform": "uppercase",
+   "sel": "a"
+  },
+  {
+   "txt": "SOURCE",
+   "raw": "source",
+   "transform": "uppercase",
+   "sel": "a"
+  },
+  {
+   "txt": "SCREENSHOT",
+   "raw": "screenshot",
+   "transform": "uppercase",
+   "sel": "span"
+  },
+  {
+   "txt": "EXAMPLE ENTRY",
+   "raw": "example entry",
+   "transform": "uppercase",
+   "sel": "span.tag.ghosttag"
+  },
+  {
+   "txt": "ENTRANT NAME",
+   "raw": "Entrant name",
+   "transform": "uppercase",
+   "sel": "div.by"
+  },
+  {
+   "txt": "WHAT I FOUND",
+   "raw": "what I found",
+   "transform": "uppercase",
+   "sel": "b"
+  },
+  {
+   "txt": "GATE PASS",
+   "raw": "gate pass",
+   "transform": "uppercase",
+   "sel": "span.badge.pass"
+  },
+  {
+   "txt": "GPT AGENT",
+   "raw": "GPT agent",
+   "transform": "uppercase",
+   "sel": "span.badge"
+  },
+  {
+   "txt": "RACING",
+   "raw": "racing",
+   "transform": "uppercase",
+   "sel": "span.badge"
+  },
+  {
+   "txt": "PLAY",
+   "raw": "play",
+   "transform": "uppercase",
+   "sel": "a.mute"
+  },
+  {
+   "txt": "SOURCE",
+   "raw": "source",
+   "transform": "uppercase",
+   "sel": "a.mute"
+  },
+  {
+   "txt": "SCREENSHOT",
+   "raw": "screenshot",
+   "transform": "uppercase",
+   "sel": "span"
+  },
+  {
+   "txt": "EXAMPLE ENTRY",
+   "raw": "example entry",
+   "transform": "uppercase",
+   "sel": "span.tag.ghosttag"
+  },
+  {
+   "txt": "TEAM NAME",
+   "raw": "Team name",
+   "transform": "uppercase",
+   "sel": "div.by"
+  },
+  {
+   "txt": "WHAT I FOUND",
+   "raw": "what I found",
+   "transform": "uppercase",
+   "sel": "b"
+  },
+  {
+   "txt": "GATE PASS",
+   "raw": "gate pass",
+   "transform": "uppercase",
+   "sel": "span.badge.pass"
+  },
+  {
+   "txt": "CLAUDE CODE",
+   "raw": "Claude Code",
+   "transform": "uppercase",
+   "sel": "span.badge"
+  },
+  {
+   "txt": "SHOOTER",
+   "raw": "shooter",
+   "transform": "uppercase",
+   "sel": "span.badge"
+  },
+  {
+   "txt": "PLAY",
+   "raw": "play",
+   "transform": "uppercase",
+   "sel": "a.mute"
+  },
+  {
+   "txt": "SOURCE",
+   "raw": "source",
+   "transform": "uppercase",
+   "sel": "a.mute"
+  },
+  {
+   "txt": "SCREENSHOT",
+   "raw": "screenshot",
+   "transform": "uppercase",
+   "sel": "span"
+  },
+  {
+   "txt": "EXAMPLE ENTRY",
+   "raw": "example entry",
+   "transform": "uppercase",
+   "sel": "span.tag.ghosttag"
+  },
+  {
+   "txt": "ENTRANT NAME",
+   "raw": "Entrant name",
+   "transform": "uppercase",
+   "sel": "div.by"
+  },
+  {
+   "txt": "WHAT I FOUND",
+   "raw": "what I found",
+   "transform": "uppercase",
+   "sel": "b"
+  },
+  {
+   "txt": "GATE PASS",
+   "raw": "gate pass",
+   "transform": "uppercase",
+   "sel": "span.badge.pass"
+  },
+  {
+   "txt": "MIXED FLEET",
+   "raw": "mixed fleet",
+   "transform": "uppercase",
+   "sel": "span.badge"
+  },
+  {
+   "txt": "PLATFORMER",
+   "raw": "platformer",
+   "transform": "uppercase",
+   "sel": "span.badge"
+  },
+  {
+   "txt": "PLAY",
+   "raw": "play",
+   "transform": "uppercase",
+   "sel": "a.mute"
+  },
+  {
+   "txt": "SOURCE",
+   "raw": "source",
+   "transform": "uppercase",
+   "sel": "a.mute"
+  },
+  {
+   "txt": "SCREENSHOT",
+   "raw": "screenshot",
+   "transform": "uppercase",
+   "sel": "span"
+  },
+  {
+   "txt": "EXAMPLE ENTRY",
+   "raw": "example entry",
+   "transform": "uppercase",
+   "sel": "span.tag.ghosttag"
+  },
+  {
+   "txt": "ENTRANT NAME",
+   "raw": "Entrant name",
+   "transform": "uppercase",
+   "sel": "div.by"
+  },
+  {
+   "txt": "WHAT I FOUND",
+   "raw": "what I found",
+   "transform": "uppercase",
+   "sel": "b"
+  },
+  {
+   "txt": "GATE PASS",
+   "raw": "gate pass",
+   "transform": "uppercase",
+   "sel": "span.badge.pass"
+  },
+  {
+   "txt": "OPEN MODEL ON RUNPOD",
+   "raw": "open model on RunPod",
+   "transform": "uppercase",
+   "sel": "span.badge"
+  },
+  {
+   "txt": "PLAY",
+   "raw": "play",
+   "transform": "uppercase",
+   "sel": "a.mute"
+  },
+  {
+   "txt": "SOURCE",
+   "raw": "source",
+   "transform": "uppercase",
+   "sel": "a.mute"
+  },
+  {
+   "txt": "SCREENSHOT",
+   "raw": "screenshot",
+   "transform": "uppercase",
+   "sel": "span"
+  },
+  {
+   "txt": "EXAMPLE ENTRY",
+   "raw": "example entry",
+   "transform": "uppercase",
+   "sel": "span.tag.ghosttag"
+  },
+  {
+   "txt": "TEAM NAME",
+   "raw": "Team name",
+   "transform": "uppercase",
+   "sel": "div.by"
+  },
+  {
+   "txt": "WHAT I FOUND",
+   "raw": "what I found",
+   "transform": "uppercase",
+   "sel": "b"
+  },
+  {
+   "txt": "GATE PASS",
+   "raw": "gate pass",
+   "transform": "uppercase",
+   "sel": "span.badge.pass"
+  },
+  {
+   "txt": "CLAUDE CODE",
+   "raw": "Claude Code",
+   "transform": "uppercase",
+   "sel": "span.badge"
+  },
+  {
+   "txt": "RACING",
+   "raw": "racing",
+   "transform": "uppercase",
+   "sel": "span.badge"
+  },
+  {
+   "txt": "PLAY",
+   "raw": "play",
+   "transform": "uppercase",
+   "sel": "a.mute"
+  },
+  {
+   "txt": "SOURCE",
+   "raw": "source",
+   "transform": "uppercase",
+   "sel": "a.mute"
+  },
+  {
+   "txt": "THE PAGE",
+   "raw": "the page",
+   "transform": "uppercase",
+   "sel": "p.lab"
+  },
+  {
+   "txt": "404—GEN",
+   "raw": "404—GEN",
+   "transform": "uppercase",
+   "sel": "a.mark.pix"
+  },
+  {
+   "txt": "404.XYZ",
+   "raw": "404.xyz",
+   "transform": "uppercase",
+   "sel": "a"
+  },
+  {
+   "txt": "THE RECIPE",
+   "raw": "the recipe",
+   "transform": "uppercase",
+   "sel": "a"
+  },
+  {
+   "txt": "SUBNET 17",
+   "raw": "subnet 17",
+   "transform": "uppercase",
+   "sel": "span.pix.g"
+  },
+  {
+   "txt": "DRAFT ",
+   "raw": "draft ",
+   "transform": "uppercase",
+   "sel": "span.pix.g"
+  },
+  {
+   "txt": "V4",
+   "raw": "v4",
+   "transform": "uppercase",
+   "sel": "span.tbd"
+  },
+  {
+   "txt": " FOR REVIEW",
+   "raw": " for review",
+   "transform": "uppercase",
+   "sel": "span.pix.g"
+  },
+  {
+   "txt": "TBD",
+   "raw": "TBD",
+   "transform": "uppercase",
+   "sel": "span.tbd::after"
+  },
+  {
+   "txt": "TBD",
+   "raw": "TBD",
+   "transform": "none",
+   "sel": "span.tbd::after"
+  },
+  {
+   "txt": "TBD",
+   "raw": "TBD",
+   "transform": "none",
+   "sel": "span.tbd::after"
+  },
+  {
+   "txt": "TBD",
+   "raw": "TBD",
+   "transform": "none",
+   "sel": "span.tbd::after"
+  },
+  {
+   "txt": "TBD",
+   "raw": "TBD",
+   "transform": "none",
+   "sel": "span.tbd::after"
+  },
+  {
+   "txt": "TBD",
+   "raw": "TBD",
+   "transform": "none",
+   "sel": "span.tbd::after"
+  },
+  {
+   "txt": "TBD",
+   "raw": "TBD",
+   "transform": "none",
+   "sel": "span.tbd::after"
+  },
+  {
+   "txt": "TBD",
+   "raw": "TBD",
+   "transform": "none",
+   "sel": "span.tbd::after"
+  },
+  {
+   "txt": "TBD",
+   "raw": "TBD",
+   "transform": "uppercase",
+   "sel": "span.tbd::after"
+  },
+  {
+   "txt": "TBD",
+   "raw": "TBD",
+   "transform": "none",
+   "sel": "span.tbd::after"
+  },
+  {
+   "txt": "TBD",
+   "raw": "TBD",
+   "transform": "none",
+   "sel": "span.tbd::after"
+  },
+  {
+   "txt": "TBD",
+   "raw": "TBD",
+   "transform": "none",
+   "sel": "span.tbd::after"
+  },
+  {
+   "txt": "TBD",
+   "raw": "TBD",
+   "transform": "none",
+   "sel": "span.tbd::after"
+  },
+  {
+   "txt": "TBD",
+   "raw": "TBD",
+   "transform": "none",
+   "sel": "span.tbd::after"
+  },
+  {
+   "txt": "TBD",
+   "raw": "TBD",
+   "transform": "none",
+   "sel": "span.tbd::after"
+  },
+  {
+   "txt": "(-)",
+   "raw": "(-)",
+   "transform": "uppercase",
+   "sel": "summary::before"
+  },
+  {
+   "txt": "(0)",
+   "raw": "(0)",
+   "transform": "uppercase",
+   "sel": "summary::before"
+  },
+  {
+   "txt": "(0)",
+   "raw": "(0)",
+   "transform": "uppercase",
+   "sel": "summary::before"
+  },
+  {
+   "txt": "(0)",
+   "raw": "(0)",
+   "transform": "uppercase",
+   "sel": "summary::before"
+  },
+  {
+   "txt": "TBD",
+   "raw": "TBD",
+   "transform": "none",
+   "sel": "span.tbd::after"
+  },
+  {
+   "txt": "(0)",
+   "raw": "(0)",
+   "transform": "uppercase",
+   "sel": "summary::before"
+  },
+  {
+   "txt": "TBD",
+   "raw": "TBD",
+   "transform": "none",
+   "sel": "span.tbd::after"
+  },
+  {
+   "txt": "TBD",
+   "raw": "TBD",
+   "transform": "none",
+   "sel": "span.tbd::after"
+  },
+  {
+   "txt": "TBD",
+   "raw": "TBD",
+   "transform": "uppercase",
+   "sel": "span.tbd::after"
+  }
+ ]
+}
