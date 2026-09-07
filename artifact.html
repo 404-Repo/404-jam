@@ -49,16 +49,30 @@ h1 .k{color:var(--coral)}
   background:rgba(0,0,0,.45);color:#fff;border:1px solid rgba(255,255,255,.35);padding:6px 10px;cursor:pointer}
 .play:hover,.play:focus{background:var(--coral);border-color:var(--coral);outline:none}
 
-/* prompt strip */
-.promptbar{background:var(--ink);color:#fff;border-bottom:1px solid var(--ink)}
-.promptbar .wrap{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;padding-top:13px;padding-bottom:13px}
-.promptbar .lbl{font-family:var(--pix);font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:#8d8d8d}
-.promptbar code{font-family:var(--mono);font-size:14px;color:#fff;overflow-x:auto;white-space:nowrap;flex:1;min-width:260px}
-.promptbar code .m{color:var(--coral)}
-.promptbar code .slot{color:var(--coral);border-bottom:1px solid var(--coral)}
-.promptbar button{font-family:var(--pix);font-size:10px;letter-spacing:.06em;text-transform:uppercase;background:none;
-  border:1px solid #3a3a3a;color:#c9c9c9;padding:6px 11px;cursor:pointer}
-.promptbar button:hover,.promptbar button:focus{color:var(--coral);border-color:var(--coral);outline:none}
+/* prompt panel, with a beam riding the border */
+@property --beam{syntax:'<angle>';initial-value:0deg;inherits:false}
+.promptwrap{background:var(--paper);border-bottom:1px solid var(--ink);padding:26px 0 30px}
+.promptwrap .lbl{font-family:var(--pix);font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:var(--grey);margin:0 0 10px}
+.panel{position:relative;background:var(--ink);color:#fff;padding:2px}
+.panel::before{content:"";position:absolute;inset:0;padding:2px;
+  background:conic-gradient(from var(--beam),rgba(248,89,81,0) 0deg,rgba(248,89,81,0) 200deg,#f85951 268deg,#ffffff 296deg,#f85951 320deg,rgba(248,89,81,0) 356deg);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;
+  mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);mask-composite:exclude;
+  animation:beamspin 4.5s linear infinite;pointer-events:none}
+@keyframes beamspin{to{--beam:360deg}}
+@media (prefers-reduced-motion:reduce){.panel::before{animation:none;background:#f85951}}
+.panel .inner{position:relative;display:flex;flex-wrap:wrap;gap:12px 18px;align-items:center;padding:18px 20px}
+.panel code{font-family:var(--mono);font-size:clamp(14px,1.7vw,20px);line-height:1.45;color:#fff;flex:1;min-width:260px;word-break:break-word}
+.panel code .m{color:#ffd7d5}
+.panel .slot{color:var(--coral);border-bottom:2px solid var(--coral);padding-bottom:1px;white-space:nowrap}
+.panel .slot.hot{background:rgba(248,89,81,.16)}
+.pcaret{display:inline-block;width:9px;height:1.05em;background:var(--coral);vertical-align:-.18em;margin-left:2px;animation:bl 1s steps(1) infinite}
+@keyframes bl{50%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.pcaret{animation:none}}
+.panel .acts{display:flex;gap:8px;margin-left:auto}
+.panel button{font-family:var(--pix);font-size:10px;letter-spacing:.06em;text-transform:uppercase;background:none;
+  border:1px solid #3a3a3a;color:#c9c9c9;padding:8px 12px;cursor:pointer;white-space:nowrap}
+.panel button:hover,.panel button:focus{color:var(--coral);border-color:var(--coral);outline:none}
 
 /* stats, the Dream style callout row */
 .stats{display:grid;grid-template-columns:repeat(2,1fr);border-bottom:1px solid var(--ink)}
@@ -214,10 +228,12 @@ footer a:hover{color:var(--coral)}
   </div></div>
 </div>
 
-<div class="promptbar"><div class="wrap">
-  <span class="lbl">paste into your agent</span>
-  <code>Read <span class="m">GAME.md</span> in github.com/404-Repo/404-game-recipe and build me a game about <span class="slot" id="slot">a coastal kart racer</span>.</code>
-  <button id="copy" type="button">copy</button>
+<div class="promptwrap"><div class="wrap">
+  <p class="lbl">paste this into your agent</p>
+  <div class="panel"><div class="inner">
+    <code>Read <span class="m">GAME.md</span> in github.com/404-Repo/404-game-recipe and build me a game about <span class="slot" id="slot">a coastal kart racer</span><span class="pcaret" id="pcaret"></span></code>
+    <span class="acts"><button id="shuffle" type="button">another</button><button id="copy" type="button">copy</button></span>
+  </div></div>
 </div></div>
 
 <div class="stats">
@@ -254,8 +270,8 @@ footer a:hover{color:var(--coral)}
   <h2>Five steps</h2>
 </div>
 <div class="steps">
-  <div class="step"><span class="n">(01)</span><h3>Sign up for Atlas</h3><p>A fixed credit grant lands on sign up: images, textures, sky, sound, music. <span class="tbd">Link to come.</span></p></div>
-  <div class="step"><span class="n">(02)</span><h3>Clone the recipe</h3><p><code>npm install</code> then <code>npm run selftest</code>, which proves the verifier catches broken assets.</p></div>
+  <div class="step"><span class="n">(01)</span><h3>Clone 404's 3JS harness</h3><p><code>npm install</code> then <code>npm run selftest</code>, which proves the verifier catches broken assets.</p></div>
+  <div class="step"><span class="n">(02)</span><h3>Sign up for Atlas</h3><p>A fixed credit grant lands on sign up: images, textures, sky, sound, music. <span class="tbd">Link to come.</span></p></div>
   <div class="step"><span class="n">(03)</span><h3>Give your agent the line</h3><p>The line above, with your idea in it. How you split the work is yours.</p></div>
   <div class="step"><span class="n">(04)</span><h3>Pass the gate</h3><p>Desktop and phone. The harness prints a verdict block and that block is your entry ticket.</p></div>
   <div class="step"><span class="n">(05)</span><h3>Submit</h3><p><span class="tbd">A pull request</span> with the link, the verdict and what you found. Closes 25 <span class="tbd">Sep</span>.</p></div>
@@ -417,11 +433,31 @@ footer a:hover{color:var(--coral)}
     if (vid.paused) { vid.play(); vt.textContent = 'pause'; } else { vid.pause(); vt.textContent = 'play'; }
   });
 
-  /* rotating idea in the prompt line */
+  /* the changing idea: erase, then type the next one with the leading character scrambling */
   var IDEAS = ['a coastal kart racer','a night market chase','a lighthouse platformer','a submarine salvage sim',
-               'a rooftop parkour run','a desert train heist','a haunted arcade','anything you like'];
-  var slot = document.getElementById('slot'), i = 0;
-  if (!reduce) setInterval(function(){ i = (i + 1) % IDEAS.length; slot.textContent = IDEAS[i]; }, 2600);
+               'a rooftop parkour run','a desert train heist','a haunted arcade','a game nobody has made yet'];
+  var SCRAM = 'abcdefghijklmnopqrstuvwxyz0123456789/-_';
+  var slot = document.getElementById('slot'), idea = 0, busy = false, timer = null;
+  function rnd(){ return SCRAM[(Math.random() * SCRAM.length) | 0]; }
+  function step(ms){ return new Promise(function(r){ setTimeout(r, ms); }); }
+  async function swapTo(next){
+    if (busy) return; busy = true;
+    var cur = slot.textContent;
+    for (var e = cur.length; e >= 0; e--) { slot.textContent = cur.slice(0, e); await step(14); }
+    for (var t = 1; t <= next.length; t++) {
+      for (var k = 0; k < 2; k++) { slot.textContent = next.slice(0, t - 1) + rnd(); await step(16); }
+      slot.textContent = next.slice(0, t); await step(22);
+    }
+    slot.classList.add('hot'); await step(260); slot.classList.remove('hot');
+    busy = false;
+  }
+  function nextIdea(){ idea = (idea + 1) % IDEAS.length; return IDEAS[idea]; }
+  function loop(){ timer = setTimeout(function(){ swapTo(nextIdea()).then(loop); }, 2400); }
+  if (!reduce) loop();
+  document.getElementById('shuffle').addEventListener('click', function(){
+    clearTimeout(timer); if (busy) return;
+    swapTo(nextIdea()).then(function(){ if (!reduce) loop(); });
+  });
 
   var b = document.getElementById('copy');
   b.addEventListener('click', function(){
