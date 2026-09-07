@@ -1,0 +1,382 @@
+<title>Jam Launch Review</title>
+<style>
+:root{
+  --bg:#f2f2f2; --panel:#ffffff; --ink:#111111; --muted:#6a6a6a; --rule:#d9d9d9;
+  --coral:#f85951; --coral-ink:#c93a33; --amber:#b8860b; --green:#2e7d4f; --grey:#8a8a8a;
+  --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  --sans:"Helvetica Neue",Helvetica,Arial,system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){ --bg:#141414; --panel:#1d1d1d; --ink:#ececec; --muted:#a0a0a0; --rule:#333333; --coral-ink:#ff7a72; --amber:#d9a828; --green:#5cb885; --grey:#8a8a8a; }
+}
+:root[data-theme="dark"]{ --bg:#141414; --panel:#1d1d1d; --ink:#ececec; --muted:#a0a0a0; --rule:#333333; --coral-ink:#ff7a72; --amber:#d9a828; --green:#5cb885; --grey:#8a8a8a; }
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 var(--sans);-webkit-text-size-adjust:100%}
+.wrap{max-width:760px;margin:0 auto;padding:20px 18px 80px}
+h1{font-size:clamp(28px,7vw,40px);line-height:1.02;letter-spacing:-.02em;margin:8px 0 6px;text-wrap:balance}
+.eyebrow{font:12px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--coral-ink)}
+.lede{color:var(--muted);margin:0 0 22px;max-width:60ch}
+h2{font-size:22px;letter-spacing:-.01em;margin:38px 0 12px;text-wrap:balance}
+h2 small{font:12px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px}
+.verdicts{display:grid;grid-template-columns:1fr;gap:10px;margin:18px 0 6px}
+@media (min-width:640px){.verdicts{grid-template-columns:repeat(3,1fr)}}
+.v{background:var(--panel);border:1px solid var(--rule);padding:14px 14px 12px}
+.v .k{font:12px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.v .s{font-size:20px;font-weight:700;letter-spacing:-.01em;margin:6px 0 4px}
+.v .s.no{color:var(--coral-ink)} .v .s.near{color:var(--amber)}
+.v p{margin:0;color:var(--muted);font-size:14px;line-height:1.45}
+.note{border-left:3px solid var(--coral);padding:8px 14px;margin:14px 0;background:var(--panel)}
+.note p{margin:6px 0}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 4px;position:sticky;top:0;background:var(--bg);padding:10px 0;z-index:2}
+.chip{border:1px solid var(--rule);background:var(--panel);color:var(--ink);font:13px/1 var(--mono);padding:9px 11px;cursor:pointer;border-radius:2px}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chip:focus-visible{outline:2px solid var(--coral);outline-offset:2px}
+.count{font:13px/1 var(--mono);color:var(--muted);margin:6px 0 0}
+.item{background:var(--panel);border:1px solid var(--rule);margin:10px 0;padding:14px 14px 12px;display:grid;grid-template-columns:28px 1fr;gap:0 12px}
+.item[hidden]{display:none}
+.item input{width:20px;height:20px;margin:3px 0 0;accent-color:var(--coral)}
+.head{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:baseline}
+.id{font:12px/1 var(--mono);color:var(--muted)}
+.t{font-weight:700;font-size:17px;letter-spacing:-.01em}
+.tag{font:11px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;padding:4px 7px;border-radius:2px;color:#fff;background:var(--grey)}
+.tag.change{background:var(--coral)} .tag.call{background:var(--amber)} .tag.keep{background:var(--green)} .tag.fixed{background:var(--ink);color:var(--bg)}
+.ev{font:11px/1 var(--mono);letter-spacing:.04em;color:var(--muted);border:1px solid var(--rule);padding:3px 6px;border-radius:2px}
+.body{grid-column:2}
+.body p{margin:8px 0 0;font-size:15px;line-height:1.5}
+.body p b{font-weight:700}
+.body .fix{color:var(--ink)} .body .saw{color:var(--muted)}
+q{font-family:var(--mono);font-size:13.5px;quotes:"\201C" "\201D"}
+table{border-collapse:collapse;width:100%;font-size:14px;margin:10px 0}
+td,th{border-bottom:1px solid var(--rule);padding:8px 8px 8px 0;text-align:left;vertical-align:top}
+th{font:12px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+td.n{font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:13px}
+.tw{overflow-x:auto}
+ul{padding-left:20px;margin:8px 0} li{margin:4px 0}
+.foot{color:var(--muted);font-size:13px;margin-top:40px;border-top:1px solid var(--rule);padding-top:14px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+  <div class="eyebrow">404 game jam / launch review / 7 Sep 2026</div>
+  <h1>Is this ready to launch?</h1>
+  <p class="lede">A fresh read of the site, the recipe repo, and the two together as the thing the jam goes public with. Three independent readers (an indie dev on a phone, a stranger's coding agent, a jam organiser) plus my own pass. Every item below is marked with what I saw, why it matters, and a recommendation. Tick what you decide; the ticks stay in your browser.</p>
+
+  <div class="verdicts">
+    <div class="v"><div class="k">The site, alone</div><div class="s no">Not yet</div><p>Strong on a laptop. Dead sign up button, 19 placeholders, an unpriced prize, no organiser identity, and rule copy that contradicts itself. Most of it is your decisions, then a day of text.</p></div>
+    <div class="v"><div class="k">The repo, alone</div><div class="s near">Method yes, tools no</div><p>The method is sound and honest and a stranger shipped a game with it today. Four tool defects reproduced tonight, the cost is buried, and there is no way to enter a jam from inside it.</p></div>
+    <div class="v"><div class="k">The pair, as a launch</div><div class="s no">Not coherent</div><p>The site promises a gate the repo does not ship, a way to enter that does not exist, and a rule that cannot be enforced as written. All three are text. Launch on the 11th is possible if decisions land by Wednesday.</p></div>
+  </div>
+
+  <div class="note">
+    <p><b>Three corrections to things I told you.</b></p>
+    <p>1. At about 20:25 I relayed that the cheap phone lighting tier beat the desktop tier on the property that decided seven of eight blind pairs. It was never a real result. The run's statistics read one frame-relative band across a square reference, a widescreen desktop capture and a portrait phone capture, and the effect was the frame shape. Re-measured square against square tonight, the original failure stands at about the size first reported. The blind pair results, judged by eye, never moved. The repo's claims doc now carries the rule.</p>
+<p>2. I told you the repo was ready for public agents. It is ready for an agent to build a game with. It is not ready as a rulebook, and its tools have the defects in R1 to R5 below, two of which I introduced this week.</p>
+    <p>3. I described the site as phone ready for a week. The public page shipped with no doctype and no viewport tag, so every phone rendered the desktop layout shrunk to 40 percent with 4px labels. Every phone screenshot I showed you was of the preview page, which adds those tags itself. Fixed and live since about 20:55 tonight. A stranger found it in the first minute.</p>
+  </div>
+
+  <div class="chips" role="group" aria-label="filter">
+    <button class="chip" data-f="all" aria-pressed="true">all</button>
+    <button class="chip" data-f="pair">pair</button>
+    <button class="chip" data-f="site">site</button>
+    <button class="chip" data-f="repo">repo</button>
+    <button class="chip" data-f="change">change</button>
+    <button class="chip" data-f="call">your call</button>
+    <button class="chip" data-f="keep">keep</button>
+    <button class="chip" data-f="fixed">done tonight</button>
+  </div>
+  <div class="count" id="count"></div>
+
+  <h2><small>A</small>The pair, as what goes public</h2>
+
+  <div class="item" data-a="pair" data-r="change" id="P1"><input type="checkbox"><div>
+    <div class="head"><span class="id">P1</span><span class="t">The gate the site sells does not exist in the repo</span><span class="tag change">change</span><span class="ev">verified</span></div>
+    <div class="body">
+      <p class="saw">Site: <q>window.__READY__ within 8 s on a 4G profile</q>, <q>under 10 MB</q>, <q>1.5M triangles</q>, <q>the harness prints a verdict block and that block is your entry ticket</q>. Repo: no verdict block anywhere, triangle budget 1.7M, no size check, READY allowed 180 s, a desktop viewport with arrow keys only, and the gates doc says the shipped gate is the wrong gate for most games. Under a throttled 4G profile none of the three reference games makes 8 s: Drive 11.7 s, Rust 17 17 to 21 s, Lantern Run 10.7 s.</p>
+      <p><b>Why it hurts.</b> On day one an entrant runs the gate on a platformer, gets <q>legs stalled</q>, and asks where the verdict block is. And the entries page says a pull request merges when <q>the harness verdict in it checks out against a run of our own</q>, which cannot be reproduced for a gate each entrant writes.</p>
+      <p class="fix"><b>Fix.</b> Ship one jam gate: live.mjs plus a phone viewport, timed READY under 4G, byte count, draws and triangles, and a printed block with URL, commit and timestamp. Take the site's numbers from that file. Run it on the three reference games before Thursday and set the READY line to what they pass, or drop the line. Half a day, mine.</p>
+    </div></div></div>
+
+  <div class="item" data-a="pair" data-r="change" id="P2"><input type="checkbox"><div>
+    <div class="head"><span class="id">P2</span><span class="t">There is no way to enter</span><span class="tag change">change</span><span class="ev">verified</span></div>
+    <div class="body">
+      <p class="saw">Site step 05: <q>A pull request with the link, the verdict and what you found.</q> Repo: no .github folder, no PR template, no entries directory, no submission fields. The word <q>jam</q> appears once in the whole repo, in needs.md, and never in GAME.md. An agent given the site's line builds a game and never learns there is a competition.</p>
+      <p class="fix"><b>Fix.</b> JAM.md at the repo root, linked from the first line of GAME.md, with dates, rules, budgets and what to submit. A pull request template and an entries folder with one JSON per entry. One hour once you name the submission repo.</p>
+    </div></div></div>
+
+  <div class="item" data-a="pair" data-r="change" id="P3"><input type="checkbox"><div>
+    <div class="head"><span class="id">P3</span><span class="t">The one hard rule cannot be enforced as written</span><span class="tag change">change</span><span class="ev">verified rules, inferred exploit</span></div>
+    <div class="body">
+      <p class="saw">The verifier checks parse, bounds, base at zero, triangle band and blank sides. A downloaded mesh decoded into a vertex array inside the module passes every check. Nothing says source must be public, that commits must fall inside the window, or that the organisers' four public games (which carry no licence file) may not be forked. A re-skinned Drive is a legal entry under the current text. <q>One to four people, one entry each</q> has no identity behind it.</p>
+      <p class="fix"><b>Fix.</b> Four rule lines: public source repo; commits dated inside the window; geometry built from Three.js constructors, no literal vertex arrays over about 64 numbers and no base64; organiser games may be read, not copied. Optional and yours to call: a 20-line lint in ship.mjs that flags numeric literal density per module. ETHGlobal and js13k both publish the equivalent.</p>
+    </div></div></div>
+
+  <div class="item" data-a="pair" data-r="change" id="P4"><input type="checkbox"><div>
+    <div class="head"><span class="id">P4</span><span class="t">The copy bans textures, then hands them out</span><span class="tag change">change</span><span class="ev">verified</span></div>
+    <div class="body">
+      <p class="saw"><q>100% assets as code</q> and <q>No meshes, no asset store, no texture pipeline</q> sit above step 02, <q>A fixed credit grant lands on sign up: images, textures, sky, sound, music</q>, and the Rust 17 card, <q>Atlas does the materials, the sky and the sound.</q> A careful entrant reads the hero and thinks image textures are banned.</p>
+      <p class="fix"><b>Fix.</b> One sentence in the rules: geometry must be code; textures, skies, sprites and sound may be images and audio, from Atlas or your own, declared in your entry. Change the hero stat to <q>100% geometry as code</q>.</p>
+    </div></div></div>
+
+  <div class="item" data-a="pair" data-r="change" id="P5"><input type="checkbox"><div>
+    <div class="head"><span class="id">P5</span><span class="t">Atlas is a mandatory step that is never explained, and the real cost of entry is hidden</span><span class="tag change">change</span><span class="ev">verified copy, inferred cost</span></div>
+    <div class="body">
+      <p class="saw">Step 02 is <q>Sign up for Atlas</q> with no sentence on what Atlas is or its relation to 404. The FAQ then says <q>Your own art is fine if you say so</q>, so the account is not required. The only hint that entrants pay their own model bill is <q>the models they already pay for</q>. The repo's needs page puts the reference racer at about 10M tokens and ten hours for the full method, and says usage limits were tripped three times. An indie dev on a metered agent can spend more than third prize before the first filmstrip. A Bittensor reader will see <q>subnet 17</q> in the footer and conclude this is subnet marketing.</p>
+      <p class="fix"><b>Fix.</b> One honest paragraph: who 404 and Atlas are to each other, that the credits exist so nobody pays for images, that your agent's tokens are your cost and a first pass of the reference build was roughly N million, that own art is allowed. Mark step 02 optional.</p>
+    </div></div></div>
+
+  <div class="item" data-a="pair" data-r="change" id="P6"><input type="checkbox"><div>
+    <div class="head"><span class="id">P6</span><span class="t">The judging method contradicts its own rubric</span><span class="tag change">change</span><span class="ev">verified</span></div>
+    <div class="body">
+      <p class="saw"><q>No scores out of ten: a number invites a build to optimise the number</q> sits beside 40 / 30 / 20 / 10 percent. Frames in pairs can judge only <q>Does it look like a made thing</q> (30). <q>Is it good to play</q> (40) needs hands. <q>What did you find</q> (20) is the entrant's own card text, neither blind nor checkable. The repo's pair tool compares a game against its own reference, so there is no shared reference across genres, and all against all for 20 to 60 entries is 190 to 1,770 pairs per judge in two and a half days. Resemblance to a commercial reference is also the opposite of <q>What separates the winners is what you think to build.</q></p>
+      <p class="fix"><b>Fix.</b> Publish a two stage card. Stage one: each entry appears in about six blind pairs against other entries, three judges, made thing only, top twelve advance. Stage two: hand play, thirty minutes per entry, four one-line questions matching the percentages, creativity judged here. Name the judges and their conflicts: anyone from 404 or Atlas judging games built on Atlas credits should be declared.</p>
+    </div></div></div>
+
+  <div class="item" data-a="pair" data-r="call" id="P7"><input type="checkbox"><div>
+    <div class="head"><span class="id">P7</span><span class="t">Half a TAO decided by a vote that lives in the voter's browser</span><span class="tag call">your call</span><span class="ev">verified</span></div>
+    <div class="body">
+      <p class="saw">Prize copy: <q>Voted by everyone who enters, on the shortlist.</q> Entries page: <q>your votes are kept in your own browser.</q> One localStorage key, no server, no identity, no vote window in the dates. You chose no bot proofing for now. The money attached is what changes the calculation: itch.io's own docs call open public voting a bad idea and GMTK has disqualified for vote fraud with accounts, and this has no accounts.</p>
+      <p class="fix"><b>Options.</b> Entrants only, one vote per merged pull request author, cast as a GitHub reaction or a form behind GitHub login, with a published window such as 26 Sep 12:00 to 27 Sep 12:00 UTC. Or make the community pick non-monetary for jam 001 and say so now. Either is a day or less. Leaving it as is means the first dispute is about the vote.</p>
+    </div></div></div>
+
+  <div class="item" data-a="pair" data-r="change" id="P8"><input type="checkbox"><div>
+    <div class="head"><span class="id">P8</span><span class="t">Nothing on payment, eligibility or tax, for a token prize</span><span class="tag change">change</span><span class="ev">verified absence</span></div>
+    <div class="body">
+      <p class="saw">FAQ: <q>TAO to a Bittensor wallet you give us at submission. Payout terms to confirm.</q> Nothing on the entity paying, age, sanctioned regions, KYC, tax, whether the prize is fixed in TAO or dollars, payout date, or staff exclusion. TAO was around 260 dollars on three price sites tonight, so the pool is roughly 2,600 dollars and the community prize about 130. Colosseum and Devfolio both publish all of the above.</p>
+      <p class="fix"><b>Fix.</b> One terms page, about twelve lines: entity and address; 18 or age of majority; not open where prohibited or to sanctioned persons; prize denominated in TAO and paid as TAO, or fixed in dollars at announcement day rate, pick one; paid to one wallet per team within 30 days; identity check at organiser discretion; winner bears tax; organiser staff excluded; governing law. Legal can start from Colosseum's public rules.</p>
+    </div></div></div>
+
+  <div class="item" data-a="pair" data-r="change" id="P9"><input type="checkbox"><div>
+    <div class="head"><span class="id">P9</span><span class="t">IP wording missing on both sides</span><span class="tag change">change</span><span class="ev">verified</span></div>
+    <div class="body">
+      <p class="saw"><q>Your game stays yours. Entering lets 404 show it. Wording from legal.</q> Also <q>Showcased by 404 on X, with the build behind it</q> and <q>a build breakdown published with 404.</q> Missing: the scope of the grant, whether <q>the build behind it</q> means publishing the entrant's source and prompts, whether Atlas outputs on jam credits are the entrant's to use commercially (the site never links Atlas terms), a warranty on third party content, and a takedown route.</p>
+      <p class="fix"><b>Fix.</b> Copy the js13k sentence: entrants retain ownership and grant a perpetual, worldwide, royalty free, non-exclusive licence to display, stream and write about. Add the Global Game Jam warranty line. Add <q>Atlas outputs generated on jam credits are yours</q> with a link to the Atlas terms. Say what the build breakdown will and will not publish.</p>
+    </div></div></div>
+
+  <div class="item" data-a="pair" data-r="call" id="P10"><input type="checkbox"><div>
+    <div class="head"><span class="id">P10</span><span class="t">Sixty hours from close to stage, with no process text</span><span class="tag call">your call</span><span class="ev">verified dates, inferred load</span></div>
+    <div class="body">
+      <p class="saw">Closes 25 Sep 23:59 UTC, winners 28 Sep on stage in Montreal. That is about two and a half days to rerun gates on every pull request, shortlist, judge pairs, hand play, run a community vote with no dates, and verify wallets, while at least one organiser is travelling. Nothing covers late entries, a broken link at close, ties, disqualification and appeal, judge conflicts, or fewer than N passing entries.</p>
+      <p class="fix"><b>Options.</b> Announce the shortlist on stage and the winners a few days later, which removes the summit as a hard deadline. Or keep the stage and staff it: three judges briefed by the 22nd, a one-page judge brief, and rule lines for late (none), broken (one 24 hour fix window), ties (judge majority then community), disqualification (named organiser, written reason, 24 hours to respond), payout within 30 days. I recommend the first.</p>
+    </div></div></div>
+
+  <div class="item" data-a="pair" data-r="keep" id="P11"><input type="checkbox"><div>
+    <div class="head"><span class="id">P11</span><span class="t">The three example games help the method and hurt the gate</span><span class="tag keep">keep the games, change the claim</span><span class="ev">verified, played</span></div>
+    <div class="body">
+      <p class="saw">All three start from a real tap on a phone and move, which most web jams cannot say. Under crude input in the first minute: the Drive kart climbed a wall and lay on its side within 20 seconds; Rust 17 is 6.2 to 6.8 MB and cannot make 8 seconds on 4G by arithmetic, and a laptop mouse without pointer lock pitched the camera to the sky; Lantern Run was caught at 72 of 1,100 metres in about 20 seconds in both viewports. The strip says <q>all four in the strip below</q> but Costa Verde has no link anywhere, and the repo's own example is not on the entries page.</p>
+      <p class="fix"><b>Recommendation.</b> Keep them exactly as the reference builds they are labelled. Make the gate line true (P1) rather than removing the games. Link Costa Verde or drop it from the strip.</p>
+    </div></div></div>
+
+  <h2><small>B</small>The site, alone</h2>
+
+  <div class="item" data-a="site" data-r="fixed" id="S1"><input type="checkbox" checked disabled><div>
+    <div class="head"><span class="id">S1</span><span class="t">Phones got the desktop layout at 40 percent</span><span class="tag fixed">done tonight</span><span class="ev">verified</span></div>
+    <div class="body">
+      <p class="saw">The public index had no doctype, no head and no viewport tag, because the source is a body written for the preview viewer, which wraps it. On a 390px phone the page rendered at 980px and shrank: nav labels 4px, tap targets 13 by 19. The mobile CSS had never fired on the live site. Also no social preview tags, so a forwarded link showed a bare URL.</p>
+      <p class="fix"><b>Done.</b> The build now wraps the page in a real head with viewport, description, Open Graph tags and a favicon. Live and confirmed at 390 and 360 wide with nothing overflowing. Worth a look on your own phone.</p>
+    </div></div></div>
+
+  <div class="item" data-a="site" data-r="change" id="S2"><input type="checkbox"><div>
+    <div class="head"><span class="id">S2</span><span class="t">Both sign up buttons do nothing</span><span class="tag change">change</span><span class="ev">verified</span></div>
+    <div class="body">
+      <p class="saw">Hero and footer <q>sign up and build</q> both link to <q>#</q>. No form, no mail, no Discord, no registration anywhere. The one action the page asks for is impossible. The entrant reviewer named this as the moment they would close the tab.</p>
+      <p class="fix"><b>Fix.</b> Point it at the Atlas signup once you have the link. Until then, point it at the recipe or a waitlist form and relabel it. Ten minutes once the destination exists.</p>
+    </div></div></div>
+
+  <div class="item" data-a="site" data-r="change" id="S3"><input type="checkbox"><div>
+    <div class="head"><span class="id">S3</span><span class="t">Nineteen placeholders, a draft stamp, and a countdown to a date marked tbd</span><span class="tag change">change</span><span class="ev">verified</span></div>
+    <div class="body">
+      <p class="saw">The markers sit on the parts that govern money and eligibility: the open date, the Atlas link, the submission repo, the 10 MB limit, the budgets, team size, legal wording, judges, how ten licences are chosen, payout terms, the Discord, the summit name, subnet 17. The footer reads <q>draft v4 for review</q>. Real jams with money publish rules that are final at open, because a rule that changes after entries exist is the dispute you spend the weekend on.</p>
+      <p class="fix"><b>Fix.</b> No tbd on the page on the 11th. Where a fact is not settled, delete the sentence rather than flag it. The decisions that are yours: judges, entity, TAO or dollars, team size, submission repo, the ten licences, Atlas link, Discord. Everything else I can close today.</p>
+    </div></div></div>
+
+  <div class="item" data-a="site" data-r="change" id="S4"><input type="checkbox"><div>
+    <div class="head"><span class="id">S4</span><span class="t">The prize is never priced</span><span class="tag change">change</span><span class="ev">verified</span></div>
+    <div class="body">
+      <p class="saw"><q>TEN TAO.</q> is the headline and 5 / 3 / 1.5 / 0.5 the table. A game developer without crypto has no idea whether that is 50 dollars or 5,000, learns they need a wallet to be paid, and is told terms are unconfirmed.</p>
+      <p class="fix"><b>Fix.</b> An approximate dollar figure beside each TAO amount, dated, and the payout mechanism in one sentence.</p>
+    </div></div></div>
+
+  <div class="item" data-a="site" data-r="call" id="S5"><input type="checkbox"><div>
+    <div class="head"><span class="id">S5</span><span class="t">The first five seconds do not say it is a game jam</span><span class="tag call">your call</span><span class="ev">inferred from verified copy</span></div>
+    <div class="body">
+      <p class="saw">Above the fold on a phone: <q>ONE LINE. TWO WEEKS. TEN TAO.</q> and <q>Your agent builds the game. Every object in it is Three.js code from the open 404 recipe.</q> The word jam appears only in the browser title and the small meta line. Agent, Three.js, 404, recipe and TAO are all undefined at the moment they are used. What you get and what you do arrive at the five steps, about 1,800px down.</p>
+      <p class="fix"><b>Options.</b> Keep the headline and change only the sub-line to something like <q>A two week game jam. Give an AI coding agent one line, it builds a Three.js game. The best one wins ten TAO, about N dollars.</q> Or keep the terse copy and accept that it speaks to people who already know the words. I recommend the first; the headline stays.</p>
+    </div></div></div>
+
+  <div class="item" data-a="site" data-r="change" id="S6"><input type="checkbox"><div>
+    <div class="head"><span class="id">S6</span><span class="t">Eight terms used without definition</span><span class="tag change">change</span><span class="ev">verified</span></div>
+    <div class="body">
+      <p class="saw">Harness, Atlas, verdict block, the gate, 4G profile, filmstrip, subnet 17, and <q>Bittensor Exploit summit</q>, which reads as a hacking conference to a game developer.</p>
+      <p class="fix"><b>Fix.</b> One short parenthetical at first use for each. Half an hour.</p>
+    </div></div></div>
+
+  <div class="item" data-a="site" data-r="change" id="S7"><input type="checkbox"><div>
+    <div class="head"><span class="id">S7</span><span class="t">No organiser identity anywhere</span><span class="tag change">change</span><span class="ev">verified absence</span></div>
+    <div class="body">
+      <p class="saw">No names, no company, no about line, no contact, no Discord, no X link despite <q>Showcased by 404 on X</q>, no terms, no privacy notice, judges to be announced. The entrant reviewer's words: for a competition paying crypto to a wallet you hand over, that is the profile of a scam page.</p>
+      <p class="fix"><b>Fix.</b> A footer block with the legal entity, two named organisers with links, a contact address, the X account and the Discord, and the judges before launch.</p>
+    </div></div></div>
+
+  <div class="item" data-a="site" data-r="change" id="S8"><input type="checkbox"><div>
+    <div class="head"><span class="id">S8</span><span class="t">The entries page shows fake numbers and a vote button four days before open</span><span class="tag change">change</span><span class="ev">verified</span></div>
+    <div class="body">
+      <p class="saw"><q>5 entries / 5 passed the gate / 4 genres / 19 days left</q>, five cards titled example entry whose text is <q>Placeholder</q> and whose play and source links point back at the page. Vote counts reset per browser.</p>
+      <p class="fix"><b>Fix.</b> Until the 11th show only the two reference builds and one line, <q>Entries appear here from 11 September.</q> Hide the vote button until it is server backed and restricted (P7).</p>
+    </div></div></div>
+
+  <div class="item" data-a="site" data-r="call" id="S9"><input type="checkbox"><div>
+    <div class="head"><span class="id">S9</span><span class="t">The hero is a rifle</span><span class="tag call">your call</span><span class="ev">verified</span></div>
+    <div class="body">
+      <p class="saw">A first person rifle over an oilfield is the first frame of a jam that wants any genre, above a strip of a kart racer, a coastal driver and a night market. The phone encode is 3.7 MB and plays about 1.3 s after load on fast 4G, 3.1 s on slow 4G.</p>
+      <p class="fix"><b>Options.</b> You picked Rust 17 today and it is the best looking clip we have. Alternatives: a four genre montage, or Rust 17 on laptop with Drive as the phone poster. Whichever you choose, the phone file should be under 2 MB.</p>
+    </div></div></div>
+
+  <div class="item" data-a="site" data-r="change" id="S10"><input type="checkbox"><div>
+    <div class="head"><span class="id">S10</span><span class="t">Pixel face at 10px on sixty labels, nav targets under 44px</span><span class="tag change">change</span><span class="ev">verified</span></div>
+    <div class="body">
+      <p class="saw">About sixty elements set in the pixel face at 10px: nav, eyebrows, stat labels, chips. Nav links measure 33 to 36px wide. Borderline on a laptop, small on a phone even after the viewport fix.</p>
+      <p class="fix"><b>Fix.</b> Pixel face for the wordmark and section eyebrows only, 12px minimum, more padding on the nav. An hour, and the spacing pass has to be rechecked after.</p>
+    </div></div></div>
+
+  <div class="item" data-a="site" data-r="change" id="S11"><input type="checkbox"><div>
+    <div class="head"><span class="id">S11</span><span class="t">Small breakage</span><span class="tag change">change</span><span class="ev">verified</span></div>
+    <div class="body">
+      <p class="saw">Entries view unreachable with JavaScript off. The <q>another</q> typewriter shows half words on fast taps. Cards say <q>404 gen</q> while the wordmark carries the dash. Start date ambiguity: the recipe is live and the hero says paste this now, while dates say <q>Opens 11 Sep: Recipe, harness and credits available.</q> Can I start today, and is early work eligible?</p>
+      <p class="fix"><b>Fix.</b> One line on early work. The rest is an hour.</p>
+    </div></div></div>
+
+  <h2><small>C</small>The repo, alone</h2>
+
+  <div class="item" data-a="repo" data-r="change" id="R1"><input type="checkbox"><div>
+    <div class="head"><span class="id">R1</span><span class="t">The gate misdiagnoses the repo's own example, and I wrote the wrong diagnosis</span><span class="tag change">fix</span><span class="ev">verified</span></div>
+    <div class="body">
+      <p class="saw">The playtest never reads the <q>over</q> flag the contract requires games to publish. The example's player is shot dead at 23 seconds; the tool polls a corpse for 127 more seconds, then says <q>this route does not fit your game: it drives fifty metres forward and turns, which walks an interior straight into a wall.</q> The filmstrip is six identical frames of MISSION FAILED. The gates doc says five of six legs and <q>Nothing is broken.</q> It is six of six, and the cause is death. That message is the one I added two days ago.</p>
+      <p class="fix"><b>Fix.</b> Read the flag every poll, stop, and print <q>the player died at N s, N legs never ran.</q> Correct the gates doc. One hour.</p>
+    </div></div></div>
+
+  <div class="item" data-a="repo" data-r="change" id="R2"><input type="checkbox"><div>
+    <div class="head"><span class="id">R2</span><span class="t">The cache stamp works once</span><span class="tag change">fix</span><span class="ev">verified, reproduced</span></div>
+    <div class="body">
+      <p class="saw">ship.mjs with the stamp flag rewrites imports to carry a version. On a folder that already carries one, it stamps zero files and prints success, and the old version stays. From the second push onward the cache bug it exists to fix is back. I reproduced it on a copy of the example.</p>
+      <p class="fix"><b>Fix.</b> Match an existing stamp and replace it. Ten minutes.</p>
+    </div></div></div>
+
+  <div class="item" data-a="repo" data-r="call" id="R3"><input type="checkbox"><div>
+    <div class="head"><span class="id">R3</span><span class="t">The open weights are not publicly reachable</span><span class="tag call">your call</span><span class="ev">401 verified, reason inferred</span></div>
+    <div class="body">
+      <p class="saw">The README says <q>the winning weights are open</q> and 404.md names the Hugging Face repo. Fetching it anonymously returns 401. The author's public model list does not include it. Private, gated or renamed. An entrant who budgets two dollars an hour for a GPU may find the template cannot pull weights.</p>
+      <p class="fix"><b>Options.</b> Ask the miner, or check whether SN17 mirrors it. Until it resolves anonymously, say <q>weights via the RunPod template</q> and drop <q>open</q>.</p>
+    </div></div></div>
+
+  <div class="item" data-a="repo" data-r="change" id="R4"><input type="checkbox"><div>
+    <div class="head"><span class="id">R4</span><span class="t">Four path conventions, one of which the shipping tool rejects</span><span class="tag change">fix</span><span class="ev">verified</span></div>
+    <div class="body">
+      <p class="saw">GAME.md says <q>./assets</q>, 404.md <q>./harness/assetlib.js</q>, the README <q>../harness/assetlib.js</q>, and the surfaces doc uses absolute <q>/assets/</q> and <q>/harness/</q>, which ship.mjs fails as a deploy waiting to 404. Follow one doc and the tool rejects you.</p>
+      <p class="fix"><b>Fix.</b> One convention, the example's: copy the three harness files into the game folder and use relative paths. Rewrite the surfaces doc to it. Half an hour.</p>
+    </div></div></div>
+
+  <div class="item" data-a="repo" data-r="change" id="R5"><input type="checkbox"><div>
+    <div class="head"><span class="id">R5</span><span class="t">One doc describes a harness that no longer exists</span><span class="tag change">fix</span><span class="ev">verified</span></div>
+    <div class="body">
+      <p class="saw">verify-loop.md says the playtest <q>holds each input for a number of frames</q> and adds a frame field to the contract. The playtest measures metres covered, says so in its own comments, and GAME.md agrees. The README lists the stale doc as the explanation of what the tools check.</p>
+      <p class="fix"><b>Fix.</b> Delete it or regenerate it from the code.</p>
+    </div></div></div>
+
+  <div class="item" data-a="repo" data-r="change" id="R6"><input type="checkbox"><div>
+    <div class="head"><span class="id">R6</span><span class="t">The cost and the requirements are in the wrong file</span><span class="tag change">change</span><span class="ev">verified</span></div>
+    <div class="body">
+      <p class="saw">The numbers that decide whether you can do this at all live only in needs.md: 25 agents, about 10M tokens over three attempts, about two and a half hours for a first pass, and <q>we tripped a usage limit twice and a credit cap once.</q> GAME.md mentions fan out and vision in one sentence and hands off. The README's start section says <q>Node 20 or newer.</q> A reader learns the price after cloning.</p>
+      <p class="fix"><b>Fix.</b> The cost table and the two requirements on the first screen of GAME.md. Twenty minutes.</p>
+    </div></div></div>
+
+  <div class="item" data-a="repo" data-r="change" id="R7"><input type="checkbox"><div>
+    <div class="head"><span class="id">R7</span><span class="t">The lighting rig's limits are only inside the rig</span><span class="tag change">change</span><span class="ev">verified</span></div>
+    <div class="body">
+      <p class="saw">The README sells the rig for forty lines with before and after pictures. That it is an exterior daylight rig, that a room the sun cannot reach gets one colour temperature, and that a night game lit by the rig alone gets the same failure, are said only in the rig's own header, one of them in the middle of an options table. The shipped example is a night interior and does not use the rig. A haunted lighthouse, the reader agent's brief, is a night exterior with a lit interior, so the repo's one lighting recommendation covered neither half.</p>
+      <p class="fix"><b>Fix.</b> One sentence in the README section and in GAME.md: exterior daylight; night and interiors need practicals, see the example's lighting file.</p>
+    </div></div></div>
+
+  <div class="item" data-a="repo" data-r="change" id="R8"><input type="checkbox"><div>
+    <div class="head"><span class="id">R8</span><span class="t">The one limit of the format is the last thing you read</span><span class="tag change">change</span><span class="ev">verified</span></div>
+    <div class="body">
+      <p class="saw">That printed text cannot be done well, and that <q>no glyphs anywhere</q> belongs in the style lock, is the final section of GAME.md. An agent reading top down locked its style two hundred lines earlier, and the style lock template does not contain the line.</p>
+      <p class="fix"><b>Fix.</b> Move it above the style lock section and add the line to the template.</p>
+    </div></div></div>
+
+  <div class="item" data-a="repo" data-r="call" id="R9"><input type="checkbox"><div>
+    <div class="head"><span class="id">R9</span><span class="t">The example ships no gate of its own</span><span class="tag call">your call</span><span class="ev">verified</span></div>
+    <div class="body">
+      <p class="saw">GAME.md calls the gate <q>the tool you will run a hundred times</q> and says writing one is an afternoon. The example is a shooter, publishes aim and shots and kills, and has no gate file. The 815 line kart gate the case study describes is not in the repo either. The only gate that exists fails the only game that exists.</p>
+      <p class="fix"><b>Options.</b> Ship the example's shooter gate, an afternoon of mine, and the example then passes its own tools. Or leave it and let R1's corrected message carry the explanation. I recommend shipping it; it is the first command a stranger runs after the selftest.</p>
+    </div></div></div>
+
+  <div class="item" data-a="repo" data-r="call" id="R10"><input type="checkbox"><div>
+    <div class="head"><span class="id">R10</span><span class="t">Eighteen thousand words, and rules wrapped in war stories</span><span class="tag call">your call</span><span class="ev">verified</span></div>
+    <div class="body">
+      <p class="saw">The prose an agent is told to read is about 18,000 words plus a 234 line header in the rig. The three round table appears three times. The shop front anecdote appears four times. Two entries in traps.md are changelog notes dressed as traps. Every rule arrives with the incident that produced it. Both reader agents named the same pages as genuinely good and untouchable: <q>Knowing when to stop</q> and the code headers at decision points.</p>
+      <p class="fix"><b>Options.</b> A dedupe pass: one canonical place per fact, history moved to the case study, about a day. Or leave the voice alone, which was your call this week and which the readers respected. I recommend the dedupe and not a rewrite.</p>
+    </div></div></div>
+
+  <div class="item" data-a="repo" data-r="change" id="R11"><input type="checkbox"><div>
+    <div class="head"><span class="id">R11</span><span class="t">Small defects, one batch</span><span class="tag change">fix</span><span class="ev">verified</span></div>
+    <div class="body">
+      <p class="saw">live.mjs writes its screenshot into the current folder and it is not gitignored. The playtest prints <q>drops ? busted ?</q>, fields from a game that no longer exists. The site says 1.5M triangles and the gate 1.7M. verify.mjs uses the software rendering flag the gates doc forbids, without saying why. Node 20 is stated but not enforced. The floor build costs an hour in two files and 60 to 90 minutes in a third. The puppeteer resolution trap is warned about in gates.md, after GAME.md has already told you to build outside the repo.</p>
+      <p class="fix"><b>Fix.</b> One hour, one commit.</p>
+    </div></div></div>
+
+  <div class="item" data-a="repo" data-r="fixed" id="R12"><input type="checkbox" checked disabled><div>
+    <div class="head"><span class="id">R12</span><span class="t">Band statistics need the build captured at the reference's aspect ratio</span><span class="tag fixed">done tonight</span><span class="ev">verified by the clean room run</span></div>
+    <div class="body">
+      <p class="saw">The clean room run's last finding, and it cost it most of a day. Its bar was square, its desktop gate widescreen, its phone gate portrait, and one band read across all three made a claim look four times worse or better with frame shape alone. Cropping did not fix it and a width-referenced band made it worse. Rendering the measurement pass at the reference's own shape brought the real gap back at the size first reported.</p>
+      <p class="fix"><b>Done.</b> claims.md now says: your capture tool must match the reference's shape, the measurement pass runs at that shape while the critic's filmstrip stays at the shape people play, every figure names its capture size, and the blind pairs judged by eye carry the verdict. Pushed.</p>
+    </div></div></div>
+
+  <h2><small>D</small>What it costs to close</h2>
+  <div class="tw"><table>
+    <tr><th>Who</th><th>What</th><th>Time</th></tr>
+    <tr><td>You</td><td>Judges, legal entity, TAO or dollars, community vote, team size, submission repo, ten licences method, Atlas link, Discord, hero, sub-headline, stage or later announcement</td><td class="n">decisions</td></tr>
+    <tr><td>Legal</td><td>Terms page (P8) and IP paragraph (P9), from Colosseum and js13k wording</td><td class="n">1 day</td></tr>
+    <tr><td>Me</td><td>Jam gate (P1), JAM.md and PR template (P2), rules text (P3, P4, P5), judging card (P6), site copy and fixes (S2 to S11), repo fixes (R1, R2, R4, R5, R6, R7, R8, R11)</td><td class="n">2 days</td></tr>
+    <tr><td>Me, optional</td><td>Example gate (R9), dedupe pass (R10), vote backend (P7)</td><td class="n">2 days</td></tr>
+  </table></div>
+  <p>Wednesday is the last day decisions can land for an 11 September open with no placeholders on the page.</p>
+
+  <h2><small>E</small>What is genuinely strong</h2>
+  <ul>
+    <li>The repo is unusually honest for launch material, and all three readers said so unprompted. It says its gate is the wrong gate for most games, that headless frame rates are not a verdict, that printed text cannot be done, and that the method lost 0 of 8 against the commercial bar three rounds running. That tone is right for people who build with agents.</li>
+    <li>Geometry as code, verified from four sides, is a real creative constraint with a real reason. The filmstrip in motion and <q>a warning is not a gate</q> are ideas other jams should steal.</li>
+    <li>The pasteable line with a working copy button is the one thing on the page a Claude Code or Cursor user understands instantly and would try tonight. The entrant reviewer named it as the thing they would forward.</li>
+    <li>All three games start from a real tap on a phone and move. Most web jams cannot say that. A stranger's agent built the third one in four hours from the repo alone.</li>
+    <li>The blind pair rationale, <q>a number invites a build to optimise the number</q>, is the sharpest sentence on the site.</li>
+  </ul>
+
+  <div class="foot">Readers: an indie developer on a phone viewport, a stranger's coding agent asked to build a haunted lighthouse, a jam organiser with token prize experience. Every item marked verified was reproduced by me tonight or is a direct quote from the live page or the public repo at commit 63e1f95. Prices from three public price pages on 7 Sep. Ticks are saved in this browser only.</div>
+</div>
+
+<script>
+(function(){
+  var KEY='jam.review.v1', state={};
+  try{ state=JSON.parse(localStorage.getItem(KEY)||'{}')||{}; }catch(e){ state={}; }
+  var items=[].slice.call(document.querySelectorAll('.item'));
+  items.forEach(function(it){
+    var cb=it.querySelector('input'); if(!cb||cb.disabled) return;
+    if(state[it.id]) cb.checked=true;
+    cb.addEventListener('change',function(){ state[it.id]=cb.checked; try{ localStorage.setItem(KEY,JSON.stringify(state)); }catch(e){} count(); });
+  });
+  var chips=[].slice.call(document.querySelectorAll('.chip')), f='all';
+  function apply(){
+    items.forEach(function(it){
+      var show = f==='all' || it.dataset.a===f || it.dataset.r===f;
+      it.hidden=!show;
+    });
+    chips.forEach(function(c){ c.setAttribute('aria-pressed', c.dataset.f===f ? 'true':'false'); });
+    count();
+  }
+  function count(){
+    var vis=items.filter(function(i){return !i.hidden;}), done=vis.filter(function(i){var c=i.querySelector('input');return c&&c.checked;}).length;
+    document.getElementById('count').textContent = vis.length+' items shown, '+done+' ticked';
+  }
+  chips.forEach(function(c){ c.addEventListener('click',function(){ f=c.dataset.f; apply(); }); });
+  apply();
+})();
+</script>

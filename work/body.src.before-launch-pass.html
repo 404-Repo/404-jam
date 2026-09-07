@@ -94,8 +94,8 @@ section[id],#top{scroll-margin-top:calc(var(--bar) + var(--s4))}
   .stats .stat:last-child{grid-column:1/-1;padding-left:var(--gutc);padding-right:var(--gutc)}
 }
 @media (min-width:900px){
-  .stat:nth-child(5n+1),.prize:nth-child(4n+1),.tcell:nth-child(5n+1){grid-column:1/span 2;padding-left:var(--gutc)}
-  .stat:nth-child(5n),.prize:nth-child(4n),.tcell:nth-child(5n){grid-column:-3/-1;padding-right:var(--gutc)}
+  .stat:nth-child(5n+1),.prize:nth-child(4n+1),.tcell:nth-child(4n+1){grid-column:1/span 2;padding-left:var(--gutc)}
+  .stat:nth-child(5n),.prize:nth-child(4n),.tcell:nth-child(4n){grid-column:-3/-1;padding-right:var(--gutc)}
 }
 @media (max-width:599px){
   .step{grid-column:1/-1;padding-left:var(--gutc);padding-right:var(--gutc)}
@@ -113,6 +113,8 @@ section[id],#top{scroll-margin-top:calc(var(--bar) + var(--s4))}
 
 .pix{font-family:var(--pix);font-size:var(--pix-s);letter-spacing:var(--pix-s-tr);text-transform:uppercase}
 .c{color:var(--coral)} .g{color:var(--grey)}
+.tbd{color:var(--coral);border-bottom:1px dotted var(--coral)}
+.tbd::after{content:"TBD";font-family:var(--pix);font-size:var(--pix-s);letter-spacing:var(--pix-s-tr);vertical-align:super;margin-left:var(--s1)}
 
 /* bar */
 .bar{position:fixed;top:0;left:0;right:0;z-index:40;transition:background .2s}
@@ -127,9 +129,7 @@ section[id],#top{scroll-margin-top:calc(var(--bar) + var(--s4))}
 .bar nav a#navEntries::before{content:"";display:inline-block;width:5px;height:5px;background:var(--coral);vertical-align:.14em;margin-right:var(--s1)}
 .bar.solid nav a#navEntries:hover,.bar.solid nav a#navEntries:focus{color:var(--ink)}
 .bar:not(.solid) nav a#navEntries:hover,.bar:not(.solid) nav a#navEntries:focus{color:#fff}
-@media (max-width:640px){.bar .wrap{gap:var(--s3)}.bar nav{gap:0}.bar nav a{padding:var(--s4) var(--s2)}}
-/* the pixel face is a bitmap: 10px reads on a laptop and not on a phone, so phones get the next size the font has */
-@media (max-width:599px){:root{--pix-s:12px;--pix-s-tr:.07em}}
+@media (max-width:640px){.bar .wrap{gap:var(--s3)}.bar nav{gap:0}.bar nav a{padding:var(--s4) var(--s1)}}
 .bar.solid{background:var(--paper);border-bottom:1px solid var(--ink)}
 .bar.solid a{color:var(--ink);text-shadow:none}
 
@@ -254,8 +254,7 @@ p.lead{font-size:var(--t-lead);font-weight:700;letter-spacing:-.02em;line-height
 
 /* dates */
 .time{display:grid;grid-template-columns:var(--gutt) repeat(2,minmax(0,1fr)) var(--gutt);border-top:1px solid var(--ink)}
-@media (min-width:900px){.time{grid-template-columns:var(--gutt) repeat(5,minmax(0,1fr)) var(--gutt)}}
-@media (max-width:899px){.time .tcell:last-of-type{grid-column:1/-1;padding-left:var(--gutc);padding-right:var(--gutc)}}
+@media (min-width:900px){.time{grid-template-columns:var(--gutt) repeat(4,minmax(0,1fr)) var(--gutt)}}
 .tcell .d{font-weight:700;font-size:var(--d-num);letter-spacing:-.04em;line-height:1;margin:var(--s2) 0 var(--s2)}
 .tcell p{font-size:var(--t-cell);color:var(--grey);margin:0;max-width:none}
 /* the live cell is marked by an ink coloured brand, not by a 9 level shift in grey */
@@ -321,12 +320,12 @@ footer .mark{font-size:var(--pix-l);letter-spacing:var(--pix-l-tr);color:var(--i
 .badge{font-family:var(--pix);font-size:var(--pix-s);letter-spacing:var(--pix-s-tr);text-transform:uppercase;border:1px solid var(--hair2);color:var(--grey);padding:var(--s1) var(--s2)}
 .badge.pass{color:var(--coral);border-color:var(--coral)}
 .cact{display:flex;border-top:1px solid var(--hair)}
-.cact a,.cact span{flex:1;text-align:center;padding:0 var(--s2);min-height:var(--tap);display:inline-flex;align-items:center;justify-content:center;
+.cact a{flex:1;text-align:center;padding:0 var(--s2);min-height:var(--tap);display:inline-flex;align-items:center;justify-content:center;
   font-family:var(--pix);font-size:var(--pix-s);letter-spacing:var(--pix-s-tr);text-transform:uppercase;
   color:var(--ink);text-decoration:none;border-right:1px solid var(--hair)}
-.cact a:last-child,.cact span:last-child{border-right:0}
+.cact a:last-child{border-right:0}
 .cact a:hover{background:var(--ink);color:var(--paper)}
-.cact a.mute,.cact span.mute{color:#a0a0a0}
+.cact a.mute{color:#a0a0a0}
 /* play is the coral action in the middle of the card's row, and it opens the game in a new tab */
 .cact a.goplay{background:var(--coral);color:#fff;border-right-color:var(--coral)}
 .cact a.goplay:hover,.cact a.goplay:focus-visible{background:var(--ink);color:var(--paper);border-right-color:var(--ink)}
@@ -358,12 +357,12 @@ footer .mark{font-size:var(--pix-l);letter-spacing:var(--pix-l-tr);color:var(--i
   <div class="veil"></div>
   <button class="play" id="vtoggle" type="button">pause</button>
   <div class="in"><div class="wrap">
-    <div class="tagline">jam-001 / a game jam / 11 to 25 september 2026 / <span id="countdown">opens in 4 days</span></div>
+    <div class="tagline">jam-001 / 11 to 25 <span class="tbd">september</span> 2026 / <span id="countdown">opens in 4 days</span></div>
     <h1>One line.<br>Two weeks.<br><span class="k">Ten TAO.</span></h1>
     <div class="row">
-      <p>A two week game jam. Give an AI coding agent one line and it builds a playable Three.js game, every 3D object written as code from the open 404 recipe. The best one wins 5 TAO, about 1,300 dollars.</p>
+      <p>Your agent builds the game. Every object in it is Three.js code from the open 404 recipe.</p>
       <div class="btns">
-        <a class="btn light" href="#how" id="signup">How to enter</a>
+        <a class="btn light" href="#" id="signup">Sign up and build</a>
         <a class="btn wire" href="#entries">Entries</a>
       </div>
     </div>
@@ -383,7 +382,7 @@ footer .mark{font-size:var(--pix-l);letter-spacing:var(--pix-l-tr);color:var(--i
   <div class="stat"><b>14<em>days</em></b><span>to build</span></div>
   <div class="stat"><b>1<em>line</em></b><span>to start</span></div>
   <div class="stat"><b>0<em>GPUs</em></b><span>required</span></div>
-  <div class="stat"><b>100<em>%</em></b><span>geometry as code</span></div>
+  <div class="stat"><b>100<em>%</em></b><span>assets as code</span></div>
 </div>
 
 <section id="what"><div class="wrap">
@@ -393,8 +392,8 @@ footer .mark{font-size:var(--pix-l);letter-spacing:var(--pix-l-tr);color:var(--i
       <h2>Same recipe.<br>Same models.<br>Different heads.</h2>
     </div>
     <div>
-      <p class="lead">Everyone gets the same open recipe, the same test harness and free image and sound credits. Your agent and its models are your own. What separates the winners is what you think to build.</p>
-      <p class="g">Built this way already, all four in the strip below: a kart racer, a desert shooter, a coastal driver and a warehouse FPS. Every 3D object in every frame is generated code. No meshes, no asset store, no hand modelling. Textures, skies and sound are ordinary files, generated on Atlas or your own.</p>
+      <p class="lead">Everyone gets the open recipe, the harness and the models they already pay for. What separates the winners is what you think to build.</p>
+      <p class="g">Built this way already, all four in the strip below: a kart racer, a desert shooter, a coastal driver and a warehouse FPS. Every object in every frame is generated code. No meshes, no asset store, no texture pipeline.</p>
     </div>
   </div>
 </div>
@@ -412,11 +411,11 @@ footer .mark{font-size:var(--pix-l);letter-spacing:var(--pix-l-tr);color:var(--i
   <h2>Five steps</h2>
 </div>
 <div class="steps">
-  <div class="step"><span class="n">(01)</span><h3>Clone the recipe</h3><p><a href="https://github.com/404-Repo/404-game-recipe">404-game-recipe</a> is the method and the test harness, the scripts that check assets and drive your game. <code>npm install</code> then <code>npm run selftest</code>.</p></div>
-  <div class="step"><span class="n">(02)</span><h3>Sign up for Atlas, optional</h3><p><a href="https://atlas.design">Atlas</a> is the AI production platform run by the team behind 404. Jam sign ups get a fixed credit grant for reference images, textures, skies, sound and music, so nobody pays for art. Your own art is allowed instead. Sign up link goes live on 11 Sep.</p></div>
-  <div class="step"><span class="n">(03)</span><h3>Give your agent the line</h3><p>The line above, with your idea in it. How you split the work is yours. Your agent's tokens are your cost: the reference racer took about 10 million tokens and ten hours for the full method, and a half day version is described in the recipe.</p></div>
-  <div class="step"><span class="n">(04)</span><h3>Pass the gate</h3><p><code>node harness/jam.mjs &lt;your live url&gt;</code> loads your game on a phone viewport over 4G, taps start with a real touch, and prints a verdict block. That block is your entry ticket.</p></div>
-  <div class="step"><span class="n">(05)</span><h3>Submit</h3><p>A pull request to <a href="https://github.com/404-Repo/404-game-jam">404-game-jam</a> with the link, the verdict and what you found. Closes 25 Sep, 23:59 UTC.</p></div>
+  <div class="step"><span class="n">(01)</span><h3>Clone 404's 3JS harness</h3><p><code>npm install</code> then <code>npm run selftest</code>, which proves the verifier catches broken assets.</p></div>
+  <div class="step"><span class="n">(02)</span><h3>Sign up for Atlas</h3><p>A fixed credit grant lands on sign up: images, textures, sky, sound, music. <span class="tbd">Link to come.</span></p></div>
+  <div class="step"><span class="n">(03)</span><h3>Give your agent the line</h3><p>The line above, with your idea in it. How you split the work is yours.</p></div>
+  <div class="step"><span class="n">(04)</span><h3>Pass the gate</h3><p>Desktop and phone. The harness prints a verdict block and that block is your entry ticket.</p></div>
+  <div class="step"><span class="n">(05)</span><h3>Submit</h3><p><span class="tbd">A pull request</span> with the link, the verdict and what you found. Closes 25 <span class="tbd">Sep</span>.</p></div>
 </div></section>
 
 <section id="gate"><div class="wrap">
@@ -424,16 +423,16 @@ footer .mark{font-size:var(--pix-l);letter-spacing:var(--pix-l-tr);color:var(--i
     <div>
       <p class="lab">gate</p>
       <h2>Machine checked<br>before a human looks</h2>
-      <p class="g">A judge only ever compares games that actually run, on a phone, with the player moving. The jam gate is one script in the recipe. Run it against your live link as often as you like; it writes screenshots and a verdict, and we rerun it before your entry is merged.</p>
+      <p class="g">A judge only ever compares games that actually run, on a phone, at a frame rate, with the player moving. Run it yourself as often as you like; it writes a filmstrip of your game in motion.</p>
     </div>
     <div>
       <div class="spec">
-        <div><span class="k">ready</span><p class="v"><code>window.__READY__</code> within 20 s on a 4G profile, 4 Mbps down</p></div>
+        <div><span class="k">ready</span><p class="v"><code>window.__READY__</code> within 8 s on a 4G profile</p></div>
         <div><span class="k">starts</span><p class="v">From a real click and a real touch tap, never a debug hook</p></div>
-        <div><span class="k">reports</span><p class="v"><code>window.__GAME__</code> every frame: position, frame rate, draws, triangles, game over</p></div>
-        <div><span class="k">moves</span><p class="v">At least a metre under a real finger on a 390 by 844 phone viewport</p></div>
-        <div><span class="k">ships as</span><p class="v">One folder at a public URL, relative paths only, under 10 MB transferred</p></div>
-        <div><span class="k">budgets</span><p class="v">900 draw calls and 1.5M triangles at peak. Frame rate is reported, not judged: headless numbers are software rendering.</p></div>
+        <div><span class="k">reports</span><p class="v"><code>window.__GAME__</code> every frame: position, real frame rate, draws, triangles</p></div>
+        <div><span class="k">moves</span><p class="v">Under real keys, and under a real finger on a phone viewport</p></div>
+        <div><span class="k">ships as</span><p class="v">One folder, relative paths only, <span class="tbd">under 10 MB</span></p></div>
+        <div><span class="k">budgets</span><p class="v"><span class="tbd">900 draws, 1.5M triangles, 30 fps on a phone</span></p></div>
       </div>
     </div>
   </div>
@@ -444,15 +443,15 @@ footer .mark{font-size:var(--pix-l);letter-spacing:var(--pix-l-tr);color:var(--i
     <div>
       <p class="lab">rules</p>
       <h2>One hard rule</h2>
-      <p class="g">Everything else is open: any agent, any models, any generator for images and sound, named in your entry. The full rules live in the <a href="https://github.com/404-Repo/404-game-jam">jam repo</a> and where the two differ, the repo wins.</p>
+      <p class="g">Everything else is open, including which agent and which models, named in your entry.</p>
     </div>
     <div>
       <div class="spec">
-        <div><span class="k">geometry</span><p class="v">Every 3D object is Three.js code written through the recipe. No downloaded meshes, no asset store, no hand modelling, and no mesh smuggled in as a vertex array: geometry is built from constructors, and the shipping check flags anything else.</p></div>
-        <div><span class="k">art and sound</span><p class="v">Textures, skies, sprites and sound may be files: Atlas on your jam credits, or your own, declared in your entry.</p></div>
-        <div><span class="k">team</span><p class="v">One to four people, one entry each. Public source repo, first commit on or after 11 Sep.</p></div>
-        <div><span class="k">original</span><p class="v">No trademarked characters, names or logos. Read the 404 reference games all you like; copying their assets or code disqualifies.</p></div>
-        <div><span class="k">yours</span><p class="v">You keep your game. Entering grants 404 a non-exclusive licence to show, stream and write about it. Nothing from your repo is published without asking. Atlas outputs on jam credits are yours.</p></div>
+        <div><span class="k">geometry</span><p class="v">Every object comes through the 404 recipe as code. No downloaded meshes, no asset store, no hand modelling.</p></div>
+        <div><span class="k">art and sound</span><p class="v">Atlas, on your jam credits. Your own art is fine if you say so.</p></div>
+        <div><span class="k">team</span><p class="v"><span class="tbd">One to four people</span>, one entry each.</p></div>
+        <div><span class="k">original</span><p class="v">No trademarked characters, names or logos, in the game or the repo.</p></div>
+        <div><span class="k">yours</span><p class="v">Your game stays yours. Entering lets 404 show it. <span class="tbd">Wording from legal.</span></p></div>
       </div>
     </div>
   </div>
@@ -463,15 +462,15 @@ footer .mark{font-size:var(--pix-l);letter-spacing:var(--pix-l-tr);color:var(--i
     <div>
       <p class="lab">judging</p>
       <h2>Blind, in pairs,<br>in motion</h2>
-      <p class="g">Stage one: frames from every entry in motion, shown two at a time against other entries, names off, order shuffled, three judges, one question: does it look like a made thing. The top twelve are the shortlist. Stage two: every judge plays each shortlisted game for thirty minutes on a phone and a laptop and scores the four questions on the right. No scores out of ten before then: a number invites a build to optimise the number.</p>
-      <p class="pix">Judges announced before entries close. Conflicts declared, and a conflicted judge does not score that entry.</p>
+      <p class="g">Frames from every entry, shown two at a time with the names off and the order shuffled. No scores out of ten: a number invites a build to optimise the number. The shortlist is then played by hand.</p>
+      <p class="pix"><span class="tbd">Judges to be announced</span></p>
     </div>
     <div>
       <div class="spec">
         <div><span class="k">40 percent</span><p class="v">Is it good to play</p></div>
         <div><span class="k">30 percent</span><p class="v">Does it look like a made thing</p></div>
         <div><span class="k">20 percent</span><p class="v">What did you find that nobody else tried</p></div>
-        <div><span class="k">10 percent</span><p class="v">How it was made, with the receipts: your repo, your gate runs, what you threw away</p></div>
+        <div><span class="k">10 percent</span><p class="v">How it was made, with the receipts</p></div>
       </div>
     </div>
   </div>
@@ -480,19 +479,17 @@ footer .mark{font-size:var(--pix-l);letter-spacing:var(--pix-l-tr);color:var(--i
 <section id="prizes"><div class="wrap">
   <p class="lab">prizes</p>
   <h2>Ten TAO and a stage</h2>
-  <p class="g">Paid in TAO, one wallet per team, within 30 days. Dollar figures are for orientation, at about 260 dollars per TAO on 7 Sep 2026.</p>
 </div>
 <div class="prizes">
-  <div class="prize first"><span class="pix">first</span><div class="amt">5<em>TAO</em></div><p>About 1,300 dollars. Announced on stage at Exploit Summit, Montreal, plus a build breakdown written with you and published by 404.</p></div>
-  <div class="prize"><span class="pix g">second</span><div class="amt">3<em>TAO</em></div><p>About 780 dollars. Showcase slot and a post on the 404 channel.</p></div>
-  <div class="prize"><span class="pix g">third</span><div class="amt">1.5<em>TAO</em></div><p>About 390 dollars. Showcase slot and a post on the 404 channel.</p></div>
-  <div class="prize"><span class="pix g">community</span><div class="amt">0.5<em>TAO</em></div><p>About 130 dollars. Voted by entrants, on the shortlist, one GitHub account one vote, 27 to 28 Sep.</p></div>
+  <div class="prize first"><span class="pix">first</span><div class="amt">5<em>TAO</em></div><p>Announced on stage at the summit, plus a build breakdown published with 404.</p></div>
+  <div class="prize"><span class="pix g">second</span><div class="amt">3<em>TAO</em></div><p>Showcase slot and a post on the 404 channel.</p></div>
+  <div class="prize"><span class="pix g">third</span><div class="amt">1.5<em>TAO</em></div><p>Showcase slot and a post on the 404 channel.</p></div>
+  <div class="prize"><span class="pix g">community</span><div class="amt">0.5<em>TAO</em></div><p>Voted by everyone who enters, on the shortlist.</p></div>
 </div>
 <div class="wrap"><div class="spec">
   <div><span class="k">everyone</span><p class="v">Keeps their game, outright.</p></div>
-  <div><span class="k">ten entrants</span><p class="v">A free Atlas licence, chosen by the judges from the shortlist and the honourable mentions.</p></div>
-  <div><span class="k">the best</span><p class="v">Showcased by 404 on X with the play link and, with your say so, the build behind it.</p></div>
-  <div><span class="k">who can win</span><p class="v">Anyone 18 or over where the law allows. People who work on 404, its subnet or Atlas can enter and cannot win. Taxes are yours.</p></div>
+  <div><span class="k">ten entrants</span><p class="v">A free Atlas licence. <span class="tbd">Chosen how, to confirm.</span></p></div>
+  <div><span class="k">the best</span><p class="v">Showcased by 404 on X, with the build behind it.</p></div>
 </div></div></section>
 
 <section id="dates"><div class="wrap">
@@ -500,26 +497,23 @@ footer .mark{font-size:var(--pix-l);letter-spacing:var(--pix-l-tr);color:var(--i
   <h2>Two weeks</h2>
 </div>
 <div class="time">
-  <div class="tcell now"><span class="pix c">opens</span><div class="d">11 Sep</div><p>12:00 UTC. Recipe, harness and credits available. Build earlier if you like; your repo's first commit must be on or after 11 Sep.</p></div>
-  <div class="tcell"><span class="pix g">office hours</span><div class="d">18 Sep</div><p>Questions answered, one entry taken apart live.</p></div>
-  <div class="tcell"><span class="pix g">closes</span><div class="d">25 Sep</div><p>23:59 UTC. Pull request open, gate passed, link working. Late is late.</p></div>
-  <div class="tcell"><span class="pix g">shortlist</span><div class="d">27 Sep</div><p>Twelve games published here and on X. Community vote opens.</p></div>
-  <div class="tcell"><span class="pix g">winner</span><div class="d">28 Sep</div><p>Announced on stage at Exploit Summit, Montreal, a Bittensor conference. Nobody has to be there.</p></div>
+  <div class="tcell now"><span class="pix c">opens</span><div class="d">11 <span class="tbd">Sep</span></div><p>Recipe, harness and credits available.</p></div>
+  <div class="tcell"><span class="pix g">office hours</span><div class="d"><span class="tbd">18 Sep</span></div><p>Questions answered, one entry taken apart live.</p></div>
+  <div class="tcell"><span class="pix g">closes</span><div class="d">25 <span class="tbd">Sep</span></div><p>23:59 UTC, gate passed, link working.</p></div>
+  <div class="tcell"><span class="pix g">winners</span><div class="d">28 <span class="tbd">Sep</span></div><p>On stage at the <span class="tbd">Bittensor Exploit summit</span>.</p></div>
 </div></section>
 
 <section id="faq"><div class="wrap">
   <p class="lab">questions</p>
   <div class="faq">
-    <details open><summary>Do I need a GPU?</summary><p>No. Your agent writes the geometry as code. Running the 404 model yourself on a rented GPU is an option the recipe describes, not a requirement.</p></details>
+    <details open><summary>Do I need a GPU?</summary><p>No. Your agent writes the geometry. The open model on a rented GPU is an option, not a requirement.</p></details>
     <details><summary>Do I have to use Claude?</summary><p>No. Any agent that reads files, runs a shell and looks at images. Name what you used.</p></details>
     <details><summary>Can I use my own art?</summary><p>Yes, for images and sound. The 3D is the one thing that must come through the recipe as code.</p></details>
-    <details><summary>How do I get paid?</summary><p>In TAO, to one Bittensor wallet per team, within 30 days of the announcement. You can give the wallet at submission or when you win. We may ask a winner to confirm who they are first.</p></details>
-    <details><summary>Can I start before the 11th?</summary><p>Yes. The recipe is public now. Your entry repo's first commit must be on or after 11 Sep 00:00 UTC, and the work has to be in the commits.</p></details>
-    <details><summary>What if my link is broken at close?</summary><p>One 24 hour window to fix the deploy without changing the game. Once. Details, ties and disqualification are in the jam repo.</p></details>
-    <details><summary>Where do I ask for help?</summary><p>Open an issue on the <a href="https://github.com/404-Repo/404-game-jam">jam repo</a>, ask on X at <a href="https://x.com/404gen_">@404gen_</a>, or come to office hours on 18 Sep.</p></details>
+    <details><summary>How do I get paid?</summary><p>TAO to a Bittensor wallet you give us at submission. <span class="tbd">Payout terms to confirm.</span></p></details>
+    <details><summary>Where do I ask for help?</summary><p><span class="tbd">Discord link to come.</span> Office hours are on the calendar above.</p></details>
   </div>
   <div class="btns">
-    <a class="btn" href="https://github.com/404-Repo/404-game-jam" id="signup2">Read the rules</a>
+    <a class="btn" href="#" id="signup2">Sign up and build</a>
     <a class="btn ghost" href="https://github.com/404-Repo/404-game-recipe">Read the recipe</a>
   </div>
 </div></section>
@@ -531,15 +525,15 @@ footer .mark{font-size:var(--pix-l);letter-spacing:var(--pix-l-tr);color:var(--i
   <div class="ehead">
     <p class="lab">jam-001 / entries</p>
     <h1>The <span class="k">entries</span></h1>
-    <p class="g">Entries appear here from 11 September, the moment a pull request is merged. The two games below are 404 reference builds: play them, read them, and do not copy them. They are not eligible.</p>
+    <p class="g">Submissions open 11 <span class="tbd">September</span>. The layout below is placeholder. The 404 build at the top is real and is not eligible.</p>
   </div>
 </div>
 <div class="stats">
   <div class="stat"><b id="statEntries">0</b><span>entries</span></div>
   <div class="stat"><b id="statPass">0</b><span>passed the gate</span></div>
-  <div class="stat"><b>2</b><span>reference builds</span></div>
+  <div class="stat"><b>4</b><span>genres</span></div>
   <div class="stat live"><b>10<em>TAO</em></b><span>still to win</span></div>
-  <div class="stat"><b id="statDays">14</b><span>days to build</span></div>
+  <div class="stat"><b id="statDays">14</b><span>days left</span></div>
 </div>
 <div class="wrap">
   <div class="filters">
@@ -551,12 +545,13 @@ footer .mark{font-size:var(--pix-l);letter-spacing:var(--pix-l-tr);color:var(--i
     <button class="chip" type="button" data-f="platformer" aria-pressed="false">platformer</button>
     <button class="chip" type="button" data-f="other" aria-pressed="false">other</button>
   </div>
-  <p class="votenote">Play opens the game in a new tab. The community vote is a thumbs up on the entry's pull request, entrants only, one GitHub account one vote, from the shortlist on 27 Sep until 28 Sep 12:00 UTC.</p>
+  <p class="votenote">Play opens the game in a new tab. Voting opens with the shortlist; until the count is wired to a
+  server your votes are kept in your own browser, so treat the numbers here as layout, not results.</p>
   <div class="grid" id="grid"></div>
-  <p class="empty" id="empty" hidden>No entries in this filter yet. The first ones land on 11 September.</p>
+  <p class="empty" id="empty" hidden>No entries in this filter yet.</p>
   <div class="cols">
     <div><p class="lab">the page</p><h2>How a game gets here</h2></div>
-    <div><p class="g">An entry appears the moment its pull request to the <a href="https://github.com/404-Repo/404-game-jam">jam repo</a> is merged, which happens when our rerun of the jam gate agrees with the verdict block in it. Nothing is curated in or out before judging. Every card carries the play link, the source, what it was built with, and the entrant's own line on what they found.</p></div>
+    <div><p class="g">An entry appears the moment its pull request is merged, which happens when the harness verdict in it checks out against a run of our own. Nothing is curated in or out before judging. Every card carries the play link, the gate verdict, what it was built with, and the entrant's own line on what they found.</p></div>
   </div>
 </div>
 </div>
@@ -565,9 +560,8 @@ footer .mark{font-size:var(--pix-l);letter-spacing:var(--pix-l-tr);color:var(--i
   <a class="mark pix" href="#top">404&#8212;GEN</a>
   <a href="https://404.xyz">404.xyz</a>
   <a href="https://github.com/404-Repo/404-game-recipe">the recipe</a>
-  <a href="https://github.com/404-Repo/404-game-jam">the rules</a>
-  <a href="https://x.com/404gen_">@404gen_</a>
-  <span class="pix g">run by 404, bittensor subnet 17, with atlas</span>
+  <span class="pix g">subnet 17</span>
+  <span class="pix g">draft <span class="tbd">v4</span> for review</span>
 </div></footer>
 
 <script>
@@ -646,19 +640,37 @@ footer .mark{font-size:var(--pix-l);letter-spacing:var(--pix-l-tr);color:var(--i
 
   /* entries */
   var ENTRIES = [
-    { ref:true, id:'drive', title:'Drive', by:'404\u2014GEN', tag:'reference build, not eligible', genre:'racing', short:false,
+    { ref:true, id:'drive', title:'Drive', by:'404 GEN', tag:'reference build, not eligible', genre:'racing', short:false,
       found:'Three blind rounds against a commercial racer. The property that decided every one was named by a person, never by the model.',
-      badges:['reference','777 draws','1.36M tris','Claude Opus and Fable'],
+      badges:['gate pass','777 draws','1.36M tris','Claude Opus and Fable'],
       play:'https://404-repo.github.io/drive/game/', src:'https://github.com/404-Repo/drive', shot:'MEDIA/t_drive_b.jpg' },
-    { ref:true, id:'rust17', title:'Rust 17', by:'404\u2014GEN', tag:'reference build, not eligible', genre:'shooter', short:false,
+    { ref:true, id:'rust17', title:'Rust 17', by:'404 GEN', tag:'reference build, not eligible', genre:'shooter', short:false,
       found:'Twenty four rounds on a desert oilfield. Generated meshes lost to code every time at game weight, so the 3D is code and Atlas does the materials, the sky and the sound.',
-      badges:['reference','767 draws','1.16M tris','Claude Opus and Fable'],
+      badges:['gate pass','767 draws','1.16M tris','Claude Opus and Fable'],
       play:'https://404-repo.github.io/rust17/game/', src:'https://github.com/404-Repo/rust17', shot:'MEDIA/t_rust_card.jpg' },
+    { title:'Example entry', by:'Entrant name', genre:'racing', short:true,
+      found:'One line on the thing this entrant tried that nobody else did. Their words, three sentences at most, and it carries 20 percent of the judging.',
+      badges:['gate pass','GPT agent','racing'], play:'#', src:'#' },
+    { title:'Example entry', by:'Team name', genre:'shooter', short:true,
+      found:'Placeholder. A card is this short on purpose: the play link and the found line are what make someone open a game.',
+      badges:['gate pass','Claude Code','shooter'], play:'#', src:'#' },
+    { title:'Example entry', by:'Entrant name', genre:'platformer', short:false,
+      found:'Placeholder. The chips above filter this grid, and the shortlist chip shows what the judges took through to hand play.',
+      badges:['gate pass','mixed fleet','platformer'], play:'#', src:'#' },
+    { title:'Example entry', by:'Entrant name', genre:'other', short:false,
+      found:'Placeholder for something that does not fit a genre, which is the entry we would most like to see.',
+      badges:['gate pass','open model on RunPod'], play:'#', src:'#' },
+    { title:'Example entry', by:'Team name', genre:'racing', short:false,
+      found:'Placeholder. Entries appear in submission order until judging closes, then the shortlist floats to the top.',
+      badges:['gate pass','Claude Code','racing'], play:'#', src:'#' }
   ];
   var grid = document.getElementById('grid'), empty = document.getElementById('empty');
   function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'})[c]; }); }
-  /* votes are a thumbs up on the entry's pull request, one GitHub account each; a card links to it
-     once the entry has a pr field. Nothing is counted in the browser. */
+  /* votes: one per entry per browser. Swap readVotes and writeVote for a fetch when the count
+     moves to a server; nothing else in here needs to change. */
+  var VKEY = 'jam.votes.v1';
+  function readVotes(){ try { return JSON.parse(localStorage.getItem(VKEY) || '{}'); } catch (e) { return {}; } }
+  function writeVote(id, on){ var v = readVotes(); if (on) v[id] = 1; else delete v[id]; try { localStorage.setItem(VKEY, JSON.stringify(v)); } catch (e) {} return v; }
 
   function card(e, i){
     var id = e.id || ('e' + i);
@@ -667,7 +679,8 @@ footer .mark{font-size:var(--pix-l);letter-spacing:var(--pix-l-tr);color:var(--i
     var tag = '<span class="tag' + (e.ref ? '' : ' ghosttag') + '">' + esc(e.ref ? e.tag : 'example entry') + '</span>';
     var badges = e.badges.map(function(t, n){ return '<span class="badge' + (n === 0 ? ' pass' : '') + '">' + esc(t) + '</span>'; }).join('');
     var playable = e.play && e.play !== '#';
-    var vote = e.pr ? '<a class="vote" href="' + e.pr + '" target="_blank" rel="noopener">vote</a>' : '<span class="vote mute">' + (e.ref ? 'not eligible' : 'vote from 27 sep') + '</span>';
+    var voted = readVotes()[id] ? ' voted' : '';
+    var vote = '<button class="vote' + voted + '" type="button" data-vote="' + id + '">vote <span class="n">' + (readVotes()[id] ? 1 : 0) + '</span></button>';
     var play = playable ? '<a class="goplay" href="' + e.play + '" target="_blank" rel="noopener">play</a>' : '<a class="mute" href="#entries">play</a>';
     var src = e.src === '#' ? '<a class="mute" href="#entries">source</a>' : '<a href="' + e.src + '" target="_blank" rel="noopener">source</a>';
     return '<article class="card' + (e.ref ? ' ref' : '') + '" data-genre="' + e.genre + '" data-short="' + (e.short ? 1 : 0) + '">' +
@@ -677,6 +690,15 @@ footer .mark{font-size:var(--pix-l);letter-spacing:var(--pix-l-tr);color:var(--i
   }
   grid.innerHTML = ENTRIES.map(card).join('');
 
+  grid.addEventListener('click', function(ev){
+    var v = ev.target.closest && ev.target.closest('[data-vote]');
+    if (v) {
+      var id = v.getAttribute('data-vote'), on = !v.classList.contains('voted');
+      writeVote(id, on);
+      v.classList.toggle('voted', on);
+      v.querySelector('.n').textContent = on ? 1 : 0;
+    }
+  });
   /* the 404 builds are references, not entries, so they do not count */
   var real = ENTRIES.filter(function(e){ return !e.ref; }).length;
   document.getElementById('statEntries').textContent = real;
