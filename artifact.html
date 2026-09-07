@@ -53,19 +53,33 @@ h1 .k{color:var(--coral)}
 @property --beam{syntax:'<angle>';initial-value:0deg;inherits:false}
 .promptwrap{background:var(--paper);border-bottom:1px solid var(--ink);padding:26px 0 30px}
 .promptwrap .lbl{font-family:var(--pix);font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:var(--grey);margin:0 0 10px}
-.panel{position:relative;background:var(--ink);color:#fff;padding:2px}
-.panel::before{content:"";position:absolute;inset:0;padding:2px;
-  background:conic-gradient(from var(--beam),rgba(248,89,81,0) 0deg,rgba(248,89,81,0) 200deg,#f85951 268deg,#ffffff 296deg,#f85951 320deg,rgba(248,89,81,0) 356deg);
+/* the beam: a blurred conic on the wrapper for the glow, a masked ring on the panel for the edge */
+.beamwrap{position:relative}
+.beamwrap::before{content:"";position:absolute;inset:-16px;pointer-events:none;filter:blur(20px);opacity:.7;
+  background:conic-gradient(from var(--beam),rgba(248,89,81,0) 0deg,rgba(248,89,81,0) 176deg,#f85951 236deg,#ffe9e7 268deg,#fff 276deg,#ffb1ad 288deg,#f85951 312deg,rgba(248,89,81,0) 352deg);
+  animation:beamspin 2.8s linear infinite}
+.panel{position:relative;z-index:1;background:var(--ink);color:#fff;padding:3px}
+.panel::before{content:"";position:absolute;inset:0;padding:3px;pointer-events:none;
+  background:conic-gradient(from var(--beam),rgba(248,89,81,0) 0deg,rgba(248,89,81,0) 176deg,#f85951 236deg,#ffe9e7 268deg,#fff 276deg,#ffb1ad 288deg,#f85951 312deg,rgba(248,89,81,0) 352deg);
   -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;
   mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);mask-composite:exclude;
-  animation:beamspin 4.5s linear infinite;pointer-events:none}
+  animation:beamspin 2.8s linear infinite}
 @keyframes beamspin{to{--beam:360deg}}
-@media (prefers-reduced-motion:reduce){.panel::before{animation:none;background:#f85951}}
+@media (prefers-reduced-motion:reduce){.beamwrap::before{display:none}.panel::before{animation:none;background:#f85951}}
 .panel .inner{position:relative;display:flex;flex-wrap:wrap;gap:12px 18px;align-items:center;padding:18px 20px}
 .panel code{font-family:var(--mono);font-size:clamp(14px,1.7vw,20px);line-height:1.45;color:#fff;flex:1;min-width:260px;word-break:break-word}
 .panel code .m{color:#ffd7d5}
-.panel .slot{color:var(--coral);border-bottom:2px solid var(--coral);padding-bottom:1px;white-space:nowrap}
-.panel .slot.hot{background:rgba(248,89,81,.16)}
+.panel .slot{position:relative;display:inline-block;color:#fff;font-weight:700;font-size:1.14em;letter-spacing:-.01em;
+  background:rgba(248,89,81,.18);box-shadow:inset 0 -2px 0 var(--coral);padding:1px 6px 2px;white-space:nowrap}
+/* a light sweeps across the phrase the moment it lands */
+.panel .slot::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:0;
+  background:linear-gradient(100deg,transparent 20%,rgba(255,255,255,.85) 48%,transparent 76%);
+  transform:translateX(-110%)}
+.panel .slot.land::after{opacity:1;animation:shine .5s ease-out 1}
+@keyframes shine{to{transform:translateX(110%)}}
+.panel .slot.land{background:var(--coral);color:#fff;box-shadow:inset 0 -2px 0 #fff,0 0 22px rgba(248,89,81,.75)}
+.panel .slot.glitch{text-shadow:2px 0 rgba(255,60,60,.9),-2px 0 rgba(90,255,255,.85);}
+@media (prefers-reduced-motion:reduce){.panel .slot::after{display:none}}
 .pcaret{display:inline-block;width:9px;height:1.05em;background:var(--coral);vertical-align:-.18em;margin-left:2px;animation:bl 1s steps(1) infinite}
 @keyframes bl{50%{opacity:0}}
 @media (prefers-reduced-motion:reduce){.pcaret{animation:none}}
@@ -230,10 +244,10 @@ footer a:hover{color:var(--coral)}
 
 <div class="promptwrap"><div class="wrap">
   <p class="lbl">paste this into your agent</p>
-  <div class="panel"><div class="inner">
+  <div class="beamwrap"><div class="panel"><div class="inner">
     <code>Read <span class="m">GAME.md</span> in github.com/404-Repo/404-game-recipe and build me a game about <span class="slot" id="slot">a coastal kart racer</span><span class="pcaret" id="pcaret"></span></code>
     <span class="acts"><button id="shuffle" type="button">another</button><button id="copy" type="button">copy</button></span>
-  </div></div>
+  </div></div></div>
 </div></div>
 
 <div class="stats">
@@ -448,11 +462,14 @@ footer a:hover{color:var(--coral)}
       for (var k = 0; k < 2; k++) { slot.textContent = next.slice(0, t - 1) + rnd(); await step(16); }
       slot.textContent = next.slice(0, t); await step(22);
     }
-    slot.classList.add('hot'); await step(260); slot.classList.remove('hot');
+    /* landing: a glitch flash, then a light sweeps across the phrase */
+    slot.classList.add('glitch'); await step(70);
+    slot.classList.remove('glitch'); slot.classList.add('land'); await step(520);
+    slot.classList.remove('land');
     busy = false;
   }
   function nextIdea(){ idea = (idea + 1) % IDEAS.length; return IDEAS[idea]; }
-  function loop(){ timer = setTimeout(function(){ swapTo(nextIdea()).then(loop); }, 2400); }
+  function loop(){ timer = setTimeout(function(){ swapTo(nextIdea()).then(loop); }, 1900); }
   if (!reduce) loop();
   document.getElementById('shuffle').addEventListener('click', function(){
     clearTimeout(timer); if (busy) return;
