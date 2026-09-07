@@ -2,385 +2,359 @@
 <style>
 /* FONTS_HERE */
 :root{
-  --paper:#F2F2F2; --ink:#000; --coral:#f85951; --grey:#5c5c5c; --hair:#dbdbdb; --hair2:#c9c9c9; --panel:#e7e7e7;
+  --paper:#F2F2F2; --ink:#000; --coral:#f85951; --grey:#5c5c5c; --hair:#dbdbdb; --hair2:#c9c9c9; --panel:#e9e9e9;
   --pix:fourzerofourpixel,ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
   --sans:Helvetica,"Helvetica Neue",Arial,ui-sans-serif,system-ui,sans-serif;
   --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
 }
 html{color-scheme:light}
 *{box-sizing:border-box}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.45;-webkit-font-smoothing:antialiased}
 [hidden]{display:none!important}
 a{color:var(--ink)}
-.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+img,video{display:block;max-width:100%}
+.wrap{max-width:1280px;margin:0 auto;padding:0 20px}
 .pix{font-family:var(--pix);font-size:11px;letter-spacing:.06em;text-transform:uppercase}
-.c{color:var(--coral)}
-.g{color:var(--grey)}
+.c{color:var(--coral)} .g{color:var(--grey)}
+.tbd{color:var(--coral);border-bottom:1px dotted var(--coral)}
+.tbd::after{content:"TBD";font-family:var(--pix);font-size:8px;vertical-align:super;margin-left:3px}
 
-/* nav, 404.xyz style: wordmark left, terse lowercase links right */
-.bar{position:sticky;top:0;z-index:40;background:var(--paper);border-bottom:1px solid var(--ink)}
-.bar .wrap{display:flex;align-items:center;gap:18px;height:48px}
-.mark{font-family:var(--pix);font-size:13px;letter-spacing:.02em;text-decoration:none;color:var(--ink)}
-.bar nav{margin-left:auto;display:flex;gap:16px;overflow-x:auto}
-.bar nav a{font-family:var(--pix);font-size:11px;letter-spacing:.04em;color:var(--grey);text-decoration:none;white-space:nowrap}
-.bar nav a:hover,.bar nav a:focus{color:var(--coral);outline:none}
-.bar nav a.on{color:var(--ink)}
-@media (max-width:700px){.bar nav a:not(.keep){display:none}}
+/* bar */
+.bar{position:fixed;top:0;left:0;right:0;z-index:40;transition:background .2s}
+.bar .wrap{display:flex;align-items:center;gap:18px;height:46px}
+.bar a{font-family:var(--pix);font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:#fff;text-decoration:none;text-shadow:0 1px 3px rgba(0,0,0,.65)}
+.bar a:hover,.bar a:focus{color:var(--coral);outline:none}
+.bar .mark{font-size:13px}
+.bar nav{margin-left:auto;display:flex;gap:15px}
+@media (max-width:640px){.bar nav a:not(.keep){display:none}}
+.bar.solid{background:var(--paper);border-bottom:1px solid var(--ink)}
+.bar.solid a{color:var(--ink);text-shadow:none}
 
-/* hero */
-.hero{padding:26px 0 0}
-.crumb{display:flex;flex-wrap:wrap;gap:10px 22px;align-items:baseline;padding-bottom:10px}
-h1{font-family:var(--sans);font-weight:700;font-size:clamp(56px,13.4vw,186px);line-height:.82;letter-spacing:-.055em;
-   margin:6px 0 0;text-transform:uppercase;text-wrap:balance}
-h1 span{display:block}
+/* hero: full bleed clip, almost no words */
+.stage{position:relative;height:min(92vh,780px);min-height:460px;overflow:hidden;background:#111;border-bottom:1px solid var(--ink)}
+.stage video,.stage img.poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.stage .veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.42) 0%,rgba(0,0,0,.05) 34%,rgba(0,0,0,.06) 62%,rgba(0,0,0,.62) 100%)}
+.stage .in{position:absolute;inset:auto 0 0 0;padding:0 20px 26px;color:#fff}
+.stage .in .wrap{padding:0}
+h1{font-weight:700;font-size:clamp(44px,10.5vw,140px);line-height:.84;letter-spacing:-.055em;margin:0;text-transform:uppercase;color:#fff}
 h1 .k{color:var(--coral)}
-.heroline{border-top:1px solid var(--ink);margin-top:26px;padding-top:16px;display:grid;grid-template-columns:1fr;gap:22px}
-@media (min-width:900px){.heroline{grid-template-columns:1fr 1fr;gap:48px}}
-.claim{font-size:clamp(17px,2vw,21px);line-height:1.35;font-weight:700;letter-spacing:-.015em;margin:0;max-width:34ch}
-.sub{color:var(--grey);font-size:15px;max-width:56ch;margin:10px 0 0}
+.stage .row{display:flex;flex-wrap:wrap;gap:12px 26px;align-items:flex-end;justify-content:space-between;margin-top:14px}
+.stage .row p{margin:0;max-width:34ch;font-size:15px;color:rgba(255,255,255,.82)}
+.stage .tagline{font-family:var(--pix);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:10px}
+.play{position:absolute;top:56px;right:20px;font-family:var(--pix);font-size:10px;letter-spacing:.06em;text-transform:uppercase;
+  background:rgba(0,0,0,.45);color:#fff;border:1px solid rgba(255,255,255,.35);padding:6px 10px;cursor:pointer}
+.play:hover,.play:focus{background:var(--coral);border-color:var(--coral);outline:none}
 
-/* the prompt box, inverted */
-.term{background:var(--ink);color:var(--paper);padding:0;border:1px solid var(--ink)}
-.term .hd{display:flex;align-items:center;gap:10px;padding:8px 12px;border-bottom:1px solid #2a2a2a;font-family:var(--pix);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#8d8d8d}
-.term .bd{padding:16px 14px;font-family:var(--mono);font-size:15px;line-height:1.55;overflow-x:auto;white-space:nowrap}
-.term .bd .m{color:var(--coral)}
-.term .bd .slot{color:var(--coral);border-bottom:1px solid var(--coral)}
-.caret{display:inline-block;width:8px;height:16px;background:var(--coral);vertical-align:-3px;margin-left:2px;animation:bl 1s steps(1) infinite}
-@keyframes bl{50%{opacity:0}}
-@media (prefers-reduced-motion:reduce){.caret{animation:none}}
-.term button{margin-left:auto;font-family:var(--pix);font-size:10px;letter-spacing:.06em;text-transform:uppercase;
-  background:none;border:1px solid #3a3a3a;color:#c9c9c9;padding:4px 9px;cursor:pointer}
-.term button:hover,.term button:focus{color:var(--coral);border-color:var(--coral);outline:none}
+/* prompt strip */
+.promptbar{background:var(--ink);color:#fff;border-bottom:1px solid var(--ink)}
+.promptbar .wrap{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;padding-top:13px;padding-bottom:13px}
+.promptbar .lbl{font-family:var(--pix);font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:#8d8d8d}
+.promptbar code{font-family:var(--mono);font-size:14px;color:#fff;overflow-x:auto;white-space:nowrap;flex:1;min-width:260px}
+.promptbar code .m{color:var(--coral)}
+.promptbar code .slot{color:var(--coral);border-bottom:1px solid var(--coral)}
+.promptbar button{font-family:var(--pix);font-size:10px;letter-spacing:.06em;text-transform:uppercase;background:none;
+  border:1px solid #3a3a3a;color:#c9c9c9;padding:6px 11px;cursor:pointer}
+.promptbar button:hover,.promptbar button:focus{color:var(--coral);border-color:var(--coral);outline:none}
 
-/* ticker */
-.ticker{background:var(--coral);color:#fff;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);
-  overflow:hidden;white-space:nowrap;margin-top:26px}
-.ticker div{display:inline-block;padding:8px 0;font-family:var(--pix);font-size:11px;letter-spacing:.1em;text-transform:uppercase;
-  animation:tick 34s linear infinite}
-.ticker span{padding:0 26px}
-@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-@media (prefers-reduced-motion:reduce){.ticker div{animation:none}}
-
-/* stat strip */
+/* stats, the Dream style callout row */
 .stats{display:grid;grid-template-columns:repeat(2,1fr);border-bottom:1px solid var(--ink)}
-@media (min-width:820px){.stats{grid-template-columns:repeat(4,1fr)}}
-.stat{padding:22px 20px 20px;border-right:1px solid var(--hair2)}
+@media (min-width:900px){.stats{grid-template-columns:repeat(5,1fr)}}
+.stat{padding:20px;border-right:1px solid var(--hair2)}
 .stat:last-child{border-right:0}
-@media (max-width:819px){.stat:nth-child(2n){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--hair2)}}
-.stat b{display:block;font-weight:700;font-size:clamp(34px,5vw,54px);letter-spacing:-.05em;line-height:1;font-variant-numeric:tabular-nums}
-.stat b em{font-style:normal;font-size:.42em;letter-spacing:-.01em;margin-left:5px;color:var(--grey)}
-.stat .lbl{font-family:var(--pix);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--grey);margin-top:8px;display:block}
+@media (max-width:899px){.stat:nth-child(2n){border-right:0}.stat{border-bottom:1px solid var(--hair2)}}
+.stat b{display:block;font-weight:700;font-size:clamp(30px,4vw,46px);letter-spacing:-.05em;line-height:1;font-variant-numeric:tabular-nums}
+.stat b em{font-style:normal;font-size:.4em;letter-spacing:-.01em;margin-left:5px;color:var(--grey)}
+.stat span{font-family:var(--pix);font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:var(--grey);margin-top:7px;display:block}
 .stat.live b{color:var(--coral)}
 
-/* sections */
-section{border-bottom:1px solid var(--ink);padding:52px 0}
-section.tight{padding:38px 0}
-.sechead{display:grid;grid-template-columns:1fr;gap:6px;margin-bottom:26px}
-@media (min-width:820px){.sechead{grid-template-columns:150px minmax(0,1fr);gap:0 24px;align-items:baseline}}
-h2{font-weight:700;font-size:clamp(30px,5vw,58px);line-height:.95;letter-spacing:-.045em;margin:0;text-transform:uppercase;text-wrap:balance}
-.two{display:grid;grid-template-columns:1fr;gap:26px}
-@media (min-width:860px){.two{grid-template-columns:1fr 1fr;gap:48px}}
-p{margin:0 0 14px;max-width:62ch}
-p.big{font-size:19px;font-weight:700;line-height:1.35;letter-spacing:-.02em}
+/* sections, one word labels */
+section{border-bottom:1px solid var(--ink);padding:40px 0}
+.lab{font-family:var(--pix);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--coral);margin:0 0 14px}
+h2{font-weight:700;font-size:clamp(26px,4vw,44px);line-height:.98;letter-spacing:-.045em;margin:0 0 16px;text-transform:uppercase;text-wrap:balance}
+p{margin:0 0 12px;max-width:58ch}
+p.lead{font-size:18px;font-weight:700;letter-spacing:-.02em;line-height:1.3}
+.cols{display:grid;grid-template-columns:1fr;gap:24px}
+@media (min-width:880px){.cols{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px}}
 
-/* spec rows */
+/* media grid */
+.gal{display:grid;grid-template-columns:1fr;gap:0;border-top:1px solid var(--ink)}
+@media (min-width:620px){.gal{grid-template-columns:1fr 1fr}}
+@media (min-width:1000px){.gal.three{grid-template-columns:repeat(3,1fr)}}
+.shotcell{position:relative;border-right:1px solid var(--hair);border-bottom:1px solid var(--hair);background:#ddd}
+.shotcell img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.shotcell .cap{position:absolute;left:0;bottom:0;background:var(--paper);border-top:1px solid var(--hair);border-right:1px solid var(--hair);
+  font-family:var(--pix);font-size:9px;letter-spacing:.06em;text-transform:uppercase;color:var(--grey);padding:5px 9px}
+.shotcell .cap b{color:var(--ink);font-weight:400}
+
+/* compact spec */
 .spec{border-top:1px solid var(--ink)}
-.spec > div{display:grid;grid-template-columns:1fr;gap:2px 24px;padding:14px 0;border-bottom:1px solid var(--hair)}
-@media (min-width:720px){.spec > div{grid-template-columns:150px minmax(0,1fr)}}
-.spec .k{font-family:var(--pix);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--coral);padding-top:4px}
-.spec .v{margin:0;max-width:64ch}
-.spec .v small{display:block;color:var(--grey);font-size:14px;margin-top:3px}
+.spec > div{display:grid;grid-template-columns:1fr;gap:2px 20px;padding:11px 0;border-bottom:1px solid var(--hair)}
+@media (min-width:720px){.spec > div{grid-template-columns:145px minmax(0,1fr)}}
+.spec .k{font-family:var(--pix);font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:var(--coral);padding-top:3px}
+.spec .v{margin:0;max-width:62ch;font-size:15px}
+.spec .v code{font-family:var(--mono);font-size:13px;background:var(--panel);padding:1px 5px}
 
-/* steps */
-ol.steps{list-style:none;counter-reset:s;padding:0;margin:0;border-top:1px solid var(--ink)}
-ol.steps li{counter-increment:s;padding:16px 0;border-bottom:1px solid var(--hair);display:grid;grid-template-columns:52px minmax(0,1fr);gap:0 16px}
-ol.steps li::before{content:"(" counter(s,decimal-leading-zero) ")";font-family:var(--pix);font-size:11px;color:var(--coral);padding-top:5px}
-ol.steps h3{font-size:18px;font-weight:700;margin:0 0 5px;letter-spacing:-.02em}
-ol.steps p{margin:0;color:var(--grey);max-width:62ch}
-ol.steps code{font-family:var(--mono);font-size:13px;background:var(--panel);padding:1px 5px}
-
-/* inverted band for the gate */
-.invert{background:var(--ink);color:var(--paper);border-bottom:1px solid var(--ink)}
-.invert h2,.invert a{color:var(--paper)}
-.invert p{color:#b9b9b9}
-.invert p.big{color:var(--paper)}
-.invert .spec{border-top-color:#333}
-.invert .spec > div{border-bottom-color:#2a2a2a}
-.invert .spec .v small{color:#8d8d8d}
-ul.check{list-style:none;padding:0;margin:0;display:grid;gap:10px}
-ul.check li{display:grid;grid-template-columns:16px minmax(0,1fr);gap:12px;font-size:15px;line-height:1.45}
-ul.check li::before{content:"";width:10px;height:10px;border:2px solid var(--coral);margin-top:5px}
-ul.check code{font-family:var(--mono);font-size:13px;color:var(--coral)}
-.invert .k{color:var(--coral)}
+/* steps inline */
+.steps{display:grid;grid-template-columns:1fr;border-top:1px solid var(--ink)}
+@media (min-width:760px){.steps{grid-template-columns:repeat(5,1fr)}}
+.step{padding:16px 16px 18px;border-right:1px solid var(--hair2);border-bottom:1px solid var(--hair)}
+.step:last-child{border-right:0}
+.step .n{font-family:var(--pix);font-size:10px;color:var(--coral);text-transform:uppercase}
+.step h3{font-size:15px;font-weight:700;letter-spacing:-.015em;margin:8px 0 5px}
+.step p{font-size:13px;color:var(--grey);margin:0;max-width:none}
+.step code{font-family:var(--mono);font-size:12px;background:var(--panel);padding:1px 4px}
 
 /* prizes */
-.prizes{display:grid;grid-template-columns:1fr;border-top:1px solid var(--ink)}
+.prizes{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--ink)}
 @media (min-width:760px){.prizes{grid-template-columns:repeat(4,1fr)}}
-.prize{padding:22px 20px 24px;border-right:1px solid var(--hair2);border-bottom:1px solid var(--hair)}
+.prize{padding:18px 18px 20px;border-right:1px solid var(--hair2);border-bottom:1px solid var(--hair)}
 .prize:last-child{border-right:0}
-.prize .amt{font-weight:700;font-size:clamp(40px,6vw,68px);letter-spacing:-.055em;line-height:1;margin:10px 0 8px;font-variant-numeric:tabular-nums}
-.prize .amt em{font-style:normal;font-size:.34em;letter-spacing:0;margin-left:6px;color:var(--grey)}
+.prize .amt{font-weight:700;font-size:clamp(34px,5vw,58px);letter-spacing:-.055em;line-height:1;margin:8px 0 6px;font-variant-numeric:tabular-nums}
+.prize .amt em{font-style:normal;font-size:.34em;margin-left:5px;color:var(--grey)}
 .prize.first{background:var(--coral);color:#fff;border-right-color:var(--coral)}
-.prize.first .amt em,.prize.first p,.prize.first .pix{color:rgba(255,255,255,.85)}
-.prize p{font-size:13.5px;color:var(--grey);margin:0}
+.prize.first .amt em,.prize.first p,.prize.first .pix{color:rgba(255,255,255,.9)}
+.prize p{font-size:13px;color:var(--grey);margin:0}
 
-/* timeline */
-.time{display:grid;grid-template-columns:1fr;border-top:1px solid var(--ink)}
-@media (min-width:700px){.time{grid-template-columns:repeat(4,1fr)}}
-.tcell{padding:18px 18px 20px;border-right:1px solid var(--hair2);border-bottom:1px solid var(--hair)}
+/* dates */
+.time{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--ink)}
+@media (min-width:760px){.time{grid-template-columns:repeat(4,1fr)}}
+.tcell{padding:16px 16px 18px;border-right:1px solid var(--hair2);border-bottom:1px solid var(--hair)}
 .tcell:last-child{border-right:0}
-.tcell .d{font-weight:700;font-size:28px;letter-spacing:-.04em;margin:8px 0 5px}
-.tcell p{font-size:13.5px;color:var(--grey);margin:0}
-.tcell.now{background:var(--panel)}
-.tcell.now .d{color:var(--coral)}
+.tcell .d{font-weight:700;font-size:26px;letter-spacing:-.04em;margin:7px 0 4px}
+.tcell p{font-size:13px;color:var(--grey);margin:0;max-width:none}
+.tcell.now{background:var(--panel)} .tcell.now .d{color:var(--coral)}
 
 /* faq */
 .faq{border-top:1px solid var(--ink)}
-.faq details{border-bottom:1px solid var(--hair);padding:14px 0}
-.faq summary{cursor:pointer;font-weight:700;font-size:17px;letter-spacing:-.02em;list-style:none;display:flex;gap:12px;align-items:baseline}
+.faq details{border-bottom:1px solid var(--hair);padding:12px 0}
+.faq summary{cursor:pointer;font-weight:700;font-size:16px;letter-spacing:-.02em;list-style:none;display:flex;gap:11px;align-items:baseline}
 .faq summary::-webkit-details-marker{display:none}
-.faq summary::before{content:"(+)";font-family:var(--pix);color:var(--coral);font-size:11px}
+.faq summary::before{content:"(+)";font-family:var(--pix);color:var(--coral);font-size:11px;text-transform:uppercase}
 .faq details[open] summary::before{content:"(-)"}
-.faq p{margin:10px 0 0 34px;color:var(--grey);font-size:15px}
+.faq p{margin:8px 0 0 32px;color:var(--grey);font-size:14.5px}
 
-/* buttons */
-.btn{display:inline-block;background:var(--coral);color:#fff;font-family:var(--pix);font-size:13px;letter-spacing:.06em;
-  text-transform:uppercase;padding:15px 22px;text-decoration:none;border:1px solid var(--coral)}
+/* buttons + footer */
+.btn{display:inline-block;background:var(--coral);color:#fff;font-family:var(--pix);font-size:12px;letter-spacing:.06em;
+  text-transform:uppercase;padding:14px 20px;text-decoration:none;border:1px solid var(--coral)}
 .btn:hover,.btn:focus{background:var(--ink);border-color:var(--ink);color:var(--paper);outline:none}
 .btn.ghost{background:none;color:var(--ink);border-color:var(--ink)}
 .btn.ghost:hover{background:var(--ink);color:var(--paper)}
-.btns{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:20px}
-.tbd{color:var(--coral);border-bottom:1px dotted var(--coral);cursor:help}
-.tbd::after{content:"tbd";font-family:var(--pix);font-size:8px;letter-spacing:.06em;vertical-align:super;margin-left:3px}
-
-footer{padding:24px 0 40px}
-footer .wrap{display:flex;flex-wrap:wrap;gap:10px 24px;align-items:center}
+.btn.light{background:#fff;color:var(--ink);border-color:#fff}
+.btn.light:hover{background:var(--coral);border-color:var(--coral);color:#fff}
+.btns{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+footer{padding:20px 0 36px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 22px;align-items:center}
+footer a{font-family:var(--pix);font-size:11px;color:var(--grey);text-decoration:none;text-transform:uppercase}
+footer a:hover{color:var(--coral)}
 
 /* entries */
-.ehead{padding:26px 0 22px}
-.filters{display:flex;flex-wrap:wrap;gap:8px;padding:16px 0;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);align-items:center}
-.filters .lbl{font-family:var(--pix);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--grey);margin-right:6px}
-.chip{font-family:var(--pix);font-size:10px;letter-spacing:.06em;text-transform:uppercase;background:none;border:1px solid var(--hair2);
-  color:var(--grey);padding:7px 12px;cursor:pointer}
+.ehead{padding:70px 0 20px}
+.filters{display:flex;flex-wrap:wrap;gap:7px;padding:14px 0;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);align-items:center}
+.filters .lbl{font-family:var(--pix);font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:var(--grey);margin-right:5px}
+.chip{font-family:var(--pix);font-size:10px;letter-spacing:.05em;text-transform:uppercase;background:none;border:1px solid var(--hair2);
+  color:var(--grey);padding:6px 11px;cursor:pointer}
 .chip:hover,.chip:focus{border-color:var(--ink);color:var(--ink);outline:none}
 .chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--paper)}
-.grid{display:grid;grid-template-columns:1fr;gap:0;border-left:1px solid var(--hair)}
+.grid{display:grid;grid-template-columns:1fr;border-left:1px solid var(--hair)}
 @media (min-width:680px){.grid{grid-template-columns:1fr 1fr}}
-@media (min-width:1020px){.grid{grid-template-columns:repeat(3,1fr)}}
-.card{border-right:1px solid var(--hair);border-bottom:1px solid var(--hair);display:flex;flex-direction:column;background:var(--paper)}
+@media (min-width:1040px){.grid{grid-template-columns:repeat(3,1fr)}}
+.card{border-right:1px solid var(--hair);border-bottom:1px solid var(--hair);display:flex;flex-direction:column}
 .card.ref{background:var(--panel)}
-.shot{aspect-ratio:16/9;background:#ddd;position:relative;overflow:hidden;display:block;border-bottom:1px solid var(--hair)}
-.shot img{width:100%;height:100%;object-fit:cover;display:block}
+.shot{aspect-ratio:16/9;position:relative;overflow:hidden;background:#ddd;border-bottom:1px solid var(--hair)}
+.shot img{width:100%;height:100%;object-fit:cover}
 .shot .ph{position:absolute;inset:0;display:grid;place-items:center;background:repeating-linear-gradient(135deg,#e4e4e4 0 12px,#dedede 12px 24px)}
-.shot .ph span{font-family:var(--pix);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#9a9a9a}
-.tag{position:absolute;top:0;left:0;font-family:var(--pix);font-size:9px;letter-spacing:.08em;text-transform:uppercase;
-  background:var(--coral);color:#fff;padding:4px 8px}
+.shot .ph span{font-family:var(--pix);font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:#9a9a9a}
+.tag{position:absolute;top:0;left:0;font-family:var(--pix);font-size:9px;letter-spacing:.06em;text-transform:uppercase;background:var(--coral);color:#fff;padding:4px 8px}
 .tag.ghosttag{background:var(--paper);color:var(--grey);border-right:1px solid var(--hair);border-bottom:1px solid var(--hair)}
-.cbody{padding:14px 16px 16px;display:flex;flex-direction:column;gap:7px;flex:1}
-.cbody h3{font-weight:700;font-size:21px;letter-spacing:-.035em;line-height:1;margin:0;text-transform:uppercase}
-.by{font-family:var(--pix);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--grey)}
-.found{font-size:14px;line-height:1.45;margin:0;max-width:none}
-.found b{color:var(--coral);font-weight:400;font-family:var(--pix);font-size:9px;letter-spacing:.08em;text-transform:uppercase;display:block;margin-bottom:3px}
-.meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:8px}
-.badge{font-family:var(--pix);font-size:9px;letter-spacing:.06em;text-transform:uppercase;border:1px solid var(--hair2);color:var(--grey);padding:3px 7px}
+.cbody{padding:13px 15px 15px;display:flex;flex-direction:column;gap:6px;flex:1}
+.cbody h3{font-weight:700;font-size:19px;letter-spacing:-.035em;line-height:1;margin:0;text-transform:uppercase}
+.by{font-family:var(--pix);font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--grey)}
+.found{font-size:13.5px;line-height:1.4;margin:0;max-width:none}
+.found b{color:var(--coral);font-weight:400;font-family:var(--pix);font-size:9px;letter-spacing:.07em;text-transform:uppercase;display:block;margin-bottom:2px}
+.meta{display:flex;flex-wrap:wrap;gap:5px;margin-top:auto;padding-top:7px}
+.badge{font-family:var(--pix);font-size:9px;letter-spacing:.05em;text-transform:uppercase;border:1px solid var(--hair2);color:var(--grey);padding:3px 6px}
 .badge.pass{color:var(--coral);border-color:var(--coral)}
 .cact{display:flex;border-top:1px solid var(--hair)}
-.cact a{flex:1;text-align:center;padding:11px 8px;font-family:var(--pix);font-size:10px;letter-spacing:.08em;text-transform:uppercase;
+.cact a{flex:1;text-align:center;padding:10px 8px;font-family:var(--pix);font-size:10px;letter-spacing:.07em;text-transform:uppercase;
   color:var(--ink);text-decoration:none;border-right:1px solid var(--hair)}
 .cact a:last-child{border-right:0}
 .cact a:hover,.cact a:focus{background:var(--ink);color:var(--paper);outline:none}
 .cact a.mute{color:#a0a0a0}
-.empty{padding:40px 0;color:var(--grey);font-family:var(--pix);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.empty{padding:36px 0;color:var(--grey);font-family:var(--pix);font-size:11px;letter-spacing:.07em;text-transform:uppercase}
 </style>
 
-<div class="bar"><div class="wrap">
+<div class="bar" id="bar"><div class="wrap">
   <a class="mark" href="#top">404&#8212;GEN</a>
-  <nav id="nav">
-    <a href="#enter">enter</a><a href="#rules">rules</a><a href="#gate">gate</a>
-    <a href="#judging">judging</a><a href="#prizes">prizes</a>
-    <a href="#entries" class="keep" id="navEntries">entries</a>
+  <nav>
+    <a href="#how">how</a><a href="#gate">gate</a><a href="#prizes">prizes</a>
+    <a href="#dates">dates</a><a href="#entries" class="keep" id="navEntries">entries</a>
   </nav>
 </div></div>
 
 <!-- ================= JAM ================= -->
 <div id="view-jam">
-<div class="wrap" id="top">
-  <div class="hero">
-    <div class="crumb">
-      <span class="pix c">jam-001</span>
-      <span class="pix g">3D as code</span>
-      <span class="pix g">11 to 25 <span class="tbd">september</span> 2026</span>
-      <span class="pix g" id="countdown">opens in 4 days</span>
+<div class="stage" id="top">
+  <video id="hero" src="MEDIA/hero.mp4" poster="MEDIA/hero_poster.jpg" autoplay muted loop playsinline preload="metadata"></video>
+  <div class="veil"></div>
+  <button class="play" id="vtoggle" type="button">pause</button>
+  <div class="in"><div class="wrap">
+    <div class="tagline">jam-001 / 11 to 25 <span class="tbd">september</span> 2026 / <span id="countdown">opens in 4 days</span></div>
+    <h1>One line.<br>Two weeks.<br><span class="k">Ten TAO.</span></h1>
+    <div class="row">
+      <p>Your agent builds the game. Every object in it is Three.js code from the open 404 recipe.</p>
+      <div class="btns">
+        <a class="btn light" href="#" id="signup">Sign up and build</a>
+        <a class="btn light" href="#entries" style="background:transparent;color:#fff;border-color:rgba(255,255,255,.6)">Entries</a>
+      </div>
     </div>
-    <h1><span>One line.</span><span>Two weeks.</span><span class="k">Ten TAO.</span></h1>
-    <div class="heroline">
-      <div>
-        <p class="claim">Everyone gets the same recipe, the same harness and the same models. What separates the winners is what you think to build.</p>
-        <p class="sub">Point your agent at the open 404 recipe and it writes a game, and every object in it, as Three.js code. Atlas gives it the images, textures, sky and sound. It ships as one folder that runs in a browser and has to pass our own harness before a judge sees it. Winners are announced on stage at the <span class="tbd">Bittensor Exploit summit</span>.</p>
-      </div>
-      <div>
-        <div class="term">
-          <div class="hd"><span>paste into your agent</span><button id="copy" type="button">copy</button></div>
-          <div class="bd">Read <span class="m">GAME.md</span> in github.com/404-Repo/404-game-recipe and build me a game about <span class="slot" id="slot">a coastal kart racer</span><span class="caret"></span></div>
-        </div>
-        <div class="btns">
-          <a class="btn" href="#" id="signup">Sign up and claim credits</a>
-          <a class="btn ghost" href="#enter">How it works</a>
-        </div>
-      </div>
+  </div></div>
+</div>
+
+<div class="promptbar"><div class="wrap">
+  <span class="lbl">paste into your agent</span>
+  <code>Read <span class="m">GAME.md</span> in github.com/404-Repo/404-game-recipe and build me a game about <span class="slot" id="slot">a coastal kart racer</span>.</code>
+  <button id="copy" type="button">copy</button>
+</div></div>
+
+<div class="stats">
+  <div class="stat live"><b>10<em>TAO</em></b><span>prize pool</span></div>
+  <div class="stat"><b>14<em>days</em></b><span>to build</span></div>
+  <div class="stat"><b>1<em>line</em></b><span>to start</span></div>
+  <div class="stat"><b>0<em>GPUs</em></b><span>required</span></div>
+  <div class="stat"><b>100<em>%</em></b><span>assets as code</span></div>
+</div>
+
+<section id="what"><div class="wrap">
+  <div class="cols">
+    <div>
+      <p class="lab">what</p>
+      <h2>Same recipe.<br>Same models.<br>Different heads.</h2>
+    </div>
+    <div>
+      <p class="lead">Everyone gets the open recipe, the harness and the models they already pay for. What separates the winners is what you think to build.</p>
+      <p class="g">Built this way already, all four in the strip below: a kart racer, a desert shooter, a coastal driver and a warehouse FPS. Every object in every frame is generated code. No meshes, no asset store, no texture pipeline.</p>
     </div>
   </div>
 </div>
+<div class="gal three">
+  <div class="shotcell"><img src="MEDIA/t_drive_a.jpg" alt="A kart racing through an old town street with bunting overhead" loading="lazy"><span class="cap"><b>Drive</b> / kart racer</span></div>
+  <div class="shotcell"><img src="MEDIA/t_rust_a.jpg" alt="A derrick tower over a desert oilfield seen down a rifle" loading="lazy"><span class="cap"><b>Rust 17</b> / shooter</span></div>
+  <div class="shotcell"><img src="MEDIA/t_costa_a.jpg" alt="A car under a stone arch in a coastal old town at night" loading="lazy"><span class="cap"><b>Costa Verde</b> / driver</span></div>
+  <div class="shotcell"><img src="MEDIA/t_drive_c.jpg" alt="Karts on a seafront corner with crowds" loading="lazy"><span class="cap"><b>Drive</b> / seafront</span></div>
+  <div class="shotcell"><img src="MEDIA/t_ware.jpg" alt="A warehouse loading dock seen down the sights of a carbine" loading="lazy"><span class="cap"><b>Warehouse</b> / FPS</span></div>
+  <div class="shotcell"><img src="MEDIA/t_costa_b.jpg" alt="A quay at night with stacked containers" loading="lazy"><span class="cap"><b>Costa Verde</b> / quay</span></div>
+</div></section>
 
-<div class="ticker" aria-hidden="true"><div id="tick"></div></div>
-
-<div class="stats">
-  <div class="stat live"><b>10<em>TAO</em></b><span class="lbl">prize pool</span></div>
-  <div class="stat"><b>14<em>days</em></b><span class="lbl">to build</span></div>
-  <div class="stat"><b>1<em>line</em></b><span class="lbl">to start</span></div>
-  <div class="stat"><b>0<em>GPUs</em></b><span class="lbl">required</span></div>
+<section id="how"><div class="wrap">
+  <p class="lab">how</p>
+  <h2>Five steps</h2>
 </div>
+<div class="steps">
+  <div class="step"><span class="n">(01)</span><h3>Sign up for Atlas</h3><p>A fixed credit grant lands on sign up: images, textures, sky, sound, music. <span class="tbd">Link to come.</span></p></div>
+  <div class="step"><span class="n">(02)</span><h3>Clone the recipe</h3><p><code>npm install</code> then <code>npm run selftest</code>, which proves the verifier catches broken assets.</p></div>
+  <div class="step"><span class="n">(03)</span><h3>Give your agent the line</h3><p>The line above, with your idea in it. How you split the work is yours.</p></div>
+  <div class="step"><span class="n">(04)</span><h3>Pass the gate</h3><p>Desktop and phone. The harness prints a verdict block and that block is your entry ticket.</p></div>
+  <div class="step"><span class="n">(05)</span><h3>Submit</h3><p><span class="tbd">A pull request</span> with the link, the verdict and what you found. Closes 25 <span class="tbd">Sep</span>.</p></div>
+</div></section>
 
-<section id="premise"><div class="wrap">
-  <div class="sechead"><span class="pix c">(01) the premise</span><h2>Winnable by anyone</h2></div>
-  <div class="two">
+<section id="gate"><div class="wrap">
+  <div class="cols">
     <div>
-      <p class="big">We ran this method ourselves for two days and shipped a kart racer that beats a zero shot build on every frame. The interesting part is what decided each round: never the model, always a choice a person made.</p>
-      <p>The recipe is public and free. The harness is public. The models are the ones you already pay for. So this jam removes the two things that usually decide an AI game jam, budget and access, and leaves the one that should: what you point the thing at.</p>
-      <p>Our own build lost blind comparisons against a commercial racer eight times out of eight, then six, then five, and the fix each round was a single property a human named. That is the game here. Find the property nobody else thought to name.</p>
-      <p><a href="#entries" class="pix c">See the reference build &#8594;</a></p>
+      <p class="lab">gate</p>
+      <h2>Machine checked<br>before a human looks</h2>
+      <p class="g">A judge only ever compares games that actually run, on a phone, at a frame rate, with the player moving. Run it yourself as often as you like; it writes a filmstrip of your game in motion.</p>
     </div>
     <div>
       <div class="spec">
-        <div><span class="k">you get</span><p class="v">The full asset method<small>One reference image, three independent attempts, a four sided render, a choice made by eye.</small></p></div>
-        <div><span class="k">you get</span><p class="v">A verifier<small>Catches an asset that does not parse, has no back, hovers off the ground or has run away in triangles.</small></p></div>
-        <div><span class="k">you get</span><p class="v">A play harness<small>Drives your game with real input and photographs it in motion, so a parked screenshot cannot fool you.</small></p></div>
-        <div><span class="k">you get</span><p class="v">The trap list<small>Every bug we have hit that produces wrong output silently, gathered over six builds.</small></p></div>
-        <div><span class="k">you get</span><p class="v">Atlas credits<small>A fixed grant on sign up for images, textures, sky panoramas, sound effects and music. <span class="tbd">Amount to confirm.</span></small></p></div>
+        <div><span class="k">ready</span><p class="v"><code>window.__READY__</code> within 8 s on a 4G profile</p></div>
+        <div><span class="k">starts</span><p class="v">From a real click and a real touch tap, never a debug hook</p></div>
+        <div><span class="k">reports</span><p class="v"><code>window.__GAME__</code> every frame: position, real frame rate, draws, triangles</p></div>
+        <div><span class="k">moves</span><p class="v">Under real keys, and under a real finger on a phone viewport</p></div>
+        <div><span class="k">ships as</span><p class="v">One folder, relative paths only, <span class="tbd">under 10 MB</span></p></div>
+        <div><span class="k">budgets</span><p class="v"><span class="tbd">900 draws, 1.5M triangles, 30 fps on a phone</span></p></div>
       </div>
     </div>
   </div>
 </div></section>
 
-<section id="enter"><div class="wrap">
-  <div class="sechead"><span class="pix c">(02) how to enter</span><h2>Five steps</h2></div>
-  <ol class="steps">
-    <li><div><h3>Sign up for Atlas and claim your credits</h3>
-      <p>One account gives your agent the image, texture, sky, sound and music generation it needs over MCP, with a fixed grant the moment you sign up. <span class="tbd">Link to come.</span> The 3D is not generated here: that is what the recipe is for.</p></div></li>
-    <li><div><h3>Clone the recipe and prove the verifier works</h3>
-      <p><code>git clone github.com/404-Repo/404-game-recipe</code>, then <code>npm install</code> and <code>npm run selftest</code>. It runs the verifier against assets broken in known ways and asserts each one is caught. A check nobody has seen fail is decoration.</p></div></li>
-    <li><div><h3>Give your agent the line and a game to build</h3>
-      <p>The prompt at the top of this page, with your idea in it. Everything after that is yours: how you split the work, what you loop on, who criticises it and how hard.</p></div></li>
-    <li><div><h3>Make it pass the gate</h3>
-      <p>Clear the checklist below on a phone viewport and a desktop one. The harness prints a verdict block, and that block is part of your entry.</p></div></li>
-    <li><div><h3>Submit before the deadline</h3>
-      <p><span class="tbd">Open a pull request on github.com/404-Repo/game-jam</span> with a link to your hosted game, the verdict block and three sentences on what you tried that nobody else would have. Closes 25 <span class="tbd">September</span>, 23:59 UTC.</p></div></li>
-  </ol>
-</div></section>
-
-<div class="invert" id="gate"><div class="wrap" style="padding-top:52px;padding-bottom:52px">
-  <div class="sechead"><span class="pix c">(03) the gate</span><h2>Machine checked<br>before a human looks</h2></div>
-  <div class="two">
-    <div>
-      <p class="big">The same harness we gate our own builds with, in the recipe, run by you before you submit.</p>
-      <p>This is what makes the jam fair: a judge only ever compares games that actually run, on a phone, at a frame rate, with the player moving. We shipped a build that was unstartable on every phone for a fortnight because every check called into the game instead of pressing the button. The gate presses the button.</p>
-      <p>Run it as often as you like. It writes a filmstrip of your game in motion, which is also the best way to see what your build looks like to a player.</p>
-    </div>
-    <div>
-      <ul class="check">
-        <li>Signal <code>window.__READY__</code> when loaded and startable, within 8 s on a 4G profile.</li>
-        <li>Start from a real button press, a click and a touch tap, not a debug hook.</li>
-        <li>Publish <code>window.__GAME__</code> every frame: position in metres, frame rate from real elapsed time, draw calls and triangles.</li>
-        <li>Move when the harness holds a real key, and again when it holds a real finger on a phone viewport.</li>
-        <li>Stay inside its own folder: no path that climbs above it, or it dies the moment it is hosted.</li>
-        <li>Keep to the budgets: <span class="tbd">900 draw calls, 1.5M triangles in view, 30 fps on a phone</span>.</li>
-        <li>Log no console errors and fetch nothing that 404s.</li>
-      </ul>
-    </div>
-  </div>
-</div></div>
-
 <section id="rules"><div class="wrap">
-  <div class="sechead"><span class="pix c">(04) rules</span><h2>One hard rule</h2></div>
-  <div class="spec">
-    <div><span class="k">geometry</span><p class="v">Every object in the game is generated as code through the 404 recipe, by your agent or by the open model on a GPU you rent.<small>No downloaded meshes, no asset store, no photogrammetry, no hand modelling. This is the one hard rule and it is what makes entries comparable.</small></p></div>
-    <div><span class="k">everything else</span><p class="v">Images, textures, sky panoramas, sound and music come from Atlas through your jam credits.<small>Use your own art instead if you would rather, and say so. It will not be held against you.</small></p></div>
-    <div><span class="k">models</span><p class="v">Any agent and any model, named in your entry.<small>We used Claude, both Opus and Fable, and the recipe was built with Claude Code. GPT agents and everything else are welcome; the recipe is model neutral.</small></p></div>
-    <div><span class="k">team size</span><p class="v"><span class="tbd">One to four people</span>. Solo entries and agent fleets both count as one entry.</p></div>
-    <div><span class="k">ships as</span><p class="v">One folder that runs from a static host with no build step, playable on a phone and a laptop.<small>Three.js from a CDN import map is fine. Nothing over <span class="tbd">10 MB</span>, ready within 8 seconds on 4G.</small></p></div>
-    <div><span class="k">originality</span><p class="v">Original work only: no trademarked characters, names, logos or sound alikes, in the game or the repo.<small>Being inspired by a genre is the point. Shipping someone's property is not.</small></p></div>
-    <div><span class="k">licence</span><p class="v">Your game stays yours. Entering grants 404 the right to show it, stream it and link it.<small><span class="tbd">Final wording from legal.</span></small></p></div>
-    <div><span class="k">disqualifies</span><p class="v">A game that fails the gate, a downloaded mesh, an entry that only runs on your machine, or a late submission.</p></div>
+  <div class="cols">
+    <div>
+      <p class="lab">rules</p>
+      <h2>One hard rule</h2>
+      <p class="g">Everything else is open, including which agent and which models, named in your entry.</p>
+    </div>
+    <div>
+      <div class="spec">
+        <div><span class="k">geometry</span><p class="v">Every object comes through the 404 recipe as code. No downloaded meshes, no asset store, no hand modelling.</p></div>
+        <div><span class="k">art and sound</span><p class="v">Atlas, on your jam credits. Your own art is fine if you say so.</p></div>
+        <div><span class="k">team</span><p class="v"><span class="tbd">One to four people</span>, one entry each.</p></div>
+        <div><span class="k">original</span><p class="v">No trademarked characters, names or logos, in the game or the repo.</p></div>
+        <div><span class="k">yours</span><p class="v">Your game stays yours. Entering lets 404 show it. <span class="tbd">Wording from legal.</span></p></div>
+      </div>
+    </div>
   </div>
 </div></section>
 
 <section id="judging"><div class="wrap">
-  <div class="sechead"><span class="pix c">(05) judging</span><h2>Blind, in pairs,<br>in motion</h2></div>
-  <div class="two">
+  <div class="cols">
     <div>
-      <p class="big">The method we use on our own rounds, pointed at your games.</p>
-      <p>Frames are captured from every entry while it is being played, then shown to judges two at a time with the names removed and the order shuffled. A judge says which side is better and why in one sentence. Nobody scores a game out of ten, because a number invites a build to optimise the number.</p>
-      <p>Then the shortlist is played by hand, on a phone and a laptop, because three real bugs in our last build were found by a person playing and none by instrumentation.</p>
+      <p class="lab">judging</p>
+      <h2>Blind, in pairs,<br>in motion</h2>
+      <p class="g">Frames from every entry, shown two at a time with the names off and the order shuffled. No scores out of ten: a number invites a build to optimise the number. The shortlist is then played by hand.</p>
       <p class="pix"><span class="tbd">Judges to be announced</span></p>
     </div>
     <div>
       <div class="spec">
-        <div><span class="k">40 percent</span><p class="v">Is it good to play<small>Feel, pace, readability at speed, whether the first thirty seconds teach you the game.</small></p></div>
-        <div><span class="k">30 percent</span><p class="v">Does it look like a made thing<small>A coherent set, a light rig with two colour temperatures, a world that reads as one place.</small></p></div>
-        <div><span class="k">20 percent</span><p class="v">What did you find<small>The clever solution, the mechanic nobody else tried, the trick the rest of us will steal.</small></p></div>
-        <div><span class="k">10 percent</span><p class="v">How it was made<small>The loop you built, what you let fail your work, what you measured.</small></p></div>
+        <div><span class="k">40 percent</span><p class="v">Is it good to play</p></div>
+        <div><span class="k">30 percent</span><p class="v">Does it look like a made thing</p></div>
+        <div><span class="k">20 percent</span><p class="v">What did you find that nobody else tried</p></div>
+        <div><span class="k">10 percent</span><p class="v">How it was made, with the receipts</p></div>
       </div>
     </div>
   </div>
 </div></section>
 
-<section id="prizes" class="tight"><div class="wrap">
-  <div class="sechead"><span class="pix c">(06) prizes</span><h2>Ten TAO<br>and a stage</h2></div>
+<section id="prizes" style="padding-bottom:0"><div class="wrap">
+  <p class="lab">prizes</p>
+  <h2>Ten TAO and a stage</h2>
 </div>
 <div class="prizes">
-  <div class="prize first"><span class="pix">first</span><div class="amt">5<em>TAO</em></div><p>Announced on stage at the summit, a build breakdown published with 404, and your game in the showcase.</p></div>
+  <div class="prize first"><span class="pix">first</span><div class="amt">5<em>TAO</em></div><p>Announced on stage at the summit, plus a build breakdown published with 404.</p></div>
   <div class="prize"><span class="pix g">second</span><div class="amt">3<em>TAO</em></div><p>Showcase slot and a post on the 404 channel.</p></div>
   <div class="prize"><span class="pix g">third</span><div class="amt">1.5<em>TAO</em></div><p>Showcase slot and a post on the 404 channel.</p></div>
-  <div class="prize"><span class="pix g">community pick</span><div class="amt">0.5<em>TAO</em></div><p>Voted by everyone who enters, on the shortlist.</p></div>
+  <div class="prize"><span class="pix g">community</span><div class="amt">0.5<em>TAO</em></div><p>Voted by everyone who enters, on the shortlist.</p></div>
 </div>
 <div class="wrap"><div class="spec" style="border-top:0">
-  <div><span class="k">everyone</span><p class="v">Keeps their game and everything built with it, outright.</p></div>
-  <div><span class="k">ten entrants</span><p class="v">A free Atlas licence.<small><span class="tbd">Chosen how: judges' pick, or the ten best that did not place.</span></small></p></div>
-  <div><span class="k">the best of them</span><p class="v">Showcased by 404 on X, with the build behind it.</p></div>
+  <div><span class="k">everyone</span><p class="v">Keeps their game, outright.</p></div>
+  <div><span class="k">ten entrants</span><p class="v">A free Atlas licence. <span class="tbd">Chosen how, to confirm.</span></p></div>
+  <div><span class="k">the best</span><p class="v">Showcased by 404 on X, with the build behind it.</p></div>
 </div></div></section>
 
-<section id="dates" class="tight"><div class="wrap">
-  <div class="sechead"><span class="pix c">(07) dates</span><h2>Two weeks</h2></div>
+<section id="dates" style="padding-bottom:0"><div class="wrap">
+  <p class="lab">dates</p>
+  <h2>Two weeks</h2>
 </div>
 <div class="time">
-  <div class="tcell now"><span class="pix c">opens</span><div class="d">11 <span class="tbd">Sep</span></div><p>Recipe, harness and credits available. Build from day one.</p></div>
-  <div class="tcell"><span class="pix g">office hours</span><div class="d"><span class="tbd">18 Sep</span></div><p>We answer questions and take apart one entry live.</p></div>
-  <div class="tcell"><span class="pix g">closes</span><div class="d">25 <span class="tbd">Sep</span></div><p>23:59 UTC. Pull request open, gate passed, link working.</p></div>
-  <div class="tcell"><span class="pix g">winners</span><div class="d">28 <span class="tbd">Sep</span></div><p>Announced on stage at the <span class="tbd">Bittensor Exploit summit</span>.</p></div>
+  <div class="tcell now"><span class="pix c">opens</span><div class="d">11 <span class="tbd">Sep</span></div><p>Recipe, harness and credits available.</p></div>
+  <div class="tcell"><span class="pix g">office hours</span><div class="d"><span class="tbd">18 Sep</span></div><p>Questions answered, one entry taken apart live.</p></div>
+  <div class="tcell"><span class="pix g">closes</span><div class="d">25 <span class="tbd">Sep</span></div><p>23:59 UTC, gate passed, link working.</p></div>
+  <div class="tcell"><span class="pix g">winners</span><div class="d">28 <span class="tbd">Sep</span></div><p>On stage at the <span class="tbd">Bittensor Exploit summit</span>.</p></div>
 </div></section>
 
 <section id="faq"><div class="wrap">
-  <div class="sechead"><span class="pix c">(08) questions</span><h2>Answers</h2></div>
+  <p class="lab">questions</p>
   <div class="faq">
-    <details open><summary>Do I need a GPU?</summary><p>No. The default path has your own agent write the geometry, which needs no account, no GPU and nothing to pay for. If you would rather use the open model behind the 404 competition leader, it deploys to a rented GPU from a one click template, on your account.</p></details>
-    <details><summary>Do I have to use Claude?</summary><p>No. Any agent that can read files, run a shell and look at images. The recipe is model neutral and we would like to see what a GPT agent or a mixed fleet does with it. Name what you used in your entry.</p></details>
-    <details><summary>Can I use my own art?</summary><p>Yes, for images, textures and sound. The 3D is the one thing that must come through the recipe as code, because that is what makes entries comparable and it is the whole point of the format.</p></details>
-    <details><summary>What does the harness actually do?</summary><p>It serves your folder the way a static host would, loads it, presses your real start button, drives with real keys and real multi touch, photographs the game while it moves, and asserts the player moved and the budgets held. It prints a verdict block and exits non zero when something is wrong.</p></details>
-    <details><summary>Is a small game allowed to win?</summary><p>Yes, and one probably should. Scope is not a criterion. A short thing that is genuinely good to play beats a large thing that is a tour of assets.</p></details>
-    <details><summary>How do I get paid?</summary><p>Prizes are paid in TAO to a Bittensor wallet address you give us when you submit. <span class="tbd">Payout terms to be confirmed.</span></p></details>
-    <details><summary>Can I enter more than once?</summary><p><span class="tbd">One entry per person or team.</span> Build as many as you like, submit the one you would want played.</p></details>
-    <details><summary>Where do I ask for help?</summary><p><span class="tbd">Discord channel and link to come.</span> Office hours are on the calendar above.</p></details>
+    <details open><summary>Do I need a GPU?</summary><p>No. Your agent writes the geometry. The open model on a rented GPU is an option, not a requirement.</p></details>
+    <details><summary>Do I have to use Claude?</summary><p>No. Any agent that reads files, runs a shell and looks at images. Name what you used.</p></details>
+    <details><summary>Can I use my own art?</summary><p>Yes, for images and sound. The 3D is the one thing that must come through the recipe as code.</p></details>
+    <details><summary>How do I get paid?</summary><p>TAO to a Bittensor wallet you give us at submission. <span class="tbd">Payout terms to confirm.</span></p></details>
+    <details><summary>Where do I ask for help?</summary><p><span class="tbd">Discord link to come.</span> Office hours are on the calendar above.</p></details>
   </div>
-</div></section>
-
-<section class="tight"><div class="wrap">
-  <h2>Take the line.<br>Build the thing.</h2>
-  <div class="btns">
-    <a class="btn" href="#" id="signup2">Sign up and claim credits</a>
+  <div class="btns" style="margin-top:26px">
+    <a class="btn" href="#" id="signup2">Sign up and build</a>
     <a class="btn ghost" href="https://github.com/404-Repo/404-game-recipe">Read the recipe</a>
-    <a class="btn ghost" href="#entries">See the entries</a>
   </div>
-  <p class="pix g" style="margin-top:16px"><span class="tbd">Sign up link to be wired to Atlas</span></p>
 </div></section>
 </div>
 
@@ -388,16 +362,17 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px 24px;align-items:center}
 <div id="view-entries" hidden>
 <div class="wrap">
   <div class="ehead">
-    <div class="crumb"><span class="pix c">jam-001</span><span class="pix g">entries</span></div>
-    <h1 style="font-size:clamp(46px,10vw,120px)">The <span class="k" style="display:inline">entries</span></h1>
-    <p class="sub" style="margin-top:16px">Submissions open 11 <span class="tbd">September</span>. Everything below is placeholder layout so you can see how an entry will read. The 404 build at the top is real and is not eligible.</p>
+    <p class="lab">jam-001 / entries</p>
+    <h1 style="color:var(--ink);font-size:clamp(40px,8vw,96px)">The <span class="k">entries</span></h1>
+    <p class="g" style="margin-top:14px">Submissions open 11 <span class="tbd">September</span>. The layout below is placeholder. The 404 build at the top is real and is not eligible.</p>
   </div>
 </div>
 <div class="stats">
-  <div class="stat"><b id="statEntries">0</b><span class="lbl">entries</span></div>
-  <div class="stat"><b id="statPass">0</b><span class="lbl">passed the gate</span></div>
-  <div class="stat"><b>4</b><span class="lbl">genres so far</span></div>
-  <div class="stat live"><b>10<em>TAO</em></b><span class="lbl">still to win</span></div>
+  <div class="stat"><b id="statEntries">0</b><span>entries</span></div>
+  <div class="stat"><b id="statPass">0</b><span>passed the gate</span></div>
+  <div class="stat"><b>4</b><span>genres</span></div>
+  <div class="stat live"><b>10<em>TAO</em></b><span>still to win</span></div>
+  <div class="stat"><b id="statDays">14</b><span>days left</span></div>
 </div>
 <div class="wrap">
   <div class="filters">
@@ -411,45 +386,39 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px 24px;align-items:center}
   </div>
   <div class="grid" id="grid"></div>
   <p class="empty" id="empty" hidden>No entries in this filter yet.</p>
-
-  <section style="border-bottom:0;padding:44px 0 20px">
-    <div class="sechead"><span class="pix c">(&#8734;) the page</span><h2>How a game gets here</h2></div>
-    <div class="two">
-      <div>
-        <p>An entry appears the moment its pull request is merged, which happens when the harness verdict in it checks out against a run of our own. Nothing is curated in or out before judging.</p>
-        <p>Every card carries the same four things, because those are what a visitor needs to decide what to play next.</p>
-      </div>
-      <div>
-        <div class="spec">
-          <div><span class="k">play</span><p class="v">A link to the hosted game that works on a phone.</p></div>
-          <div><span class="k">gate</span><p class="v">Pass or fail, with the draw calls, triangles and frame rate from the verdict block.</p></div>
-          <div><span class="k">built with</span><p class="v">The agent and models named by the entrant.</p></div>
-          <div><span class="k">what I found</span><p class="v">Three sentences maximum, in their words.<small>Source links are optional. Some entrants will keep the loop to themselves until judging is over.</small></p></div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <div class="cols" style="padding:36px 0 20px">
+    <div><p class="lab">the page</p><h2>How a game gets here</h2></div>
+    <div><p class="g">An entry appears the moment its pull request is merged, which happens when the harness verdict in it checks out against a run of our own. Nothing is curated in or out before judging. Every card carries the play link, the gate verdict, what it was built with, and the entrant's own line on what they found.</p></div>
+  </div>
 </div>
 </div>
 
 <footer><div class="wrap">
-  <span class="mark">404&#8212;GEN</span>
+  <a class="mark pix" href="#top">404&#8212;GEN</a>
+  <a href="https://404.xyz">404.xyz</a>
+  <a href="https://github.com/404-Repo/404-game-recipe">the recipe</a>
   <span class="pix g">subnet 17</span>
-  <span class="pix g"><a href="https://github.com/404-Repo/404-game-recipe">the recipe</a></span>
-  <span class="pix g"><a href="https://404.xyz">404.xyz</a></span>
-  <span class="pix g">draft <span class="tbd">v3</span> for review</span>
+  <span class="pix g">draft <span class="tbd">v4</span> for review</span>
 </div></footer>
 
 <script>
 (function(){
-  /* rotating game idea in the prompt line */
+  var reduce = false;
+  try { reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
+
+  /* hero video: pause control, and honour reduced motion by showing the poster */
+  var vid = document.getElementById('hero'), vt = document.getElementById('vtoggle');
+  if (reduce && vid) { vid.pause(); vt.textContent = 'play'; }
+  vt.addEventListener('click', function(){
+    if (vid.paused) { vid.play(); vt.textContent = 'pause'; } else { vid.pause(); vt.textContent = 'play'; }
+  });
+
+  /* rotating idea in the prompt line */
   var IDEAS = ['a coastal kart racer','a night market chase','a lighthouse platformer','a submarine salvage sim',
                'a rooftop parkour run','a desert train heist','a haunted arcade','anything you like'];
-  var slot = document.getElementById('slot'), i = 0, reduce = false;
-  try { reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
+  var slot = document.getElementById('slot'), i = 0;
   if (!reduce) setInterval(function(){ i = (i + 1) % IDEAS.length; slot.textContent = IDEAS[i]; }, 2600);
 
-  /* copy */
   var b = document.getElementById('copy');
   b.addEventListener('click', function(){
     var line = 'Read GAME.md in github.com/404-Repo/404-game-recipe and build me a game about ' + slot.textContent + '.';
@@ -458,62 +427,59 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px 24px;align-items:center}
     }).catch(function(){ b.textContent = 'select it'; });
   });
 
-  /* ticker */
-  var WORDS = ['3D as code','no meshes','no asset store','one folder','runs on a phone','open recipe',
-               'apache 2.0','your agent, your loop','10 TAO','blind judged','in motion','subnet 17'];
-  var row = WORDS.map(function(w){ return '<span>' + w + '</span>'; }).join('');
-  document.getElementById('tick').innerHTML = row + row;
-
-  /* countdown to the open, then to the close */
+  /* countdown */
   var OPEN = Date.UTC(2026, 8, 11, 0, 0), CLOSE = Date.UTC(2026, 8, 25, 23, 59);
-  var el = document.getElementById('countdown');
-  function tickClock(){
+  var el = document.getElementById('countdown'), days = document.getElementById('statDays');
+  function clock(){
     var now = Date.now(), t, label;
     if (now < OPEN) { t = OPEN - now; label = 'opens in '; }
     else if (now < CLOSE) { t = CLOSE - now; label = 'closes in '; }
-    else { el.textContent = 'submissions closed'; return; }
+    else { el.textContent = 'submissions closed'; if (days) days.textContent = '0'; return; }
     var d = Math.floor(t / 864e5), h = Math.floor(t / 36e5) % 24, m = Math.floor(t / 6e4) % 60;
     el.textContent = label + d + 'd ' + h + 'h ' + m + 'm';
+    if (days) days.textContent = String(Math.max(0, Math.ceil((CLOSE - now) / 864e5)));
   }
-  tickClock(); setInterval(tickClock, 30000);
+  clock(); setInterval(clock, 30000);
+
+  /* bar goes solid once past the hero */
+  var bar = document.getElementById('bar'), stage = document.getElementById('top');
+  function onScroll(){
+    var past = !stage || window.scrollY > (stage.offsetHeight - 60) || document.getElementById('view-jam').hidden;
+    bar.classList.toggle('solid', past);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
 
   /* entries */
-  var THUMB = 'data:image/jpeg;base64,THUMB_B64';
   var ENTRIES = [
     { ref:true, title:'Drive', by:'404 GEN', tag:'reference build, not eligible', genre:'racing', short:false,
-      found:'Three blind rounds against a commercial racer. The property that decided every one of them was named by a person, never by the model: hero scale, then highlight range, then the kart’s own surfaces.',
+      found:'Three blind rounds against a commercial racer. The property that decided every one was named by a person, never by the model.',
       badges:['gate pass','777 draws','1.36M tris','Claude Opus and Fable'],
-      play:'https://404-repo.github.io/drive/game/', src:'https://github.com/404-Repo/drive', shot:THUMB },
+      play:'https://404-repo.github.io/drive/game/', src:'https://github.com/404-Repo/drive', shot:'MEDIA/t_drive_b.jpg' },
     { title:'Example entry', by:'Entrant name', genre:'racing', short:true,
-      found:'One line on the thing this entrant tried that nobody else did. Written by them, capped at three sentences, and it carries 20 percent of the judging.',
+      found:'One line on the thing this entrant tried that nobody else did. Their words, three sentences at most, and it carries 20 percent of the judging.',
       badges:['gate pass','GPT agent','racing'], play:'#', src:'#' },
     { title:'Example entry', by:'Team name', genre:'shooter', short:true,
-      found:'Placeholder. A card is this short on purpose: the play link and the found line are what make someone open a game, not a description of the plot.',
+      found:'Placeholder. A card is this short on purpose: the play link and the found line are what make someone open a game.',
       badges:['gate pass','Claude Code','shooter'], play:'#', src:'#' },
     { title:'Example entry', by:'Entrant name', genre:'platformer', short:false,
-      found:'Placeholder for a platformer entry. The chips above filter this grid, and the shortlist chip shows only what the judges took through to hand play.',
+      found:'Placeholder. The chips above filter this grid, and the shortlist chip shows what the judges took through to hand play.',
       badges:['gate pass','mixed fleet','platformer'], play:'#', src:'#' },
     { title:'Example entry', by:'Entrant name', genre:'other', short:false,
       found:'Placeholder for something that does not fit a genre, which is the entry we would most like to see.',
       badges:['gate pass','open model on RunPod'], play:'#', src:'#' },
     { title:'Example entry', by:'Team name', genre:'racing', short:false,
       found:'Placeholder. Entries appear in submission order until judging closes, then the shortlist floats to the top.',
-      badges:['gate pass','Claude Code','racing'], play:'#', src:'#' },
-    { title:'Example entry', by:'Entrant name', genre:'shooter', short:false,
-      found:'Placeholder. An entry with no source link is still eligible; some makers will keep the loop private until judging is over.',
-      badges:['gate pass','GPT agent'], play:'#', src:'#' }
+      badges:['gate pass','Claude Code','racing'], play:'#', src:'#' }
   ];
   var grid = document.getElementById('grid'), empty = document.getElementById('empty');
   function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'})[c]; }); }
   function card(e){
-    var shot = e.shot ? '<img src="' + e.shot + '" alt="A frame from ' + esc(e.title) + ' in motion">'
+    var shot = e.shot ? '<img src="' + e.shot + '" alt="A frame from ' + esc(e.title) + '" loading="lazy">'
                       : '<div class="ph"><span>screenshot</span></div>';
     var tag = '<span class="tag' + (e.ref ? '' : ' ghosttag') + '">' + esc(e.ref ? e.tag : 'example entry') + '</span>';
     var badges = e.badges.map(function(t, n){ return '<span class="badge' + (n === 0 ? ' pass' : '') + '">' + esc(t) + '</span>'; }).join('');
-    var play = e.play === '#' ? '<a class="mute" href="#entries">play</a>'
-             : '<a href="' + e.play + '" target="_blank" rel="noopener">play</a>';
-    var src = e.src === '#' ? '<a class="mute" href="#entries">source</a>'
-            : '<a href="' + e.src + '" target="_blank" rel="noopener">source</a>';
+    var play = e.play === '#' ? '<a class="mute" href="#entries">play</a>' : '<a href="' + e.play + '" target="_blank" rel="noopener">play</a>';
+    var src = e.src === '#' ? '<a class="mute" href="#entries">source</a>' : '<a href="' + e.src + '" target="_blank" rel="noopener">source</a>';
     return '<article class="card' + (e.ref ? ' ref' : '') + '" data-genre="' + e.genre + '" data-short="' + (e.short ? 1 : 0) + '">' +
       '<div class="shot">' + shot + tag + '</div><div class="cbody"><h3>' + esc(e.title) + '</h3>' +
       '<div class="by">' + esc(e.by) + '</div><p class="found"><b>what I found</b>' + esc(e.found) + '</p>' +
@@ -538,14 +504,14 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px 24px;align-items:center}
 
   /* two views in one file */
   var vJam = document.getElementById('view-jam'), vEnt = document.getElementById('view-entries');
-  var navEntries = document.getElementById('navEntries');
   function route(){
     var on = location.hash === '#entries';
     vJam.hidden = on; vEnt.hidden = !on;
-    navEntries.classList.toggle('on', on);
+    if (vid) { if (on) vid.pause(); else if (!reduce) vid.play().catch(function(){}); }
+    onScroll();
     if (on) window.scrollTo(0, 0);
   }
   window.addEventListener('hashchange', route);
-  route();
+  route(); onScroll();
 })();
 </script>

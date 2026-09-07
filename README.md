@@ -1,35 +1,56 @@
 # 404 game jam, draft launch site
 
-Draft for Ben's review. Public: https://ben-atlas.github.io/404-jam/ (entries page at `#entries`).
-Artifact: https://claude.ai/code/artifact/2043ddf6-a5a4-46fa-ae89-66c2d61d8511
+Public draft: https://ben-atlas.github.io/404-jam/ (entries at `#entries`).
+Artifact copy: https://claude.ai/code/artifact/2043ddf6-a5a4-46fa-ae89-66c2d61d8511
 
-## Brand
+## v4, the media-led version
 
-v3 is built on the **404.xyz** system, read from that site's own markup, because the jam will live on a
-404.xyz subdomain: paper `#F2F2F2`, ink `#000`, coral `#f85951`, Helvetica for headlines set very large and
-tight, and `fourzerofourpixel` for every label, nav item and number. Wordmark is `404—GEN` with the em dash.
-Their nav is terse and lowercase (`exp-001`, `catalog`, `app`), so ours is `enter rules gate judging prizes
-entries` and the jam is tagged `jam-001`.
+Ben, 2026-09-07: *"i think this is too much text what about this ref https://dream.404.xyz/ you could
+generate stills or videos from sample games we've made already"*. So the page now opens on a full
+bleed gameplay clip, the copy is roughly half what it was, sections carry one word labels, and every
+image is a real capture from a game built with the recipe.
 
-Catchiness, taken from chromaawards.com: a scale line as the hero (`One line. Two weeks. Ten TAO.`), a stat
-strip under it, a moving ticker, a live countdown, and the prompt line itself as the thing you copy.
+**Brand** is 404.xyz, read from that site's own markup: paper `#F2F2F2`, ink `#000`, coral `#f85951`,
+Helvetica set large and tight, `fourzerofourpixel` for labels, `404—GEN` with the em dash.
 
-## Files
+⚠ **The pixel face is a partial subset** (66 glyphs, taken from `404.xyz/fonts`): uppercase, digits and
+a little punctuation. Every pixel string on this page is `text-transform: uppercase` for that reason,
+and the face renders those as its own single case forms. Avoid `%`, `+`, the middle dot and arrows in
+any pixel string. The subset shipped inside DRIVE's `game/fonts/` is a DIFFERENT, broken subset whose
+cmap points at the wrong glyphs; do not use it here.
 
-- `index.html` is the published page (pixel font and the reference thumbnail inlined).
-- `body.src.html` is the source, with `/* FONTS_HERE */` and `THUMB_B64` as the two injection points.
-- `fonts.css` is the `@font-face` block for `fourzerofourpixel` (licensed to 404 GEN).
-- `thumb.b64` is a frame of DRIVE, used on the reference entry card.
+## Media, and how to make more
 
-Rebuild after editing the source:
+`media/` holds one clip and eight stills, 3.4 MB in total:
 
-    python3 -c "b=open('body.src.html').read();f=open('fonts.css').read();t=open('thumb.b64').read().strip();open('index.html','w').write(b.replace('/* FONTS_HERE */',f).replace('THUMB_B64',t))"
+| file | what | source |
+|---|---|---|
+| `hero.mp4` | 13 s of Drive in motion, 854x480, HUD hidden | recorded with `tools/clip.mjs` in `~/drive` |
+| `hero_poster.jpg` | first frame, for `poster` and reduced motion | same run |
+| `t_drive_a/b/c.jpg` | Drive stills | frames from the same run |
+| `t_rust_a/b.jpg` | Rust 17 | `~/cod_derrick/rounds/r11`, `r14` |
+| `t_costa_a/b.jpg` | Costa Verde | `~/cod_clean/game/_shots` |
+| `t_ware.jpg` | warehouse FPS | `404-game-recipe/docs/img/hero.png` |
 
-The pixel face subset has no `! " # % & ' + ; < = > [ ] _`, so keep pixel-face strings to letters, digits,
-full stops, commas, colons, hyphens, slashes, parentheses and the em dash.
+`tools/clip.mjs` in `~/drive` is the kart gate with a CDP screencast bolted on: it drives the game
+with real input and streams JPEG frames at the render rate, then prints the ffmpeg line to stitch
+them. `--nohud` injects a style tag that hides every UI element for the whole run.
+
+    node tools/clip.mjs game/ --nohud --out=hero --metres=560 --net=none
+    ffmpeg -y -start_number 300 -framerate 71.34 -i game/_karttest/hero_clip/f%05d.jpg \
+      -frames:v 950 -vf "scale=854:-2,fps=24" -c:v libx264 -crf 33 -preset veryslow \
+      -pix_fmt yuv420p -movflags +faststart hero.mp4
+
+## Build
+
+    python3 build.py
+
+Writes `index.html` (media referenced from `media/`, the real site) and `artifact.html` (everything
+inlined as data URIs, for an Artifact preview whose CSP blocks external media). Edit `body.src.html`,
+never the two outputs.
 
 ## Awaiting Ben
 
-Everything marked `<span class="tbd">`: judges, Atlas signup link and grant size, submission repo, team size,
-entry cap, size and budget numbers, licence wording, Discord, office hours date, how the ten Atlas licences
-are chosen, and confirmation of the month on every date.
+Everything marked `<span class="tbd">`: judges, Atlas signup link and grant size, submission repo,
+team size, size and budget numbers, licence wording, Discord, office hours date, how the ten Atlas
+licences are chosen, and confirmation of the month on every date.
