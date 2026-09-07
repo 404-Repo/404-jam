@@ -11,7 +11,7 @@ Draft for Ben's review, 2026-09-07. Artifact: https://claude.ai/code/artifact/20
 
 Rebuild after editing the source:
 
-    python3 -c "b=open('body.src.html').read();f=open('fonts.css').read();open('index.html','w').write(b.replace('/* FONTS_HERE */',f))"
+    python3 -c "b=open('body.src.html').read();f=open('fonts.css').read();t=open('thumb.b64').read().strip();open('index.html','w').write(b.replace('/* FONTS_HERE */',f).replace('THUMB_B64',t))"
 
 Everything awaiting Ben is marked `<span class="tbd">`: prizes, dates, judges, Atlas signup link and
 credit grant, submission repo, team size, licence wording, Discord link, entry cap, budgets.
