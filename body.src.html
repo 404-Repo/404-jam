@@ -326,14 +326,9 @@ footer .mark{font-size:var(--pix-l);letter-spacing:var(--pix-l-tr);color:var(--i
 .cact a:last-child{border-right:0}
 .cact a:hover{background:var(--ink);color:var(--paper)}
 .cact a.mute{color:#a0a0a0}
-/* a card that can be played: the poster is a button, the frame only loads when it is pressed */
-.shot.can{cursor:pointer;border:0;padding:0;width:100%;display:block;background:#ddd;font:inherit}
-.shot .go{position:absolute;inset:0;display:grid;place-items:center;background:rgba(0,0,0,.28)}
-.shot .go span{font-family:var(--pix);font-size:var(--pix-m);letter-spacing:var(--pix-m-tr);text-transform:uppercase;
-  color:#fff;background:var(--coral);padding:var(--s2) var(--s4);box-shadow:0 0 0 1px rgba(0,0,0,.25)}
-.shot.can:hover .go,.shot.can:focus-visible .go{background:rgba(0,0,0,.12)}
-.shot iframe{width:100%;height:100%;border:0;display:block;background:#000}
-.playing .tag{display:none}
+/* play is the coral action in the middle of the card's row, and it opens the game in a new tab */
+.cact a.goplay{background:var(--coral);color:#fff;border-right-color:var(--coral)}
+.cact a.goplay:hover,.cact a.goplay:focus-visible{background:var(--ink);color:var(--paper);border-right-color:var(--ink)}
 .cact button{flex:1;text-align:center;padding:var(--s3) var(--s2);font-family:var(--pix);font-size:var(--pix-s);
   letter-spacing:var(--pix-s-tr);text-transform:uppercase;color:var(--ink);background:none;border:0;
   border-right:1px solid var(--hair);cursor:pointer;min-height:var(--tap)}
@@ -550,8 +545,8 @@ footer .mark{font-size:var(--pix-l);letter-spacing:var(--pix-l-tr);color:var(--i
     <button class="chip" type="button" data-f="platformer" aria-pressed="false">platformer</button>
     <button class="chip" type="button" data-f="other" aria-pressed="false">other</button>
   </div>
-  <p class="votenote">Press a card to play the game in place. Voting opens with the shortlist; until the count is
-  wired to a server your votes are kept in your own browser, so treat the numbers here as layout, not results.</p>
+  <p class="votenote">Play opens the game in a new tab. Voting opens with the shortlist; until the count is wired to a
+  server your votes are kept in your own browser, so treat the numbers here as layout, not results.</p>
   <div class="grid" id="grid"></div>
   <p class="empty" id="empty" hidden>No entries in this filter yet.</p>
   <div class="cols">
@@ -684,31 +679,18 @@ footer .mark{font-size:var(--pix-l);letter-spacing:var(--pix-l-tr);color:var(--i
     var tag = '<span class="tag' + (e.ref ? '' : ' ghosttag') + '">' + esc(e.ref ? e.tag : 'example entry') + '</span>';
     var badges = e.badges.map(function(t, n){ return '<span class="badge' + (n === 0 ? ' pass' : '') + '">' + esc(t) + '</span>'; }).join('');
     var playable = e.play && e.play !== '#';
-    var shotEl = playable
-      ? '<button class="shot can" type="button" data-play="' + e.play + '" aria-label="Play ' + esc(e.title) + ' here">' + shot + tag + '<span class="go"><span>play</span></span></button>'
-      : '<div class="shot">' + shot + tag + '</div>';
     var voted = readVotes()[id] ? ' voted' : '';
     var vote = '<button class="vote' + voted + '" type="button" data-vote="' + id + '">vote <span class="n">' + (readVotes()[id] ? 1 : 0) + '</span></button>';
+    var play = playable ? '<a class="goplay" href="' + e.play + '" target="_blank" rel="noopener">play</a>' : '<a class="mute" href="#entries">play</a>';
     var src = e.src === '#' ? '<a class="mute" href="#entries">source</a>' : '<a href="' + e.src + '" target="_blank" rel="noopener">source</a>';
-    var open = playable ? '<a href="' + e.play + '" target="_blank" rel="noopener">new tab</a>' : '<a class="mute" href="#entries">new tab</a>';
     return '<article class="card' + (e.ref ? ' ref' : '') + '" data-genre="' + e.genre + '" data-short="' + (e.short ? 1 : 0) + '">' +
-      shotEl + '<div class="cbody"><h3>' + esc(e.title) + '</h3>' +
+      '<div class="shot">' + shot + tag + '</div><div class="cbody"><h3>' + esc(e.title) + '</h3>' +
       '<div class="by">' + esc(e.by) + '</div><p class="found"><b>what I found</b>' + esc(e.found) + '</p>' +
-      '<div class="meta">' + badges + '</div></div><div class="cact">' + vote + open + src + '</div></article>';
+      '<div class="meta">' + badges + '</div></div><div class="cact">' + vote + play + src + '</div></article>';
   }
   grid.innerHTML = ENTRIES.map(card).join('');
 
-  /* press a poster and the game loads in place, not before: an iframe per card on load would
-     pull two whole games down for a visitor who wanted to read the rules */
   grid.addEventListener('click', function(ev){
-    var b = ev.target.closest && ev.target.closest('[data-play]');
-    if (b) {
-      var url = b.getAttribute('data-play'), box = document.createElement('div');
-      box.className = 'shot playing';
-      box.innerHTML = '<iframe src="' + url + '" title="Playable build" allow="fullscreen; autoplay; gamepad" allowfullscreen></iframe>';
-      b.replaceWith(box);
-      return;
-    }
     var v = ev.target.closest && ev.target.closest('[data-vote]');
     if (v) {
       var id = v.getAttribute('data-vote'), on = !v.classList.contains('voted');

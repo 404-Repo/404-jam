@@ -51,10 +51,13 @@ never the two outputs.
 
 ## Entries page: playing and voting
 
-Both 404 builds are real, playable cards, marked ineligible. Pressing a poster swaps it for an
-iframe of the live game, and nothing loads before that press: two games behind a page about rules
-is a lot to download for a visitor who came to read. Neither host sets `X-Frame-Options`, checked,
-so the frame works.
+Both 404 builds are real, playable cards, marked ineligible. `play` is the coral action in the
+middle of each card's row and opens the game in a new tab. An in-page iframe was tried and Ben
+preferred the link.
+
+⚠ Name card classes carefully: `.play` already belongs to the hero's pause control, which is
+`position:absolute`, so a card link with that class left the flex row and rendered 64px wide in
+the corner. The card action is `.goplay`.
 
 Voting is one vote per entry per browser, held in `localStorage` under `jam.votes.v1`. There is no
 bot proofing and no server, at Ben's call for now, so the page says plainly that the counts are
