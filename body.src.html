@@ -124,6 +124,11 @@ section[id],#top{scroll-margin-top:calc(var(--bar) + var(--s4))}
 .bar .mark{font-size:var(--pix-l);letter-spacing:var(--pix-l-tr);align-self:stretch;display:flex;align-items:center}
 .bar nav{margin-left:auto;display:flex;gap:var(--s2)}
 .bar nav a{padding:var(--s4) var(--s2)}   /* a 46px hit box without moving the type */
+/* entries is where we want people to go, so it is the one coral item in the bar, marked with a dot */
+.bar nav a#navEntries,.bar.solid nav a#navEntries{color:var(--coral)}
+.bar nav a#navEntries::before{content:"";display:inline-block;width:5px;height:5px;background:var(--coral);vertical-align:.14em;margin-right:var(--s1)}
+.bar.solid nav a#navEntries:hover,.bar.solid nav a#navEntries:focus{color:var(--ink)}
+.bar:not(.solid) nav a#navEntries:hover,.bar:not(.solid) nav a#navEntries:focus{color:#fff}
 @media (max-width:640px){.bar .wrap{gap:var(--s3)}.bar nav{gap:0}.bar nav a{padding:var(--s4) var(--s1)}}
 .bar.solid{background:var(--paper);border-bottom:1px solid var(--ink)}
 .bar.solid a{color:var(--ink);text-shadow:none}
@@ -335,7 +340,7 @@ footer .mark{font-size:var(--pix-l);letter-spacing:var(--pix-l-tr);color:var(--i
 <!-- ================= JAM ================= -->
 <div id="view-jam">
 <div class="stage" id="top">
-  <video id="hero" src="MEDIA/hero.mp4" poster="MEDIA/hero_poster.jpg" autoplay muted loop playsinline preload="metadata"></video>
+  <video id="hero" src="MEDIA/hero_rust.mp4" poster="MEDIA/hero_rust_poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Rust 17, a desert oilfield shooter built with the recipe, seen in motion"></video>
   <div class="veil"></div>
   <button class="play" id="vtoggle" type="button">pause</button>
   <div class="in"><div class="wrap">
