@@ -146,7 +146,7 @@ section[id],#top{scroll-margin-top:calc(var(--bar) + var(--s4))}
 .bar nav a#navEntries::before{content:"";display:inline-block;width:5px;height:5px;background:var(--coral);vertical-align:.14em;margin-right:var(--s1)}
 .bar.solid nav a#navEntries:hover,.bar.solid nav a#navEntries:focus{color:var(--ink)}
 .bar:not(.solid) nav a#navEntries:hover,.bar:not(.solid) nav a#navEntries:focus{color:#fff}
-@media (max-width:640px){.bar .wrap{gap:var(--s3)}.bar nav{gap:0}.bar nav a{padding:var(--s4) var(--s2)}}
+@media (max-width:640px){.bar .wrap{gap:var(--s3)}.bar nav{gap:0}.bar nav a{padding:var(--s4) var(--s2)}.bar nav a.wide{display:none}}
 /* the pixel face is a bitmap: 10px reads on a laptop and not on a phone, so phones get the next size the font has */
 @media (max-width:599px){:root{--pix-s:12px;--pix-s-tr:.07em}}
 .bar.solid{background:var(--paper);border-bottom:1px solid var(--ink)}
@@ -300,6 +300,8 @@ p.lead{font-size:var(--t-lead);font-weight:700;letter-spacing:-.02em;line-height
 .btn.light{background:#fff;color:var(--ink);border-color:#fff}
 .btn.light:hover{background:var(--coral);border-color:var(--coral);color:#fff}
 .btn.wire{background:transparent;color:#fff;border-color:rgba(255,255,255,.6)}
+.btn.off{color:rgba(255,255,255,.55);border-color:rgba(255,255,255,.28);pointer-events:none;flex-direction:column;gap:2px;line-height:1.1}
+.btn.off small{font-size:var(--pix-s);letter-spacing:var(--pix-s-tr);text-transform:uppercase;color:rgba(255,255,255,.45)}
 .btn.wire:hover{background:#fff;color:var(--ink);border-color:#fff}
 .btns{display:flex;flex-wrap:wrap;gap:var(--s3);align-items:center}
 #faq .btns{margin-top:var(--s6)}
@@ -364,7 +366,7 @@ footer .mark{font-size:var(--pix-l);letter-spacing:var(--pix-l-tr);color:var(--i
   <a class="mark" href="#top">404&#8212;GEN</a>
   <nav>
     <a href="#how">how</a><a href="#gate">gate</a><a href="#prizes">prizes</a>
-    <a href="#dates">dates</a><a href="#entries" class="keep" id="navEntries">entries</a>
+    <a href="#dates">dates</a><a href="https://discord.gg/5qvNHuWxTH" class="wide">discord</a><a href="#entries" class="keep" id="navEntries">entries</a>
   </nav>
 </div></div>
 
@@ -383,6 +385,7 @@ footer .mark{font-size:var(--pix-l);letter-spacing:var(--pix-l-tr);color:var(--i
       <p>A two week game jam. Give an AI coding agent one line and it builds a playable Three.js game, every 3D object written as code from the open 404 recipe. The best one wins 5 TAO, about 1,300 dollars.</p>
       <div class="btns">
         <a class="btn light" href="#how" id="signup">How to enter</a>
+        <a class="btn wire off" href="https://github.com/404-Repo/404-game-jam" id="submitb" aria-disabled="true"><span>Submit</span><small id="submitwhen">opens 11 Sep, 12:00 UTC</small></a>
         <a class="btn wire" href="#entries">Entries</a>
       </div>
     </div>
@@ -533,9 +536,10 @@ footer .mark{font-size:var(--pix-l);letter-spacing:var(--pix-l-tr);color:var(--i
     <details><summary>Do I have to use Claude?</summary><p>No. Any agent that reads files, runs a shell and looks at images. Name what you used.</p></details>
     <details><summary>Can I use my own art?</summary><p>Yes, for images and sound. The 3D is the one thing that must come through the recipe as code.</p></details>
     <details><summary>How do I get paid?</summary><p>In TAO, to one Bittensor wallet per team, within 30 days of the announcement. You can give the wallet at submission or when you win. We may ask a winner to confirm who they are first.</p></details>
+    <details><summary>Can I enter the same game somewhere else?</summary><p>Yes. Your game is yours. Tripo's Tripothon takes submissions from 15 September to 5 October, and it takes the same world-building game we do: finish it here by the 25th, polish it, then enter it there.</p></details>
     <details><summary>Can I start before the 11th?</summary><p>Yes. The recipe is public now. Your entry repo's first commit must be on or after 11 Sep 00:00 UTC, and the work has to be in the commits.</p></details>
     <details><summary>What if my link is broken at close?</summary><p>One 24 hour window to fix the deploy without changing the game. Once. Details, ties and disqualification are in the jam repo.</p></details>
-    <details><summary>Where do I ask for help?</summary><p>Open an issue on the <a href="https://github.com/404-Repo/404-game-jam">jam repo</a>, ask on X at <a href="https://x.com/404gen_">@404gen_</a>, or come to office hours on 18 Sep.</p></details>
+    <details><summary>Where do I ask for help?</summary><p>The <a href="https://discord.gg/5qvNHuWxTH">404 Discord</a> is the fastest. Otherwise open an issue on the <a href="https://github.com/404-Repo/404-game-jam">jam repo</a>, ask on X at <a href="https://x.com/404gen_">@404gen_</a>, or come to office hours on 18 Sep.</p></details>
   </div>
   <div class="btns">
     <a class="btn" href="https://github.com/404-Repo/404-game-jam" id="signup2">Read the rules</a>
@@ -585,6 +589,7 @@ footer .mark{font-size:var(--pix-l);letter-spacing:var(--pix-l-tr);color:var(--i
   <a href="https://404.xyz">404.xyz</a>
   <a href="https://github.com/404-Repo/404-game-recipe">the recipe</a>
   <a href="https://github.com/404-Repo/404-game-jam">the rules</a>
+  <a href="https://discord.gg/5qvNHuWxTH">discord</a>
   <a href="https://x.com/404gen_">@404gen_</a>
   <span class="pix g">run by 404, bittensor subnet 17, with atlas</span>
 </div></footer>
@@ -642,15 +647,17 @@ footer .mark{font-size:var(--pix-l);letter-spacing:var(--pix-l-tr);color:var(--i
   });
 
   /* countdown */
-  var OPEN = Date.UTC(2026, 8, 11, 0, 0), CLOSE = Date.UTC(2026, 8, 25, 23, 59);
+  var OPEN = Date.UTC(2026, 8, 11, 12, 0), CLOSE = Date.UTC(2026, 8, 25, 23, 59);
   var el = document.getElementById('countdown'), days = document.getElementById('statDays');
   function clock(){
     var now = Date.now(), t, label;
-    if (now < OPEN) { t = OPEN - now; label = 'opens in '; }
-    else if (now < CLOSE) { t = CLOSE - now; label = 'closes in '; }
+    if (now < OPEN) { t = OPEN - now; label = 'opens 11 sep 12:00 utc, in '; }
+    else if (now < CLOSE) { t = CLOSE - now; label = 'closes 25 sep 23:59 utc, in '; }
     else { el.textContent = 'submissions closed'; if (days) days.textContent = '0'; return; }
     var d = Math.floor(t / 864e5), h = Math.floor(t / 36e5) % 24, m = Math.floor(t / 6e4) % 60;
     el.textContent = label + d + 'd ' + h + 'h ' + m + 'm';
+    var sb = document.getElementById('submitb');
+    if (sb && now >= OPEN) { sb.classList.remove('off'); sb.removeAttribute('aria-disabled'); sb.innerHTML = 'Submit'; }
     if (days) days.textContent = String(Math.max(0, Math.ceil((CLOSE - now) / 864e5)));
   }
   clock(); setInterval(clock, 30000);
