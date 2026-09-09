@@ -20,7 +20,7 @@ HEAD = """<!doctype html>
 <meta name="description" content="A two week game jam. Give your agent one line, it builds a Three.js game from the open 404 recipe. Ten TAO in prizes.">
 <meta property="og:title" content="404 Game Jam">
 <meta property="og:description" content="One line. Two weeks. Ten TAO. Your agent builds the game, every object in it as Three.js code.">
-<meta property="og:image" content="https://ben-atlas.github.io/404-jam/media/t_drive_a.jpg">
+<meta property="og:image" content="https://game.404.xyz/media/t_drive_a.jpg">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#F2F2F2">
