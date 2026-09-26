@@ -719,7 +719,9 @@ footer .mark{font-size:var(--pix-l);letter-spacing:var(--pix-l-tr);color:var(--i
     var tag = '<span class="tag">' + esc(e.tag) + '</span>';
     var badges = e.badges.map(function(t, n){ return '<span class="badge' + (n === 0 ? ' pass' : '') + '">' + esc(t) + '</span>'; }).join('');
     var playable = e.play && e.play !== '#';
-    var vote = e.pr ? '<a class="vote" href="' + e.pr + '" target="_blank" rel="noopener">vote</a>' : '<span class="vote mute">' + (e.ref ? 'not eligible' : 'vote from 27 sep') + '</span>';
+    /* vote links only for shortlisted entries, and only once the shortlist is published (VOTE_OPEN) */
+    var VOTE_OPEN = false;
+    var vote = (VOTE_OPEN && e.pr && e.short) ? '<a class="vote" href="' + e.pr + '" target="_blank" rel="noopener">vote</a>' : '<span class="vote mute">' + (e.ref ? 'not eligible' : 'vote from 27 sep') + '</span>';
     var play = playable ? '<a class="goplay" href="' + e.play + '" target="_blank" rel="noopener">play</a>' : '<a class="mute" href="#entries">play</a>';
     var src = e.src === '#' ? '<a class="mute" href="#entries">source</a>' : '<a href="' + e.src + '" target="_blank" rel="noopener">source</a>';
     return '<article class="card' + (e.ref ? ' ref' : '') + '" data-genre="' + e.genre + '" data-short="' + (e.short ? 1 : 0) + '">' +
