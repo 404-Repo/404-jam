@@ -508,7 +508,7 @@ footer .mark{font-size:var(--pix-l);letter-spacing:var(--pix-l-tr);color:var(--i
   <div class="prize first"><span class="pix">first</span><div class="amt">5<em>TAO</em></div><p>About 1,300 dollars. Announced on stage at Exploit Summit, Montreal, plus a build breakdown written with you and published by 404.</p></div>
   <div class="prize"><span class="pix g">second</span><div class="amt">3<em>TAO</em></div><p>About 780 dollars. Showcase slot and a post on the 404 channel.</p></div>
   <div class="prize"><span class="pix g">third</span><div class="amt">1.5<em>TAO</em></div><p>About 390 dollars. Showcase slot and a post on the 404 channel.</p></div>
-  <div class="prize"><span class="pix g">community</span><div class="amt">0.5<em>TAO</em></div><p>About 130 dollars. Voted by entrants, on any entry, one GitHub account one vote, 29 Sep to 1 Oct 23:59 UTC.</p></div>
+  <div class="prize"><span class="pix g">community</span><div class="amt">0.5<em>TAO</em></div><p>About 130 dollars. Voted by entrants on the fifteen shortlisted games, one GitHub account one vote, 5 Oct 10:00 UTC to 12 Oct 10:00 UTC. The three podium winners cannot also win it.</p></div>
 </div>
 <div class="wrap"><div class="spec">
   <div><span class="k">everyone</span><p class="v">Keeps their game, outright.</p></div>
@@ -525,7 +525,7 @@ footer .mark{font-size:var(--pix-l);letter-spacing:var(--pix-l-tr);color:var(--i
   <div class="tcell now"><span class="pix c">opens</span><div class="d">11 Sep</div><p>12:00 UTC. Recipe, harness and credits available. Build earlier if you like; your repo's first commit must be on or after 11 Sep.</p></div>
   <div class="tcell"><span class="pix g">office hours</span><div class="d">18 Sep</div><p>Questions answered, one entry taken apart live.</p></div>
   <div class="tcell"><span class="pix g">closes</span><div class="d">25 Sep</div><p>23:59 UTC. Pull request open, gate passed, link working. Late is late.</p></div>
-  <div class="tcell"><span class="pix g">shortlist</span><div class="d">28 Sep</div><p>Fifteen games published here and on X. Community vote on every entry opens 29 Sep, until 1 Oct 23:59 UTC.</p></div>
+  <div class="tcell"><span class="pix g">shortlist</span><div class="d">28 Sep</div><p>Fifteen games published here and on X. Community vote on the shortlist runs 5 Oct 10:00 UTC to 12 Oct 10:00 UTC.</p></div>
   <div class="tcell"><span class="pix g">winner</span><div class="d">28 Sep</div><p>Announced on stage at Exploit Summit, Montreal, a Bittensor conference. Nobody has to be there.</p></div>
 </div></section>
 
@@ -554,7 +554,7 @@ footer .mark{font-size:var(--pix-l);letter-spacing:var(--pix-l-tr);color:var(--i
   <div class="ehead">
     <p class="lab">jam-001 / entries</p>
     <h1>The <span class="k">entries</span></h1>
-    <p class="g">Entries are closed. Every game below was merged after our rerun of the jam gate. The judges' shortlist of fifteen is published (use the shortlist filter). The community vote on every entry opens on 29 September and runs until 1 October 23:59 UTC. The last two cards are 404 reference builds: play them, read them, they are not eligible.</p>
+    <p class="g">Entries are closed. Every game below was merged after our rerun of the jam gate. The judges' shortlist of fifteen is published (use the shortlist filter). The community vote is open on the fifteen shortlisted games from 5 October 10:00 UTC until 12 October 10:00 UTC (12:00 in Vienna). The three podium winners cannot also win the community prize; if one of them tops the vote, it goes to the next game. The last two cards are 404 reference builds: play them, read them, they are not eligible.</p>
   </div>
 </div>
 <div class="stats">
@@ -574,7 +574,7 @@ footer .mark{font-size:var(--pix-l);letter-spacing:var(--pix-l-tr);color:var(--i
     <button class="chip" type="button" data-f="platformer" aria-pressed="false">platformer</button>
     <button class="chip" type="button" data-f="other" aria-pressed="false">other</button>
   </div>
-  <p class="votenote">Play opens the game in a new tab. The community vote is a thumbs up on the entry's pull request, entrants only, one GitHub account one vote, on any entry, from 29 Sep until 1 Oct 23:59 UTC. Not your own.</p>
+  <p class="votenote">Play opens the game in a new tab. The community vote is a thumbs up on the entry's pull request, entrants only, one GitHub account one vote, on any shortlisted game, from 5 Oct 10:00 UTC until 12 Oct 10:00 UTC. Not your own. The three podium winners cannot also win it.</p>
   <div class="grid" id="grid"></div>
   <p class="empty" id="empty" hidden>No entries in this filter yet. The first ones land on 11 September.</p>
   <div class="cols">
@@ -719,9 +719,10 @@ footer .mark{font-size:var(--pix-l);letter-spacing:var(--pix-l-tr);color:var(--i
     var tag = '<span class="tag">' + esc(e.tag) + '</span>';
     var badges = e.badges.map(function(t, n){ return '<span class="badge' + (n === 0 ? ' pass' : '') + '">' + esc(t) + '</span>'; }).join('');
     var playable = e.play && e.play !== '#';
-    /* vote links on every entry while the vote is open (VOTE_OPEN) */
-    var VOTE_OPEN = false;
-    var vote = (VOTE_OPEN && e.pr) ? '<a class="vote" href="' + e.pr + '" target="_blank" rel="noopener">vote</a>' : '<span class="vote mute">' + (e.ref ? 'not eligible' : 'vote opens 29 sep') + '</span>';
+    /* vote links on shortlisted entries while the vote window is open (5 Oct 10:00 UTC to 12 Oct 10:00 UTC) */
+    var now = Date.now(), VOTE_FROM = Date.UTC(2026, 9, 5, 10), VOTE_TO = Date.UTC(2026, 9, 12, 10);
+    var VOTE_OPEN = now >= VOTE_FROM && now < VOTE_TO;
+    var vote = (VOTE_OPEN && e.pr && e.short) ? '<a class="vote" href="' + e.pr + '" target="_blank" rel="noopener">vote</a>' : '<span class="vote mute">' + (e.ref ? 'not eligible' : !e.short ? 'not shortlisted' : now < VOTE_FROM ? 'vote opens 5 oct' : 'vote closed') + '</span>';
     var play = playable ? '<a class="goplay" href="' + e.play + '" target="_blank" rel="noopener">play</a>' : '<a class="mute" href="#entries">play</a>';
     var src = e.src === '#' ? '<a class="mute" href="#entries">source</a>' : '<a href="' + e.src + '" target="_blank" rel="noopener">source</a>';
     return '<article class="card' + (e.ref ? ' ref' : '') + '" data-genre="' + e.genre + '" data-short="' + (e.short ? 1 : 0) + '">' +
