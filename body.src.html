@@ -103,7 +103,7 @@ section[id],#top{scroll-margin-top:calc(var(--bar) + var(--s4))}
 @media (min-width:600px) and (max-width:1199px){
   .step:nth-child(2n+1){grid-column:1/span 2;padding-left:var(--gutc)}
   .step:nth-child(2n){grid-column:-3/-1;padding-right:var(--gutc)}
-  .steps .step:last-child{grid-column:1/-1;padding-left:var(--gutc);padding-right:var(--gutc)}
+  .steps .step:last-child:nth-child(odd){grid-column:1/-1;padding-left:var(--gutc);padding-right:var(--gutc)}
 }
 @media (min-width:1200px){
   .step:nth-child(5n+1){grid-column:1/span 2;padding-left:var(--gutc)}
@@ -235,7 +235,7 @@ p.lead{font-size:var(--t-lead);font-weight:700;letter-spacing:-.02em;line-height
 /* steps inline */
 .steps{display:grid;grid-template-columns:var(--gutt) minmax(0,1fr) var(--gutt);border-top:1px solid var(--ink)}
 @media (min-width:600px){.steps{grid-template-columns:var(--gutt) repeat(2,minmax(0,1fr)) var(--gutt)}}
-@media (min-width:1200px){.steps{grid-template-columns:var(--gutt) repeat(5,minmax(0,1fr)) var(--gutt)}.steps .step:last-child{grid-column:-3/-1;padding-left:var(--cell)}}
+@media (min-width:1200px){.steps{grid-template-columns:var(--gutt) repeat(4,minmax(0,1fr)) var(--gutt)}.steps .step:last-child{grid-column:-3/-1;padding-left:var(--cell)}}
 .step .n{font-family:var(--pix);font-size:var(--pix-s);letter-spacing:var(--pix-s-tr);color:var(--coral);text-transform:uppercase}
 .step h3{font-size:var(--t-body);font-weight:700;letter-spacing:-.015em;line-height:1.25;margin:var(--s2) 0 var(--s1)}
 .step p{font-size:var(--t-cell);color:var(--grey);margin:0;max-width:none}
@@ -413,14 +413,13 @@ footer .mark{font-size:var(--pix-l);letter-spacing:var(--pix-l-tr);color:var(--i
 
 <section id="how"><div class="wrap">
   <p class="lab">how</p>
-  <h2>Five steps</h2>
+  <h2>Four steps</h2>
 </div>
 <div class="steps">
   <div class="step"><span class="n">(01)</span><h3>Clone the recipe</h3><p><a href="https://github.com/404-Repo/404-game-recipe">404-game-recipe</a> is the method and the test harness, the scripts that check assets and drive your game. <code>npm install</code> then <code>npm run selftest</code>.</p></div>
-  <div class="step"><span class="n">(02)</span><h3>Sign up for Atlas, optional</h3><p><a href="https://atlas.design">Atlas</a> is the AI production platform run by the team behind 404. <a href="https://app.atlas.design/campaign/404-game-jam">Sign up through the jam page</a> and a fixed credit grant lands for reference images, textures, skies, sound and music, so nobody pays for art. Your own art is allowed instead.</p></div>
-  <div class="step"><span class="n">(03)</span><h3>Give your agent the line</h3><p>The line above, with your idea in it. How you split the work is yours. Your agent's tokens are your cost: the reference racer took about 10 million tokens and ten hours for the full method, and a half day version is described in the recipe.</p></div>
-  <div class="step"><span class="n">(04)</span><h3>Pass the gate</h3><p><code>node harness/jam.mjs &lt;your live url&gt;</code> loads your game on a phone viewport over 4G, taps start with a real touch, and prints a verdict block. That block is your entry ticket.</p></div>
-  <div class="step"><span class="n">(05)</span><h3>Submit</h3><p>A pull request to <a href="https://github.com/404-Repo/404-game-jam">404-game-jam</a> with the link, the verdict and what you found. Closes 25 Sep, 23:59 UTC.</p></div>
+  <div class="step"><span class="n">(02)</span><h3>Give your agent the line</h3><p>The line above, with your idea in it. How you split the work is yours. Your agent's tokens are your cost: the reference racer took about 10 million tokens and ten hours for the full method, and a half day version is described in the recipe.</p></div>
+  <div class="step"><span class="n">(03)</span><h3>Pass the gate</h3><p><code>node harness/jam.mjs &lt;your live url&gt;</code> loads your game on a phone viewport over 4G, taps start with a real touch, and prints a verdict block. That block is your entry ticket.</p></div>
+  <div class="step"><span class="n">(04)</span><h3>Submit</h3><p>A pull request to <a href="https://github.com/404-Repo/404-game-jam">404-game-jam</a> with the link, the verdict and what you found. Closes 25 Sep, 23:59 UTC.</p></div>
 </div></section>
 
 <section id="gate"><div class="wrap">
